@@ -1,0 +1,57 @@
+{% liquid
+  assign min = 1
+  assign max = 10000
+  assign diff = max | minus: min
+  assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min
+  assign section_unique_id = 'section_' | append: randomNumber
+%}
+
+{% render 'countdown-timer-snippet',
+  hide_small: section.settings.hide_small,
+  countdown_text: section.settings.countdown_text,
+  countdown_day: section.settings.countdown_day,
+  countdown_month: section.settings.countdown_month,
+  countdown_year: section.settings.countdown_year,
+  section_id: section_unique_id
+%}
+
+{% schema %}
+{
+  "name": "Countdown Timer",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "hide_small",
+      "label": "Hide small",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "countdown_text",
+      "label": "Countdown Text",
+      "default": "Special Offer - Don’t Miss Out!"
+    },
+    {
+      "type": "number",
+      "id": "countdown_day",
+      "label": "Day of Countdown Date (i.e. 03, 14, 22, 10)"
+    },
+    {
+      "type": "number",
+      "id": "countdown_month",
+      "label": "Month of Countdown Date (i.e. 03, 11, 08, 12)"
+    },
+    {
+      "type": "number",
+      "id": "countdown_year",
+      "label": "Year of Countdown Date (i.e. 2023, 2024, 2025)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown Timer"
+    }
+  ]
+}
+{% endschema %}

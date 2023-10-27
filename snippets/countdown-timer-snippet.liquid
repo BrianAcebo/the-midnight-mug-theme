@@ -1,0 +1,120 @@
+{{ 'countdown-timer.css' | asset_url | stylesheet_tag }}
+
+<div class="countdown-timer-container{% if hide_small %} hide-small{% endif %}">
+  <p class="countdown-timer-header">{{ countdown_text }}</p>
+
+  <div class="countdown-wrapper">
+    <div class="countdown-numbers-container">
+      Days
+      <div id="countdown-days_{{ section_id }}" class="countdown-timer"></div>
+    </div>
+    <div class="countdown-numbers-container">
+      Hours
+      <div id="countdown-hours_{{ section_id }}" class="countdown-timer"></div>
+    </div>
+    <div class="countdown-numbers-container">
+      Minutes
+      <div id="countdown-mins_{{ section_id }}" class="countdown-timer"></div>
+    </div>
+    <div class="countdown-numbers-container">
+      Seconds
+      <div id="countdown-secs_{{ section_id }}" class="countdown-timer"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+    {% if countdown_day != blank %}let day_{{ section_id }} = {{ countdown_day }};{% else %}let day_{{ section_id }} = null;{% endif %}
+    {% if countdown_month != blank %}let month_{{ section_id }} = {{ countdown_month }};{% else %}let month_{{ section_id }} = null;{% endif %}
+    {% if countdown_year != blank %}let year_{{ section_id }} = {{ countdown_year }};{% else %}let year_{{ section_id }} = null;{% endif %}
+
+    switch (month_{{ section_id }}) {
+        case 1:
+            month_{{ section_id }} = 'Jan';
+            break;
+        case 2:
+            month_{{ section_id }} = 'Feb';
+            break;
+        case 3:
+            month_{{ section_id }} = 'Mar';
+            break;
+        case 4:
+            month_{{ section_id }} = 'Apr';
+            break;
+        case 5:
+            month_{{ section_id }} = 'May';
+            break;
+        case 6:
+            month_{{ section_id }} = 'Jun';
+            break;
+        case 7:
+            month_{{ section_id }} = 'Jul';
+            break;
+        case 8:
+            month_{{ section_id }} = 'Aug';
+            break;
+        case 9:
+            month_{{ section_id }} = 'Sept';
+            break;
+        case 10:
+            month_{{ section_id }} = 'Oct';
+            break;
+        case 11:
+            month_{{ section_id }} = 'Nov';
+            break;
+        case 12:
+            month_{{ section_id }} = 'Dec';
+            break;
+        default:
+    }
+
+    const splitDigits_{{ section_id }} = (num) => {
+        // Ensure double digits
+        num = num.toLocaleString('en-US', {
+            minimumIntegerDigits: 2,
+            useGrouping: false
+        });
+        return num.toString().split('');
+    }
+
+    if (day_{{ section_id }} && month_{{ section_id }} && year_{{ section_id }}) {
+        let countDownDate_{{ section_id }} = new Date(`${month_{{ section_id }}} ${day_{{ section_id }}}, ${year_{{ section_id }}}`).getTime();
+
+        let x = setInterval(function () {
+            let now = new Date().getTime();
+            let distance = countDownDate_{{ section_id }} - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+            days = splitDigits_{{ section_id }}(days);
+            document.getElementById('countdown-days_{{ section_id }}').innerHTML = '';
+            document.getElementById('countdown-days_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${days[0]}</p><p>${days[1]}</p>`);
+
+            hours = splitDigits_{{ section_id }}(hours);
+            document.getElementById('countdown-hours_{{ section_id }}').innerHTML = '';
+            document.getElementById('countdown-hours_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${hours[0]}</p><p>${hours[1]}</p>`);
+
+            mins = splitDigits_{{ section_id }}(mins);
+            document.getElementById('countdown-mins_{{ section_id }}').innerHTML = '';
+            document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${mins[0]}</p><p>${mins[1]}</p>`);
+
+            secs = splitDigits_{{ section_id }}(secs);
+            document.getElementById('countdown-secs_{{ section_id }}').innerHTML = '';
+            document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${secs[0]}</p><p>${secs[1]}</p>`);
+
+            if (distance < 0) {
+                clearInterval(x);
+            }
+        }, 1000);
+    } else {
+        document.getElementById('countdown-days_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        document.getElementById('countdown-hours_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+    }
+
+</script>
