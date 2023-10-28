@@ -6,6 +6,8 @@
   assign section_unique_id = 'section_' | append: randomNumber
 %}
 
+  {{ section.id | replace: '-', '_' }}
+
 {% render 'countdown-timer-snippet',
   countdown_text: section.settings.countdown_text,
   countdown_day: section.settings.countdown_day,
