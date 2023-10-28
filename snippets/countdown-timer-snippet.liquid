@@ -117,29 +117,41 @@
             let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             let secs = Math.floor((distance % (1000 * 60)) / 1000);
 
-            years = splitDigits_{{ section_id }}(years);
-            document.getElementById('countdown-years_{{ section_id }}').innerHTML = '';
-            document.getElementById('countdown-years_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${years[0]}</p><p>${years[1]}</p>`);
+            {% if show_years %}
+              years = splitDigits_{{ section_id }}(years);
+              document.getElementById('countdown-years_{{ section_id }}').innerHTML = '';
+              document.getElementById('countdown-years_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${years[0]}</p><p>${years[1]}</p>`);
+            {% endif %}
+          
+            {% if show_months %}
+              months = splitDigits_{{ section_id }}(months);
+              document.getElementById('countdown-months_{{ section_id }}').innerHTML = '';
+              document.getElementById('countdown-months_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${months[0]}</p><p>${months[1]}</p>`);
+            {% endif %}
 
-            months = splitDigits_{{ section_id }}(months);
-            document.getElementById('countdown-months_{{ section_id }}').innerHTML = '';
-            document.getElementById('countdown-months_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${months[0]}</p><p>${months[1]}</p>`);
+            {% if show_days %}
+              days = splitDigits_{{ section_id }}(days);
+              document.getElementById('countdown-days_{{ section_id }}').innerHTML = '';
+              document.getElementById('countdown-days_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${days[0]}</p><p>${days[1]}</p>`);
+            {% endif %}
 
-            days = splitDigits_{{ section_id }}(days);
-            document.getElementById('countdown-days_{{ section_id }}').innerHTML = '';
-            document.getElementById('countdown-days_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${days[0]}</p><p>${days[1]}</p>`);
+            {% if show_hours %}
+              hours = splitDigits_{{ section_id }}(hours);
+              document.getElementById('countdown-hours_{{ section_id }}').innerHTML = '';
+              document.getElementById('countdown-hours_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${hours[0]}</p><p>${hours[1]}</p>`);
+            {% endif %}
 
-            hours = splitDigits_{{ section_id }}(hours);
-            document.getElementById('countdown-hours_{{ section_id }}').innerHTML = '';
-            document.getElementById('countdown-hours_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${hours[0]}</p><p>${hours[1]}</p>`);
+            {% if show_mins %}
+              mins = splitDigits_{{ section_id }}(mins);
+              document.getElementById('countdown-mins_{{ section_id }}').innerHTML = '';
+              document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${mins[0]}</p><p>${mins[1]}</p>`);
+            {% endif %}
 
-            mins = splitDigits_{{ section_id }}(mins);
-            document.getElementById('countdown-mins_{{ section_id }}').innerHTML = '';
-            document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${mins[0]}</p><p>${mins[1]}</p>`);
-
-            secs = splitDigits_{{ section_id }}(secs);
-            document.getElementById('countdown-secs_{{ section_id }}').innerHTML = '';
-            document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${secs[0]}</p><p>${secs[1]}</p>`);
+            {% if show_sec %}
+              secs = splitDigits_{{ section_id }}(secs);
+              document.getElementById('countdown-secs_{{ section_id }}').innerHTML = '';
+              document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${secs[0]}</p><p>${secs[1]}</p>`);
+            {% endif %}
 
             if (distance < 0) {
                 clearInterval(timer);
