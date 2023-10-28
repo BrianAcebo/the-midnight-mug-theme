@@ -45,6 +45,21 @@
         "show_text_below": false
       }
     },
+    "e89fd0a2-3c38-464d-ac05-eb18cb6f7eeb": {
+      "type": "countdown-timer",
+      "settings": {
+        "countdown_text": "Special Offer - Don’t Miss Out!",
+        "countdown_day": 11,
+        "countdown_month": 2,
+        "countdown_year": 2024,
+        "show_days": true,
+        "show_months": false,
+        "show_years": false,
+        "show_hours": true,
+        "show_mins": true,
+        "show_sec": true
+      }
+    },
     "0a684abd-bf0b-4bfb-b474-65cdbc49fc41": {
       "type": "multicolumn",
       "blocks": {
@@ -353,6 +368,7 @@
   },
   "order": [
     "image_banner",
+    "e89fd0a2-3c38-464d-ac05-eb18cb6f7eeb",
     "0a684abd-bf0b-4bfb-b474-65cdbc49fc41",
     "65badca7-ddae-47be-b8ed-62d827df9404",
     "f7a81f0c-55f3-4e1c-8ca6-dcb2c5971994",
