@@ -47,15 +47,6 @@
   endif
 -%}
 
-{% if page.handle == 'ultimate-shopify-ebook' %}
-  <script>
-    if (window.innerWidth <= 750) {
-      const imageBanner = document.getElementsByClassName('image-banner-hero')[0];
-      imageBanner.style.display = "none";
-    }
-  </script>
-{% endif %}
-
 {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
 <div
@@ -182,6 +173,18 @@
     </div>
   </div>
 </div>
+
+{% if page.handle == 'ultimate-shopify-ebook' %}
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.innerWidth <= 750) {
+        const imageBanner = document.getElementsByClassName('image-banner-hero')[0];
+        imageBanner.style.display = "none";
+      }
+    });
+  </script>
+{% endif %}
+
 
 {% schema %}
 {
