@@ -94,7 +94,6 @@
     "72b75473-6603-463d-babe-8e8b4341e91d": {
       "type": "countdown-timer",
       "settings": {
-        "hide_small": false,
         "countdown_text": "Special Offer - Don’t Miss Out!",
         "countdown_day": 11,
         "countdown_month": 2,
@@ -335,11 +334,10 @@
     "d732d392-1d5f-45b6-acd1-b3424727ebad": {
       "type": "countdown-timer",
       "settings": {
-        "hide_small": false,
         "countdown_text": "30% OFF - Don’t Miss Out!",
-        "countdown_day": 20,
-        "countdown_month": 10,
-        "countdown_year": 2023
+        "countdown_day": 12,
+        "countdown_month": 2,
+        "countdown_year": 2024
       }
     },
     "48f74d08-0bf5-40b5-93b9-76ffd065bd5a": {
