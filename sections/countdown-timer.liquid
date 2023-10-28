@@ -1,16 +1,5 @@
-{% liquid
-  assign min = 1
-  assign max = 10000
-  assign diff = max | minus: min
-  assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min
-  comment 
-    assign section_unique_id = 'section_' | append: randomNumber
-  endcomment
-  assign section_unique_id = section.id | replace: '-', '_'
-%}
-
-  {{ section.id | replace: '-', '_' }}
-
+{% assign section_unique_id = section.id | replace: '-', '_' %}
+{{ section_unique_id }}
 {% render 'countdown-timer-snippet',
   countdown_text: section.settings.countdown_text,
   countdown_day: section.settings.countdown_day,
