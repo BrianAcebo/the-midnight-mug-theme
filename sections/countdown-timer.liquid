@@ -11,7 +11,7 @@
   countdown_day: section.settings.countdown_day,
   countdown_month: section.settings.countdown_month,
   countdown_year: section.settings.countdown_year,
-  section_id: section.id
+  section_id: section.id | replace: '-', '_'
 %}
 
 {% schema %}

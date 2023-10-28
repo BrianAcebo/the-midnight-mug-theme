@@ -25,7 +25,19 @@
 
 <script defer>
   document.addEventListener("DOMContentLoaded", () => {
-    {% if countdown_day != blank %}let day_{{ section_id }} = {{ countdown_day }};{% else %}let day_{{ section_id }} = null;{% endif %}
+    const generateSlug = (str) => {
+      str = str
+          .replace(/’/g, "") // Remove apostrophes
+          .replace(/&/g, "and") // Convert ampersand to 'and'
+          .replace(/[^0-9a-zA-Z]+/g, "-") // Convert special characters to dashes
+          .replace(/-+/g, "-") // Replace 2 or more dashes with a single dash
+          .replace(/^-|-$|(?<!\S)-|-(?!\S)/g, ""); // Trim any leading or trailing dashes
+  
+      return str.toLowerCase(); // Convert the entire slug to lowercase
+    };
+    
+    const cleanSectionId = generateSlug("{{ section_id }}");
+    {% if countdown_day != blank %}let day_cleanSectionId = {{ countdown_day }};{% else %}let day_{{ section_id }} = null;{% endif %}
     {% if countdown_month != blank %}let month_{{ section_id }} = {{ countdown_month }};{% else %}let month_{{ section_id }} = null;{% endif %}
     {% if countdown_year != blank %}let year_{{ section_id }} = {{ countdown_year }};{% else %}let year_{{ section_id }} = null;{% endif %}
 
