@@ -23,8 +23,8 @@
   </div>
 </div>
 
-<script>
-  
+<script defer>
+  document.addEventListener("DOMContentLoaded", () => {
     {% if countdown_day != blank %}let day_{{ section_id }} = {{ countdown_day }};{% else %}let day_{{ section_id }} = null;{% endif %}
     {% if countdown_month != blank %}let month_{{ section_id }} = {{ countdown_month }};{% else %}let month_{{ section_id }} = null;{% endif %}
     {% if countdown_year != blank %}let year_{{ section_id }} = {{ countdown_year }};{% else %}let year_{{ section_id }} = null;{% endif %}
@@ -116,5 +116,5 @@
         document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
         document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
     }
-
+  });
 </script>
