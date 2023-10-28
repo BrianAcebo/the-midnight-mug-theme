@@ -158,12 +158,30 @@
             }
         }, 1000);
     } else {
-        document.getElementById('countdown-years_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
-        document.getElementById('countdown-months_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
-        document.getElementById('countdown-days_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
-        document.getElementById('countdown-hours_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
-        document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
-        document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+
+        {% if show_years %}
+          document.getElementById('countdown-years_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        {% endif %}
+
+        {% if show_months %}
+          document.getElementById('countdown-months_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        {% endif %}
+
+        {% if show_days %}
+          document.getElementById('countdown-days_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        {% endif %}
+
+        {% if show_hours %}
+          document.getElementById('countdown-hours_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        {% endif %}
+
+        {% if show_mins %}
+          document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        {% endif %}
+
+        {% if show_sec %}
+          document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        {% endif %}
     }
   });
 </script>
