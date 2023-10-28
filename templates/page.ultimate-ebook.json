@@ -95,12 +95,12 @@
       "type": "countdown-timer",
       "settings": {
         "countdown_text": "Special Offer - Don’t Miss Out!",
-        "show_days": true,
         "countdown_day": 11,
-        "show_months": false,
         "countdown_month": 2,
-        "show_years": false,
         "countdown_year": 2024,
+        "show_days": true,
+        "show_months": false,
+        "show_years": false,
         "show_hours": true,
         "show_mins": true,
         "show_sec": true
@@ -341,12 +341,12 @@
       "type": "countdown-timer",
       "settings": {
         "countdown_text": "30% OFF - Don’t Miss Out!",
-        "show_days": true,
-        "countdown_day": 12,
-        "show_months": false,
+        "countdown_day": 11,
         "countdown_month": 2,
-        "show_years": false,
         "countdown_year": 2024,
+        "show_days": true,
+        "show_months": false,
+        "show_years": false,
         "show_hours": true,
         "show_mins": true,
         "show_sec": true
