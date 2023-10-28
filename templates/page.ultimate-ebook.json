@@ -91,6 +91,16 @@
         "padding_bottom": 0
       }
     },
+    "72b75473-6603-463d-babe-8e8b4341e91d": {
+      "type": "countdown-timer",
+      "settings": {
+        "hide_small": false,
+        "countdown_text": "Special Offer - Don’t Miss Out!",
+        "countdown_day": 11,
+        "countdown_month": 2,
+        "countdown_year": 2024
+      }
+    },
     "b7bf4f19-fdd5-4c2b-9912-27150f47a20e": {
       "type": "rich-text",
       "blocks": {
@@ -672,6 +682,7 @@
   "order": [
     "image_banner",
     "7da2cacc-0c17-4e45-bed2-1fa9cb84fde1",
+    "72b75473-6603-463d-babe-8e8b4341e91d",
     "b7bf4f19-fdd5-4c2b-9912-27150f47a20e",
     "65badca7-ddae-47be-b8ed-62d827df9404",
     "43d417a1-3790-4142-8b10-23b33f519922",
