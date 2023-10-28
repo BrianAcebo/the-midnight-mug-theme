@@ -7,7 +7,6 @@
 %}
 
 {% render 'countdown-timer-snippet',
-  hide_small: section.settings.hide_small,
   countdown_text: section.settings.countdown_text,
   countdown_day: section.settings.countdown_day,
   countdown_month: section.settings.countdown_month,
@@ -20,12 +19,6 @@
   "name": "Countdown Timer",
   "tag": "section",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "hide_small",
-      "label": "Hide small",
-      "default": false
-    },
     {
       "type": "text",
       "id": "countdown_text",
