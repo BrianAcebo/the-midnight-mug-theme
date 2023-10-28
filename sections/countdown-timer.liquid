@@ -3,7 +3,10 @@
   assign max = 10000
   assign diff = max | minus: min
   assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min
-  assign section_unique_id = 'section_' | append: randomNumber
+  comment 
+    assign section_unique_id = 'section_' | append: randomNumber
+  endcomment
+  assign section_unique_id = section.id | replace: '-', '_'
 %}
 
   {{ section.id | replace: '-', '_' }}
@@ -13,7 +16,7 @@
   countdown_day: section.settings.countdown_day,
   countdown_month: section.settings.countdown_month,
   countdown_year: section.settings.countdown_year,
-  section_id: section.id | replace: '-', '_'
+  section_id: section_unique_id
 %}
 
 {% schema %}
