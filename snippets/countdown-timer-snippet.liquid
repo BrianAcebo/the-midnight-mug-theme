@@ -4,22 +4,47 @@
   <p class="countdown-timer-header">{{ countdown_text }}</p>
 
   <div class="countdown-wrapper">
-    <div class="countdown-numbers-container">
-      Days
-      <div id="countdown-days_{{ section_id }}" class="countdown-timer"></div>
-    </div>
-    <div class="countdown-numbers-container">
-      Hours
-      <div id="countdown-hours_{{ section_id }}" class="countdown-timer"></div>
-    </div>
-    <div class="countdown-numbers-container">
-      Minutes
-      <div id="countdown-mins_{{ section_id }}" class="countdown-timer"></div>
-    </div>
-    <div class="countdown-numbers-container">
-      Seconds
-      <div id="countdown-secs_{{ section_id }}" class="countdown-timer"></div>
-    </div>
+    {% if show_days %}
+      <div class="countdown-numbers-container">
+        Days
+        <div id="countdown-days_{{ section_id }}" class="countdown-timer"></div>
+      </div>
+    {% endif %}
+
+    {% if show_months %}
+      <div class="countdown-numbers-container">
+        Months
+        <div id="countdown-months_{{ section_id }}" class="countdown-timer"></div>
+      </div>
+    {% endif %}
+
+    {% if show_years %}
+      <div class="countdown-numbers-container">
+        Years
+        <div id="countdown-years_{{ section_id }}" class="countdown-timer"></div>
+      </div>
+    {% endif %}
+
+    {% if show_hours %}
+      <div class="countdown-numbers-container">
+        Hours
+        <div id="countdown-hours_{{ section_id }}" class="countdown-timer"></div>
+      </div>
+    {% endif %}
+
+    {% if show_mins %}
+      <div class="countdown-numbers-container">
+        Minutes
+        <div id="countdown-mins_{{ section_id }}" class="countdown-timer"></div>
+      </div>
+    {% endif %}
+
+    {% if show_sec %}
+      <div class="countdown-numbers-container">
+        Seconds
+        <div id="countdown-secs_{{ section_id }}" class="countdown-timer"></div>
+      </div>
+    {% endif %}
   </div>
 </div>
 
@@ -81,14 +106,24 @@
     if (day_{{ section_id }} && month_{{ section_id }} && year_{{ section_id }}) {
         let countDownDate_{{ section_id }} = new Date(`${month_{{ section_id }}} ${day_{{ section_id }}}, ${year_{{ section_id }}}`).getTime();
 
-        let x = setInterval(function () {
+        let timer = setInterval(function () {
             let now = new Date().getTime();
             let distance = countDownDate_{{ section_id }} - now;
 
+            let years = Math.floor(distance / (1000 * 60 * 60 * 24 * 30 * 12));
+            let months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
             let days = Math.floor(distance / (1000 * 60 * 60 * 24));
             let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             let secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+            years = splitDigits_{{ section_id }}(years);
+            document.getElementById('countdown-years_{{ section_id }}').innerHTML = '';
+            document.getElementById('countdown-years_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${years[0]}</p><p>${years[1]}</p>`);
+
+            months = splitDigits_{{ section_id }}(months);
+            document.getElementById('countdown-months_{{ section_id }}').innerHTML = '';
+            document.getElementById('countdown-months_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${months[0]}</p><p>${months[1]}</p>`);
 
             days = splitDigits_{{ section_id }}(days);
             document.getElementById('countdown-days_{{ section_id }}').innerHTML = '';
@@ -107,10 +142,12 @@
             document.getElementById('countdown-secs_{{ section_id }}').insertAdjacentHTML('beforeend', `<p>${secs[0]}</p><p>${secs[1]}</p>`);
 
             if (distance < 0) {
-                clearInterval(x);
+                clearInterval(timer);
             }
         }, 1000);
     } else {
+        document.getElementById('countdown-years_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
+        document.getElementById('countdown-months_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
         document.getElementById('countdown-days_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
         document.getElementById('countdown-hours_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
         document.getElementById('countdown-mins_{{ section_id }}').insertAdjacentHTML('beforeend', '<p>0</p><p>0</p>');
