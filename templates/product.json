@@ -142,7 +142,7 @@
           "type": "column",
           "settings": {
             "title": "We'll Make It Up",
-            "text": "<p>If there is any reason you are unsatisfied, get a free product of your choosing entirely on us. Free products must be under $75 USD of value, and are not available if your original product is refunded.<\/p>",
+            "text": "<p>If there is any reason you are unsatisfied, get a free product of your choosing entirely on us. Free products must be under $15 USD of value, and are not available if your original product is refunded.<\/p>",
             "link_label": "",
             "link": ""
           }
