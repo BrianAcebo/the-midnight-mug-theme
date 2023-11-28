@@ -159,80 +159,6 @@
         "padding_bottom": 0
       }
     },
-    "f7a81f0c-55f3-4e1c-8ca6-dcb2c5971994": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "best-sellers",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "43d417a1-3790-4142-8b10-23b33f519922": {
-      "type": "multirow",
-      "blocks": {
-        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-1": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/build-empire.jpg",
-            "caption": "",
-            "heading": "Build a better online business.",
-            "text": "<p>Gain the financial freedom you deserve, and live the life you want to live with our expert-crafted guides, kits, and templates for guaranteed success online!<\/p>",
-            "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/best-sellers"
-          }
-        },
-        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-2": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/guided-growth.jpg",
-            "caption": "",
-            "heading": "Years of experience in minutes.",
-            "text": "<p>We combined our knowledge, from years of experience as Shopify experts, into proven frameworks, guides, templates, and more.<\/p>",
-            "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/best-sellers"
-          }
-        }
-      },
-      "block_order": [
-        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-1",
-        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-2"
-      ],
-      "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "image_layout": "alternate-right",
-        "section_color_scheme": "background-2",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
     "48f74d08-0bf5-40b5-93b9-76ffd065bd5a": {
       "type": "featured-product",
       "blocks": {
@@ -347,6 +273,52 @@
         "padding_bottom": 52
       }
     },
+    "43d417a1-3790-4142-8b10-23b33f519922": {
+      "type": "multirow",
+      "blocks": {
+        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-1": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/build-empire.jpg",
+            "caption": "",
+            "heading": "Build a better online business.",
+            "text": "<p>Gain the financial freedom you deserve, and live the life you want to live with our expert-crafted guides, kits, and templates for guaranteed success online!<\/p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/best-sellers"
+          }
+        },
+        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-2": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/guided-growth.jpg",
+            "caption": "",
+            "heading": "Years of experience in minutes.",
+            "text": "<p>We combined our knowledge, from years of experience as Shopify experts, into proven frameworks, guides, templates, and more.<\/p>",
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections\/best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-1",
+        "template--21218355937577__43d417a1-3790-4142-8b10-23b33f519922-row-2"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "background-2",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "cfa06be2-ff17-4873-bbe9-daa0bdf43d91": {
       "type": "featured-blog",
       "disabled": true,
@@ -371,10 +343,9 @@
     "e89fd0a2-3c38-464d-ac05-eb18cb6f7eeb",
     "0a684abd-bf0b-4bfb-b474-65cdbc49fc41",
     "65badca7-ddae-47be-b8ed-62d827df9404",
-    "f7a81f0c-55f3-4e1c-8ca6-dcb2c5971994",
-    "43d417a1-3790-4142-8b10-23b33f519922",
     "48f74d08-0bf5-40b5-93b9-76ffd065bd5a",
     "d5da32de-d523-4782-84e5-b4ce5c9eab99",
+    "43d417a1-3790-4142-8b10-23b33f519922",
     "cfa06be2-ff17-4873-bbe9-daa0bdf43d91"
   ]
 }
