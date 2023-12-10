@@ -1,0 +1,109 @@
+{%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "657615686374a2846b97a630" -%}{%- assign bodyClasses = "" -%}
+  {%- render 'navbar' -%}
+  <div id="top" class="section hero-project-template">
+    <div class="main-container w-container">
+      <div data-w-id="77146cc2-88f0-f38c-17e2-23bb4a51b719" class="heading-wrap-project-template">
+        <h1>{{ article.title }}</h1>
+        <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="overlay-project-heading"></div>
+      </div>
+      <div class="space-64 project-hero-space"></div>
+      <div data-w-id="cff96580-437a-a16e-d6c0-9991badfe9dd" class="image-wrap-main-project-image"><img alt="{{ article.image.alt }}" loading="lazy" src="{{ article.image | img_url: 'master' }}" class="image-main-project-image" srcset="{{ article.image | img_url: '1920x' }} 1920w,{{ article.image | img_url: '1600x' }} 1600w,{{ article.image | img_url: '1366x' }} 1366w,{{ article.image | img_url: '1024x' }} 1024w,{{ article.image | img_url: '768x' }} 768w,{{ article.image | img_url: '640x' }} 640w">
+        <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="overlay-project-page-general"></div>
+      </div>
+      <div class="space-64"></div>
+      <div data-w-id="aa1e9934-3d43-1b71-e121-34e5ee0b4509" style="-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="master-project-details">
+        <div class="left-project-details">
+          <div class="column-project-details in-short-columns">
+            <div class="text-block-heading-3-styles">{{ 'tn68bc261f' | t }}</div>
+            <p class="no-margins">{{ article.metafields.udesly['short-description'] }}</p>
+          </div>
+          <div class="column-project-details">
+            <div class="text-block-heading-3-styles">{{ 't7877dfeb' | t }}</div>
+            <p class="no-margins">{{ article.metafields.udesly['client'] }}</p>
+          </div>
+          <div class="column-project-details">
+            <div class="text-block-heading-3-styles">{{ 't560f747e' | t }}</div>
+            <div class="no-margins w-richtext">{{ article.metafields.udesly['all-services'] }}</div>
+          </div>
+        </div>
+        <div class="right-project-details">
+          <div class="column-project-details">
+            <div class="text-block-heading-3-styles">{{ 't23d3162b' | t }}</div>
+            <p class="no-margins">{{ article.metafields.udesly['completed-on'] | date: "%B %e, %Y" }}</p>
+          </div>
+        </div>
+      </div>
+      <div data-w-id="84cfa152-4f95-5f6e-6596-04c001146705" style="opacity:0" class="divider-project-hero"></div>
+    </div>
+  </div>
+  <div data-w-id="d4c3ff9c-cfe7-fc5f-945f-fe131f80c863" style="opacity:0" class="section project-rich-text">
+    <div class="main-container w-container"></div>
+    <div class="w-layout-blockcontainer container-small w-container">
+      <div class="w-richtext">{{ article.content }}</div>
+    </div>
+  </div>
+  <div class="section project-gallery">
+    <div class="main-container w-container">
+      {%- assign setItems = article.metafields.udesly['first-gallery'] -%}<div class="w-dyn-list">
+        {%- unless setItems.size == 0 -%}<div role="list" class="list-project-gallery w-dyn-items">
+          {%- for setItem in setItems -%}<div role="listitem" class="image-wrap-project-gallery w-dyn-item"><img alt="" loading="lazy" src="{{ setItem.src }}" class="image-project-gallery">
+            <div class="overlay-project-page-general"></div>
+          </div>{%- endfor -%}
+        </div>{%- endunless -%}
+        {%- if setItems.size == 0 -%}<div class="w-dyn-empty">
+          <div>{{ 't3d503d2b' | t }}</div>
+        </div>{%- endif -%}
+      <template><div class="w-dyn-list" udesly-repeater="true">
+        <div role="list" class="list-project-gallery w-dyn-items">
+          <div role="listitem" class="image-wrap-project-gallery w-dyn-item"><img alt="" loading="lazy" src="{# setItem.src #}" class="image-project-gallery">
+            <div class="overlay-project-page-general"></div>
+          </div>
+        </div>
+        <div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>
+      </div></template></div>
+    </div>
+  </div>
+  <div data-w-id="4a3c315c-3822-fc14-6604-de408125e161" style="opacity:0" class="section project-rich-text">
+    <div class="main-container w-container"></div>
+    <div class="w-layout-blockcontainer container-small w-container">
+      <div class="w-richtext">{{ article.metafields.udesly['second-rich-text'] }}</div>
+    </div>
+  </div>
+  <div class="section project-gallery">
+    <div class="main-container w-container">
+      {%- assign setItems = article.metafields.udesly['second-gallery'] -%}<div class="w-dyn-list">
+        {%- unless setItems.size == 0 -%}<div role="list" class="list-project-gallery w-dyn-items">
+          {%- for setItem in setItems -%}<div role="listitem" class="image-wrap-project-gallery w-dyn-item"><img alt="" loading="lazy" src="{{ setItem.src }}" class="image-project-gallery">
+            <div class="overlay-project-page-general"></div>
+          </div>{%- endfor -%}
+        </div>{%- endunless -%}
+        {%- if setItems.size == 0 -%}<div class="w-dyn-empty">
+          <div>{{ 't3d503d2b' | t }}</div>
+        </div>{%- endif -%}
+      <template><div class="w-dyn-list" udesly-repeater="true">
+        <div role="list" class="list-project-gallery w-dyn-items">
+          <div role="listitem" class="image-wrap-project-gallery w-dyn-item"><img alt="" loading="lazy" src="{# setItem.src #}" class="image-project-gallery">
+            <div class="overlay-project-page-general"></div>
+          </div>
+        </div>
+        <div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>
+      </div></template></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="main-container w-container">
+      <h2>{{ 't65e151c2' | t }}</h2>
+      <div class="space-64"></div>
+      {%- render "projects_where__id_ne_current_sorted_by_order" -%}
+    </div>
+  </div>
+  {%- render 'education-combo-section' -%}
+  {%- render 'footer' -%}
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=657615686374a2846b97a5f7" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="{{ 'webflow.js' | asset_url }}" type="text/javascript"></script>
+
+{{ 'udesly-shopify.min.js' | asset_url | script_tag }}

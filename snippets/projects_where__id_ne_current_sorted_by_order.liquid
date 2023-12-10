@@ -1,0 +1,37 @@
+{% capture listItems %}
+{% paginate blogs['projects'].articles by 999 %}
+{%- assign allItems = blogs['projects'].articles -%}
+{%- for item in allItems -%}{%- assign condition_value = item.handle | strip -%}{% assign condition_0 = false %}                  
+                {% unless condition_value == article.handle %}
+                    {% assign condition_0 = true %}
+                {% endunless %}{% if condition_0 %}
+ <div role="listitem" class="w-dyn-item" custom-sort-field="{{ item.metafields.udesly['order'] }}">
+            <a href="{{ item.url }}" class="link-project-b w-inline-block">
+              <div class="divider-project-b"></div>
+              <div class="top-wrap-project-b">
+                <div class="text-block-heading-3-styles">{{ item.metafields.udesly['client'] }}</div>
+                {%- assign itemHandle = "services/" | append: item.metafields.udesly['main-service'].handle -%}{%- assign refItem = articles[itemHandle] -%}<div class="text-block-heading-3-styles">{{ refItem.title }}</div>
+              </div>
+              <div class="image-wrap-project-b">
+                <div class="image-project-b" style="background-image: url('{{item.image | img_url: 'master'}}')"></div>
+                <div class="overlay-project"></div>
+              </div>
+              <div class="bottom-wrap-project-b">
+                <p class="no-margins">{{ item.metafields.udesly['short-description'] }}</p>
+              </div>
+            </a>
+          </div>
+{% endif %}
+{%- endfor -%}
+{% endpaginate %}
+{% endcapture %}
+{% assign items_length = listItems | strip | size %}
+
+<div class="w-dyn-list" udy-collection="projects">
+        {%- unless items_length == 0 -%}<div role="list" class="list-projects-b w-dyn-items" custom-sort="{&quot;reverse&quot;:false,&quot;type&quot;:&quot;Number&quot;}">
+          {{ listItems }}
+        </div>{%- endunless -%}
+        {%- if items_length == 0 -%}<div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>{%- endif -%}
+      </div>

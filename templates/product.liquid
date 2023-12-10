@@ -1,0 +1,87 @@
+{%- assign headerSnippetPath = "header-index" -%}{%- assign wfPage = "657615686374a2846b97a62f" -%}{%- assign bodyClasses = "" -%}
+  {%- render 'navbar' -%}
+  <div id="top" class="section">
+    <div class="main-container w-container">
+      <div class="center-text">
+        <div class="center-content">
+          <div class="master-product-page">
+            <h1>{{ product.title }}</h1>
+            <div class="big-text">{{ product.metafields.udesly['description'] }}</div>
+            <div class="space-64"></div>
+            <div class="master-product-purchase">
+              <div class="add-to-cart">
+                {%- form "product", product, data-node-type: "commerce-add-to-cart-form", class: "w-commerce-commerceaddtocartform default-state-add-to-cart" -%}{%- unless product.has_only_default_variant or product.variants.size == 1 -%}<div data-node-type="add-to-cart-option-list" class="option-list">{%- for option in product.options_with_values -%}<fieldset data-node-type="add-to-cart-option" style="{% if product.has_only_default_variant or product.variants.size == 1 %}display: none; {% endif %}"><select data-node-type="add-to-cart-option-select" class="select-field w-select" style="display: none;" name="{{ "option" | append: forloop.index }}">{%- render "product-options", option: option -%}</select><div data-node-type="add-to-cart-option-pill-group" class="w-commerce-commerceaddtocartoptionpillgroup" aria-label="{{ "option" | append: forloop.index  }}">{%- for value in option.values -%}<div data-node-type="add-to-cart-option-pill" class="w-commerce-commerceaddtocartoptionpill" data-option-name="{{ value | handle }}"><div data-node-type="block">{{ value }}</div></div>{%- endfor -%}</div></fieldset>{%- endfor -%}</div>{%- endunless -%}
+                  <div position-id="c82a9290-b060-6050-373a-559b90454572" class="left-add-to-cart">{%- assign condition_value = product.type | strip -%}{%- unless condition_value == "e348fd487d0102946c9179d2a94bb613" -%}<input type="number" pattern="^[0-9]+$" inputmode="numeric" id="quantity-291f90550c8d2b95653602ff10dc8bf1" name="quantity" min="1" class="w-commerce-commerceaddtocartquantityinput input-field quantity" value="1">{%- endunless -%}
+                    <div class="divider-add-to-cart-inputs"></div>
+                    <div data-commerce-type="variation-price">{{ product.price | money_with_currency }}</div>
+                  </div>
+                  <div position-id="73e9b1b0-aab4-cc4c-86d1-21760627f86b" class="right-add-to-cart"><input type="submit" data-node-type="commerce-add-to-cart-button" data-loading-text="Adding to cart..." value="{{ 'tn26bdceda' | t }}" aria-busy="false" aria-haspopup="dialog" class="w-commerce-commerceaddtocartbutton cta add-to-cart-cta">
+                    <a data-node-type="commerce-buy-now-button" data-default-text="Buy now" data-subscription-text="Subscribe now" aria-busy="false" aria-haspopup="false" style="display:none" class="w-commerce-commercebuynowbutton cta" href="/checkout">{{ 't71bb9a1c' | t }}</a>
+                  </div>
+                {%- render "product-variants-data-currency" product: product -%}{%- endform -%}
+                <div tabindex="0" style="display:none" class="w-commerce-commerceaddtocartoutofstock">
+                  <div>{{ 't7aaa2dac' | t }}</div>
+                </div>
+                <div aria-live="assertive" data-node-type="commerce-add-to-cart-error" style="display:none" class="w-commerce-commerceaddtocarterror">
+                  <div data-node-type="commerce-add-to-cart-error" data-w-add-to-cart-quantity-error="Product is not available in this quantity." data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart." data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription." data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item." data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site." data-w-add-to-cart-select-all-options-error="Please select an option in each set.">{{ 'tn1c765d0d' | t }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="space-64"></div>
+            <div class="master-product-visuals">
+              <div class="image-wrap-product-main-image" style="background-image: url('{{product.featured_image | img_url: 'master'}}')" data-commerce-type="variation-image"></div>
+              {% assign ref = product.selected_or_first_available_variant %}{%- if ref.metafields.udesly['more-images'] -%}<div class="master-more-visuals">
+                {% if product.variants.size > 1 and product.selected_or_first_available_variant.metafields.udesly['more-images'].size > 0 %}{%- assign setItems = product.selected_or_first_available_variant.metafields.udesly['more-images'] -%}<div class="w-dyn-list" data-commerce-type="more-images">
+                  {%- unless setItems.size == 0 -%}<div role="list" class="list-product-images w-dyn-items">
+                    {%- for setItem in setItems offset: 1 -%}<div role="listitem" class="item-product-image w-dyn-item">
+                      <a href="#" class="lightbox-more-images w-inline-block w-lightbox" style="background-image: url('{{setItem.more-images}}')">
+                        <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ setItem.more-images }}","caption":""}],"group":"Product Gallery"}</script>
+                      </a>
+                    </div>{%- endfor -%}
+                  </div>{%- endunless -%}
+                  {%- if setItems.size == 0 -%}<div class="w-dyn-empty">
+                    <div>{{ 't3d503d2b' | t }}</div>
+                  </div>{%- endif -%}
+                <template><div class="w-dyn-list" udesly-repeater="true" data-commerce-type="more-images">
+                  <div role="list" class="list-product-images w-dyn-items">
+                    <div role="listitem" class="item-product-image w-dyn-item">
+                      <a href="#" class="lightbox-more-images w-inline-block w-lightbox" style="background-image: url('{#setItem.more-images#}')">
+                        <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{# setItem.more-images #}","caption":""}],"group":"Product Gallery"}</script>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="w-dyn-empty">
+                    <div>No items found.</div>
+                  </div>
+                </div></template></div>{% else %}{%- assign setItems = product.images -%}<div class="w-dyn-list" data-commerce-type="more-images">
+                  {%- unless setItems.size == 0 -%}<div role="list" class="list-product-images w-dyn-items">
+                    {%- for setItem in setItems offset: 1 -%}<div role="listitem" class="item-product-image w-dyn-item">
+                      <a href="#" class="lightbox-more-images w-inline-block w-lightbox" style="background-image: url('{{setItem | product_img_url: 'master'}}')">
+                        <script type="application/json" class="w-json">{"items":[{"type":"image","url":"{{ setItem | product_img_url: 'master' }}","caption":""}],"group":"Product Gallery"}</script>
+                      </a>
+                    </div>{%- endfor -%}
+                  </div>{%- endunless -%}
+                  {%- if setItems.size == 0 -%}<div class="w-dyn-empty">
+                    <div>{{ 't3d503d2b' | t }}</div>
+                  </div>{%- endif -%}
+                </div>{%- endif -%}
+              </div>{%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section light">
+    <div class="main-container w-container">
+      <h2>{{ 'tefa95af' | t }}</h2>
+      <div class="space-40"></div>
+      {%- if settings.collection_products_template != blank -%}{%- render "markup_for_collection_products_template" -%}{%- else -%}{%- render "products_max_3_where__id_ne_current" -%}{%- endif -%}
+    </div>
+  </div>
+  {%- render 'footer' -%}
+  {%- render 'cart' -%}
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=657615686374a2846b97a5f7" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="{{ 'webflow.js' | asset_url }}" type="text/javascript"></script>
+
+{{ 'udesly-shopify.min.js' | asset_url | script_tag }}
