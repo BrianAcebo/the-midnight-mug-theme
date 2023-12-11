@@ -2,6 +2,15 @@
 {%- assign wfPage = '657615686374a2846b97a634' -%}
 {%- assign bodyClasses = '' -%}
 {%- render 'navbar' -%}
+
+<style>
+  @media screen and (max-width: 595px) {
+    #index-email {
+      display: none;
+    }
+  }
+</style>
+
 <div id="top" class="section hero-home-a">
   <div class="main-container w-container">
     <div class="heading-wrap-home-a">
@@ -62,7 +71,7 @@
           </a>
         {% endcomment %}
       </div>
-      <div class="right-links-hero-a">
+      <div class="right-links-hero-a" id="index-email">
         <a href="mailto:hello@themidnightmug.com" class="big-underline-link w-inline-block">
           <div>hello@themidnightmug.com</div>
           <div class="underline-master">
@@ -71,7 +80,7 @@
         </a>
       </div>
     </div>
-    <div class="columns-contact w-row" style="display: flex; justify-content: center; margin-top: 2rem;">
+    <div class="columns-contact w-row" style="margin-top: 2rem;">
       <div class="column-contact-form w-col w-col-6">
         <div class="w-form">
           {% form 'customer', class: 'newsletter-form' %}
