@@ -4,7 +4,7 @@
 {%- render 'navbar' -%}
 
 <style>
-  .w-input[type="text"] {
+  #NewsletterForm--email {
     width: 80%;
     margin: 0;
   }
@@ -21,7 +21,7 @@
       display: none;
     }
 
-    .w-input[type="text"] {
+    #NewsletterForm--email {
       font-size: 20px;
       height: 56px;
     }
@@ -115,7 +115,7 @@
             >
               <div class="field" style="display: flex; align-items: flex-end;">
                 <input
-                  id="NewsletterForm--{{ section.id }}"
+                  id="NewsletterForm--email"
                   type="email"
                   class="input-underline w-input"
                   maxlength="256"
