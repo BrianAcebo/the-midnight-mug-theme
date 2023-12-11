@@ -1,23 +1,41 @@
-<div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="e490a032-bd81-301e-083b-21811b2df363" role="banner" data-duration="400">
-    <div class="navbar-container">
-      <div class="navbar-inside">
-        <a href="{{ routes.root_url }}" aria-current="page" class="brand-link-navbar w-nav-brand w--current"><img src="{{ 'logo-layla-webflow-template.svg' | asset_url }}" loading="lazy" alt="" class="brand-navbar"></a>
-        <nav role="navigation" class="nav-menu w-nav-menu">
-          <a href="{{ pages["home-a"].url }}" class="nav-link w-nav-link">{{ 't2268ff' | t }}</a>
-          <a href="{{ pages["projects-a"].url }}" class="nav-link w-nav-link">{{ 'tn37ac8366' | t }}</a>
-          <a href="{{ pages["about-a"].url }}" class="nav-link w-nav-link">{{ 't3c2336d' | t }}</a>
-          <a href="blog.html" class="nav-link w-nav-link">{{ 't1fa3c2' | t }}</a>
-          <a href="{{ pages["contact"].url }}" class="nav-link w-nav-link">{{ 'tn64104400' | t }}</a>
+<div
+  data-animation="default"
+  class="navbar w-nav"
+  data-easing2="ease"
+  data-easing="ease"
+  data-collapse="medium"
+  data-w-id="e490a032-bd81-301e-083b-21811b2df363"
+  role="banner"
+  data-duration="400"
+>
+  <div class="navbar-container">
+    <div class="navbar-inside">
+      <a
+        href="{{ routes.root_url }}"
+        aria-current="page"
+        class="brand-link-navbar w--current"
+        style="text-decoration: none; font-weight: bold;"
+      >
+        The Midnight Mug
+      </a>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <a href="/" class="nav-link w-nav-link">{{ 't2268ff' | t }}</a>
+        {% comment %} <a href="{{ pages["projects-a"].url }}" class="nav-link w-nav-link">{{ 'tn37ac8366' | t }}</a> {% endcomment %}
+        {% comment %} <a href="{{ pages["about-a"].url }}" class="nav-link w-nav-link">{{ 't3c2336d' | t }}</a> {% endcomment %}
+        {% comment %} <a href="blog.html" class="nav-link w-nav-link">{{ 't1fa3c2' | t }}</a> {% endcomment %}
+        <a href="{{ pages["contact"].url }}" class="nav-link w-nav-link">{{ 'tn64104400' | t }}</a>
+        {% comment %}
           <a href="{{ pages["shop"].url }}" class="nav-link w-nav-link">{{ 't274f16' | t }}</a>
           <a href="/#pages" class="nav-link w-nav-link">{{ 't6732065' | t }}</a>
-          <a href="https://webflow.com/templates/designers/wavesdesign" target="_blank" class="cta small navbar w-button">{{ 'tn472e870c' | t }}</a>
-        </nav>
-        <div class="menu-button w-nav-button">
-          <div class="wrap-menu-button">
-            <div class="line-menu first-line"></div>
-            <div class="line-menu second-line"></div>
-          </div>
+        {% endcomment %}
+        <a href="/" class="cta small navbar w-button">Join</a>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="wrap-menu-button">
+          <div class="line-menu first-line"></div>
+          <div class="line-menu second-line"></div>
         </div>
       </div>
     </div>
   </div>
+</div>
