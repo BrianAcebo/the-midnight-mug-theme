@@ -4,6 +4,10 @@
 {%- render 'navbar' -%}
 
 <style>
+  .columns-contact {
+    margin-top: 50px;
+  }
+  
   #NewsletterForm--email {
     width: 80%;
     margin: 0;
@@ -108,7 +112,7 @@
         </a>
       </div>
     </div>
-    <div class="columns-contact w-row" style="margin-top: 2rem;">
+    <div class="columns-contact w-row">
       <div class="column-contact-form w-col w-col-6">
         <div class="w-form">
           {% form 'customer', class: 'newsletter-form' %}
