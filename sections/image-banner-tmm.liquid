@@ -116,7 +116,7 @@
     </div>
   {%- endif -%}
   <div class="tmm-banner__content tmm-banner__content--{{ section.settings.desktop_content_position }} tmm-page-width{% if settings.animations_reveal_on_scroll %} tmm-scroll-trigger tmm-animate--slide-in{% endif %}">
-    <div class="tmm-banner__box tmm-content-container tmm-content-container--full-width-mobile tmm-color-{{ section.settings.color_scheme }} tmm-gradient">
+    <div class="tmm-banner__box tmm-content-container tmm-content-container--full-width-mobile tmm-color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
