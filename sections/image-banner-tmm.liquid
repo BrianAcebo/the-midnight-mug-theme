@@ -23,28 +23,32 @@
   {%- endstyle -%}
 {%- endif -%}
 
+{%- unless section.settings.full_image_width -%}
+  {%- style -%}
+    @media screen and (min-width: 990px) {
+      #Banner-container-{{ section.id }} {
+        padding-left: 5rem;
+        padding-right: 5rem;
+      }
+    }
+  
+    @media screen and (min-width: 750px) {
+     #Banner-container-{{ section.id }} {
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+      }
+    }
+  
+    #Banner-container-{{ section.id }} {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  {%- endstyle -%}
+{%- endunless -%}
+
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
-  }
-  
-  @media screen and (min-width: 990px) {
-    #Banner-{{ section.id }}.page-width {
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-  }
-
-  @media screen and (min-width: 750px) {
-    #Banner-{{ section.id }}.page-width {
-      padding-left: 3.2rem;
-      padding-right: 3.2rem;
-    }
-  }
-
-  #Banner-{{ section.id }}.page-width {
-    padding-left: 3rem;
-    padding-right: 3rem;
   }
 }
 {%- endstyle -%}
@@ -71,9 +75,12 @@
   endif
 -%}
 
+{%- unless section.settings.full_image_width -%}
+  <div id="Banner-container-{{ section.id }}" class="page-width">
+{%- endunless -%}
 <div
   id="Banner-{{ section.id }}"
-  class="{% unless section.settings.full_image_width %}page-width {% endunless %}banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -185,6 +192,9 @@
     </div>
   </div>
 </div>
+{%- unless section.settings.full_image_width -%}
+  </div>
+{%- endunless -%}
 
 {% schema %}
 {
