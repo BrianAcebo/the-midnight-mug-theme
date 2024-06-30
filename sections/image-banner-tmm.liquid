@@ -1,13 +1,13 @@
 {{ 'section-image-banner-tmm.css' | asset_url | stylesheet_tag }}
 
-<section class="hero">
-    <h1>Discover a World of Books at Our Online Ebook Store</h1>
+<section class="tmm-hero">
+    <{{ section.settings.heading_tag }}>Discover a World of Books at Our Online Ebook Store</{{ section.settings.heading_tag }}>
     <p>Browse our extensive collection of eBooks and find your next great read.</p>
-    <div class="buttons">
+    <div class="tmm-buttons">
         <button>Explore</button>
         <button>Learn More</button>
     </div>
-    <div class="hero-image"></div>
+    <div class="tmm-hero-image tmm-placeholder"></div>
 </section>
 
 {% schema %}
@@ -236,6 +236,34 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            }
+          ],
+          "default": "h2",
+          "label": "Heading Element"
         }
       ]
     },
