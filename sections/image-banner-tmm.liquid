@@ -30,9 +30,22 @@
   
   @media screen and (min-width: 990px) {
     #Banner-{{ section.id }}.page-width {
-        padding-left: 5rem;
-        padding-right: 5rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
+  }
+
+  @media screen and (min-width: 750px) {
+    #Banner-{{ section.id }}.page-width {
+      padding-left: 3.2rem;
+      padding-right: 3.2rem;
+    }
+  }
+
+  #Banner-{{ section.id }}.page-width {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 {%- endstyle -%}
 
