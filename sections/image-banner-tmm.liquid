@@ -3,9 +3,9 @@
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
-      #Banner-{{ section.id }}::before,
-      #Banner-{{ section.id }} .banner__media::before,
-      #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+      #tmm-Banner-{{ section.id }}::before,
+      #tmm-Banner-{{ section.id }} .tmm-banner__media::before,
+      #tmm-Banner-{{ section.id }}:not(.tmm-banner--mobile-bottom) .tmm-banner__content::before {
         padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
@@ -13,8 +13,8 @@
     }
 
     @media screen and (min-width: 750px) {
-      #Banner-{{ section.id }}::before,
-      #Banner-{{ section.id }} .banner__media::before {
+      #tmm-Banner-{{ section.id }}::before,
+      #tmm-Banner-{{ section.id }} .tmm-banner__media::before {
         padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
@@ -24,7 +24,7 @@
 {%- endif -%}
 
 {%- style -%}
-  #Banner-{{ section.id }}::after {
+  #tmm-Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
 {%- endstyle -%}
@@ -52,15 +52,15 @@
 -%}
 
 <div
-  id="Banner-{{ section.id }}"
-  class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  id="tmm-Banner-{{ section.id }}"
+  class="tmm-banner tmm-banner--content-align-{{ section.settings.desktop_content_alignment }} tmm-banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} tmm-banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} tmm-banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} tmm-banner--adapt{% endif %}{% if section.settings.show_text_below %} tmm-banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} tmm-banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} tmm-scroll-trigger tmm-animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="tmm-banner__media tmm-media{% if section.settings.image == blank and section.settings.image_2 == blank %} tmm-placeholder{% endif %}{% if section.settings.image_2 != blank %} tmm-banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} tmm-animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} tmm-scroll-trigger tmm-animate--fade-in{% endif %}">
       {%- liquid
         assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
         if section.settings.image_2 != blank
-          assign image_class = 'banner__media-image-half'
+          assign image_class = 'tmm-banner__media-image-half'
         endif
         if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
           assign sizes = stacked_sizes
@@ -83,16 +83,16 @@
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+    <div class="tmm-banner__media tmm-media{% if section.settings.image == blank and section.settings.image_2 == blank %} tmm-placeholder{% endif %}{% if section.settings.image_2 != blank %} tmm-banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} tmm-animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} tmm-scroll-trigger tmm-animate--fade-in{% endif %}">
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'tmm-placeholder-svg' }}
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="tmm-banner__media tmm-media{% if section.settings.image != blank %} tmm-banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} tmm-animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} tmm-scroll-trigger tmm-animate--fade-in{% endif %}">
       {%- liquid
         assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio
         if section.settings.image != blank
-          assign image_class_2 = 'banner__media-image-half'
+          assign image_class_2 = 'tmm-banner__media-image-half'
         endif
         if section.settings.image != blank and section.settings.stack_images_on_mobile
           assign sizes = stacked_sizes
@@ -115,24 +115,24 @@
       }}
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+  <div class="tmm-banner__content tmm-banner__content--{{ section.settings.desktop_content_position }} tmm-page-width{% if settings.animations_reveal_on_scroll %} tmm-scroll-trigger tmm-animate--slide-in{% endif %}">
+    <div class="tmm-banner__box tmm-content-container tmm-content-container--full-width-mobile tmm-color-{{ section.settings.color_scheme }} tmm-gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
-              class="banner__heading inline-richtext {{ block.settings.heading_size }}"
+              class="tmm-banner__heading tmm-inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
             </h2>
           {%- when 'text' -%}
-            <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+            <div class="tmm-banner__text tmm-rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
           {%- when 'buttons' -%}
             <div
-              class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
+              class="tmm-banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} tmm-banner__buttons--multiple{% endif %}"
               {{ block.shopify_attributes }}
             >
               {%- if block.settings.button_label_1 != blank -%}
@@ -142,7 +142,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="tmm-button{% if block.settings.button_style_secondary_1 %} tmm-button--secondary{% else %} tmm-button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -152,9 +152,9 @@
                   {% if block.settings.button_link_2 == blank %}
                     role="link" aria-disabled="true"
                   {% else %}
-                    href="{{ block.settings.button_link_2 }}"
+                    href="{{ block.settings.button_link_2 }}
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="tmm-button{% if block.settings.button_style_secondary_2 %} tmm-button--secondary{% else %} tmm-button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
@@ -170,7 +170,7 @@
 {
   "name": "t:sections.image-banner.name",
   "tag": "section",
-  "class": "section",
+  "class": "tmm-section",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
