@@ -251,12 +251,9 @@
   </div>
 {%- endunless -%}
 
-{%- assign section_preset_name = "t:sections.image-banner.name" | append: ' - TMM' -%}
-{%- assign section_preset_name = section_preset_name | append: ' - TMM' -%}
-
 {% schema %}
 {
-  "name": "{{ section_preset_name }}",
+  "name": "t:sections.image-banner.name",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -632,7 +629,7 @@
   ],
   "presets": [
     {
-      "name": "t:sections.image-banner.presets.name - TMM",
+      "name": "t:sections.image-banner.presets.name",
       "blocks": [
         {
           "type": "heading"
