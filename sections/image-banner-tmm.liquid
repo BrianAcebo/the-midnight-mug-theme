@@ -1,13 +1,28 @@
 {{ 'section-image-banner-tmm.css' | asset_url | stylesheet_tag }}
 
 <section class="tmm-hero">
-    <{{ section.settings.heading_tag }}>Discover a World of Books at Our Online Ebook Store</{{ section.settings.heading_tag }}>
-    <p>Browse our extensive collection of eBooks and find your next great read.</p>
-    <div class="tmm-buttons">
-        <button>Explore</button>
-        <button>Learn More</button>
-    </div>
-    <div class="tmm-hero-image tmm-placeholder"></div>
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'heading' -%}
+        <{{ section.settings.heading_tag }} class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+          {{- block.settings.heading -}}
+        </{{ section.settings.heading_tag }}>
+      {%- when 'text' -%}
+        <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {%- when 'buttons' -%}
+        <div class="tmm-buttons" {{ block.shopify_attributes }}>
+          {%- if block.settings.button_label_1 != blank -%}
+            <button>{{- block.settings.button_label_1 -}}</button>
+          {%- endif -%}
+          {%- if block.settings.button_label_2 != blank -%}
+            <button>{{- block.settings.button_label_2 -}}</button>
+          {%- endif -%}
+        </div>
+      <div class="tmm-hero-image tmm-placeholder"></div>
+    {%- endcase -%}
+  {%- endfor -%}
 </section>
 
 {% schema %}
