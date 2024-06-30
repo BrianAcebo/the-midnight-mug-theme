@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.tmm-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tmm-header-container .tmm-logo img {
+    height: 40px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.tmm-sign-up {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tmm-hero {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.tmm-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tmm-hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.tmm-hero .tmm-buttons button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tmm-hero .tmm-hero-image {
+    background-color: #cccccc;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.tmm-why-choose-us {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tmm-why-choose-us h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tmm-why-choose-us p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.tmm-features {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.tmm-feature {
+    text-align: center;
+    width: 30%;
+}
+
+.tmm-feature .tmm-feature-image {
+    background-color: #cccccc;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.tmm-feature h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.tmm-feature-buttons button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tmm-featured-ebooks {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tmm-featured-ebooks h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tmm-featured-ebooks p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.tmm-featured-books {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.tmm-book {
+    text-align: center;
+    width: 45%;
+}
+
+.tmm-book h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.tmm-book button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tmm-featured-image {
+    background-color: #cccccc;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.tmm-digital-reading {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tmm-digital-reading h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tmm-digital-reading p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.tmm-digital-reading ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.tmm-digital-reading ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.tmm-newsletter {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tmm-newsletter h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tmm-newsletter p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.tmm-newsletter .tmm-buttons button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.tmm-newsletter .tmm-newsletter-image {
+    background-color: #cccccc;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.tmm-testimonials {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tmm-testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tmm-reviews {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.tmm-review {
+    text-align: center;
+    width: 45%;
+}
+
+.tmm-review p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.tmm-reviewer-info p {
+    font-size: 1em;
+    color: #777;
+}
+
+.tmm-faq {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tmm-faq h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.tmm-faq p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.tmm-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tmm-question {
+    background-color: #f4f4f4;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.tmm-question h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.tmm-question p {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.tmm-faq button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.tmm-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tmm-footer-logo img {
+    height: 40px;
+}
+
+.tmm-footer-info p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.tmm-footer-links ul {
+    list-style: none;
+}
+
+.tmm-footer-links ul li {
+    margin: 5px 0;
+}
+
+.tmm-footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.tmm-footer-social a img {
+    height: 20px;
+    margin: 0 10px;
+}
+
+.tmm-footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tmm-footer-bottom p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.tmm-footer-bottom p a {
+    color: #777;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.tmm-placeholder {
+    background-color: #cccccc;
+}
