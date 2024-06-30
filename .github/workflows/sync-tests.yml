@@ -1,0 +1,28 @@
+name: Sync test branches
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    name: Syncing branches
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install action dependencies
+        run: |
+          cd .github/actions/test-action
+          npm ci
+      - name: Merge to test branches
+        uses: ./.github/actions/test-action
+        with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          SOURCE_BRANCH: "main"
+          TARGET_BRANCH_STARTS_WITH: "test/"

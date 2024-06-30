@@ -45,13 +45,15 @@
     assign half_width = '50vw'
     assign stacked_sizes = '(min-width: 750px) 50vw, 100vw'
   endif
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
 -%}
-
-{%- assign product_form_id = 'product-form-' | append: section.id -%}
 
 <div
   id="Banner-{{ section.id }}"
-  class="image-banner-hero {% if template.name == 'index' %}home-hero {% endif %}banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -72,12 +74,12 @@
         section.settings.image
         | image_url: width: 3840
         | image_tag:
-          loading: 'lazy',
           width: section.settings.image.width,
           height: image_height,
           class: image_class,
           sizes: sizes,
-          widths: widths
+          widths: widths,
+          fetchpriority: fetch_priority
       }}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
@@ -104,12 +106,12 @@
         section.settings.image_2
         | image_url: width: 3840
         | image_tag:
-          loading: 'lazy',
           width: section.settings.image_2.width,
           height: image_height_2,
           class: image_class_2,
           sizes: sizes,
-          widths: widths
+          widths: widths,
+          fetchpriority: fetch_priority
       }}
     </div>
   {%- endif -%}
@@ -128,16 +130,6 @@
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
-          {% when 'product' %}
-            {%- render 'buy-buttons',
-              block: block,
-              product: block.settings.quick_add_product,
-              product_form_id: product_form_id,
-              section_id: section.id,
-              image_banner: true,
-              secondary_button_label: block.settings.quick_add_button_label,
-              secondary_button_link: block.settings.quick_add_button_link
-            -%}
           {%- when 'buttons' -%}
             <div
               class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
@@ -173,18 +165,6 @@
     </div>
   </div>
 </div>
-
-{% if page.handle == 'ultimate-shopify-ebook' %}
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      if (window.innerWidth <= 750) {
-        const imageBanner = document.getElementsByClassName('image-banner-hero')[0];
-        imageBanner.style.display = "none";
-      }
-    });
-  </script>
-{% endif %}
-
 
 {% schema %}
 {
@@ -314,7 +294,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "background-1"
+      "default": "scheme-1"
     },
     {
       "type": "header",
@@ -445,29 +425,6 @@
           ],
           "default": "body",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
-        }
-      ]
-    },
-    {
-      "type": "product",
-      "name": "Quick add product",
-      "settings": [
-        {
-          "type": "product",
-          "id": "quick_add_product",
-          "label": "Quick add product"
-        },
-        {
-          "type": "text",
-          "id": "quick_add_button_label",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
-        },
-        {
-          "type": "url",
-          "id": "quick_add_button_link",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
         }
       ]
     },

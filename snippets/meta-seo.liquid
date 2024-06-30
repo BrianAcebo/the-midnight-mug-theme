@@ -1,0 +1,174 @@
+{% comment %}
+  *** ON THIS PAGE ***
+
+  1. Canonical urls
+  2. Social meta tags
+  3. Page title and description
+{% endcomment %}
+
+{% comment %}
+  *** CANONICAL URLS ***
+{% endcomment %}
+
+{% liquid
+  comment
+    canon_urls works as key:value pairs
+    copy_url:og_url
+
+    Think of it like
+    bad_unwanted_url:good_wanted_url
+
+    Tells Google that a particular page is a copy of the original page
+    and references the original page’s URL.
+  endcomment
+%}
+
+{% capture canon_urls %}
+{% endcapture %}
+
+{% comment %}
+  Url's to add a noindex meta tag
+{% endcomment %}
+{% capture no_index_url_paths %}
+  /pages/thank-you,
+  /search
+{% endcapture %}
+
+{% liquid
+  assign canon_urls = canon_urls | split: ','
+
+  # For each of the strings above, split apart the two urls
+  # Then, if the user is on one of the above copy urls output a new canon url
+  for url in canon_urls
+    assign copy_url = url | split: ':' | first | strip
+    assign og_url = url | split: ':' | last | strip
+    assign path = request.path | strip
+
+    if path == copy_url
+      assign has_canonical_tag = true
+
+      assign complete_url = "<link rel='canonical' href='" | append: shop.url | append: og_url | append: "'>"
+      echo complete_url
+    endif
+  endfor
+
+  # If not a custom canonical url, output a collection canon url
+  # or just the regular shaopify made canon url
+  unless has_canonical_tag
+    if template.name == 'collection'
+      assign complete_url = "<link rel='canonical' href='" | append: shop.url | append: collection.url | append: "'>"
+    else
+      assign complete_url = "<link rel='canonical' href='" | append: canonical_url | append: "'>"
+    endif
+    echo complete_url
+  endunless
+
+  # Tell Google not to index/follow these specific pages
+  assign no_index_url_paths = no_index_url_paths | split: ','
+  for path in no_index_url_paths
+    assign path = path | strip
+    assign request_path = request.path | strip
+
+    # Strip sometimes didn't remove extra whitespace from capture so used 'contains' rather than '=='
+    if request_path != '/' and path contains request_path
+      echo '<meta name="robots" content="noindex, nofollow">'
+      break
+    endif
+  endfor
+%}
+
+{% comment %}
+  *** SOCIAL META TAGS ***
+{% endcomment %}
+
+{% liquid
+  # Defaults
+  assign open_graph_title = page_title
+  assign open_graph_url = canonical_url
+  assign open_graph_type = 'website'
+  assign open_graph_description = page_description | default: shop.description | default: shop.name
+
+  # List collections
+  if template.name == 'list-collections'
+    assign open_graph_description = "Build your business and grow your online store with valuable insights on optimizing your storefront, platform tips and tricks, and much more made by seasoned Shopify developers!"
+
+    # Product
+  elsif template.name == 'product'
+    assign open_graph_title = product.title | strip_html
+    assign open_graph_type = 'product'
+
+    assign product_price = product.price  | money_without_currency | strip_html
+    echo '<meta property="og:price:amount" content="' | append: product_price | append: '">'
+    echo '<meta property="og:price:currency" content="' | append: shop.currency | append: '">'
+
+    for image in product.images limit: 3
+      assign image_src = image.src | image_url: width: '1024'
+      echo '<meta property="og:image" content="http:' | append: image_src | append: '">'
+      echo '<meta property="og:image:secure_url" content="https:' | append: image_src | append: '">'
+    endfor
+
+    # Article
+  elsif template.name == 'article'
+    assign open_graph_title = article.title | strip_html
+    assign open_graph_type = 'article'
+    assign open_graph_description = article.excerpt_or_content | strip_html
+
+    if article_image
+      assign image_src = article.image | image_url: width: '1024'
+      echo '<meta property="og:image" content="http:' | append: image_src | append: '">'
+      echo '<meta property="og:image:secure_url" content="http:' | append: image_src | append: '">'
+    endif
+
+    # Password
+  elsif template.name == 'password'
+    assign open_graph_title = shop.name
+    assign open_graph_url = shop.url
+    assign open_graph_description = shop.description | default: shop.name
+  endif
+%}
+
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:url" content="{{ open_graph_url }}">
+<meta property="og:title" content="{{ open_graph_title }}">
+<meta property="og:type" content="{{ open_graph_type }}">
+<meta property="og:description" content="{{ open_graph_description }}">
+
+<meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ open_graph_title }}">
+<meta name="twitter:description" content="{{ open_graph_description }}">
+
+{% comment %}
+  *** PAGE TITLE AND DESCRIPTION ***
+{% endcomment %}
+
+{% liquid
+  # Description
+  if template.name == 'list-collections'
+    assign description = "Build your business and grow your online store with valuable insights on optimizing your storefront, platform tips and tricks, and much more made by seasoned Shopify developers!"
+  else
+    assign description = page_description | escape
+  endif
+
+  echo '<meta name="description" content="' | append: description | append: '">'
+
+  # Title
+  if blog != blank and article == blank
+    assign title = 'Blogs & Articles'
+  else
+    assign title = page_title
+  endif
+
+  if current_tags
+    assign meta_tags = current_tags | join: ', '
+    assign title = title | append: ' - ' | append: 'Tags (' | append: meta_tags | append: ')'
+  endif
+
+  if current_page != 1
+    assign title = title | append: ' - ' | append: 'Page ' | append: current_page
+  endif
+
+  assign title = title | append: ' | ' | append: shop.name
+
+  echo '<title>' | append: title | append: '</title>'
+%}

@@ -1,0 +1,163 @@
+AssetPreload:
+  enabled: true
+  severity: suggestion
+
+AssetSizeCSS:
+  enabled: true
+  severity: suggestion
+  threshold_in_bytes: 100000
+
+AssetSizeJavaScript:
+  enabled: false
+  severity: suggestion
+  threshold_in_bytes: 10000
+
+HtmlParsingError:
+  enabled: true
+  severity: error
+
+ImgLazyLoading:
+  enabled: true
+  severity: suggestion
+
+ImgWidthAndHeight:
+  enabled: true
+  severity: style
+
+ParserBlockingJavaScript:
+  enabled: true
+  severity: error
+
+RemoteAsset:
+  enabled: true
+  severity: suggestion
+
+ValidJson:
+  enabled: true
+  severity: error
+
+ValidSchema:
+  enabled: true
+  severity: error
+
+ValidHTMLTranslation:
+  enabled: true
+  severity: error
+
+AppBlockValidTags:
+  enabled: false
+
+AssetSizeCSSStylesheetTag:
+  enabled: true
+  severity: suggestion
+  threshold_in_bytes: 100000
+
+AssetUrlFilters:
+  enabled: true
+  severity: error
+
+ContentForHeaderModification:
+  enabled: true
+  severity: error
+
+ConvertIncludeToRender:
+  enabled: true
+  severity: error
+
+DeprecatedFilter:
+  enabled: true
+  severity: error
+
+DeprecatedGlobalAppBlockType:
+  enabled: true
+  severity: error
+
+LiquidTag:
+  enabled: true
+  severity: style
+  min_consecutive_statements: 4
+
+MissingEnableComment:
+  enabled: true
+  severity: error
+
+MissingRequiredTemplateFiles:
+  enabled: true
+  severity: error
+
+MissingTemplate:
+  enabled: true
+  severity: error
+
+NestedSnippet:
+  enabled: false
+
+ParserBlockingScriptTag:
+  enabled: true
+  severity: error
+
+RequiredDirectories:
+  enabled: true
+  severity: error
+
+RequiredLayoutThemeObject:
+  enabled: true
+  severity: error
+
+SchemaJsonFormat:
+  enabled: true
+  severity: style
+
+SpaceInsideBraces:
+  enabled: true
+  severity: style
+
+SyntaxError:
+  enabled: true
+  severity: error
+
+TemplateLength:
+  enabled: true
+  max_length: 600
+  severity: style
+  exclude_schema: true
+  exclude_stylesheet: true
+  exclude_javascript: true
+
+UndefinedObject:
+  enabled: true
+  severity: error
+
+UnknownFilter:
+  enabled: true
+  severity: error
+
+UnusedAssign:
+  enabled: true
+  severity: error
+
+UnusedSnippet:
+  enabled: true
+  severity: suggestion
+
+AssetSizeAppBlockCSS:
+  enabled: false
+
+AssetSizeAppBlockJavascript:
+  enabled: false
+
+DefaultLocale:
+  enabled: true
+  severity: suggestion
+
+MatchingSchemaTranslations:
+  enabled: true
+  severity: suggestion
+
+MatchingTranslations:
+  enabled: true
+  severity: suggestion
+
+TranslationKeyExists:
+  enabled: true
+  severity: error

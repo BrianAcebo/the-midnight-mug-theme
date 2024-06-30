@@ -1,0 +1,37 @@
+{
+  "cSpell.words": ["endcapture", "endcomment", "endform", "endunless", "Loungewear", "yotpo", "stylesheet"],
+  "themeCheck.checkOnChange": true,
+  "themeCheck.checkOnOpen": true,
+  "themeCheck.checkOnSave": true,
+  "themeCheck.onlySingleFileChecks": true,
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
+  "prettier.semi": true,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "es5",
+  "prettier.useTabs": false,
+  "prettier.printWidth": 120,
+  "prettier.enable": true,
+  "[liquid]": {
+    "editor.defaultFormatter": "Shopify.theme-check-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "liquid.format.enable": true
+}

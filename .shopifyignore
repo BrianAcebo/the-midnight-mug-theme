@@ -1,0 +1,17 @@
+.gitattributes
+.gitignore
+
+package-lock.json
+package.json
+postcss.config.js
+README.md
+tailwind.config.js
+tw-input.css
+tailwind-input-deprecated.css
+tailwind-input.css
+
+.git/
+.github/
+.vscode/
+node_modules/
+documentation/

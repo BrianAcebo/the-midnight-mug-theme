@@ -1,0 +1,26 @@
+name: Send Release Event to Noibu
+
+on:
+ push:
+  branches:
+   - main
+jobs:
+ post-noibu-events-webhook:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v4
+  - name: Set Current Time
+    run: echo "CURRENT_TIME=$(date -u +'%Y-%m-%d %H:%M:%S+00:00')" >> $GITHUB_ENV
+  - name: Make POST request to Noibu Webhook URL
+    run: |
+     curl -X POST "https://webhook.noibu.com/release_webhook/679dd55e-7882-43e3-80a6-9ec2e9ee615e" \
+     -H "Content-Type: application/json" \
+     -d '{
+      "component":"na",
+      "title":"na",
+      "description":"na",
+      "status":"success",
+      "version":"'"$GITHUB_SHA"'",
+      "release_time":"'"$CURRENT_TIME"'"
+     }'
