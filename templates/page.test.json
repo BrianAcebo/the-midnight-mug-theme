@@ -9,15 +9,13 @@
 */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "image-banner-tmm": {
+      "type": "image-banner-tmm",
       "settings": {
-        "padding_top": 100,
-        "padding_bottom": 100
       }
     }
   },
   "order": [
-    "main"
+    "image-banner-tmm"
   ]
 }
