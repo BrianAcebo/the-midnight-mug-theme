@@ -111,7 +111,7 @@
     </div>
   {%- elsif section.settings.image_2 == blank -%}
     <div class="tmm-banner__media tmm-media{% if section.settings.image == blank and section.settings.image_2 == blank %} tmm-placeholder{% endif %}{% if section.settings.image_2 != blank %} tmm-banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} tmm-animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} tmm-scroll-trigger tmm-animate--fade-in{% endif %}">
-      {{ 'hero-apparel-1' | placeholder_svg_tag: 'tmm-placeholder-svg' }}
+      {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
