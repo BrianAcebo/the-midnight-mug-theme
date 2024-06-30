@@ -214,7 +214,7 @@
 }
 
 .tmm-banner--adapt,
-.tmm-banner--adapt_image.tmm-banner--mobile-bottom .tmm-banner__media:not(.tmm-placeholder) {
+.tmm-banner--adapt_image.tmm-banner--mobile-bottom .tmm-banner__media:not(.placeholder) {
   height: auto;
 }
 
