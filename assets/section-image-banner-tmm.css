@@ -441,6 +441,7 @@
   margin-bottom: 0;
   visibility: visibile;
   opacity: 1;
+  transition: ease-in all 0.3s;
 }
 
 .tmm-banner__heading.heading-invisible {
