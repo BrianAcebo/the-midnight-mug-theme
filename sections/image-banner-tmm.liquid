@@ -102,10 +102,10 @@
             {%- case block.type -%}
               {%- when 'heading' -%}
                 <{{ block.settings.heading_tag }}
-                  class="tmm-banner__heading tmm-inline-richtext {{ block.settings.heading_size }} tmm-fadeInUp"
+                  class="tmm-banner__heading tmm-inline-richtext {{ block.settings.heading_size }}"
                   {{ block.shopify_attributes }}
                 >
-                  {{- block.settings.heading -}}
+                  <span class="tmm-fadeInUp">{{- block.settings.heading -}}</span>
                 </{{ block.settings.heading_tag }}>
 
                 {%- if block.settings.heading_2 != blank or block.settings.heading_3 != blank -%}
@@ -126,10 +126,11 @@
                         headingCopyIndex =
                               headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
 
-                        const currentHeading = document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading");
+                        const currentHeading = document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading > span");
                         const currentHeadingClone = currentHeading.cloneNode(true);
                         currentHeadingClone.classList.add('heading-invisible');
                         currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
+                        document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
 
                         currentHeading.classList.add('tmm-fadeUpOut');
                         currentHeadingClone.classList.remove('heading-invisible');
