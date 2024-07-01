@@ -42,12 +42,7 @@
 {%- endstyle -%}
 
 {%- unless section.settings.full_image_width -%}
-  {%- style -%}  
-    #tm-Banner-container-{{ section.id }} {
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
-
+  {%- style -%}
     @media screen and (min-width: 750px) {
      #tm-Banner-container-{{ section.id }} {
         padding-left: 3.2rem;
