@@ -16,8 +16,8 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner one",
-            "heading_2": "Image banner two",
-            "heading_3": "Image banner three",
+            "heading_2": "",
+            "heading_3": "",
             "heading_size": "h0",
             "heading_tag": "h1"
           }
