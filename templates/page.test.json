@@ -51,7 +51,7 @@
         "content_placement": "outside",
         "desktop_content_position": "middle-left",
         "show_text_box": true,
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
