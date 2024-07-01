@@ -12,6 +12,16 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .tmm-breadcrumbs ul {
+    gap: {{ section.settings.text_spacing }}px;
+    align-items: center;
+    justify-content: {{ section.settings.text_alignment }};
+  }
+
+  .tmm-breadcrumbs.capitalize ul li a {
+    text-transform: {{ section.settings.text_transformation }};
+  }
 {%- endstyle -%}
 
 {%- assign t = template | split: '.' | first -%}
@@ -151,6 +161,88 @@
   {
     "name": "Breadcrumbs",
     "settings": [
+      {
+        "type": "select",
+        "id": "text_decoration",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "overline",
+            "label": "Overline"
+          },
+          {
+            "value": "underline",
+            "label": "Underline"
+          },
+          {
+            "value": "strike",
+            "label": "Line-through"
+          },
+          {
+            "value": "over_under",
+            "label": "Overline-underline"
+          }
+        ],
+        "default": "none",
+        "label": "Text decoration"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "options": [
+          {
+            "value": "start",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "center"
+          },
+          {
+            "value": "end",
+            "label": "Right"
+          }
+        ],
+        "default": "start",
+        "label": "Text alignment"
+      },
+      {
+        "type": "select",
+        "id": "text_transformation",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "uppercase",
+            "label": "Uppercase"
+          },
+          {
+            "value": "lowercase",
+            "label": "Lowercase"
+          },
+          {
+            "value": "capitalize",
+            "label": "Capitalize"
+          }
+        ],
+        "default": "none",
+        "label": "Text transform"
+      },
+      {
+        "type": "range",
+        "id": "text_spacing",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text spacing",
+        "default": 18
+      },
       {
         "type": "header",
         "content": "t:sections.all.padding.section_padding_heading"
