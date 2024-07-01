@@ -15,7 +15,9 @@
         "heading_9zihjk": {
           "type": "heading",
           "settings": {
-            "heading": "Discover a World of Books at Our Online Ebook Store",
+            "heading": "Image banner one",
+            "heading_2": "Image banner two",
+            "heading_3": "Image banner three",
             "heading_size": "h0",
             "heading_tag": "h1"
           }
