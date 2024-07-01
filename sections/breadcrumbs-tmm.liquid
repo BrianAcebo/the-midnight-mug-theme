@@ -35,7 +35,7 @@
   }
 
   .tmm-breadcrumbs ul svg.caption-with-letter-spacing {
-    height: calc(1 + .2 / var(--font-body-scale))px;
+    height: calc(1 + .2 / var(--font-body-scale));
   }
 {%- endstyle -%}
 
@@ -43,9 +43,7 @@
 
 {%- capture chevron_right_svg_element -%}
   <svg 
-    class="{{ section.settings.text_style }}" 
-    width="8px"
-    height="12px"
+    class="{{ section.settings.text_style }}"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 8 12" 
     fill="none"
