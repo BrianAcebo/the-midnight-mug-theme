@@ -277,7 +277,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .tmm-banner__content {
+  .tmm-banner__content:not(.tmm-banner__content-outside) {
     padding: 5rem;
   }
 
@@ -338,7 +338,7 @@
   }
 }
 
-.tmm-banner__box:not(.tmm-banner__outside) {
+.tmm-banner__box:not(.tmm-banner__box-outside) {
   padding: 4rem 1.5rem;
   position: relative;
   height: fit-content;
@@ -349,16 +349,16 @@
   z-index: 1;
 }
 
-.tmm-banner--mobile-bottom .tmm-banner__box:not(.tmm-banner__outside) {
+.tmm-banner--mobile-bottom .tmm-banner__box:not(.tmm-banner__box-outside) {
   padding: 4rem 3.5rem;
 }
 
 @media screen and (min-width: 750px) {
-  .tmm-banner__box:not(.tmm-banner__outside) {
+  .tmm-banner__box:not(.tmm-banner__box-outside) {
     padding: 4rem 3.5rem;
   }
 
-  .tmm-banner--desktop-transparent .tmm-banner__box:not(.tmm-banner__outside) {
+  .tmm-banner--desktop-transparent .tmm-banner__box:not(.tmm-banner__box-outside) {
     padding: 4rem 0;
     background: transparent;
     max-width: 89rem;
