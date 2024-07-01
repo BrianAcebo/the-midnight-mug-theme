@@ -26,125 +26,94 @@
 
 {%- assign template_type = template | split: '.' | first -%}
 
+{%- capture chevron_right_svg_element -%}
+  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+    <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+  </svg>
+{%- endcapture -%}
+
 <nav 
   class="tmm-breadcrumbs page-width section-{{ section.id }}-padding" 
   role="navigation" 
   aria-label="breadcrumbs"
 >
   <ul>
-    <li>
-      <a href="/" title="Home">Home</a>
-    </li>
+    {%- if section.settings.show_base_link -%}
+      <li>
+        <a href="{%- if section.settings.base_link != blank -%}{{ section.settings.base_link.url }}{%- else -%}/{%- endif -%}" title="Home">{{- section.settings.base_label -}}</a>
+      </li>
+  
+      {{- chevron_right_svg_element -}}
+    {%- endif -%}
 
     {%- case template_type -%}
       {%- when 'page' -%}
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
     
         <li>
           <a href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
         </li>
-
-      {{- page.title | link_to: page.url -}}
       
       {%- when 'product' -%}
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
-    
-        <li>
-          <a href="/collections/all" aria-current="shop">Shop All</a>
-        </li>
-  
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
+        {%- if section.settings.show_base_link -%}
+          <li>
+            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_link_label -}}</a>
+          </li>
+
+          {{- chevron_right_svg_element -}}
+        {%- endif -%}
     
         <li>
           <a href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
         </li>
     
       {%- when 'collection' -%}
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
-  
+        {%- if section.settings.show_base_link -%}
+          <li>
+            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_link_label -}}</a>
+          </li>
+
+          {{- chevron_right_svg_element -}}
+        {%- endif -%}
+
         <li>
-          <a href="/collections/all" aria-current="shop">Shop All</a>
+          <a href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
         </li>
     
         {%- if current_tags -%}
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
-          </svg>
-          
-          <li>
-            <a href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
-          </li>
-  
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-          </svg>
+          {{- chevron_right_svg_element -}}
   
           <li>
             {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
             <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
           </li>
-        {%- else -%}
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-          </svg>
-  
-          <li>
-            <a href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
-          </li>
         {%- endif -%}
     
       {%- when 'blog' -%}
+        <li>
+          <a href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+        </li>
+      
         {%- if current_tags -%}
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-          </svg>
-  
-          <li>{{- blog.title | link_to: blog.url -}}</li>
-  
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none"> <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> </svg>
+          {{- chevron_right_svg_element -}}
   
           <li>
-            {% capture tag_url %}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
+            {% capture tag_url %}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
             <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
-          </li>
-        {%- else -%}
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-          </svg>
-  
-          <li>
-            <a href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
           </li>
         {%- endif -%}
     
       {%- when 'article' -%}
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
-        </svg>
+        <li>
+          <a href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+        </li>
   
-        <li>{{- blog.title | link_to: blog.url -}}</li>
-  
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
-        </svg>
+        {{- chevron_right_svg_element -}}
   
         <li>
           <a href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
         </li>
   
     {%- else -%}
-      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-      </svg>
-  
       <li aria-current="page">
         <a href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
       </li>
@@ -237,6 +206,42 @@
         "unit": "px",
         "label": "Text spacing",
         "default": 18
+      },
+      {
+        "type": "text",
+        "id": "base_label",
+        "default": "Home",
+        "label": "Label for beginning link (i.e. 'Home')",
+        "info": "This is the beginning link of the breadcrumbs. For example, this would be Home > Page Title"
+      },
+      {
+        "type": "url",
+        "id": "base_link",
+        "label": "Url for beginning link"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_base_link",
+        "default": true,
+        "label": "Show beginning link"
+      },
+      {
+        "type": "text",
+        "id": "shopping_label",
+        "default": "Shop all",
+        "label": "Label for beginning link of shopping links (i.e. 'Shop all')",
+        "info": "This is the beginning link for products and collections. For example, this would be Shop All > Product Title"
+      },
+      {
+        "type": "url",
+        "id": "shopping_link",
+        "label": "Url for shopping link"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_shopping_link",
+        "default": true,
+        "label": "Show shopping link"
       },
       {
         "type": "header",
