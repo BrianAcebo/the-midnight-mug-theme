@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ 'breadcrumbs.scss.css' | asset_url }}">
+{{ 'breadcrumbs-tmm.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -174,6 +174,11 @@
         "unit": "px",
         "label": "t:sections.all.padding.padding_bottom",
         "default": 36
+      }
+    ],
+    "presets": [
+      {
+        "name": "Breadcrumbs"
       }
     ]
   }
