@@ -439,6 +439,13 @@
 
 .tmm-banner__heading {
   margin-bottom: 0;
+  visibility: visibile;
+  opacity: 1;
+}
+
+.tmm-banner__heading.heading-invisible {
+  visibility: invisible;
+  opacity: 0;
 }
 
 .tmm-banner__box .tmm-banner__heading + * {
@@ -492,5 +499,21 @@
   .tmm-banner--desktop-transparent .tmm-inline-richtext a:hover,
   .tmm-banner--desktop-transparent .tmm-rte a:hover {
     color: currentColor;
+  }
+}
+
+.tmm-fadeInUp { 
+  animation: tmm-fadeInUp 1s ease backwards;
+}
+
+@keyframes tmm-fadeInUp {
+  0% {
+    transform: translate(0px, 100px); 
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translate(0px, 0); 
+    opacity: 1;
   }
 }
