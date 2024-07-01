@@ -354,7 +354,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .tmm-banner__box {
+  .tmm-banner__box:not(.tmm-banner__outside) {
     padding: 4rem 3.5rem;
   }
 
