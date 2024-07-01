@@ -33,12 +33,23 @@
     text-decoration: {{ section.settings.text_decoration }};
     color: {{ section.settings.link_color }};
   }
+
+  .tmm-breadcrumbs ul svg.caption-with-letter-spacing {
+    height: calc(1 + .2 / var(--font-body-scale))
+  }
 {%- endstyle -%}
 
 {%- assign template_type = template | split: '.' | first -%}
 
 {%- capture chevron_right_svg_element -%}
-  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+  <svg 
+    class="{{ section.settings.text_style }}" 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="8" 
+    height="12" 
+    viewBox="0 0 8 12" 
+    fill="none"
+  >
     <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
   </svg>
 {%- endcapture -%}
