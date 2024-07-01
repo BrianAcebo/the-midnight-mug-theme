@@ -41,24 +41,6 @@
   }
 {%- endstyle -%}
 
-{%- unless section.settings.full_image_width -%}
-  {%- style -%}
-    @media screen and (min-width: 750px) {
-     #tm-Banner-container-{{ section.id }} {
-        padding-left: 3.2rem;
-        padding-right: 3.2rem;
-      }
-    }
-
-    @media screen and (min-width: 990px) {
-      #tm-Banner-container-{{ section.id }} {
-        padding-left: 5rem;
-        padding-right: 5rem;
-      }
-    }
-  {%- endstyle -%}
-{%- endunless -%}
-
 {%- liquid
   assign full_width = '100vw'
   assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
