@@ -13,9 +13,19 @@
     }
   }
 
+  .tmm-breadcrumbs {
+    width: 100%;
+  }
+
   .tmm-breadcrumbs ul {
     gap: {{ section.settings.text_spacing }}px;
     justify-content: {{ section.settings.text_alignment }};
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
   .tmm-breadcrumbs ul li a {
