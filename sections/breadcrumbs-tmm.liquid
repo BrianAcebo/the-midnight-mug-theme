@@ -43,8 +43,6 @@
   }
 {%- endstyle -%}
 
-{%- assign template_type = template | split: '.' | first -%}
-
 {%- capture chevron_right_svg_element -%}
   <svg 
     class="{{ section.settings.text_style }}"
@@ -70,7 +68,7 @@
       {{- chevron_right_svg_element -}}
     {%- endif -%}
 
-    {%- case template_type -%}
+    {%- case template.name -%}
       {%- when 'page' -%}
     
         <li class="{{ section.settings.text_style }}">
