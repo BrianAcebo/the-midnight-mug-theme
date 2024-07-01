@@ -55,7 +55,7 @@
         </li>
       
       {%- when 'product' -%}
-        {%- if section.settings.show_base_link -%}
+        {%- if section.settings.show_shopping_link -%}
           <li>
             <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
           </li>
@@ -68,7 +68,7 @@
         </li>
     
       {%- when 'collection' -%}
-        {%- if section.settings.show_base_link -%}
+        {%- if section.settings.show_shopping_link -%}
           <li>
             <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
           </li>
