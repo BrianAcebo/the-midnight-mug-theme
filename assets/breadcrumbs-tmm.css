@@ -1,0 +1,26 @@
+.tmm-breadcrumbs {
+  width: 100%;
+}
+
+.tmm-breadcrumbs ul {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.tmm-breadcrumbs ul li {
+  margin-right: 8px;
+}
+
+@media (min-width: 750px) {
+  .tmm-breadcrumbs ul {
+    gap: 14px;
+  }
+}
+
+.tmm-breadcrumbs.capitalize ul li a {
+  text-transform: capitalize;
+}
