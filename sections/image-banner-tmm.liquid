@@ -130,11 +130,11 @@
                         const currentHeadingClone = currentHeading.cloneNode(true);
                         currentHeadingClone.classList.add('heading-invisible');
                         currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
-                        document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
 
                         currentHeading.classList.add('tmm-fadeUpOut');
-                        // currentHeadingClone.classList.remove('heading-invisible');
-                        // currentHeading.remove();
+                        document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
+                        currentHeadingClone.classList.remove('heading-invisible');
+                        currentHeading.remove();
                       },
                       5000
                     );
