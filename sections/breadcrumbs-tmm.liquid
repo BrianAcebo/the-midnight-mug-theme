@@ -57,7 +57,7 @@
       {%- when 'product' -%}
         {%- if section.settings.show_base_link -%}
           <li>
-            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_link_label -}}</a>
+            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
           </li>
 
           {{- chevron_right_svg_element -}}
@@ -70,7 +70,7 @@
       {%- when 'collection' -%}
         {%- if section.settings.show_base_link -%}
           <li>
-            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_link_label -}}</a>
+            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
           </li>
 
           {{- chevron_right_svg_element -}}
