@@ -517,3 +517,19 @@
     opacity: 1;
   }
 }
+
+.tmm-fadeUpOut { 
+  animation: tmm-fadeUpOut 1s ease backwards;
+}
+
+@keyframes tmm-fadeUpOut {
+  0% {
+    transform: translate(0px, 100px); 
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translate(0px, 0); 
+    opacity: 1;
+  }
+}
