@@ -15,7 +15,6 @@
 
   .tmm-breadcrumbs ul {
     gap: {{ section.settings.text_spacing }}px;
-    align-items: center;
     justify-content: {{ section.settings.text_alignment }};
   }
 
@@ -25,7 +24,7 @@
   }
 {%- endstyle -%}
 
-{%- assign t = template | split: '.' | first -%}
+{%- assign template_type = template | split: '.' | first -%}
 
 <nav 
   class="tmm-breadcrumbs page-width section-{{ section.id }}-padding" 
@@ -37,124 +36,119 @@
       <a href="/" title="Home">Home</a>
     </li>
 
-  {%- case t -%}
-    {%- when 'page' -%}
-      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-      </svg>
-  
-      <li>
-        <a href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
-      </li>
+    {%- case template_type -%}
+      {%- when 'page' -%}
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+        </svg>
     
-    {%- when 'product' -%}
-      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-      </svg>
-  
-      <li>
-        <a href="/collections/all" aria-current="shop">Shop All</a>
-      </li>
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-      </svg>
-
-      {%- if collection.url -%}
         <li>
-          {{- collection.title | link_to: collection.url -}}
+          <a href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
         </li>
 
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none"> <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> </svg>
-      {%- endif -%}
+      {{- page.title | link_to: page.url -}}
+      
+      {%- when 'product' -%}
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+        </svg>
+    
+        <li>
+          <a href="/collections/all" aria-current="shop">Shop All</a>
+        </li>
   
-      <li>
-        <a href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
-      </li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+        </svg>
+    
+        <li>
+          <a href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+        </li>
+    
+      {%- when 'collection' -%}
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+        </svg>
   
-    {%- when 'collection' and collection.handle -%}
-      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-      </svg>
-
-      <li>
-        <a href="/collections/all" aria-current="shop">Shop All</a>
-      </li>
+        <li>
+          <a href="/collections/all" aria-current="shop">Shop All</a>
+        </li>
+    
+        {%- if current_tags -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
+          </svg>
+          
+          <li>
+            <a href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
+          </li>
   
-      {%- if current_tags -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+          </svg>
+  
+          <li>
+            {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+            <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+          </li>
+        {%- else -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+          </svg>
+  
+          <li>
+            <a href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
+          </li>
+        {%- endif -%}
+    
+      {%- when 'blog' -%}
+        {%- if current_tags -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+          </svg>
+  
+          <li>{{- blog.title | link_to: blog.url -}}</li>
+  
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none"> <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> </svg>
+  
+          <li>
+            {% capture tag_url %}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
+            <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+          </li>
+        {%- else -%}
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
+          </svg>
+  
+          <li>
+            <a href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
+          </li>
+        {%- endif -%}
+    
+      {%- when 'article' -%}
         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
           <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
         </svg>
-        
-        <li>{{ collection.title | link_to: collection.url }}</li>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
-
-        <li>
-          {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
-          <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
-        </li>
-      {%- else -%}
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
-
-        <li>
-          <a href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
-        </li>
-      {%- endif -%}
   
-    {%- when 'blog' -%}
-      {%- if current_tags -%}
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
-
         <li>{{- blog.title | link_to: blog.url -}}</li>
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none"> <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> </svg>
-
-        <li>
-          {% capture tag_url %}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
-          <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
-        </li>
-      {%- else -%}
-        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-        </svg>
-
-        <li>
-          <a href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
-        </li>
-      {%- endif -%}
   
-    {%- when 'article' -%}
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+          <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
+        </svg>
+  
+        <li>
+          <a href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
+        </li>
+  
+    {%- else -%}
       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
+        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
       </svg>
-
-      <li>{{- blog.title | link_to: blog.url -}}</li>
-
-      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/> 
-      </svg>
-
-      <li>
-        <a href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
+  
+      <li aria-current="page">
+        <a href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
       </li>
-
-  {%- else -%}
-    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
-      <path d="M1 1L6 6L1 11" stroke="black" stroke-width="1.5"/>
-    </svg>
-
-    <li aria-current="page">
-      <a href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
-    </li>
-  {%- endcase -%}
-
+    {%- endcase -%}
   </ul>
 </nav>
 
