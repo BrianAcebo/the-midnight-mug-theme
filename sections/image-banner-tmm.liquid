@@ -105,8 +105,33 @@
                   class="tmm-banner__heading tmm-inline-richtext {{ block.settings.heading_size }}"
                   {{ block.shopify_attributes }}
                 >
-                  {{ block.settings.heading }}
+                  {{- block.settings.heading -}}
                 </{{ block.settings.heading_tag }}>
+
+                {%- if block.settings.heading_2 != blank or block.settings.heading_3 != blank -%}
+                  <script type="module">
+                    let headingCopies = [
+                      "{{- block.settings.heading -}}", 
+                      {%- if block.settings.heading_2 != blank -%}
+                        "{{- block.settings.heading_2 -}}", 
+                      {%- endif -%}
+                      {%- if block.settings.heading_2 != blank -%}
+                        "{{- block.settings.heading_3 -}}"
+                      {%- endif -%}
+                    ];
+                  
+                    let headingCopyIndex = 0;
+                    const rotateHeaders = setInterval(
+                      () => {
+                        headingCopyIndex =
+                              headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
+  
+                        document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").innerHTML = headingCopies[headingCopyIndex]
+                      },
+                      5000
+                    );
+                  </script>
+                {%- endif -%}
               {%- when 'text' -%}
                 <div class="tmm-banner__text tmm-rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                   <p>{{ block.settings.text }}</p>
@@ -265,25 +290,6 @@
     {%- endif -%}
   </div>
 </div>
-
-{% javascript %}
-  let promoBarCopies = [
-    {% for text in shop.metaobjects.announcement_bar_text.main.text_content.value %}
-        "{{ text | escape }}",
-    {% endfor %}
-  ];
-
-  let promoBarCopyIndex = 0;
-  const rotatePromoBar = setInterval(
-    () => {
-      promoBarCopyIndex =
-            promoBarCopyIndex + 1 >= promoBarCopies.length ? 0 : promoBarCopyIndex + 1;
-
-      document.querySelector("#promoBar p").innerHTML = promoBarCopies[promoBarCopyIndex]
-    },
-    5000
-  );
-{% endjavascript %}
                 
 {% schema %}
 {
