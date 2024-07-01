@@ -14,7 +14,7 @@
       "settings": {
         "text_decoration": "none",
         "text_alignment": "flex-start",
-        "text_transformation": "none",
+        "text_transformation": "capitalize",
         "text_spacing": 18,
         "link_color": "#000000",
         "base_label": "Home",
