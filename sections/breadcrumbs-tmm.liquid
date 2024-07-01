@@ -51,7 +51,7 @@
   <ul>
     {%- if section.settings.show_base_link -%}
       <li>
-        <a href="{%- if section.settings.base_link != blank -%}{{ section.settings.base_link.url }}{%- else -%}/{%- endif -%}" title="Home">{{- section.settings.base_label -}}</a>
+        <a class="{{ section.settings.text_style }}" title="{{- section.settings.base_label -}}" href="{%- if section.settings.base_link != blank -%}{{ section.settings.base_link.url }}{%- else -%}/{%- endif -%}">{{- section.settings.base_label -}}</a>
       </li>
   
       {{- chevron_right_svg_element -}}
@@ -61,33 +61,33 @@
       {%- when 'page' -%}
     
         <li>
-          <a href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
+          <a class="{{ section.settings.text_style }}" title="{{ page.title }}" href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
         </li>
       
       {%- when 'product' -%}
         {%- if section.settings.show_shopping_link -%}
           <li>
-            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
+            <a class="{{ section.settings.text_style }}" title="{{- section.settings.shopping_label -}}" href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
           </li>
 
           {{- chevron_right_svg_element -}}
         {%- endif -%}
     
         <li>
-          <a href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+          <a class="{{ section.settings.text_style }}" title="{{ product.tite }}" href="{{ product.url }}" aria-current="page">{{- product.title -}}</a>
         </li>
     
       {%- when 'collection' -%}
         {%- if section.settings.show_shopping_link -%}
           <li>
-            <a href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
+            <a class="{{ section.settings.text_style }}" title="{{- section.settings.shopping_label -}}" href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
           </li>
 
           {{- chevron_right_svg_element -}}
         {%- endif -%}
 
         <li>
-          <a href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
+          <a class="{{ section.settings.text_style }}" title="{{ collection.title }}" href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
         </li>
     
         {%- if current_tags -%}
@@ -95,13 +95,13 @@
   
           <li>
             {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
-            <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
+            <a class="{{ section.settings.text_style }}" title="{{ current_tags | join: " + "}}" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
           </li>
         {%- endif -%}
     
       {%- when 'blog' -%}
         <li>
-          <a href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+          <a class="{{ section.settings.text_style }}" title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
         </li>
       
         {%- if current_tags -%}
@@ -109,24 +109,24 @@
   
           <li>
             {% capture tag_url %}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
-            <a href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
+            <a class="{{ section.settings.text_style }}" title="{{ current_tags | join: " + " }}" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
           </li>
         {%- endif -%}
     
       {%- when 'article' -%}
         <li>
-          <a href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+          <a class="{{ section.settings.text_style }}" title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
         </li>
   
         {{- chevron_right_svg_element -}}
   
         <li>
-          <a href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
+          <a class="{{ section.settings.text_style }}" title="{{ article.title }}" href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
         </li>
   
     {%- else -%}
       <li aria-current="page">
-        <a href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
+        <a class="{{ section.settings.text_style }}" title="{{ page_title }}" href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
       </li>
     {%- endcase -%}
   </ul>
@@ -217,6 +217,26 @@
         "unit": "px",
         "label": "Text spacing",
         "default": 18
+      },
+      {
+        "type": "select",
+        "id": "text_style",
+        "options": [
+          {
+            "value": "body",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+          },
+          {
+            "value": "subtitle",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+          },
+          {
+            "value": "caption-with-letter-spacing",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+          }
+        ],
+        "default": "body",
+        "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
       },
       {
         "type": "color",
