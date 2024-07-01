@@ -49,7 +49,7 @@
         "full_image_width": false,
         "image_height": "medium",
         "content_placement": "outside",
-        "desktop_content_position": "middle-left",
+        "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-1",
