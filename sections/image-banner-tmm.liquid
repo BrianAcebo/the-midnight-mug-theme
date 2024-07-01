@@ -265,6 +265,25 @@
     {%- endif -%}
   </div>
 </div>
+
+{% javascript %}
+  let promoBarCopies = [
+    {% for text in shop.metaobjects.announcement_bar_text.main.text_content.value %}
+        "{{ text | escape }}",
+    {% endfor %}
+  ];
+
+  let promoBarCopyIndex = 0;
+  const rotatePromoBar = setInterval(
+    () => {
+      promoBarCopyIndex =
+            promoBarCopyIndex + 1 >= promoBarCopies.length ? 0 : promoBarCopyIndex + 1;
+
+      document.querySelector("#promoBar p").innerHTML = promoBarCopies[promoBarCopyIndex]
+    },
+    5000
+  );
+{% endjavascript %}
                 
 {% schema %}
 {
@@ -514,10 +533,26 @@
       "limit": 1,
       "settings": [
         {
+          "type": "header",
+          "content": "Add multiple headings to create rotating effect."
+        },
+        {
           "type": "inline_richtext",
           "id": "heading",
           "default": "Image banner",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_2",
+          "default": "Image banner",
+          "label": "Heading two"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_3",
+          "default": "Image banner",
+          "label": "Heading three"
         },
         {
           "type": "select",
