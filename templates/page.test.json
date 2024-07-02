@@ -35,8 +35,8 @@
           "type": "heading",
           "settings": {
             "heading": "Image banner",
-            "heading_2": "",
-            "heading_3": "",
+            "heading_2": "Image banner two",
+            "heading_3": "Image banner three",
             "heading_size": "h0",
             "heading_tag": "h1"
           }
@@ -70,9 +70,9 @@
         "full_image_width": false,
         "image_height": "medium",
         "content_placement": "outside",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": true,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
