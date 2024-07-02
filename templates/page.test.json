@@ -38,7 +38,8 @@
             "heading_2": "Image banner two",
             "heading_3": "Image banner three",
             "heading_size": "h0",
-            "heading_tag": "h1"
+            "heading_tag": "h1",
+            "rotation_delay": 1
           }
         },
         "text_UCaBV8": {
