@@ -42,7 +42,7 @@
 {%- endstyle -%}
 
 {%- javascript -%}
-  window.TMM.components.imageBanner.rotateHeaders = (headingCopies, rotationDelay) => {
+  const rotateHeaders = (headingCopies, rotationDelay) => {
     if (!headingCopies) return;
     
     let headingCopyIndex = 0;
@@ -63,6 +63,10 @@
       },
       rotationDelay
     );
+  }
+
+  if (!window.TMM) {
+    window.TMM = { components: { imageBanner: { rotateHeaders } } };
   }
 {%- endjavascript -%}
 
