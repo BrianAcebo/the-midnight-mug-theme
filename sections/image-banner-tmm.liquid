@@ -134,6 +134,7 @@
                         href="{{ block.settings.button_link_1 }}"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary_1 %} tmm-button--secondary{% else %} tmm-button--primary{% endif %}"
+                      style="border-radius: {{ button_rounding }}px;"
                     >
                       {{- block.settings.button_label_1 | escape -}}
                     </a>
@@ -143,9 +144,10 @@
                       {% if block.settings.button_link_2 == blank %}
                         role="link" aria-disabled="true"
                       {% else %}
-                        href="{{ block.settings.button_link_2 }}
+                        href="{{ block.settings.button_link_2 }}"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary_2 %} tmm-button--secondary{% else %} tmm-button--primary{% endif %}"
+                      style="border-radius: {{ button_rounding }}px;"
                     >
                       {{- block.settings.button_label_2 | escape -}}
                     </a>
@@ -676,7 +678,17 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
-        }
+        },
+        {
+          "type": "range",
+          "id": "button_rounding",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "Button rounding",
+          "default": 0
+        },
       ]
     }
   ],
