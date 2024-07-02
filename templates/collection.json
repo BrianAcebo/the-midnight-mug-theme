@@ -16,7 +16,7 @@
         "text_alignment": "flex-start",
         "text_transformation": "capitalize",
         "text_spacing": 14,
-        "text_style": "caption-with-letter-spacing",
+        "text_style": "caption-with-letter-spacing--large",
         "link_color": "#000000",
         "base_label": "Home",
         "base_link": "",
