@@ -12,10 +12,11 @@
     "breadcrumbs_tmm_Bfpr4M": {
       "type": "breadcrumbs-tmm",
       "settings": {
-        "text_decoration": "none",
+        "text_decoration": "underline",
         "text_alignment": "flex-start",
         "text_transformation": "capitalize",
-        "text_spacing": 18,
+        "text_spacing": 14,
+        "text_style": "caption-with-letter-spacing",
         "link_color": "#000000",
         "base_label": "Home",
         "base_link": "",
