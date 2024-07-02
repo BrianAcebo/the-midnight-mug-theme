@@ -41,6 +41,31 @@
   }
 {%- endstyle -%}
 
+{%- javascript -%}
+  window.TMM.components.imageBanner.rotateHeaders = (headingCopies, rotationDelay) => {
+    if (!headingCopies) return;
+    
+    let headingCopyIndex = 0;
+    const rotateHeaders = setInterval(
+      () => {
+        headingCopyIndex =
+              headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
+  
+        const currentHeading = document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading > span");
+        const currentHeadingClone = currentHeading.cloneNode(true);
+        currentHeadingClone.classList.add('heading-invisible');
+        currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
+  
+        currentHeading.classList.add('tmm-fadeUpOut');
+        document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
+        currentHeadingClone.classList.remove('heading-invisible');
+        currentHeading.remove();
+      },
+      rotationDelay
+    );
+  }
+{%- endjavascript -%}
+
 {%- liquid
   assign full_width = '100vw'
   assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
@@ -87,6 +112,7 @@
 
                 {%- if block.settings.heading_2 != blank or block.settings.heading_3 != blank -%}
                   <script type="module">
+                    const rotationDelay = {{ block.settings.rotation_delay }} * 1000;
                     let headingCopies = [
                       "{{- block.settings.heading -}}", 
                       {%- if block.settings.heading_2 != blank -%}
@@ -96,25 +122,8 @@
                         "{{- block.settings.heading_3 -}}"
                       {%- endif -%}
                     ];
-                  
-                    let headingCopyIndex = 0;
-                    const rotateHeaders = setInterval(
-                      () => {
-                        headingCopyIndex =
-                              headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
 
-                        const currentHeading = document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading > span");
-                        const currentHeadingClone = currentHeading.cloneNode(true);
-                        currentHeadingClone.classList.add('heading-invisible');
-                        currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
-
-                        currentHeading.classList.add('tmm-fadeUpOut');
-                        document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
-                        currentHeadingClone.classList.remove('heading-invisible');
-                        currentHeading.remove();
-                      },
-                      ({{ block.settings.rotation_delay }} * 1000)
-                    );
+                    window.TMM.components.imageBanner.rotateHeaders(headingCopies, rotationDelay);
                   </script>
                 {%- endif -%}
               {%- when 'text' -%}
@@ -242,11 +251,36 @@
                 >
                   {{ block.settings.heading }}
                 </{{ block.settings.heading_tag }}>
+
+                {%- if block.settings.heading_2 != blank or block.settings.heading_3 != blank -%}
+                  <script type="module">
+                    const rotationDelay = {{ block.settings.rotation_delay }} * 1000;
+                    let headingCopies = [
+                      "{{- block.settings.heading -}}", 
+                      {%- if block.settings.heading_2 != blank -%}
+                        "{{- block.settings.heading_2 -}}", 
+                      {%- endif -%}
+                      {%- if block.settings.heading_3 != blank -%}
+                        "{{- block.settings.heading_3 -}}"
+                      {%- endif -%}
+                    ];
+
+                    window.TMM.components.imageBanner.rotateHeaders(headingCopies, rotationDelay);
+                  </script>
+                {%- endif -%}
               {%- when 'text' -%}
                 <div class="tmm-banner__text tmm-rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                   <p>{{ block.settings.text }}</p>
                 </div>
               {%- when 'buttons' -%}
+                <style>
+                  .tmm-banner__buttons .button,
+                  .tmm-banner__buttons .button:before,
+                  .tmm-banner__buttons .button:after {
+                    border-radius: {{ block.settings.button_rounding }}px;
+                  }
+                </style>
+              
                 <div
                   class="tmm-banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} tmm-banner__buttons--multiple{% endif %}"
                   {{ block.shopify_attributes }}
