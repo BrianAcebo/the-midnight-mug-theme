@@ -122,6 +122,14 @@
                   <p>{{ block.settings.text }}</p>
                 </div>
               {%- when 'buttons' -%}
+                <style>
+                  .tmm-banner__buttons .button,
+                  .tmm-banner__buttons .button:before,
+                  .tmm-banner__buttons .button:after {
+                    border-radius: {{ block.settings.button_rounding }}px;
+                  }
+                </style>
+              
                 <div
                   class="tmm-banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} tmm-banner__buttons--multiple{% endif %}"
                   {{ block.shopify_attributes }}
@@ -134,7 +142,6 @@
                         href="{{ block.settings.button_link_1 }}"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary_1 %} tmm-button--secondary{% else %} tmm-button--primary{% endif %}"
-                      style="border-radius: {{ block.settings.button_rounding }}px;"
                     >
                       {{- block.settings.button_label_1 | escape -}}
                     </a>
@@ -147,7 +154,6 @@
                         href="{{ block.settings.button_link_2 }}"
                       {% endif %}
                       class="button{% if block.settings.button_style_secondary_2 %} tmm-button--secondary{% else %} tmm-button--primary{% endif %}"
-                      style="border-radius: {{ block.settings.button_rounding }}px;"
                     >
                       {{- block.settings.button_label_2 | escape -}}
                     </a>
