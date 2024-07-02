@@ -53,11 +53,11 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_secondary_1": false,
             "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
+            "button_link_2": "shopify:\/\/pages\/thank-you",
+            "button_style_secondary_2": true,
             "button_rounding": 0
           }
         }
@@ -109,10 +109,10 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_link_1": "shopify:\/\/collections\/best-sellers",
             "button_style_secondary_1": false,
             "button_label_2": "Button label",
-            "button_link_2": "",
+            "button_link_2": "shopify:\/\/collections\/all",
             "button_style_secondary_2": true,
             "button_rounding": 40
           }
