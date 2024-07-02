@@ -353,6 +353,10 @@
   z-index: 1;
 }
 
+.tmm-banner__box {
+  background: none;
+}
+
 .tmm-banner--mobile-bottom .tmm-banner__box:not(.tmm-banner__box-outside) {
   padding: 4rem 3.5rem;
 }
