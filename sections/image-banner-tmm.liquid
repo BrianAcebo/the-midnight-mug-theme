@@ -251,7 +251,7 @@
             {%- case block.type -%}
               {%- when 'heading' -%}
                 <{{ block.settings.heading_tag }}
-                  class="tmm-banner__heading tmm-inline-richtext {{ block.settings.heading_size }}"
+                  class="tmm-banner__heading tmm-banner__heading-{{ block.id }} tmm-inline-richtext {{ block.settings.heading_size }}"
                   {{ block.shopify_attributes }}
                 >
                   <span class="tmm-fadeInUp">{{- block.settings.heading -}}</span>
