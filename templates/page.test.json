@@ -125,7 +125,7 @@
       ],
       "settings": {
         "image_overlay_opacity": 30,
-        "full_image_width": true,
+        "full_image_width": false,
         "image_height": "medium",
         "content_placement": "inside",
         "desktop_content_position": "middle-left",
