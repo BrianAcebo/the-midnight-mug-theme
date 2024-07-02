@@ -41,36 +41,38 @@
   }
 {%- endstyle -%}
 
-{%- javascript -%}
-  const rotateHeaders = (headingCopies, rotationDelay) => {
-    if (!headingCopies) return;
+<script type="module">
+  (() => {
+    const rotateHeaders = (headingCopies, rotationDelay) => {
+      if (!headingCopies) return;
+      
+      let headingCopyIndex = 0;
+      const rotateHeaders = setInterval(
+        () => {
+          headingCopyIndex =
+                headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
+  
+          console.log("#tm-Banner-container-{{ section.id }}");
     
-    let headingCopyIndex = 0;
-    const rotateHeaders = setInterval(
-      () => {
-        headingCopyIndex =
-              headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
-
-        console.log("#tm-Banner-container-{{ section.id }}");
+          const currentHeading = document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading > span");
+          const currentHeadingClone = currentHeading.cloneNode(true);
+          currentHeadingClone.classList.add('heading-invisible');
+          currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
+    
+          currentHeading.classList.add('tmm-fadeUpOut');
+          document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
+          currentHeadingClone.classList.remove('heading-invisible');
+          currentHeading.remove();
+        },
+        rotationDelay
+      );
+    }
   
-        const currentHeading = document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading > span");
-        const currentHeadingClone = currentHeading.cloneNode(true);
-        currentHeadingClone.classList.add('heading-invisible');
-        currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
-  
-        currentHeading.classList.add('tmm-fadeUpOut');
-        document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
-        currentHeadingClone.classList.remove('heading-invisible');
-        currentHeading.remove();
-      },
-      rotationDelay
-    );
-  }
-
-  if (!window.TMM) {
-    window.TMM = { components: { imageBanner: { rotateHeaders } } };
-  }
-{%- endjavascript -%}
+    if (!window.TMM) {
+      window.TMM = { components: { imageBanner: { rotateHeaders } } };
+    }
+  })();
+</script>
 
 {%- liquid
   assign full_width = '100vw'
