@@ -6,10 +6,6 @@
   isolation: isolate;
 }
 
-.tmm-banner__box {
-  text-align: center;
-}
-
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .tmm-banner__box.gradient {
   transform: perspective(0);
@@ -344,6 +340,10 @@
 
 .tmm-banner__box:not(.tmm-banner__box-outside) {
   padding: 4rem 1.5rem;
+}
+
+.tmm-banner__box {
+  background: none;
   position: relative;
   height: fit-content;
   align-items: center;
@@ -351,10 +351,6 @@
   width: 100%;
   word-wrap: break-word;
   z-index: 1;
-}
-
-.tmm-banner__box {
-  background: none;
 }
 
 .tmm-banner--mobile-bottom .tmm-banner__box:not(.tmm-banner__box-outside) {
