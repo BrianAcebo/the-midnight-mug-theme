@@ -344,7 +344,7 @@
 }
 
 .tmm-banner__box {
-  background: none;
+  /* background: none; */
   position: relative;
   height: fit-content;
   align-items: center;
