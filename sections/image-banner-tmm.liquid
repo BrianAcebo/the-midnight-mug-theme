@@ -43,22 +43,21 @@
 
 <script type="module">
   (() => {
-    const rotateHeaders = (headingCopies, rotationDelay) => {
+    const rotateHeaders = (headingCopies, rotationDelay, sectionId, blockId) => {
       if (!headingCopies) return;
       
       let headingCopyIndex = 0;
       const rotateHeaders = setInterval(
         () => {
-          headingCopyIndex =
-                headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
-    
-          const currentHeading = document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading > span");
+          headingCopyIndex = headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
+
+          const currentHeading = document.querySelector(`#tm-Banner-container-${sectionId} .tmm-banner__heading-${blockId} > span`);
           const currentHeadingClone = currentHeading.cloneNode(true);
           currentHeadingClone.classList.add('heading-invisible');
           currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
     
           currentHeading.classList.add('tmm-fadeUpOut');
-          document.querySelector("#tm-Banner-container-{{ section.id }} .tmm-banner__heading").appendChild(currentHeadingClone);
+          currentHeading.parentElement.appendChild(currentHeadingClone);
           currentHeadingClone.classList.remove('heading-invisible');
           currentHeading.remove();
         },
@@ -110,7 +109,7 @@
             {%- case block.type -%}
               {%- when 'heading' -%}
                 <{{ block.settings.heading_tag }}
-                  class="tmm-banner__heading tmm-inline-richtext {{ block.settings.heading_size }}"
+                  class="tmm-banner__heading tmm-banner__heading-{{ block.id }} tmm-inline-richtext {{ block.settings.heading_size }}"
                   {{ block.shopify_attributes }}
                 >
                   <span class="tmm-fadeInUp">{{- block.settings.heading -}}</span>
@@ -129,7 +128,7 @@
                       {%- endif -%}
                     ];
 
-                    window.TMM.components.imageBanner.rotateHeaders(headingCopies, rotationDelay);
+                    window.TMM.components.imageBanner.rotateHeaders(headingCopies, rotationDelay, "{{ section.id }}", "{{ block.id }}");
                   </script>
                 {%- endif -%}
               {%- when 'text' -%}
@@ -271,7 +270,7 @@
                       {%- endif -%}
                     ];
 
-                    window.TMM.components.imageBanner.rotateHeaders(headingCopies, rotationDelay);
+                    window.TMM.components.imageBanner.rotateHeaders(headingCopies, rotationDelay, "{{ section.id }}", "{{ block.id }}");
                   </script>
                 {%- endif -%}
               {%- when 'text' -%}
