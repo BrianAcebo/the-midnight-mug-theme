@@ -113,7 +113,7 @@
                         currentHeadingClone.classList.remove('heading-invisible');
                         currentHeading.remove();
                       },
-                      5000
+                      {{ section.settings.rotation_delay }} * 1000
                     );
                   </script>
                 {%- endif -%}
@@ -590,7 +590,17 @@
           ],
           "default": "h2",
           "label": "Heading element"
-        }
+        },
+        {
+          "type": "range",
+          "id": "rotation_delay",
+          "min": 0,
+          "max": 10,
+          "step": 1,
+          "unit": "%",
+          "label": "Rotation delay (seconds)",
+          "default": 3
+        },
       ]
     },
     {
