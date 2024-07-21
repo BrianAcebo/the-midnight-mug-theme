@@ -129,3 +129,29 @@
   margin-top: .75rem;
   padding: .75rem;
 }
+
+.padding-global {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.container-large {
+  width: 100%;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-bottom {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.margin-xsmall {
+  margin: .75rem;
+}
+
+.text-weight-semibold {
+  font-weight: 600;
+}
