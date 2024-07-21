@@ -111,6 +111,130 @@
     "name": "Featured List",
     "settings": [
       {
+        "type": "header",
+        "content": "Add multiple headings to create rotating effect."
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_tag",
+        "options": [
+          {
+            "value": "h1",
+            "label": "H1"
+          },
+          {
+            "value": "h2",
+            "label": "H2"
+          },
+          {
+            "value": "h3",
+            "label": "H3"
+          },
+          {
+            "value": "h4",
+            "label": "H4"
+          },
+          {
+            "value": "h5",
+            "label": "H5"
+          }
+        ],
+        "default": "h2",
+        "label": "Heading element"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "text",
+        "default": "Give customers details about the banner image(s) or content on the template.",
+        "label": "t:sections.image-banner.blocks.text.settings.text.label"
+      },
+      {
+        "type": "select",
+        "id": "text_style",
+        "options": [
+          {
+            "value": "body",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+          },
+          {
+            "value": "subtitle",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+          },
+          {
+            "value": "caption-with-letter-spacing",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+          }
+        ],
+        "default": "body",
+        "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+      },
+      {
+        "type": "text",
+        "id": "button_label_1",
+        "default": "Button label",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+        "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+      },
+      {
+        "type": "url",
+        "id": "button_link_1",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_style_secondary_1",
+        "default": false,
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+      },
+      {
+        "type": "text",
+        "id": "button_label_2",
+        "default": "Button label",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+        "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+      },
+      {
+        "type": "url",
+        "id": "button_link_2",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "button_style_secondary_2",
+        "default": false,
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+      },
+      {
+        "type": "range",
+        "id": "button_rounding",
+        "min": 0,
+        "max": 40,
+        "step": 2,
+        "unit": "px",
+        "label": "Button rounding",
+        "default": 0
+      },
+      {
         "type": "range",
         "id": "padding_top",
         "min": 0,
@@ -129,6 +253,93 @@
         "unit": "px",
         "label": "t:sections.all.padding.padding_bottom",
         "default": 36
+      },
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Featured Item",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "header",
+            "content": "Add multiple headings to create rotating effect."
+          },
+          {
+            "type": "select",
+            "id": "heading_size",
+            "options": [
+              {
+                "value": "h2",
+                "label": "t:sections.all.heading_size.options__1.label"
+              },
+              {
+                "value": "h1",
+                "label": "t:sections.all.heading_size.options__2.label"
+              },
+              {
+                "value": "h0",
+                "label": "t:sections.all.heading_size.options__3.label"
+              }
+            ],
+            "default": "h1",
+            "label": "t:sections.all.heading_size.label"
+          },
+          {
+            "type": "select",
+            "id": "heading_tag",
+            "options": [
+              {
+                "value": "h1",
+                "label": "H1"
+              },
+              {
+                "value": "h2",
+                "label": "H2"
+              },
+              {
+                "value": "h3",
+                "label": "H3"
+              },
+              {
+                "value": "h4",
+                "label": "H4"
+              },
+              {
+                "value": "h5",
+                "label": "H5"
+              }
+            ],
+            "default": "h2",
+            "label": "Heading element"
+          },
+          {
+            "type": "inline_richtext",
+            "id": "text",
+            "default": "Give customers details about the banner image(s) or content on the template.",
+            "label": "t:sections.image-banner.blocks.text.settings.text.label"
+          },
+          {
+            "type": "select",
+            "id": "text_style",
+            "options": [
+              {
+                "value": "body",
+                "label": "t:sections.image-banner.blocks.text.settings.text_style.options__1.label"
+              },
+              {
+                "value": "subtitle",
+                "label": "t:sections.image-banner.blocks.text.settings.text_style.options__2.label"
+              },
+              {
+                "value": "caption-with-letter-spacing",
+                "label": "t:sections.image-banner.blocks.text.settings.text_style.options__3.label"
+              }
+            ],
+            "default": "body",
+            "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+          },
+        ]
       }
     ],
     "presets": [
