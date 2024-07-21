@@ -1,4 +1,4 @@
-.tmm-layout-grid {
+.layout-grid {
   grid-rotmm-gap: 16px;
   grid-column-gap: 16px;
   grid-template-rows: auto auto;
@@ -7,26 +7,26 @@
   display: grid;
 }
 
-.tmm-checkbox {
+.checkbox {
   margin-bottom: 5px;
   padding-left: 20px;
   display: block;
 }
 
-.tmm-checkbox:before {
+.checkbox:before {
   content: " ";
   grid-area: 1 / 1 / 2 / 2;
   display: table;
 }
 
-.tmm-checkbox:after {
+.checkbox:after {
   content: " ";
   clear: both;
   grid-area: 1 / 1 / 2 / 2;
   display: table;
 }
 
-.tmm-checkbox-input {
+.checkbox-input {
   float: left;
   margin: 4px 0 0 -20px;
   line-height: normal;
