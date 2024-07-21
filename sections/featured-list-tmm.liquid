@@ -19,21 +19,21 @@
   }
 {%- endstyle -%}
 
-<div class="section_featured-list section-{{ section.id }}-padding">
-  <div class="padding-global">
-    <div class="container-large">
-      <div class="padding-section-large">
-        <div class="featured-list_component">
-          <div class="margin-bottom margin-xxlarge">
-            <div class="w-layout-grid featured-list_content">
-              <div class="featured-list_content-left">
-                <div class="margin-bottom margin-xsmall">
-                  <div class="text-weight-semibold">Revitalize</div>
+<div class="tmm-section_featured-list section-{{ section.id }}-padding">
+  <div class="tmm-padding-global">
+    <div class="tmm-container-large">
+      <div class="tmm-padding-section-large">
+        <div class="tmm-featured-list_component">
+          <div class="tmm-margin-bottom tmm-margin-xxlarge">
+            <div class="w-layout-grid tmm-featured-list_content">
+              <div class="tmm-featured-list_content-left">
+                <div class="tmm-margin-bottom tmm-margin-xsmall">
+                  <div class="tmm-text-weight-semibold">Revitalize</div>
                 </div>
                 <h2>Discover the Power of Natural Skincare</h2>
               </div>
-              <div class="featured-list_content-right">
-                <p class="text-size-medium">
+              <div class="tmm-featured-list_content-right">
+                <p class="tmm-text-size-medium">
                   Our vegan skincare products offer a range of benefits, including deep hydration, rejuvenation, and
                   powerful anti-aging properties. Experience the transformative effects of nature&#x27;s finest
                   ingredients.
@@ -41,62 +41,62 @@
               </div>
             </div>
           </div>
-          <div class="w-layout-grid featured-list_list">
-            <div class="featured-list_item">
-              <div class="margin-bottom margin-medium">
-                <div class="featured-list_image-wrapper">
+          <div class="w-layout-grid tmm-featured-list_list">
+            <div class="tmm-featured-list_item">
+              <div class="tmm-margin-bottom tmm-margin-medium">
+                <div class="tmm-featured-list_image-wrapper">
                   <img
                     src="images/Placeholder-Image---Landscape.svg"
                     loading="lazy"
                     alt=""
-                    class="featured-list_image"
+                    class="tmm-featured-list_image"
                   >
                 </div>
               </div>
-              <div class="margin-bottom margin-small">
-                <h3 class="heading-style-h4">Hydration Boost</h3>
+              <div class="tmm-margin-bottom tmm-margin-small">
+                <h3 class="tmm-heading-style-h4">Hydration Boost</h3>
               </div>
               <p>Quench your skin&#x27;s thirst with our hydrating formulas.</p>
             </div>
-            <div class="featured-list_item">
-              <div class="margin-bottom margin-medium">
-                <div class="featured-list_image-wrapper">
+            <div class="tmm-featured-list_item">
+              <div class="tmm-margin-bottom tmm-margin-medium">
+                <div class="tmm-featured-list_image-wrapper">
                   <img
                     src="images/Placeholder-Image---Landscape.svg"
                     loading="lazy"
                     alt=""
-                    class="featured-list_image"
+                    class="tmm-featured-list_image"
                   >
                 </div>
               </div>
-              <div class="margin-bottom margin-small">
-                <h3 class="heading-style-h4">Youthful Radiance</h3>
+              <div class="tmm-margin-bottom tmm-margin-small">
+                <h3 class="tmm-heading-style-h4">Youthful Radiance</h3>
               </div>
               <p>Restore your skin&#x27;s natural glow and vitality.</p>
             </div>
-            <div class="featured-list_item">
-              <div class="margin-bottom margin-medium">
-                <div class="featured-list_image-wrapper">
+            <div class="tmm-featured-list_item">
+              <div class="tmm-margin-bottom tmm-margin-medium">
+                <div class="tmm-featured-list_image-wrapper">
                   <img
                     src="images/Placeholder-Image---Landscape.svg"
                     loading="lazy"
                     alt=""
-                    class="featured-list_image"
+                    class="tmm-featured-list_image"
                   >
                 </div>
               </div>
-              <div class="margin-bottom margin-small">
-                <h3 class="heading-style-h4">Fight Aging Signs</h3>
+              <div class="tmm-margin-bottom tmm-margin-small">
+                <h3 class="tmm-heading-style-h4">Fight Aging Signs</h3>
               </div>
               <p>Combat fine lines, wrinkles, and dullness.</p>
             </div>
           </div>
-          <div class="margin-top margin-xlarge">
-            <div class="button-group">
-              <a href="#" class="button is-secondary w-button">Shop</a>
-              <a href="#" class="button is-link is-icon w-inline-block">
+          <div class="tmm-margin-top tmm-margin-xlarge">
+            <div class="tmm-button-group">
+              <a href="#" class="tmm-button tmm-is-secondary w-button">Shop</a>
+              <a href="#" class="tmm-button tmm-is-link tmm-is-icon w-inline-block">
                 <div>Learn More</div>
-                <div class="icon-embed-xxsmall w-embed">
+                <div class="tmm-icon-embed-xxsmall w-embed">
                   <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 3L11 8L6 13" stroke="CurrentColor" stroke-width="1.5"></path>
                   </svg>
@@ -111,9 +111,36 @@
 </div>
 
 
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Featured List",
+    "settings": [
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "presets": [
+    {
+      "name": "Featured List"
+    }
+  ]
   }
 {% endschema %}
