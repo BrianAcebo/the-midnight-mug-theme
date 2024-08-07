@@ -39,7 +39,7 @@
             "heading_3": "Image banner 3",
             "heading_size": "h1",
             "heading_tag": "h1",
-            "rotation_delay": 1
+            "rotation_delay": 4
           }
         },
         "text_tKbfaB": {
@@ -69,11 +69,10 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/the-ultimate-shopify-launch-guide-display-image_1200_x_628_px_39cc1ec7-d6d5-4cc0-a747-e78b3e5002b0.jpg",
-        "image_2": "shopify:\/\/shop_images\/s59j2jD1q0N5XTBQVui7rgBVurhPyiXTCCA8Rg6H.jpg",
         "image_overlay_opacity": 0,
         "full_image_width": false,
         "image_height": "medium",
-        "content_placement": "outside",
+        "content_placement": "inside",
         "desktop_content_position": "middle-left",
         "show_text_box": true,
         "desktop_content_alignment": "left",
@@ -129,6 +128,17 @@
     "featured_list_tmm_zw9xhh": {
       "type": "featured-list-tmm",
       "settings": {
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "text": "Give customers details about the banner image(s) or content on the template.",
+        "text_style": "body",
+        "button_label_1": "Button label",
+        "button_link_1": "",
+        "button_style_secondary_1": false,
+        "button_label_2": "Button label",
+        "button_link_2": "",
+        "button_style_secondary_2": false,
+        "button_rounding": 0,
         "padding_top": 36,
         "padding_bottom": 36
       }
