@@ -22,7 +22,10 @@
   }
 {%- endstyle -%}
 
-<section id="tmm-Banner-{{ section.id }}" class="color-{{ section.settings.color_scheme }} tmm-image-banner__container">
+<section
+  id="tmm-Banner-{{ section.id }}"
+  class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} tmm-image-banner__container"
+>
   {%- if section.settings.image == blank -%}
     {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
   {%- else -%}
