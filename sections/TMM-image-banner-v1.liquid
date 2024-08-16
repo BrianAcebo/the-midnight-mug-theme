@@ -1,7 +1,7 @@
 {{ 'TMM-image-banner-v1.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  #tmm-Banner-{{ section.id }}::after {
+  #tmm-Banner-{{ section.id }} .tmm-image-banner__overlay {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
 
@@ -35,7 +35,7 @@
         class: 'tmm-image-banner__image'
     }}
   {%- endif -%}
-  <div class=""><span class="visually-hidden tmm-hidden"></span></div>
+  <div class="tmm-image-banner__overlay"><span class="visually-hidden tmm-hidden"></span></div>
 </section>
 
 {% schema %}
