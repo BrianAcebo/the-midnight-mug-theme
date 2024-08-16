@@ -1,10 +1,11 @@
 .tmm-image-banner__container {
   width: 100vw;
-  max-height: 60rem;
+  height: 60rem;
 }
 
 .tmm-image-banner__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
