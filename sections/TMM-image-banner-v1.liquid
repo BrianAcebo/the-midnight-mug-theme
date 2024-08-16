@@ -23,6 +23,7 @@
   class="section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} tmm-image-banner__container"
 >
   <div class="tmm-image-banner__wrapper">
+    <!-- Image -->
     {%- if section.settings.image == blank -%}
       {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
     {%- else -%}
@@ -36,11 +37,79 @@
           class: 'tmm-image-banner__image'
       }}
     {%- endif -%}
+    <!-- /Image -->
+
+    <!-- Overlay -->
     <div class="tmm-image-banner__overlay">
       <span class="visually-hidden tmm-hidden">Overlay for image</span>
     </div>
+    <!-- /Overlay -->
+
+    <!-- Headings -->
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          <{{ block.settings.heading_tag }}
+            class="tmm-banner__heading tmm-banner__heading-{{ forloop.index0 }} tmm-inline-richtext {{ block.settings.heading_size }}"
+            {{ block.shopify_attributes }}
+          >
+            <span class="tmm-fadeInUp">{{- block.settings.heading -}}</span>
+          </{{ block.settings.heading_tag }}>
+      {%- endcase -%}
+    {%- endfor -%}
+    <!-- /Headings -->
   </div>
 </section>
+
+<script
+  type="module"
+>
+  let headingCount = 0;
+  let headingCopies = [];
+  const rotationDelay = {{ section.settings.heading_rotation_delay }} * 1000;
+  
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'heading' -%}
+        headingCount += 1;
+        headingCopies.push("{{- block.settings.heading -}}");
+    {%- endcase -%}
+  {%- endfor -%}
+
+  if (headingCount > 1) {
+    if (window.TMM && window.TMM?.components?.imageBanner?.rotateHeaders) {
+      window.TMM.components.imageBanner.rotateHeaders(headingCopies, rotationDelay, "{{ section.id }}");
+    } else {
+      window.TMM = { 
+        components: { 
+          imageBanner: { 
+            rotateHeaders: (headingCopies, rotationDelay, sectionId) => {
+              if (!headingCopies) return;
+              
+              let headingCopyIndex = 0;
+              setInterval(
+                () => {
+                  headingCopyIndex = headingCopyIndex + 1 >= headingCopies.length ? 0 : headingCopyIndex + 1;
+          
+                  const currentHeading = document.querySelector(`#tm-Banner-${sectionId} .tmm-banner__heading-${headingCopyIndex} > span`);
+                  const currentHeadingClone = currentHeading.cloneNode(true);
+                  currentHeadingClone.classList.add('heading-invisible');
+                  currentHeadingClone.innerHTML = headingCopies[headingCopyIndex];
+            
+                  currentHeading.classList.add('tmm-fadeUpOut');
+                  currentHeading.parentElement.appendChild(currentHeadingClone);
+                  currentHeadingClone.classList.remove('heading-invisible');
+                  currentHeading.remove();
+                },
+                rotationDelay
+              );
+            }
+          } 
+        } 
+      }
+    }
+  }
+</script>
 
 {% schema %}
 {
@@ -85,6 +154,17 @@
       ],
       "default": "center",
       "label": "Content alignment"
+    },
+    {
+      "type": "range",
+      "id": "heading_rotation_delay",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Rotation delay of headings (seconds)",
+      "info": "Only applicable if there's multiple heading blocks",
+      "default": 3
     },
     {
       "type": "text",
@@ -226,17 +306,7 @@
           ],
           "default": "h2",
           "label": "Heading element"
-        },
-        {
-          "type": "range",
-          "id": "rotation_delay",
-          "min": 1,
-          "max": 10,
-          "step": 1,
-          "unit": "s",
-          "label": "Rotation delay (seconds)",
-          "default": 3
-        },
+        }
       ]
     }
   ],
