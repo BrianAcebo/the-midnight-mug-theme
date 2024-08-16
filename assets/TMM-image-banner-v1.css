@@ -1,3 +1,9 @@
 .tmm-image-banner__container {
   width: 100vw;
 }
+
+.tmm-image-banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
