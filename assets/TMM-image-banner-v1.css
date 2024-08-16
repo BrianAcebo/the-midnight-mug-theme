@@ -1,6 +1,7 @@
 .tmm-image-banner__container {
   width: 100vw;
   height: 60rem;
+  position: relative;
 }
 
 .tmm-image-banner__container:after {
