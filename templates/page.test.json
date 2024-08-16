@@ -145,8 +145,7 @@
     "tmm_image_banner_v1_9HphWP": {
       "type": "TMM-image-banner-v1",
       "settings": {
-        "image": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 30,
         "desktop_content_alignment": "center",
         "button_label_1": "Button label",
         "button_link_1": "",
