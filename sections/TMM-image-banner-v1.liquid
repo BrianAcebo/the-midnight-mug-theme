@@ -1,3 +1,5 @@
+{{ 'TMM-image-banner-v1.css' | asset_url | stylesheet_tag }}
+
 <section class="color-{{ section.settings.color_scheme }}">
   {%- if section.settings.image == blank -%}
     {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
