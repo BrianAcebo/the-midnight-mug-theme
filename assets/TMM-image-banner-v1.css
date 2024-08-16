@@ -1,3 +1,9 @@
+/* Base Styles */
+.tmm-hidden {
+  display: none;
+}
+
+/* Component Styles */
 .tmm-image-banner__container {
   width: 100vw;
   height: 60rem;
@@ -20,8 +26,4 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.tmm-hidden {
-  display: none;
 }
