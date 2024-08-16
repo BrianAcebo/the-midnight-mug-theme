@@ -2,7 +2,10 @@
   {{
     section.settings.image
     | image_url: width: 3840
-    | image_tag: width: section.settings.image_2.width, height: 'auto'
+    | image_tag:
+      width: section.settings.image.width,
+      height: section.settings.image.height,
+      loading: section.settings.image_loading
   }}
 </section>
 
@@ -18,7 +21,7 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "t:sections.image-banner.settings.image.label"
+      "label": "Banner image"
     },
     {
       "type": "range",
@@ -27,7 +30,7 @@
       "max": 100,
       "step": 10,
       "unit": "%",
-      "label": "t:sections.image-banner.settings.image_overlay_opacity.label",
+      "label": "Overlay opacity",
       "default": 0
     },
     {
@@ -36,55 +39,55 @@
       "options": [
         {
           "value": "left",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__1.label"
+          "label": "Left"
         },
         {
           "value": "center",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__2.label"
+          "label": "Center"
         },
         {
           "value": "right",
-          "label": "t:sections.image-banner.settings.desktop_content_alignment.options__3.label"
+          "label": "Right"
         }
       ],
       "default": "center",
-      "label": "t:sections.image-banner.settings.desktop_content_alignment.label"
+      "label": "Content alignment"
     },
     {
       "type": "text",
       "id": "button_label_1",
       "default": "Button label",
-      "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
-      "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+      "label": "First button label",
+      "info": "Leave the label blank to hide the button."
     },
     {
       "type": "url",
       "id": "button_link_1",
-      "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+      "label": "First button link"
     },
     {
       "type": "checkbox",
       "id": "button_style_secondary_1",
       "default": false,
-      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+      "label": "Use outline button style"
     },
     {
       "type": "text",
       "id": "button_label_2",
       "default": "Button label",
-      "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-      "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+      "label": "Secong button label",
+      "info": "Leave the label blank to hide the button."
     },
     {
       "type": "url",
       "id": "button_link_2",
-      "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+      "label": "Second button link"
     },
     {
       "type": "checkbox",
       "id": "button_style_secondary_2",
       "default": false,
-      "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+      "label": "Use outline button style"
     },
     {
       "type": "range",
