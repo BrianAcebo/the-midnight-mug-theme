@@ -21,3 +21,7 @@
   object-fit: cover;
   object-position: center;
 }
+
+.tmm-hidden {
+  display: none;
+}
