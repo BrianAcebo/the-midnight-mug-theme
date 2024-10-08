@@ -1,6 +1,128 @@
+<div class="tmm-promo-strip">
+  <div class="tmm-promo-text_wrap">
+    {% for block in section.blocks %}
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="tmm-promo-text_wrap">
+    {% for block in section.blocks %}
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+      <div 
+        {{ block.shopify_attributes }} 
+        role="region"
+        aria-label="{{ 'sections.header.announcement' | t }}"
+        class="tmm-promo-text"
+      >
+        {{- block.announcement_text -}}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "t:sections.announcement-bar.name",
+  "max_blocks": 12,
+  "class": "announcement-bar-section",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-4"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separators",
+      "default": true,
+      "label": "Show Line Seperators"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Send To URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "Annoucement Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "TMM - Promo Bar",
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
