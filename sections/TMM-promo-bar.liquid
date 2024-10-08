@@ -5,6 +5,12 @@
     	border-bottom: 1px solid #000;
     }
   {%- endif -%}
+
+  .tmm-promo-strip a {
+    text-transform: {{ section.settings.text_transformation }};
+    text-decoration: {{ section.settings.text_decoration }};
+    letter-spacing: {{ section.settings.text_spacing }}px;
+  }
 {% endstyle %}
 
 <div class="tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
@@ -12,14 +18,24 @@
     <div class="tmm-promo-text_wrap">
       {%- for block in section.blocks -%}
         {%- for i in (1..4) -%}
-          <{%- if block.url != blank -%}a href={{- block.url -}}{%- else -%}div{%- endif -%}
-            {{ block.shopify_attributes }}
-            role="region"
-            aria-label="{{ 'sections.header.announcement' | t }}"
-            class="tmm-promo-text"
-          >
-            {{- block.text -}}
-          </{%- if block.url != blank -%}a{%- else -%}div{%- endif -%}>
+          {%- if block.url != blank -%}
+            <a
+              {{ block.shopify_attributes }}
+              href="{{- block.settings.url -}}"
+              role="region"
+              class="tmm-promo-text tmm-{{ block.settings.text_style }}"
+            >
+              {{- block.settings.text -}}
+            </a>
+          {%- else -%}
+            <p
+              {{ block.shopify_attributes }}
+              role="region"
+              class="tmm-promo-text tmm-{{ block.settings.text_style }}"
+            >
+              {{- block.settings.text -}}
+            </p>
+          {%- endif -%}
         {%- endfor -%}
       {%- endfor -%}
     </div>
@@ -43,6 +59,87 @@
       "default": true,
       "label": "Show Line Seperators"
     },
+    {
+        "type": "select",
+        "id": "text_style",
+        "options": [
+          {
+            "value": "body",
+            "label": "Body"
+          },
+          {
+            "value": "text-semibold",
+            "label": "Subtitle"
+          },
+          {
+            "value": "text-caption",
+            "label": "Caption"
+          }
+        ],
+        "default": "body",
+        "label": "Text Style"
+      },
+        {
+        "type": "select",
+        "id": "text_transformation",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "uppercase",
+            "label": "Uppercase"
+          },
+          {
+            "value": "lowercase",
+            "label": "Lowercase"
+          },
+          {
+            "value": "capitalize",
+            "label": "Capitalize"
+          }
+        ],
+        "default": "capitalize",
+        "label": "Text transform"
+      },{
+        "type": "select",
+        "id": "text_decoration",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "overline",
+            "label": "Overline"
+          },
+          {
+            "value": "underline",
+            "label": "Underline"
+          },
+          {
+            "value": "strike",
+            "label": "Line-through"
+          },
+          {
+            "value": "over_under",
+            "label": "Overline-underline"
+          }
+        ],
+        "default": "none",
+        "label": "Text decoration"
+      },
+      {
+        "type": "range",
+        "id": "text_spacing",
+        "min": 0,
+        "max": 50,
+        "step": 1,
+        "unit": "px",
+        "label": "Text spacing",
+        "default": 18
+      }
   ],
   "blocks": [
     {
