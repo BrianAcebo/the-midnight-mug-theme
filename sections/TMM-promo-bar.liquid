@@ -1,3 +1,12 @@
+{% style %}
+  {%- if section.show_line_separators -%}
+    .tmm-promo-strip {
+    	border-top: 1px solid #000;
+    	border-bottom: 1px solid #000;
+    }
+  {%- endif -%}
+{% endstyle %}
+
 <div class="tmm-promo-strip">
   <div class="tmm-promo-text_wrap">
     {% for block in section.blocks %}
