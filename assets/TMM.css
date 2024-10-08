@@ -4315,8 +4315,6 @@ figcaption {
 }
 
 .tmm-promo-strip {
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
 	height: 48px;
 	display: flex;
 	overflow: hidden;
