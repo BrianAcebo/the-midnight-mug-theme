@@ -12,13 +12,13 @@
     <div class="tmm-promo-text_wrap">
       {%- for block in section.blocks -%}
         {%- for i in (1..4) -%}
-          <{%- if block.url != blank -%}a{%- else -%}div{%- endif -%}
+          <{%- if block.url != blank -%}a href={{- block.url -}}{%- else -%}div{%- endif -%}
             {{ block.shopify_attributes }}
             role="region"
             aria-label="{{ 'sections.header.announcement' | t }}"
             class="tmm-promo-text"
           >
-            {{- block.announcement_text -}}
+            {{- block.text -}}
           </{%- if block.url != blank -%}a{%- else -%}div{%- endif -%}>
         {%- endfor -%}
       {%- endfor -%}
