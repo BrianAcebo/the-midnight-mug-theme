@@ -24,7 +24,7 @@
               {{ block.shopify_attributes }}
               href="{{- block.settings.url -}}"
               role="region"
-              class="tmm-promo-text tmm-{{ section.settings.text_style }}"
+              class="tmm-promo-text {{ section.settings.text_style }}"
             >
               {{- block.settings.text -}}
             </a>
@@ -70,11 +70,11 @@
             "label": "Body"
           },
           {
-            "value": "text-semibold",
+            "value": "tmm-text-semibold",
             "label": "Subtitle"
           },
           {
-            "value": "caption",
+            "value": "tmm-caption",
             "label": "Caption"
           }
         ],
