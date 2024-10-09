@@ -9,13 +9,13 @@
 */
 {
   "sections": {
-    "breadcrumbs_tmm_XYq8R3": {
-      "type": "breadcrumbs-tmm",
+    "tmm_breadcrumbs_zmTXwE": {
+      "type": "TMM-breadcrumbs",
       "settings": {
-        "text_decoration": "underline",
+        "text_decoration": "none",
         "text_alignment": "flex-start",
         "text_transformation": "capitalize",
-        "text_spacing": 12,
+        "text_spacing": 18,
         "text_style": "body",
         "link_color": "#000000",
         "base_label": "Home",
@@ -30,6 +30,6 @@
     }
   },
   "order": [
-    "breadcrumbs_tmm_XYq8R3"
+    "tmm_breadcrumbs_zmTXwE"
   ]
 }
