@@ -18,12 +18,28 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
-            "link": ""
+            "link": "shopify://pages/thank-you"
+          }
+        },
+        "announcement_WEReLr": {
+          "type": "announcement",
+          "settings": {
+            "text": "Hello There",
+            "link": "shopify://products/make-money-with-shopify-ebook"
+          }
+        },
+        "announcement_FPw6rL": {
+          "type": "announcement",
+          "settings": {
+            "text": "1234567890",
+            "link": "shopify://pages/the-ultimate-shopify-launch-guide"
           }
         }
       },
       "block_order": [
-        "announcement_WUzEJx"
+        "announcement_WUzEJx",
+        "announcement_WEReLr",
+        "announcement_FPw6rL"
       ],
       "settings": {
         "color_scheme": "scheme-1",
