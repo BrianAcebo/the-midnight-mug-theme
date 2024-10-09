@@ -11,6 +11,11 @@
     }
   }
 
+  .tmm-padding-global: {
+    padding-left: {{ section.settings.padding_left }}%;
+    padding-left: {{ section.settings.padding_right }}%;
+  }
+
   .tmm-breadcrumbs ul {
     gap: {{ section.settings.text_spacing }}px;
     justify-content: {{ section.settings.text_alignment }};
@@ -306,7 +311,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
+      "label": "Padding top",
       "default": 36
     },
     {
@@ -316,8 +321,28 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
+      "label": "Padding bottom",
       "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Padding left",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Padding right",
+      "default": 5
     }
   ],
   "presets": [
