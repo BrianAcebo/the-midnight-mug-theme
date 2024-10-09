@@ -29,13 +29,14 @@
               {{- block.settings.text -}}
             </a>
           {%- else -%}
-            <p
+            <div
               {{ block.shopify_attributes }}
               role="region"
               class="tmm-promo-text tmm-{{ section.settings.text_style }}"
+              aria-label="{{- block.settings.text -}}"
             >
               {{- block.settings.text -}}
-            </p>
+            </div>
           {%- endif -%}
         {%- endfor -%}
       {%- endfor -%}
