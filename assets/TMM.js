@@ -3176,13 +3176,13 @@
     tmm_PAGE: () => tmm_PAGE,
     WIDTH: () => WIDTH,
     WILL_CHANGE: () => WILL_CHANGE,
-    W_MOD_IX: () => W_MOD_IX,
-    W_MOD_JS: () => W_MOD_JS,
+    T_MOD_JS_IX: () => T_MOD_JS_IX,
+    T_MOD_JS_JS: () => T_MOD_JS_JS,
   });
   var IX2_ID_DELIMITER,
     tmm_PAGE,
-    W_MOD_JS,
-    W_MOD_IX,
+    T_MOD_JS_JS,
+    T_MOD_JS_IX,
     BOUNDARY_SELECTOR,
     CONFIG_X_VALUE,
     CONFIG_Y_VALUE,
@@ -3240,8 +3240,8 @@
       "use strict";
       IX2_ID_DELIMITER = "|";
       tmm_PAGE = "data-tmm-page";
-      W_MOD_JS = "tmm-mod-js";
-      W_MOD_IX = "tmm-mod-ix";
+      T_MOD_JS_JS = "tmm-mod-js";
+      T_MOD_JS_IX = "tmm-mod-ix";
       BOUNDARY_SELECTOR = ".tmm-dyn-item";
       CONFIG_X_VALUE = "xValue";
       CONFIG_Y_VALUE = "yValue";
@@ -12250,8 +12250,8 @@
   }
   function addDocumentClass() {
     const { documentElement } = document;
-    if (documentElement.className.indexOf(W_MOD_IX2) === -1) {
-      documentElement.className += ` ${W_MOD_IX2}`;
+    if (documentElement.className.indexOf(T_MOD_JS_IX2) === -1) {
+      documentElement.className += ` ${T_MOD_JS_IX2}`;
     }
   }
   function startRenderLoop(store, testManual) {
@@ -13031,7 +13031,7 @@
     BOUNDARY_SELECTOR2,
     HTML_ELEMENT4,
     RENDER_GENERAL4,
-    W_MOD_IX2,
+    T_MOD_JS_IX2,
     getAffectedElements2,
     getElementId2,
     getDestinationValues2,
@@ -13085,7 +13085,7 @@
         BOUNDARY_SELECTOR: BOUNDARY_SELECTOR2,
         HTML_ELEMENT: HTML_ELEMENT4,
         RENDER_GENERAL: RENDER_GENERAL4,
-        W_MOD_IX: W_MOD_IX2,
+        T_MOD_JS_IX: T_MOD_JS_IX2,
       } = IX2EngineConstants_exports);
       ({
         getAffectedElements: getAffectedElements2,
