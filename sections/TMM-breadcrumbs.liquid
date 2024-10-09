@@ -34,272 +34,296 @@
   </svg>
 {%- endcapture -%}
 
-<nav 
-  class="section__tmm-component tmm-breadcrumbs tmm-paadding-global section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient" 
-  role="navigation" 
-  aria-label="breadcrumbs"
->
-  <ul>
-    {%- if section.settings.show_base_link -%}
-      <li class="{{ section.settings.text_style }}">
-        <a title="{{- section.settings.base_label -}}" href="{%- if section.settings.base_link != blank -%}{{ section.settings.base_link.url }}{%- else -%}/{%- endif -%}">{{- section.settings.base_label -}}</a>
-      </li>
-  
-      {{- chevron_right_svg_element -}}
-    {%- endif -%}
-
-    {%- case template.name -%}
-      {%- when 'page' -%}
-    
-        <li class="{{ section.settings.text_style }}">
-          <a title="{{ page.title }}" href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
-        </li>
-      
-      {%- when 'product' -%}
-        {%- if section.settings.show_shopping_link -%}
+<div class="tmm-padding-global">
+  <div class="tmm-container-large">
+    <nav
+      class="section__tmm-component tmm-breadcrumbs section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+      role="navigation"
+      aria-label="breadcrumbs"
+    >
+      <ul>
+        {%- if section.settings.show_base_link -%}
           <li class="{{ section.settings.text_style }}">
-            <a title="{{- section.settings.shopping_label -}}" href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
-          </li>
-
-          {{- chevron_right_svg_element -}}
-        {%- endif -%}
-    
-        <li class="{{ section.settings.text_style }}">
-          <a title="{{ product.tite }}" href="{{ product.url }}" aria-current="page">{{- product.title -}}</a>
-        </li>
-    
-      {%- when 'collection' -%}
-        {%- if section.settings.show_shopping_link -%}
-          <li class="{{ section.settings.text_style }}">
-            <a title="{{- section.settings.shopping_label -}}" href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}">{{- section.settings.shopping_label -}}</a>
+            <a
+              title="{{- section.settings.base_label -}}"
+              href="{%- if section.settings.base_link != blank -%}{{ section.settings.base_link.url }}{%- else -%}/{%- endif -%}"
+            >
+              {{- section.settings.base_label -}}
+            </a>
           </li>
 
           {{- chevron_right_svg_element -}}
         {%- endif -%}
 
-        <li class="{{ section.settings.text_style }}">
-          <a title="{{ collection.title }}" href="{{ collection.url }}" aria-current="page">{{- collection.title -}}</a>
-        </li>
-    
-        {%- if current_tags -%}
-          {{- chevron_right_svg_element -}}
-  
-          <li class="{{ section.settings.text_style }}">
-            {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
-            <a title="{{ current_tags | join: " + "}}" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + "}}</a>
-          </li>
-        {%- endif -%}
-    
-      {%- when 'blog' -%}
-        <li class="{{ section.settings.text_style }}">
-          <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
-        </li>
-      
-        {%- if current_tags -%}
-          {{- chevron_right_svg_element -}}
-  
-          <li class="{{ section.settings.text_style }}">
-            {% capture tag_url %}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
-            <a title="{{ current_tags | join: " + " }}" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: " + " }}</a>
-          </li>
-        {%- endif -%}
-    
-      {%- when 'article' -%}
-        <li class="{{ section.settings.text_style }}">
-          <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
-        </li>
-  
-        {{- chevron_right_svg_element -}}
-  
-        <li class="{{ section.settings.text_style }}">
-          <a title="{{ article.title }}" href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
-        </li>
-  
-    {%- else -%}
-      <li class="{{ section.settings.text_style }}">
-        <a title="{{ page_title }}" href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
-      </li>
-    {%- endcase -%}
-  </ul>
-</nav>
+        {%- case template.name -%}
+          {%- when 'page' -%}
+            <li class="{{ section.settings.text_style }}">
+              <a title="{{ page.title }}" href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
+            </li>
+
+          {%- when 'product' -%}
+            {%- if section.settings.show_shopping_link -%}
+              <li class="{{ section.settings.text_style }}">
+                <a
+                  title="{{- section.settings.shopping_label -}}"
+                  href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}"
+                >
+                  {{- section.settings.shopping_label -}}
+                </a>
+              </li>
+
+              {{- chevron_right_svg_element -}}
+            {%- endif -%}
+
+            <li class="{{ section.settings.text_style }}">
+              <a title="{{ product.tite }}" href="{{ product.url }}" aria-current="page">{{- product.title -}}</a>
+            </li>
+
+          {%- when 'collection' -%}
+            {%- if section.settings.show_shopping_link -%}
+              <li class="{{ section.settings.text_style }}">
+                <a
+                  title="{{- section.settings.shopping_label -}}"
+                  href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}"
+                >
+                  {{- section.settings.shopping_label -}}
+                </a>
+              </li>
+
+              {{- chevron_right_svg_element -}}
+            {%- endif -%}
+
+            <li class="{{ section.settings.text_style }}">
+              <a title="{{ collection.title }}" href="{{ collection.url }}" aria-current="page">
+                {{- collection.title -}}
+              </a>
+            </li>
+
+            {%- if current_tags -%}
+              {{- chevron_right_svg_element -}}
+
+              <li class="{{ section.settings.text_style }}">
+                {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                <a title="{{ current_tags | join: " + "}}" href="{{ tag_url }}" aria-current="page">
+                  {{- current_tags | join: ' + ' -}}
+                </a>
+              </li>
+            {%- endif -%}
+
+          {%- when 'blog' -%}
+            <li class="{{ section.settings.text_style }}">
+              <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
+            </li>
+
+            {%- if current_tags -%}
+              {{- chevron_right_svg_element -}}
+
+              <li class="{{ section.settings.text_style }}">
+                {% capture tag_url %}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
+                <a title="{{ current_tags | join: " + " }}" href="{{ tag_url }}" aria-current="page">
+                  {{- current_tags | join: ' + ' -}}
+                </a>
+              </li>
+            {%- endif -%}
+
+          {%- when 'article' -%}
+            <li class="{{ section.settings.text_style }}">
+              <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
+            </li>
+
+            {{- chevron_right_svg_element -}}
+
+            <li class="{{ section.settings.text_style }}">
+              <a title="{{ article.title }}" href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
+            </li>
+
+          {%- else -%}
+            <li class="{{ section.settings.text_style }}">
+              <a title="{{ page_title }}" href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
+            </li>
+        {%- endcase -%}
+      </ul>
+    </nav>
+  </div>
+</div>
 
 {% schema %}
-  {
-    "name": "TMM - Breadcrumbs",
-    "settings": [
-      {
-        "type": "select",
-        "id": "text_decoration",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "overline",
-            "label": "Overline"
-          },
-          {
-            "value": "underline",
-            "label": "Underline"
-          },
-          {
-            "value": "line-through",
-            "label": "Line-through"
-          },
-          {
-            "value": "overline underline",
-            "label": "Overline-underline"
-          }
-        ],
-        "default": "none",
-        "label": "Text decoration"
-      },
-      {
-        "type": "select",
-        "id": "text_alignment",
-        "options": [
-          {
-            "value": "flex-start",
-            "label": "Left"
-          },
-          {
-            "value": "center",
-            "label": "center"
-          },
-          {
-            "value": "flex-end",
-            "label": "Right"
-          }
-        ],
-        "default": "flex-start",
-        "label": "Text alignment"
-      },
-      {
-        "type": "select",
-        "id": "text_transformation",
-        "options": [
-          {
-            "value": "none",
-            "label": "None"
-          },
-          {
-            "value": "uppercase",
-            "label": "Uppercase"
-          },
-          {
-            "value": "lowercase",
-            "label": "Lowercase"
-          },
-          {
-            "value": "capitalize",
-            "label": "Capitalize"
-          }
-        ],
-        "default": "capitalize",
-        "label": "Text transform"
-      },
-      {
-        "type": "range",
-        "id": "text_spacing",
-        "min": 0,
-        "max": 50,
-        "step": 1,
-        "unit": "px",
-        "label": "Text spacing",
-        "default": 18
-      },
-      {
-        "type": "select",
-        "id": "text_style",
-        "options": [
-          {
-            "value": "body",
-            "label": "Body"
-          },
-          {
-            "value": "tmm-text-semibold",
-            "label": "Subtitle"
-          },
-          {
-            "value": "tmm-caption",
-            "label": "Caption"
-          }
-        ],
-        "default": "body",
-        "label": "Text style"
-      },
-      {
-        "type": "color",
-        "id": "link_color",
-        "label": "Link color",
-        "default": "#000000"
-      },
-      {
-        "type": "text",
-        "id": "base_label",
-        "default": "Home",
-        "label": "Label for beginning link (i.e. 'Home')",
-        "info": "This is the beginning link of the breadcrumbs. For example, this would be Home > Page Title"
-      },
-      {
-        "type": "url",
-        "id": "base_link",
-        "label": "Url for beginning link"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_base_link",
-        "default": true,
-        "label": "Show beginning link"
-      },
-      {
-        "type": "text",
-        "id": "shopping_label",
-        "default": "Shop All",
-        "label": "Label for beginning link of shopping links (i.e. 'Shop all')",
-        "info": "This is the beginning link for products and collections. For example, this would be Shop All > Product Title"
-      },
-      {
-        "type": "url",
-        "id": "shopping_link",
-        "label": "Url for shopping link"
-      },
-      {
-        "type": "checkbox",
-        "id": "show_shopping_link",
-        "default": true,
-        "label": "Show shopping link"
-      },
-      {
-        "type": "header",
-        "content": "Section Padding"
-      },
-      {
-        "type": "range",
-        "id": "padding_top",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 36
-      },
-      {
-        "type": "range",
-        "id": "padding_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 4,
-        "unit": "px",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default": 36
-      }
-    ],
-    "presets": [
-      {
-        "name": "TMM - Breadcrumbs"
-      }
-    ]
-  }
+{
+  "name": "TMM - Breadcrumbs",
+  "settings": [
+    {
+      "type": "select",
+      "id": "text_decoration",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "overline",
+          "label": "Overline"
+        },
+        {
+          "value": "underline",
+          "label": "Underline"
+        },
+        {
+          "value": "line-through",
+          "label": "Line-through"
+        },
+        {
+          "value": "overline underline",
+          "label": "Overline-underline"
+        }
+      ],
+      "default": "none",
+      "label": "Text decoration"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "flex-start",
+      "label": "Text alignment"
+    },
+    {
+      "type": "select",
+      "id": "text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "capitalize",
+      "label": "Text transform"
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Text spacing",
+      "default": 18
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "Body"
+        },
+        {
+          "value": "tmm-text-semibold",
+          "label": "Subtitle"
+        },
+        {
+          "value": "tmm-caption",
+          "label": "Caption"
+        }
+      ],
+      "default": "body",
+      "label": "Text style"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "base_label",
+      "default": "Home",
+      "label": "Label for beginning link (i.e. 'Home')",
+      "info": "This is the beginning link of the breadcrumbs. For example, this would be Home > Page Title"
+    },
+    {
+      "type": "url",
+      "id": "base_link",
+      "label": "Url for beginning link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_base_link",
+      "default": true,
+      "label": "Show beginning link"
+    },
+    {
+      "type": "text",
+      "id": "shopping_label",
+      "default": "Shop All",
+      "label": "Label for beginning link of shopping links (i.e. 'Shop all')",
+      "info": "This is the beginning link for products and collections. For example, this would be Shop All > Product Title"
+    },
+    {
+      "type": "url",
+      "id": "shopping_link",
+      "label": "Url for shopping link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shopping_link",
+      "default": true,
+      "label": "Show shopping link"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "TMM - Breadcrumbs"
+    }
+  ]
+}
 {% endschema %}
