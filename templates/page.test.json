@@ -26,8 +26,8 @@
         "show_shopping_link": true,
         "padding_top": 36,
         "padding_bottom": 36,
-        "padding_left": 0,
-        "padding_right": 15
+        "padding_left": 43,
+        "padding_right": 5
       }
     }
   },
