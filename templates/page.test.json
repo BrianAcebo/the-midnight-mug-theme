@@ -12,12 +12,13 @@
     "tmm_breadcrumbs_zmTXwE": {
       "type": "TMM-breadcrumbs",
       "settings": {
+        "color_scheme": "scheme-1",
         "text_decoration": "none",
         "text_alignment": "flex-start",
         "text_transformation": "capitalize",
         "text_spacing": 18,
         "text_style": "body",
-        "link_color": "#000000",
+        "link_color": "#fcfcfc",
         "base_label": "Home",
         "base_link": "",
         "show_base_link": true,
