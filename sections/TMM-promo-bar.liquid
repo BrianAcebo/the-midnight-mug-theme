@@ -1,12 +1,13 @@
 {% style %}
-  {%- if section.show_line_separators -%}
+  {%- if section.settings.show_line_separators -%}
     .tmm-promo-strip {
     	border-top: 1px solid #000;
     	border-bottom: 1px solid #000;
     }
   {%- endif -%}
 
-  .tmm-promo-strip a {
+  .tmm-promo-strip a,
+  .tmm-promo-strip p {
     text-transform: {{ section.settings.text_transformation }};
     text-decoration: {{ section.settings.text_decoration }};
     letter-spacing: {{ section.settings.text_spacing }}px;
