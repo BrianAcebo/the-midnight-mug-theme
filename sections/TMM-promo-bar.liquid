@@ -1,4 +1,4 @@
-{% style %}
+{%- style -%}
   {%- if section.settings.show_line_separators -%}
     .tmm-promo-strip {
     	border-top: 1px solid #000;
@@ -12,7 +12,7 @@
     text-decoration: {{ section.settings.text_decoration }};
     letter-spacing: {{ section.settings.text_spacing }}px;
   }
-{% endstyle %}
+{%- endstyle -%}
 
 <div class="section__tmm-component tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
   {%- for i in (1..2) -%}
