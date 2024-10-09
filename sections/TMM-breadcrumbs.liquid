@@ -40,116 +40,114 @@
 {%- endcapture -%}
 
 <div class="tmm-padding-global">
-  <div class="tmm-container-large">
-    <nav
-      class="section__tmm-component tmm-breadcrumbs section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
-      role="navigation"
-      aria-label="breadcrumbs"
-    >
-      <ul>
-        {%- if section.settings.show_base_link -%}
+  <nav
+    class="section__tmm-component tmm-breadcrumbs section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+    role="navigation"
+    aria-label="breadcrumbs"
+  >
+    <ul>
+      {%- if section.settings.show_base_link -%}
+        <li class="{{ section.settings.text_style }}">
+          <a
+            title="{{- section.settings.base_label -}}"
+            href="{%- if section.settings.base_link != blank -%}{{ section.settings.base_link.url }}{%- else -%}/{%- endif -%}"
+          >
+            {{- section.settings.base_label -}}
+          </a>
+        </li>
+
+        {{- chevron_right_svg_element -}}
+      {%- endif -%}
+
+      {%- case template.name -%}
+        {%- when 'page' -%}
           <li class="{{ section.settings.text_style }}">
-            <a
-              title="{{- section.settings.base_label -}}"
-              href="{%- if section.settings.base_link != blank -%}{{ section.settings.base_link.url }}{%- else -%}/{%- endif -%}"
-            >
-              {{- section.settings.base_label -}}
-            </a>
+            <a title="{{ page.title }}" href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
           </li>
 
-          {{- chevron_right_svg_element -}}
-        {%- endif -%}
-
-        {%- case template.name -%}
-          {%- when 'page' -%}
+        {%- when 'product' -%}
+          {%- if section.settings.show_shopping_link -%}
             <li class="{{ section.settings.text_style }}">
-              <a title="{{ page.title }}" href="{{ page.url }}" aria-current="page">{{- page.title -}}</a>
-            </li>
-
-          {%- when 'product' -%}
-            {%- if section.settings.show_shopping_link -%}
-              <li class="{{ section.settings.text_style }}">
-                <a
-                  title="{{- section.settings.shopping_label -}}"
-                  href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}"
-                >
-                  {{- section.settings.shopping_label -}}
-                </a>
-              </li>
-
-              {{- chevron_right_svg_element -}}
-            {%- endif -%}
-
-            <li class="{{ section.settings.text_style }}">
-              <a title="{{ product.tite }}" href="{{ product.url }}" aria-current="page">{{- product.title -}}</a>
-            </li>
-
-          {%- when 'collection' -%}
-            {%- if section.settings.show_shopping_link -%}
-              <li class="{{ section.settings.text_style }}">
-                <a
-                  title="{{- section.settings.shopping_label -}}"
-                  href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}"
-                >
-                  {{- section.settings.shopping_label -}}
-                </a>
-              </li>
-
-              {{- chevron_right_svg_element -}}
-            {%- endif -%}
-
-            <li class="{{ section.settings.text_style }}">
-              <a title="{{ collection.title }}" href="{{ collection.url }}" aria-current="page">
-                {{- collection.title -}}
+              <a
+                title="{{- section.settings.shopping_label -}}"
+                href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}"
+              >
+                {{- section.settings.shopping_label -}}
               </a>
             </li>
 
-            {%- if current_tags -%}
-              {{- chevron_right_svg_element -}}
+            {{- chevron_right_svg_element -}}
+          {%- endif -%}
 
-              <li class="{{ section.settings.text_style }}">
-                {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
-                <a title="{{ current_tags | join: " + "}}" href="{{ tag_url }}" aria-current="page">
-                  {{- current_tags | join: ' + ' -}}
-                </a>
-              </li>
-            {%- endif -%}
+          <li class="{{ section.settings.text_style }}">
+            <a title="{{ product.tite }}" href="{{ product.url }}" aria-current="page">{{- product.title -}}</a>
+          </li>
 
-          {%- when 'blog' -%}
+        {%- when 'collection' -%}
+          {%- if section.settings.show_shopping_link -%}
             <li class="{{ section.settings.text_style }}">
-              <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
-            </li>
-
-            {%- if current_tags -%}
-              {{- chevron_right_svg_element -}}
-
-              <li class="{{ section.settings.text_style }}">
-                {% capture tag_url %}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
-                <a title="{{ current_tags | join: " + " }}" href="{{ tag_url }}" aria-current="page">
-                  {{- current_tags | join: ' + ' -}}
-                </a>
-              </li>
-            {%- endif -%}
-
-          {%- when 'article' -%}
-            <li class="{{ section.settings.text_style }}">
-              <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
+              <a
+                title="{{- section.settings.shopping_label -}}"
+                href="{%- if section.settings.shopping_link != blank -%}{{ section.settings.shopping_link.url }}{%- else -%}/collections/all{%- endif -%}"
+              >
+                {{- section.settings.shopping_label -}}
+              </a>
             </li>
 
             {{- chevron_right_svg_element -}}
+          {%- endif -%}
+
+          <li class="{{ section.settings.text_style }}">
+            <a title="{{ collection.title }}" href="{{ collection.url }}" aria-current="page">
+              {{- collection.title -}}
+            </a>
+          </li>
+
+          {%- if current_tags -%}
+            {{- chevron_right_svg_element -}}
 
             <li class="{{ section.settings.text_style }}">
-              <a title="{{ article.title }}" href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
+              {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+              <a title="{{ current_tags | join: " + "}}" href="{{ tag_url }}" aria-current="page">
+                {{- current_tags | join: ' + ' -}}
+              </a>
             </li>
+          {%- endif -%}
 
-          {%- else -%}
+        {%- when 'blog' -%}
+          <li class="{{ section.settings.text_style }}">
+            <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
+          </li>
+
+          {%- if current_tags -%}
+            {{- chevron_right_svg_element -}}
+
             <li class="{{ section.settings.text_style }}">
-              <a title="{{ page_title }}" href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
+              {% capture tag_url %}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{% endcapture %}
+              <a title="{{ current_tags | join: " + " }}" href="{{ tag_url }}" aria-current="page">
+                {{- current_tags | join: ' + ' -}}
+              </a>
             </li>
-        {%- endcase -%}
-      </ul>
-    </nav>
-  </div>
+          {%- endif -%}
+
+        {%- when 'article' -%}
+          <li class="{{ section.settings.text_style }}">
+            <a title="{{ blog.title }}" href="{{ blog.url }}" aria-current="page">{{- blog.title -}}</a>
+          </li>
+
+          {{- chevron_right_svg_element -}}
+
+          <li class="{{ section.settings.text_style }}">
+            <a title="{{ article.title }}" href="{{ article.url }}" aria-current="page">{{- article.title -}}</a>
+          </li>
+
+        {%- else -%}
+          <li class="{{ section.settings.text_style }}">
+            <a title="{{ page_title }}" href="{{ request.path }}" aria-current="page">{{- page_title -}}</a>
+          </li>
+      {%- endcase -%}
+    </ul>
+  </nav>
 </div>
 
 {% schema %}
