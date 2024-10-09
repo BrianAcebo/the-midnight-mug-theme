@@ -25,7 +25,9 @@
         "shopping_link": "",
         "show_shopping_link": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "padding_left": 0,
+        "padding_right": 0
       }
     }
   },
