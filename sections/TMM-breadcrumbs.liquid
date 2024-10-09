@@ -35,7 +35,7 @@
 {%- endcapture -%}
 
 <nav 
-  class="tmm-breadcrumbs page-width section-{{ section.id }}-padding" 
+  class="section__tmm-component tmm-breadcrumbs tmm-paadding-global section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient" 
   role="navigation" 
   aria-label="breadcrumbs"
 >
@@ -144,11 +144,11 @@
             "label": "Underline"
           },
           {
-            "value": "strike",
+            "value": "line-through",
             "label": "Line-through"
           },
           {
-            "value": "over_under",
+            "value": "overline underline",
             "label": "Overline-underline"
           }
         ],
