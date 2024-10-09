@@ -39,9 +39,9 @@
   </svg>
 {%- endcapture -%}
 
-<div class="tmm-padding-global">
+<div class="tmm-padding-global section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <nav
-    class="section__tmm-component tmm-breadcrumbs section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient"
+    class="section__tmm-component tmm-breadcrumbs"
     role="navigation"
     aria-label="breadcrumbs"
   >
@@ -154,6 +154,12 @@
 {
   "name": "TMM - Breadcrumbs",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-4"
+    },
     {
       "type": "select",
       "id": "text_decoration",
