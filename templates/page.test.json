@@ -18,10 +18,18 @@
             "text": "Welcome to our store",
             "link": ""
           }
+        },
+        "announcement_qUcDTj": {
+          "type": "announcement",
+          "settings": {
+            "text": "123456",
+            "link": "shopify://collections/all"
+          }
         }
       },
       "block_order": [
-        "announcement_gaDLMM"
+        "announcement_gaDLMM",
+        "announcement_qUcDTj"
       ],
       "settings": {
         "color_scheme": "scheme-1",
