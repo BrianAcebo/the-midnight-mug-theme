@@ -19,6 +19,16 @@
     }
   }
 
+  .tmm-section-{{ section.id }} .tmm-button.solid {
+    background-color: {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.outline {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button_color }};
+  }
+
    {%- if section.settings.show_line_separators -%}
     .tmm-section-{{ section.id }}.tmm-nav {
     	border-top: 1px solid #000;
@@ -82,64 +92,59 @@
           <span class="tmm-h2">{{ shop.name }}</span>
         {%- endif -%}
       </a>
-      <a
-        href="#"
-        class="tmm-navbar1-link tmm-nav-link"
-        >Shop Now</a
-      >
-      <a
-        href="#"
-        class="tmm-navbar1-link tmm-nav-link"
-        >About Us</a
-      >
-      <div
-        data-hover="true"
-        data-delay="200"
-        class="tmm-navbar1-menu_dropdown tmm-dropdown"
-      >
-        <div class="tmm-navbar1-menu_dropdown-toggle tmm-dropdown-toggle">
-          <div class="text-block-6">Our Products</div>
-          <div class="tmm-dropdown-chevron tmm-embed">
-            <svg
-              width=" 100%"
-              height=" 100%"
-              viewbox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-              	fill-rule="evenodd"
-              	clip-rule="evenodd"
-              	d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z"
-              	fill="currentColor"
-              ></path>
-            </svg>
+      {%- for link in section.settings.menu.links -%}
+        {%- if link.links.size > 0 -%}
+          <div
+            data-hover="true"
+            data-delay="200"
+            class="tmm-navbar1-menu_dropdown tmm-dropdown"
+          >
+            <div class="tmm-navbar1-menu_dropdown-toggle tmm-dropdown-toggle">
+              <div class="text-block-6">Our Products</div>
+              <div class="tmm-dropdown-chevron tmm-embed">
+                <svg
+                  width=" 100%"
+                  height=" 100%"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                  	fill-rule="evenodd"
+                  	clip-rule="evenodd"
+                  	d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z"
+                  	fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <nav class="tmm-navbar1-menu_dropdown-list tmm-dropdown-list">
+              {%- for child_link in link.links -%}
+                <a
+                  href="{{- child_link.url -}}"
+                  class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link"
+                >
+                  {{- child_link.title -}}
+                </a>
+              {%- endfor -%}
+            </nav>
           </div>
-        </div>
-        <nav class="tmm-navbar1-menu_dropdown-list tmm-dropdown-list">
+        {%- else -%}
           <a
-            href="#"
-            class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link"
-            >Skincare Tips</a
+            href="{{- link.url -}}"
+            class="tmm-navbar1-link tmm-nav-link {{- section.settings.button_type -}}"
           >
-          <a
-            href="#"
-            class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link"
-            >Blog</a
-          >
-          <a
-            href="#"
-            class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link"
-            >Contact Us</a
-          >
-        </nav>
-      </div>
+            {{- link.title -}}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
       <a
         id="tmm-node-_58fa4208-d454-ddb4-2ec0-0da1ceaace48-191428a2"
-        href="#"
+        href="{{- section.settings.button_link.url -}}"
         class="tmm-button is-tmm-navbar1-button tmm-navbar1-tablet_button tmm-button"
-        >Sign Up</a
       >
+        {{- section.settings.button_text -}}
+      </a>
     </nav>
     <a
       href="#"
@@ -197,6 +202,12 @@
       "id": "color_scheme",
       "label": "Color Scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Menu"
     },
     {
       "type": "select",
