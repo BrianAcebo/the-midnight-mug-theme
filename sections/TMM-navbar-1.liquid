@@ -11,18 +11,8 @@
     }
   }
   
-  {%- if section.settings.show_line_separators -%}
-    .tmm-promo-strip {
-    	border-top: 1px solid #000;
-    	border-bottom: 1px solid #000;
-    }
-  {%- endif -%}
-
-  .tmm-promo-strip a,
-  .tmm-promo-strip div {
-    text-transform: {{ section.settings.text_transformation }};
-    text-decoration: {{ section.settings.text_decoration }};
-    letter-spacing: {{ section.settings.text_spacing }}px;
+  .tmm-section-{{ section.id }}.tmm-nav {
+    margin-bottom: {{ section.settings.margin_bottom }}px;
   }
 {%- endstyle -%}
 
@@ -324,12 +314,12 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "t:sections.header.settings.margin_bottom.label",
+      "label": "Margin bottom",
       "default": 0
     },
     {
       "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "content": "Section padding"
     },
     {
       "type": "range",
