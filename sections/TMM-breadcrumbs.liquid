@@ -11,17 +11,17 @@
     }
   }
 
-  .tmm-padding-global {
+  .tmm-section-{{ section.id }}.tmm-padding-global {
     padding-left: {{ section.settings.padding_left }}%;
     padding-right: {{ section.settings.padding_right }}%;
   }
 
-  .tmm-breadcrumbs ul {
+  .tmm-section-{{ section.id }} .tmm-breadcrumbs ul {
     gap: {{ section.settings.text_spacing }}px;
     justify-content: {{ section.settings.text_alignment }};
   }
 
-  .tmm-breadcrumbs ul li a {
+  .tmm-section-{{ section.id }} .tmm-breadcrumbs ul li a {
     text-transform: {{ section.settings.text_transformation }};
     text-decoration: {{ section.settings.text_decoration }};
     color: {{ section.settings.link_color }};
@@ -39,7 +39,7 @@
   </svg>
 {%- endcapture -%}
 
-<div class="tmm-padding-global section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+<div class="tmm-padding-global tmm-section-{{ section.id }} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <nav
     class="section__tmm-component tmm-breadcrumbs"
     role="navigation"
