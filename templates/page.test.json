@@ -43,7 +43,7 @@
     "tmm_breadcrumbs_zmTXwE": {
       "type": "TMM-breadcrumbs",
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "text_decoration": "none",
         "text_alignment": "flex-start",
         "text_transformation": "capitalize",
