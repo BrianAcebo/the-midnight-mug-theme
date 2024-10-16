@@ -25,6 +25,13 @@
     	border-bottom: 1px solid #000;
     }
   {%- endif -%}
+
+  {%- if section.settings.sticky_header_type -%}
+    .tmm-section-{{ section.id }}.tmm-nav {
+      position: fixed;
+      top: 0;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 <div
