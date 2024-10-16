@@ -1,14 +1,37 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "tmm_promo_bar_8nKHWa": {
+      "type": "TMM-promo-bar",
+      "blocks": {
+        "announcement_gaDLMM": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_gaDLMM"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "show_line_separators": true,
+        "text_style": "body",
+        "text_transformation": "capitalize",
+        "text_decoration": "none",
+        "text_spacing": 4
+      }
+    },
     "tmm_breadcrumbs_zmTXwE": {
       "type": "TMM-breadcrumbs",
       "settings": {
@@ -33,6 +56,7 @@
     }
   },
   "order": [
+    "tmm_promo_bar_8nKHWa",
     "tmm_breadcrumbs_zmTXwE"
   ]
 }

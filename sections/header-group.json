@@ -1,55 +1,16 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "tmm_promo_bar_cpLUkM": {
-      "type": "TMM-promo-bar",
-      "blocks": {
-        "announcement_WUzEJx": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": "shopify://pages/thank-you"
-          }
-        },
-        "announcement_WEReLr": {
-          "type": "announcement",
-          "settings": {
-            "text": "Hello There",
-            "link": "shopify://products/make-money-with-shopify-ebook"
-          }
-        },
-        "announcement_FPw6rL": {
-          "type": "announcement",
-          "settings": {
-            "text": "1234567890",
-            "link": "shopify://pages/the-ultimate-shopify-launch-guide"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_WUzEJx",
-        "announcement_WEReLr",
-        "announcement_FPw6rL"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "show_line_separators": true,
-        "text_style": "body",
-        "text_transformation": "uppercase",
-        "text_decoration": "none",
-        "text_spacing": 4
-      }
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -70,7 +31,6 @@
     }
   },
   "order": [
-    "tmm_promo_bar_cpLUkM",
     "header"
   ]
 }
