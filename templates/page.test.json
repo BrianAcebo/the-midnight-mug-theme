@@ -49,7 +49,7 @@
         "text_transformation": "capitalize",
         "text_spacing": 18,
         "text_style": "body",
-        "link_color": "#fcfcfc",
+        "link_color": "#020912",
         "base_label": "Home",
         "base_link": "",
         "show_base_link": true,
