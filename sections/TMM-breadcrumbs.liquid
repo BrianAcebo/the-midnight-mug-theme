@@ -24,6 +24,7 @@
   .tmm-breadcrumbs ul li a {
     text-transform: {{ section.settings.text_transformation }};
     text-decoration: {{ section.settings.text_decoration }};
+    color: {{ section.settings.link_color }};
   }
 {%- endstyle -%}
 
@@ -34,7 +35,7 @@
     viewBox="0 0 8 12" 
     fill="none"
   >
-    <path d="M1 1L6 6L1 11" stroke="inherit" stroke-width="1.2"/>
+    <path d="M1 1L6 6L1 11" stroke="{{ section.settings.link_color }}" stroke-width="1.2"/>
   </svg>
 {%- endcapture -%}
 
@@ -260,6 +261,12 @@
       ],
       "default": "body",
       "label": "Text style"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#000000"
     },
     {
       "type": "text",
