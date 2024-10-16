@@ -71,8 +71,8 @@
         "show_line_separators": true,
         "color_scheme": "",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 8,
+        "padding_bottom": 8
       }
     }
   },
