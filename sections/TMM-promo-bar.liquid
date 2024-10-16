@@ -12,21 +12,21 @@
   }
   
   {%- if section.settings.show_line_separators -%}
-    .tmm-promo-strip {
+    .tmm-section-{{ section.id }}.tmm-promo-strip {
     	border-top: 1px solid #000;
     	border-bottom: 1px solid #000;
     }
   {%- endif -%}
 
-  .tmm-promo-strip a,
-  .tmm-promo-strip div {
+  .tmm-section-{{ section.id }}.tmm-promo-strip a,
+  .tmm-section-{{ section.id }}.tmm-promo-strip div {
     text-transform: {{ section.settings.text_transformation }};
     text-decoration: {{ section.settings.text_decoration }};
     letter-spacing: {{ section.settings.text_spacing }}px;
   }
 {%- endstyle -%}
 
-<div class="section__tmm-component section-{{ section.id }}-padding tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
+<div class="section__tmm-component tmm-section-{{ section.id }} section-{{ section.id }}-padding tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
   {%- for i in (1..2) -%}
     <div class="tmm-promo-text_wrap">
       {%- for i in (1..3) -%}
