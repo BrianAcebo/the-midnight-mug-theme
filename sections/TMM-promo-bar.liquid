@@ -1,4 +1,16 @@
 {%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  
   {%- if section.settings.show_line_separators -%}
     .tmm-promo-strip {
     	border-top: 1px solid #000;
@@ -14,7 +26,7 @@
   }
 {%- endstyle -%}
 
-<div class="section__tmm-component tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
+<div class="section__tmm-component section-{{ section.id }}-padding tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
   {%- for i in (1..2) -%}
     <div class="tmm-promo-text_wrap">
       {%- for i in (1..3) -%}
