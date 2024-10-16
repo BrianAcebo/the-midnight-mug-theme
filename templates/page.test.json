@@ -37,7 +37,9 @@
         "text_style": "body",
         "text_transformation": "uppercase",
         "text_decoration": "none",
-        "text_spacing": 4
+        "text_spacing": 4,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "tmm_breadcrumbs_zmTXwE": {
@@ -61,10 +63,22 @@
         "padding_left": 5,
         "padding_right": 5
       }
+    },
+    "tmm_navbar_1_bH3xzE": {
+      "type": "TMM-navbar-1",
+      "settings": {
+        "sticky_header_type": false,
+        "show_line_separators": true,
+        "color_scheme": "",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "tmm_promo_bar_8nKHWa",
-    "tmm_breadcrumbs_zmTXwE"
+    "tmm_breadcrumbs_zmTXwE",
+    "tmm_navbar_1_bH3xzE"
   ]
 }
