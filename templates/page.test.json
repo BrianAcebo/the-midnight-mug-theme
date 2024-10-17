@@ -73,6 +73,7 @@
         "menu": "main-menu",
         "text_transformation": "capitalize",
         "text_decoration": "none",
+        "text_color": "#000000",
         "button_type": "outline",
         "button_text": "Shop Now",
         "button_link": "",
@@ -85,12 +86,13 @@
     "tmm_navbar_2_63mmEF": {
       "type": "TMM-navbar-2",
       "settings": {
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "sticky_header_type": false,
         "show_line_separators": false,
         "menu": "main-menu",
         "text_transformation": "capitalize",
         "text_decoration": "none",
+        "text_color": "#000000",
         "button1_type": "outline",
         "button1_text": "Shop Now",
         "button1_link": "",
