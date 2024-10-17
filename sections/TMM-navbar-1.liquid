@@ -44,7 +44,8 @@
   {%- endif -%}
 
   .tmm-section-{{ section.id }}.tmm-nav .tmm-nav-link,
-  .tmm-section-{{ section.id }}.tmm-nav .tmm-dropdown-link {
+  .tmm-section-{{ section.id }}.tmm-nav .tmm-dropdown-link,
+  .tmm-section-{{ section.id }} .tmm-button {
     text-transform: {{ section.settings.text_transformation }};
     text-decoration: {{ section.settings.text_decoration }};
   }
@@ -305,7 +306,7 @@
     {
       "type": "text",
       "id": "button_text",
-      "default": "Sign Up",
+      "default": "Shop Now",
       "label": "Button text"
     },
     {
