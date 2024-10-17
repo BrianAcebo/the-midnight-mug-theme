@@ -68,7 +68,7 @@
       "type": "TMM-navbar-1",
       "settings": {
         "sticky_header_type": false,
-        "show_line_separators": false,
+        "show_line_separators": true,
         "color_scheme": "",
         "menu": "main-menu",
         "text_transformation": "capitalize",
