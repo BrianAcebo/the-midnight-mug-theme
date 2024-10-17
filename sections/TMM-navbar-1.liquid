@@ -28,9 +28,10 @@
   .tmm-section-{{ section.id }} .tmm-button.outline {
     background-color: transparent;
     border: 1px solid {{ section.settings.button_color }};
+    color: {{ section.settings.button_color }};
   }
 
-   {%- if section.settings.show_line_separators -%}
+  {%- if section.settings.show_line_separators -%}
     .tmm-section-{{ section.id }}.tmm-nav {
     	border-top: 1px solid #000;
     	border-bottom: 1px solid #000;
