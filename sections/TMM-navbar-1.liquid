@@ -79,8 +79,8 @@
   const colorScheme = "{{ section.settings.color_scheme }}";
   if (colorScheme !== "") {
     setTimeout(() => {
-      const navOverlay_{{ section.id }} = document.querySelector(".tmm-nav-overlay nav");
-      navOverlay_{{ section.id }}.classList.add(`${colorScheme} gradient`);
+      const navOverlay = document.querySelector(".tmm-section-{{ section.id }} .tmm-nav-overlay nav");
+      navOverlay.classList.add(`${colorScheme} gradient`);
     }, 500);
   }
 </script>
