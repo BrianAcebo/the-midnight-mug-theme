@@ -73,6 +73,10 @@
     text-transform: {{ section.settings.text_transformation }};
     text-decoration: {{ section.settings.text_decoration }};
   }
+
+  .tmm-section-{{ section.id }}.tmm-nav .tmm-navbar1-logo {
+    min-width: {{ settings.logo_width }}px;
+  }
 {%- endstyle -%}
 
 <div
