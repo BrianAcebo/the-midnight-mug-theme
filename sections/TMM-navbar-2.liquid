@@ -19,16 +19,27 @@
     }
   }
 
-  .tmm-section-{{ section.id }} .tmm-button.solid,
+  .tmm-section-{{ section.id }} .tmm-button1.solid,
   .tmm-section-{{ section.id }} .tmm-navbar1-menu_icon > div {
-    background-color: {{ section.settings.button_color }};
-    border: 1px solid {{ section.settings.button_color }};
+    background-color: {{ section.settings.button1_color }};
+    border: 1px solid {{ section.settings.button1_color }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-button.outline {
+  .tmm-section-{{ section.id }} .tmm-button1.outline {
     background-color: transparent;
-    border: 1px solid {{ section.settings.button_color }};
-    color: {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button1_color }};
+    color: {{ section.settings.button1_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button2.solid {
+    background-color: {{ section.settings.button2_color }};
+    border: 1px solid {{ section.settings.button2_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button2.outline {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button2_color }};
+    color: {{ section.settings.button2_color }};
   }
 
   {%- if section.settings.show_line_separators -%}
@@ -61,90 +72,116 @@
   data-easing="ease"
   data-easing2="ease"
   role="banner"
-  class="tmm-navbar2-component tmm-nav"
+  class="tmm-section-{{ section.id }} tmm-navbar2-component tmm-nav section-{{ section.id }}-padding"
 >
   <div class="tmm-navbar2-container">
     <a
-      href="#"
-      class="tmm-navbar2-logo_link tmm-nav-brand"
-      ><img
-        loading="lazy"
-        src="images/company-logo.svg"
-        alt=""
-        class="tmm-navbar2-logo"
-    ></a>
+      href="{{ routes.root_url }}"
+      class="tmm-navbar1-tablet-logo_link tmm-nav-brand"
+    >
+      {%- if settings.logo != blank -%}
+        {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+        {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+        {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+        {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+        {{
+          settings.logo
+          | image_url: width: 600
+          | image_tag:
+            class: 'tmm-navbar1-logo',
+            widths: widths,
+            height: logo_height,
+            width: settings.logo_width,
+            alt: logo_alt,
+            sizes: sizes,
+            preload: true
+        }}
+      {%- else -%}
+        <span class="tmm-heading-style-h3">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
     <nav
       role="navigation"
       class="tmm-navbar2-menu is-page-height-tablet tmm-nav-menu"
     >
-      <a
-        href="#"
-        class="tmm-navbar2-link tmm-nav-link"
-        >About Us</a
-      >
-      <a
-        href="#"
-        class="tmm-navbar2-link tmm-nav-link"
-        >Our Story</a
-      >
-      <a
-        href="#"
-        class="tmm-navbar2-link tmm-nav-link"
-        >Mission</a
-      >
-      <div
-        data-delay="200"
-        data-hover="true"
-        class="tmm-navbar2-menu_dropdown tmm-dropdown"
-      >
-        <div class="tmm-navbar2-dropdown_toggle tmm-dropdown-toggle">
-          <div>Services</div>
-          <div class="tmm-dropdown-chevron tmm-embed">
-            <svg
-              width=" 100%"
-              height=" 100%"
-              viewbox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-              	fill-rule="evenodd"
-              	clip-rule="evenodd"
-              	d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z"
-              	fill="currentColor"
-              ></path>
-            </svg>
+      {%- for link in section.settings.menu.links -%}
+        {%- if link.links.size > 0 -%}
+          <div
+            data-delay="200"
+            data-hover="true"
+            class="tmm-navbar2-menu_dropdown tmm-dropdown"
+          >
+            <div class="tmm-navbar2-dropdown_toggle tmm-dropdown-toggle">
+              <a
+                href="{{- link.url -}}"
+                class="tmm-navbar2-link tmm-nav-link"
+              >
+                {{- link.title -}}
+              </a>
+              <div class="tmm-dropdown-chevron tmm-embed">
+                <svg
+                  width=" 100%"
+                  height=" 100%"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                  	fill-rule="evenodd"
+                  	clip-rule="evenodd"
+                  	d="M2.55806 6.29544C2.46043 6.19781 2.46043 6.03952 2.55806 5.94189L3.44195 5.058C3.53958 4.96037 3.69787 4.96037 3.7955 5.058L8.00001 9.26251L12.2045 5.058C12.3021 4.96037 12.4604 4.96037 12.5581 5.058L13.4419 5.94189C13.5396 6.03952 13.5396 6.19781 13.4419 6.29544L8.17678 11.5606C8.07915 11.6582 7.92086 11.6582 7.82323 11.5606L2.55806 6.29544Z"
+                  	fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <nav class="tmm-navbar2-dropdown_list tmm-dropdown-list">
+              {%- for child_link in link.links -%}
+                <a
+                  href="{{- child_link.url -}}"
+                  class="tmm-navbar2-dropdown_link tmm-dropdown-link"
+                >
+                  {{- child_link.title -}}
+                </a>
+                {%- if child_link.links.size > 0 -%}
+                  <ul class="tmm-padding-x-35">
+                    {%- for grandchild_link in child_link.links -%}
+                      <li>
+                        <a
+                          href="{{- grandchild_link.url -}}"
+                          class="tmm-navbar2-dropdown_link tmm-dropdown-link"
+                        >
+                          {{- grandchild_link.title -}}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              {%- endfor -%}
+            </nav>
           </div>
-        </div>
-        <nav class="tmm-navbar2-dropdown_list tmm-dropdown-list">
+        {%- else -%}
           <a
-            href="#"
-            class="tmm-navbar2-dropdown_link tmm-dropdown-link"
-            >Products</a
+            href="{{- link.url -}}"
+            class="tmm-navbar2-link tmm-nav-link"
           >
-          <a
-            href="#"
-            class="tmm-navbar2-dropdown_link tmm-dropdown-link"
-            >Team</a
-          >
-          <a
-            href="#"
-            class="tmm-navbar2-dropdown_link tmm-dropdown-link"
-            >Contact</a
-          >
-        </nav>
-      </div>
+            {{- link.title -}}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
       <div class="tmm-navbar2-menu_buttons">
         <a
-          href="#"
-          class="tmm-button tmm-is-secondary is-small tmm-button"
-          >Learn</a
+          href="{{- section.settings.button1_link -}}"
+          class="tmm-button tmm-button1 is-small tmm-button {{- section.settings.button1_type -}}"
         >
+          {{- section.settings.button1_text -}}
+        </a>
         <a
-          href="#"
-          class="tmm-button is-small tmm-button"
-          >Sign Up</a
+          href="{{- section.settings.button2_link -}}"
+          class="tmm-button tmm-button2 is-small tmm-button {{- section.settings.button2_type -}}"
         >
+          {{- section.settings.button2_text -}}
+        </a>
       </div>
     </nav>
     <div class="tmm-navbar2-menu_button tmm-nav-button">
@@ -241,7 +278,40 @@
     },
     {
       "type": "select",
-      "id": "button_type",
+      "id": "button1_type",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "outline",
+      "label": "Button one style"
+    },
+    {
+      "type": "text",
+      "id": "button1_text",
+      "default": "Shop Now",
+      "label": "Button one text"
+    },
+    {
+      "type": "url",
+      "id": "button1_link",
+      "label": "Button one link"
+    },
+    {
+      "type": "color",
+      "id": "button1_color",
+      "default": "#000000",
+      "label": "Button one color"
+    },
+    {
+      "type": "select",
+      "id": "button2_type",
       "options": [
         {
           "value": "solid",
@@ -253,24 +323,24 @@
         }
       ],
       "default": "solid",
-      "label": "Button style"
+      "label": "Button two style"
     },
     {
       "type": "text",
-      "id": "button_text",
+      "id": "button2_text",
       "default": "Shop Now",
-      "label": "Button text"
+      "label": "Button two text"
     },
     {
       "type": "url",
-      "id": "button_link",
-      "label": "Button link"
+      "id": "button2_link",
+      "label": "Button two link"
     },
     {
       "type": "color",
-      "id": "button_color",
+      "id": "button2_color",
       "default": "#000000",
-      "label": "Button color"
+      "label": "Button two color"
     },
     {
       "type": "header",
