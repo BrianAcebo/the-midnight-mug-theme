@@ -26,7 +26,6 @@
 }
 
 .tmm-navbar1-menu {
-  background-color: var(--base-color-brand--white);
   flex-flow: row;
   justify-content: flex-start;
   align-items: center;
