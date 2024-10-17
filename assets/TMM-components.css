@@ -4075,7 +4075,6 @@
 
   .tmm-navbar1-menu {
     z-index: 100;
-    background-color: var(--background-color--background-primary);
     -webkit-text-fill-color: inherit;
     background-clip: border-box;
     border-right: 1px solid #000;
