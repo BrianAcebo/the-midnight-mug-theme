@@ -76,13 +76,14 @@
 {%- endstyle -%}
 
 <script type="module">
-  const sectionColorScheme = "{{ section.settings.color_scheme }}";
-  if (sectionColorScheme !== "") {
+  (() => {
+    const sectionColorScheme = "{{ section.settings.color_scheme }}";
+    if (!sectionColorScheme) return;
     setTimeout(() => {
       const navOverlay = document.querySelector(".tmm-section-{{ section.id }} .tmm-nav-overlay nav");
       navOverlay.classList.add(`${sectionColorScheme} gradient`);
     }, 5000);
-  }
+  })();
 </script>
 
 <div
