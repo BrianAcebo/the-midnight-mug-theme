@@ -75,6 +75,14 @@
   }
 {%- endstyle -%}
 
+{%- javascript -%}
+  const colorScheme = "{{ section.settings.color_scheme }}";
+  if (colorScheme !== "") {
+    const navOverlay_{{ section.id }} = document.querySelector(".tmm-nav-overlay");
+    navOverlay_{{ section.id }}.classList.add("color-{{ section.settings.color_scheme }} gradient");
+  }
+{%- endjavascript -%}
+
 <div
   data-collapse="medium"
   data-animation="over-left"
