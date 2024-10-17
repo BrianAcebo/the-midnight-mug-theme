@@ -4711,6 +4711,10 @@
     padding: 0.75rem 0;
   }
 
+  .tmm-navbar2-dropdown_toggle .tmm-navbar2-link {
+    width: 100%;
+  }
+
   .tmm-menu-icon1_middle {
     background-color: #000;
     justify-content: center;
