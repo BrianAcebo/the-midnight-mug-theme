@@ -3116,6 +3116,7 @@
   align-items: center;
   display: flex;
   position: static;
+  border-top: 1px solid #000000;
 }
 
 .tmm-navbar2-dropdown_list.tmm--open {
