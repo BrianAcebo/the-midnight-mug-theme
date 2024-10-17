@@ -75,7 +75,9 @@
   }
 {%- endstyle -%}
 
-<script type="module">
+<script
+  type="module"
+>
   (() => {
     const sectionColorScheme = "{{ section.settings.color_scheme }}";
     if (!sectionColorScheme) return;
@@ -207,13 +209,15 @@
           </a>
         {%- endif -%}
       {%- endfor -%}
-      <a
-        id="tmm-node-_58fa4208-d454-ddb4-2ec0-0da1ceaace48-191428a2"
-        href="{{- section.settings.button_link -}}"
-        class="tmm-button is-tmm-navbar1-button tmm-navbar1-tablet_button {{ section.settings.button_type }}"
-      >
-        {{- section.settings.button_text -}}
-      </a>
+      {%- if section.settings.button_link != blank -%}
+        <a
+          id="tmm-node-_58fa4208-d454-ddb4-2ec0-0da1ceaace48-191428a2"
+          href="{{- section.settings.button_link -}}"
+          class="tmm-button is-tmm-navbar1-button tmm-navbar1-tablet_button {{ section.settings.button_type }}"
+        >
+          {{- section.settings.button_text -}}
+        </a>
+      {%- endif -%}
     </nav>
     <a
       href="{{ routes.root_url }}"
@@ -240,13 +244,15 @@
         <span class="tmm-heading-style-h3">{{ shop.name }}</span>
       {%- endif -%}
     </a>
-    <a
-      id="tmm-node-_6c5e477a-9506-ac21-1e2a-5e7e191428c0-191428a2"
-      href="{{- section.settings.button_link -}}"
-      class="tmm-button is-tmm-navbar1-button tmm-navbar1-desktop_button {{ section.settings.button_type }}"
-    >
-      {{- section.settings.button_text -}}
-    </a>
+    {%- if section.settings.button_link != blank -%}
+      <a
+        id="tmm-node-_6c5e477a-9506-ac21-1e2a-5e7e191428c0-191428a2"
+        href="{{- section.settings.button_link -}}"
+        class="tmm-button is-tmm-navbar1-button tmm-navbar1-desktop_button {{ section.settings.button_type }}"
+      >
+        {{- section.settings.button_text -}}
+      </a>
+    {%- endif -%}
     <div class="tmm-navbar1-menu_background">
       <div class="tmm-visually-hidden"></div>
     </div>
