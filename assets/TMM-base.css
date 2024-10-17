@@ -2198,7 +2198,7 @@ textarea.tmm-select {
   top: 100%;
   left: 0;
   right: 0;
-  background: #ffffff;
+  background-color: inherit;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -2215,6 +2215,7 @@ textarea.tmm-select {
   left: 0;
   right: 0;
   width: 100%;
+  background-color: inherit;
 }
 .tmm-nav-overlay [data-nav-menu-open] {
   top: 0;
