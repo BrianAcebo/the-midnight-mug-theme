@@ -79,6 +79,7 @@
   (() => {
     const sectionColorScheme = "{{ section.settings.color_scheme }}";
     if (!sectionColorScheme) return;
+    console.log(document.querySelector(".tmm-section-{{ section.id }} .tmm-nav-button"))
     document.querySelector(".tmm-section-{{ section.id }} .tmm-nav-button")?.addEventListener("click", () => {
       const navOverlay = document.querySelector(".tmm-section-{{ section.id }} .tmm-nav-overlay");
       console.log(navOverlay.firstChild)
