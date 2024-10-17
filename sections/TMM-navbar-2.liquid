@@ -35,6 +35,16 @@
     color: {{ section.settings.button1_color }};
   }
 
+  .tmm-section-{{ section.id }} .tmm-button1.solid:hover {
+    background-color: transparent;
+    color: {{ section.settings.button1_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button1.outline:hover {
+    background-color: {{ section.settings.button1_color }};
+    color: inherit;
+  }
+
   .tmm-section-{{ section.id }} .tmm-button2.solid {
     background-color: {{ section.settings.button2_color }};
     border: 1px solid {{ section.settings.button2_color }};
