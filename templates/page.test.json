@@ -67,7 +67,7 @@
     "tmm_navbar_1_bH3xzE": {
       "type": "TMM-navbar-1",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "sticky_header_type": false,
         "show_line_separators": true,
         "menu": "main-menu",
