@@ -20,7 +20,7 @@
   }
 
   .tmm-section-{{ section.id }} .tmm-button1.solid,
-  .tmm-section-{{ section.id }} .tmm-navbar1-menu_icon > div {
+  .tmm-section-{{ section.id }} .tmm-navbar2-menu_icon > div {
     background-color: {{ section.settings.button1_color }};
     border: 1px solid {{ section.settings.button1_color }};
   }
@@ -88,7 +88,7 @@
           settings.logo
           | image_url: width: 600
           | image_tag:
-            class: 'tmm-navbar1-logo',
+            class: 'tmm-navbar2-logo',
             widths: widths,
             height: logo_height,
             width: settings.logo_width,
