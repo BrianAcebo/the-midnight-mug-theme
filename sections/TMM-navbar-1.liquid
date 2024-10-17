@@ -100,7 +100,7 @@
             class="tmm-navbar1-menu_dropdown tmm-dropdown"
           >
             <div class="tmm-navbar1-menu_dropdown-toggle tmm-dropdown-toggle">
-              <div class="text-block-6">Our Products</div>
+              <div class="text-block-6 {{ section.settings.text_style }}">Our Products</div>
               <div class="tmm-dropdown-chevron tmm-embed">
                 <svg
                   width=" 100%"
@@ -122,7 +122,7 @@
               {%- for child_link in link.links -%}
                 <a
                   href="{{- child_link.url -}}"
-                  class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link"
+                  class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link {{ section.settings.text_style }}"
                 >
                   {{- child_link.title -}}
                 </a>
@@ -132,7 +132,7 @@
         {%- else -%}
           <a
             href="{{- link.url -}}"
-            class="tmm-navbar1-link tmm-nav-link {{- section.settings.button_type -}}"
+            class="tmm-navbar1-link tmm-nav-link {{ section.settings.button_type }} {{ section.settings.text_style }}"
           >
             {{- link.title -}}
           </a>
@@ -208,6 +208,58 @@
       "id": "menu",
       "default": "main-menu",
       "label": "Menu"
+    },
+    {
+      "type": "select",
+      "id": "text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "capitalize",
+      "label": "Text transform"
+    },
+    {
+      "type": "select",
+      "id": "text_decoration",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "overline",
+          "label": "Overline"
+        },
+        {
+          "value": "underline",
+          "label": "Underline"
+        },
+        {
+          "value": "line-through",
+          "label": "Line-through"
+        },
+        {
+          "value": "underline overline",
+          "label": "Overline-underline"
+        }
+      ],
+      "default": "none",
+      "label": "Text decoration"
     },
     {
       "type": "select",
