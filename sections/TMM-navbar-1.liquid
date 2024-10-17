@@ -106,7 +106,12 @@
             class="tmm-navbar1-menu_dropdown tmm-dropdown"
           >
             <div class="tmm-navbar1-menu_dropdown-toggle tmm-dropdown-toggle">
-              <div class="text-block-6 tmm-nav-link">Our Products</div>
+              <a
+                href="{{- link.url -}}"
+                class="tmm-navbar1-link tmm-nav-link {{ section.settings.button_type }}"
+              >
+                {{- link.title -}}
+              </a>
               <div class="tmm-dropdown-chevron tmm-embed">
                 <svg
                   width=" 100%"
@@ -132,6 +137,20 @@
                 >
                   {{- child_link.title -}}
                 </a>
+                {%- if child_link.links.size > 0 -%}
+                  <ul>
+                    {%- for grandchild_link in child_link.links -%}
+                      <li>
+                        <a
+                          href="{{- grandchild_link.url -}}"
+                          class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link"
+                        >
+                          {{- grandchild_link.title -}}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
               {%- endfor -%}
             </nav>
           </div>
