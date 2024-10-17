@@ -2207,6 +2207,9 @@ textarea.tmm-select {
   display: block;
   position: relative;
 }
+.tmm-nav-brand {
+  display: flex;
+}
 .tmm-nav-overlay {
   position: absolute;
   overflow: hidden;
