@@ -108,7 +108,7 @@
       href="{{ routes.root_url }}"
       class="tmm-navbar2-tablet-logo_link tmm-nav-brand"
     >
-      {%- if false -%}
+      {%- if settings.logo != blank -%}
         {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
         {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
         {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
