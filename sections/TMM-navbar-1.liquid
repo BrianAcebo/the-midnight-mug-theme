@@ -19,6 +19,11 @@
     }
   }
 
+  .tmm-section-{{ section.id }}.tmm-nav a,
+  .tmm-section-{{ section.id }}.tmm-nav span {
+    color: {{ section.settings.text_color }}
+  }
+
   .tmm-section-{{ section.id }} .tmm-button {
     transition: 0.2s;
   }
@@ -311,6 +316,12 @@
       ],
       "default": "none",
       "label": "Text decoration"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "default": "#000000",
+      "label": "Text color"
     },
     {
       "type": "select",
