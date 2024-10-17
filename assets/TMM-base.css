@@ -339,6 +339,11 @@ figcaption {
   margin-right: 0;
 }
 
+.tmm-padding-x-35 {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
 .tmm-padding-x-25 {
   padding-left: 25px;
   padding-right: 25px;
