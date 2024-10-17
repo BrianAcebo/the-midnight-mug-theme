@@ -51,7 +51,7 @@
         "text_transformation": "uppercase",
         "text_spacing": 18,
         "text_style": "tmm-caption",
-        "link_color": "#020912",
+        "link_color": "#000000",
         "base_label": "Home",
         "base_link": "",
         "show_base_link": true,
