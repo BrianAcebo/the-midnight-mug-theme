@@ -3144,12 +3144,7 @@
 }
 
 .tmm-navbar2-link {
-  color: #000;
   padding: 0.5rem 1rem;
-}
-
-.tmm-navbar2-link.tmm--current {
-  color: #000;
 }
 
 .tmm-navbar2-container {
