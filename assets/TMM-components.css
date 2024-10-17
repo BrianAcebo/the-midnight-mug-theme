@@ -67,8 +67,6 @@
 }
 
 .tmm-navbar1-component {
-  border-bottom: 1px solid var(--border-color--border-primary);
-  background-color: var(--background-color--background-primary);
   align-items: center;
   width: 100%;
   min-height: 4.5rem;
@@ -3129,8 +3127,6 @@
 
 .tmm-navbar2-component {
   z-index: 10;
-  background-color: #fff;
-  border-bottom: 1px solid #000;
   align-items: center;
   width: 100%;
   height: auto;
