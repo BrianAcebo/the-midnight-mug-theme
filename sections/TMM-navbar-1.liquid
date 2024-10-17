@@ -80,7 +80,8 @@
     const sectionColorScheme = "{{ section.settings.color_scheme }}";
     if (!sectionColorScheme) return;
     setTimeout(() => {
-      const navOverlay = document.querySelector(".tmm-section-{{ section.id }} .tmm-nav-overlay nav");
+      const navOverlay = document.querySelector(".tmm-section-{{ section.id }}");
+      console.log(navOverlay)
       navOverlay.classList.add(`${sectionColorScheme} gradient`);
     }, 5000);
   })();
