@@ -66,7 +66,7 @@
       "settings": {
         "color_scheme": "scheme-1",
         "sticky_header_type": false,
-        "show_line_separators": false,
+        "show_line_separators": true,
         "menu": "main-menu",
         "text_transformation": "capitalize",
         "text_decoration": "none",
