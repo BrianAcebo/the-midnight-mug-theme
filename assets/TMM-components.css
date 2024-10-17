@@ -4052,10 +4052,10 @@
     background-color: var(--base-color-neutral--black);
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 2px;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    width: 18px;
+    height: 1px;
+    margin-top: 3px;
+    margin-bottom: 3px;
     padding-bottom: 0;
     padding-right: 0;
     display: flex;
@@ -4071,8 +4071,8 @@
 
   .tmm-navbar1-menu_icon-bottom {
     background-color: var(--base-color-neutral--black);
-    width: 24px;
-    height: 2px;
+    width: 18px;
+    height: 1px;
     padding-bottom: 0;
     padding-right: 0;
   }
@@ -4157,8 +4157,8 @@
 
   .tmm-navbar1-menu_icon-top {
     background-color: var(--base-color-neutral--black);
-    width: 24px;
-    height: 2px;
+    width: 18px;
+    height: 1px;
     padding-bottom: 0;
     padding-right: 0;
   }
