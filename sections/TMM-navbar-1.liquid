@@ -79,6 +79,7 @@
   type="module"
 >
   (() => {
+    console.log(document.querySelector(".tmm-section-{{ section.id }}"))
     const sectionColorScheme = "{{ section.settings.color_scheme }}";
     if (!sectionColorScheme) return;
     console.log(document.querySelector(".tmm-section-{{ section.id }}"))
