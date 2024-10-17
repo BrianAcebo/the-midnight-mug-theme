@@ -42,6 +42,12 @@
       top: 0;
     }
   {%- endif -%}
+
+  .tmm-section-{{ section.id }}.tmm-nav .tmm-nav-link,
+  .tmm-section-{{ section.id }}.tmm-nav .tmm-dropdown-link {
+    text-transform: {{ section.settings.text_transformation }};
+    text-decoration: {{ section.settings.text_decoration }};
+  }
 {%- endstyle -%}
 
 <div
@@ -100,7 +106,7 @@
             class="tmm-navbar1-menu_dropdown tmm-dropdown"
           >
             <div class="tmm-navbar1-menu_dropdown-toggle tmm-dropdown-toggle">
-              <div class="text-block-6 {{ section.settings.text_style }}">Our Products</div>
+              <div class="text-block-6 tmm-nav-link">Our Products</div>
               <div class="tmm-dropdown-chevron tmm-embed">
                 <svg
                   width=" 100%"
@@ -122,7 +128,7 @@
               {%- for child_link in link.links -%}
                 <a
                   href="{{- child_link.url -}}"
-                  class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link {{ section.settings.text_style }}"
+                  class="tmm-navbar1-menu_dropdown-link tmm-dropdown-link"
                 >
                   {{- child_link.title -}}
                 </a>
@@ -132,7 +138,7 @@
         {%- else -%}
           <a
             href="{{- link.url -}}"
-            class="tmm-navbar1-link tmm-nav-link {{ section.settings.button_type }} {{ section.settings.text_style }}"
+            class="tmm-navbar1-link tmm-nav-link {{ section.settings.button_type }}"
           >
             {{- link.title -}}
           </a>
