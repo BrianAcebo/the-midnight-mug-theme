@@ -167,7 +167,7 @@
       <a
         id="tmm-node-_58fa4208-d454-ddb4-2ec0-0da1ceaace48-191428a2"
         href="{{- section.settings.button_link.url -}}"
-        class="tmm-button is-tmm-navbar1-button tmm-navbar1-tablet_button tmm-button {{ section.settings.button_type }}"
+        class="tmm-button is-tmm-navbar1-button tmm-navbar1-tablet_button {{ section.settings.button_type }}"
       >
         {{- section.settings.button_text -}}
       </a>
@@ -199,10 +199,11 @@
     </a>
     <a
       id="tmm-node-_6c5e477a-9506-ac21-1e2a-5e7e191428c0-191428a2"
-      href="#"
-      class="tmm-button is-tmm-navbar1-button tmm-navbar1-desktop_button tmm-button"
-      >Sign Up</a
+      href="{{- section.settings.button_link.url -}}"
+      class="tmm-button is-tmm-navbar1-button tmm-navbar1-desktop_button {{ section.settings.button_type }}"
     >
+      {{- section.settings.button_text -}}
+    </a>
     <div class="tmm-navbar1-menu_background"></div>
   </div>
 </div>
