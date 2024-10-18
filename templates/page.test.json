@@ -109,6 +109,7 @@
     "tmm_gallery_1_CrH7pE": {
       "type": "TMM-gallery-1",
       "settings": {
+        "overlay_color": "#e4f6ff",
         "padding_top": 20,
         "padding_bottom": 20
       }
