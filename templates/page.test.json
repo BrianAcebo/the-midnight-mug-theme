@@ -108,6 +108,17 @@
     },
     "tmm_gallery_1_CrH7pE": {
       "type": "TMM-gallery-1",
+      "blocks": {
+        "image_rxxQAF": {
+          "type": "image",
+          "settings": {
+            "item": "shopify://shop_images/cecelia-chang--Rq1bUOuHO0-unsplash.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_rxxQAF"
+      ],
       "settings": {
         "overlay_color": "#e4f6ff",
         "padding_top": 20,
