@@ -1,4 +1,26 @@
-<div class="tmm-request-form2 tmm-gallery">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .tmm-section-{{ section.id }}.tmm-nav {
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .tmm-section-{{ section.id }}.tmm-nav {
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tmm-relative-container tmm-gallery section-{{ section.id }}-padding tmm-section-{{ section.id }}">
   <div class="tmm-interaction_wrap">
     <div class="tmm-padding-global">
       <div class="tmm-gallery-content">
@@ -203,6 +225,12 @@
 {
   "name": "TMM - Gallery 1",
   "settings": [
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "default": "#000000",
+      "label": "Overlay color"
+    },
     {
       "type": "header",
       "content": "Section padding"
