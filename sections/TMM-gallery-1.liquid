@@ -10,6 +10,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .tmm-section-{{ section.id }} .tmm-gallery-image_overlay {
+    background-color: {{ section.settings.overlay_color }};
+  }
 {%- endstyle -%}
 
 <div class="tmm-relative-container tmm-gallery section-{{ section.id }}-padding tmm-section-{{ section.id }}">
