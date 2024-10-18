@@ -105,12 +105,20 @@
         "padding_left": 5,
         "padding_right": 5
       }
+    },
+    "tmm_gallery_1_CrH7pE": {
+      "type": "TMM-gallery-1",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "tmm_promo_bar_8nKHWa",
     "tmm_navbar_1_bH3xzE",
     "tmm_navbar_2_63mmEF",
-    "tmm_breadcrumbs_zmTXwE"
+    "tmm_breadcrumbs_zmTXwE",
+    "tmm_gallery_1_CrH7pE"
   ]
 }
