@@ -31,30 +31,24 @@
                     class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
                   >
                     <div class="tmm-gallery-image_wrap">
-                      {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
-                      {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
-                      <!--
-                        {{
-                          block.settings.image
-                          | image_url: width: 600
-                          | image_tag:
-                            class: 'tmm-gallery-image',
-                            widths: widths,
-                            height: block.settings.image.height,
-                            width: settings.logo_width,
-                            alt: block.settings.image.alt,
-                            sizes: sizes,
-                            preload: true
-                        }}
-                      -->
-                      {{ block.settings.image.alt }}
-                      <img
-                        class="image"
-                        src="{{ block.settings.image | image_url }}"
-                        loading="lazy"
-                        height="{{ block.settings.image.height }}"
-                        width="{{ block.settings.image.width }}"
-                      >
+                      {%- if block.settings.image != blank -%}
+                        {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
+                        {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
+                          {{
+                            block.settings.image
+                            | image_url: width: 600
+                            | image_tag:
+                              class: 'tmm-gallery-image',
+                              widths: widths,
+                              height: block.settings.image.height,
+                              width: settings.logo_width,
+                              alt: block.settings.image.alt,
+                              sizes: sizes,
+                              preload: true
+                          }}
+                      {%- else -%}
+                        {%- render 'TMM-placeholder', class: 'tmm-gallery-image' -%}
+                      {%- endif -%}
                       <div class="tmm-gallery-image_overlay">
                         <div class="tmm-visually-hidden"></div>
                       </div>
