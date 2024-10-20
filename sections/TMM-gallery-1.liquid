@@ -121,7 +121,7 @@
             {%- endif -%}
           </div>
           <div class="tmm-gallery-columns_right tmm-col tmm-col-6">
-            {%- if section.blocks.size > 0 -%}
+            {%- if section.blocks.size > 1 -%}
               {%- for block in section.blocks -%}
                 {% capture loop_iteration %}{% cycle 'odd', 'even' %}{% endcapture %}
                 {{ loop_iteration }}
