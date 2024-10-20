@@ -3863,6 +3863,12 @@
   height: 9px;
 }
 
+.tmm-gallery-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (min-width: 1280px) {
   .tmm-slider1-content_block {
     width: 60%;
