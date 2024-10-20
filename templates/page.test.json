@@ -112,7 +112,10 @@
         "image_rxxQAF": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/rack-of-womens-clothing.jpg"
+            "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "alt_text": "Image of mountain valley covered in  vegetation"
           }
         }
       },
