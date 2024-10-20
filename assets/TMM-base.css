@@ -1847,6 +1847,7 @@ textarea.tmm-select {
   height: 100%;
 }
 .tmm-lightbox-control {
+  display: block !important;
   position: absolute;
   top: 0;
   width: 4em;
