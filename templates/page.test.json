@@ -117,10 +117,20 @@
             "object_position": "center",
             "alt_text": "Image of mountain valley covered in  vegetation"
           }
+        },
+        "image_qKEbWR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "alt_text": "Image of lady on rocky shore"
+          }
         }
       },
       "block_order": [
-        "image_rxxQAF"
+        "image_rxxQAF",
+        "image_qKEbWR"
       ],
       "settings": {
         "overlay_color": "#e4f6ff",
