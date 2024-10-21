@@ -178,7 +178,7 @@
     "tmm_gallery_2_qUpzCA": {
       "type": "TMM-gallery-2",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "header_text": "Browse our Gallery",
         "header_size": "h1",
         "header_text_transformation": "capitalize",
