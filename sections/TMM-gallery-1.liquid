@@ -56,7 +56,6 @@
           <div class="tmm-gallery-columns_left tmm-col tmm-col-6">
             {%- if section.blocks.size > 0 -%}
               {%- for block in section.blocks -%}
-                12345
                 {% assign cycle_group = 'cycle_1_' | append: section.id %}
                 {% capture loop_iteration_1 %}{% cycle cycle_group: 'odd', 'even' %}{% endcapture %}
                 {%- if loop_iteration_1 == 'odd' -%}
@@ -108,9 +107,7 @@
                 {%- endif -%}
               {%- endfor -%}
             {%- else -%}
-              456789
               {%- for i in (1..3) -%}
-                {{ forloop.index }}
                 <a
                   href="#"
                   class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
@@ -200,7 +197,6 @@
               {%- endfor -%}
             {%- else -%}
               {%- for i in (1..3) -%}
-                {{ forloop.index }}
                 <a
                   href="#"
                   class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
