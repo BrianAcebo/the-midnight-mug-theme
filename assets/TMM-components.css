@@ -3869,7 +3869,8 @@
   height: 9px;
 }
 
-.tmm-gallery-image_wrap {
+.tmm-gallery-image_wrap,
+.tmm-gallery-image {
   width: 100%;
   height: 550px;
 }
