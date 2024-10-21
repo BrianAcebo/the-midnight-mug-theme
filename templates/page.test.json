@@ -334,6 +334,21 @@
     },
     "tmm_gallery_2_fydVrF": {
       "type": "TMM-gallery-2",
+      "blocks": {
+        "image_iEmaDH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/iphone-detects-qr-code.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_iEmaDH"
+      ],
       "settings": {
         "color_scheme": "",
         "header_text": "Browse our Gallery",
