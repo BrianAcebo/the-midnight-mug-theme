@@ -177,6 +177,21 @@
     },
     "tmm_gallery_2_qUpzCA": {
       "type": "TMM-gallery-2",
+      "blocks": {
+        "image_VHWie6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/small-business-interior.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "landscape",
+            "alt_text": "Image of candles on shelves"
+          }
+        }
+      },
+      "block_order": [
+        "image_VHWie6"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "header_text": "Browse our Gallery",
