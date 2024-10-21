@@ -13,6 +13,7 @@
 
   .tmm-section-{{ section.id }} .tmm-divider_line {
     background-color: {{ section.settings.divider_color }};
+    height: {{ section.settings.divider_thickness }}px;
   }
 {%- endstyle -%}
 
@@ -31,6 +32,16 @@
       "id": "divider_color",
       "default": "#000000",
       "label": "Divider color"
+    },
+    {
+      "type": "range",
+      "id": "divider_thickness",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Divider thickness",
+      "default": 1
     },
     {
       "type": "header",
