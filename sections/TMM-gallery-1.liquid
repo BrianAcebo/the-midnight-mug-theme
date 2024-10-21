@@ -13,15 +13,15 @@
 
   {%- for block in section.blocks -%}
     {%- if block.settings.image != blank -%}
-      {% if block.settings.object_fit == 'contain' %}
-      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
-      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
-        --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * 450);
-        width: calc(var(--og-width-x-new-height_{{ block.id }}) / {{ block.settings.image.height}});
-        max-width: 100%;
-        margin: 0 auto;
-      }
-        {% endif %}
+      {%- if block.settings.object_fit == 'contain' or block.settings.object_fit == 'scale-down' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
+          --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * 450);
+          width: calc(var(--og-width-x-new-height_{{ block.id }}) / {{ block.settings.image.height}});
+          max-width: 100%;
+          margin: 0 auto;
+        }
+      {%- endif -%}
 
       .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
         object-fit: {{ block.settings.object_fit }};
