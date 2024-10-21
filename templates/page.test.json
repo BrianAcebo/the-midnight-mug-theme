@@ -338,6 +338,37 @@
         "image_8a3qNm": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "portrait",
+            "alt_text": "",
+            "overlay_color": "#000000"
+          }
+        },
+        "image_hTfRcW": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "portrait",
+            "alt_text": "",
+            "overlay_color": "#000000"
+          }
+        },
+        "image_RqAmPy": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "portrait",
+            "alt_text": "",
+            "overlay_color": "#000000"
+          }
+        },
+        "image_3pQdwn": {
+          "type": "image",
+          "settings": {
             "object_fit": "cover",
             "object_position": "center",
             "image_orientation": "portrait",
@@ -347,7 +378,10 @@
         }
       },
       "block_order": [
-        "image_8a3qNm"
+        "image_8a3qNm",
+        "image_hTfRcW",
+        "image_RqAmPy",
+        "image_3pQdwn"
       ],
       "settings": {
         "color_scheme": "",
