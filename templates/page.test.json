@@ -184,13 +184,83 @@
             "image": "shopify://shop_images/small-business-interior.jpg",
             "object_fit": "cover",
             "object_position": "center",
-            "image_orientation": "landscape",
+            "image_orientation": "square",
             "alt_text": "Image of candles on shelves"
+          }
+        },
+        "image_meWptK": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
+          }
+        },
+        "image_rMkATz": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
+          }
+        },
+        "image_VkqbPY": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
+          }
+        },
+        "image_6ETRFY": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
+          }
+        },
+        "image_gGFXap": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
+          }
+        },
+        "image_pEfeEG": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
+          }
+        },
+        "image_7XUgrD": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "alt_text": ""
           }
         }
       },
       "block_order": [
-        "image_VHWie6"
+        "image_VHWie6",
+        "image_meWptK",
+        "image_rMkATz",
+        "image_VkqbPY",
+        "image_6ETRFY",
+        "image_gGFXap",
+        "image_pEfeEG",
+        "image_7XUgrD"
       ],
       "settings": {
         "color_scheme": "scheme-1",
