@@ -31,11 +31,15 @@
       {%- endif -%}
 
       {%- if block.settings.image_orientation == 'landscape' -%}
-        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image,
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} svg.tmm-gallery-image rect {
           height: 250px;
         }
       {%- elsif block.settings.image_orientation == 'square' -%}
-        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image,
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} svg.tmm-gallery-image rect {
           height: 400px;
         }
       {%- endif -%}
