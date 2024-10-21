@@ -10,16 +10,28 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .tmm-section-{{ section.id }} .tmm-divider_line {
+    background-color: {{ section.settings.divider_color }};
+  }
 {%- endstyle -%}
 
 <div class="section__tmm-component tmm-section-{{ section.id }} section-{{ section.id }}-padding tmm-divider">
-  <div class="tmm-divider_line"></div>
+  <div class="tmm-divider_line">
+    <div class="tmm-visually-hidden"></div>
+  </div>
 </div>
 
 {% schema %}
 {
   "name": "TMM Divider",
   "settings": [
+    {
+      "type": "color",
+      "id": "divider_color",
+      "default": "#000000",
+      "label": "Divider color"
+    },
     {
       "type": "header",
       "content": "Section padding"
