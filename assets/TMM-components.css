@@ -1028,7 +1028,9 @@
 }
 
 .tmm-gallery-image {
+  object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 .tmm-relative-container {
@@ -3866,12 +3868,6 @@
 .tmm-gallery-image_wrap {
   width: 100%;
   height: 450px;
-}
-
-.tmm-gallery-image {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }
 
 @media screen and (min-width: 1280px) {
