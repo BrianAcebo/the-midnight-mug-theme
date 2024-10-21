@@ -11,6 +11,14 @@
     }
   }
 
+  .tmm-section-{{ section.id }} .tmm-gallery-no-image {
+    overflow: hidden;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-gallery-no-image svg rect {
+    width: 1200px;
+  }
+
   {%- for block in section.blocks -%}
     {%- liquid
       assign new_image_height = 550
@@ -50,14 +58,6 @@
       }
     {%- endif -%}
   {%- endfor -%}
-
-  .tmm-gallery-no-image {
-    overflow: hidden;
-  }
-
-  .tmm-gallery-no-image svg rect {
-    width: 800px;
-  }
 {%- endstyle -%}
 
 <section class="tmm-relative-container tmm-gallery section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
