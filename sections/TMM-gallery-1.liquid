@@ -50,6 +50,10 @@
       }
     {%- endif -%}
   {%- endfor -%}
+
+  .tmm-gallery-no-image {
+    height: 400px;
+  }
 {%- endstyle -%}
 
 <section class="tmm-relative-container tmm-gallery section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
@@ -67,7 +71,7 @@
                     href="#"
                     class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
                   >
-                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }}">
+                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }}{% if block.settings.image != blank %} tmm-gallery-no-image{% endif %}">
                       {%- if block.settings.image != blank -%}
                         {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                         {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
@@ -134,7 +138,7 @@
                   href="#"
                   class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
                 >
-                  <div class="tmm-gallery-image_wrap">
+                  <div class="tmm-gallery-image_wrap tmm-gallery-no-image">
                     {%- render 'TMM-placeholder', class: 'tmm-gallery-image' -%}
                     <div class="tmm-gallery-image_overlay">
                       <div class="tmm-visually-hidden"></div>
@@ -174,7 +178,7 @@
                     href="#"
                     class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
                   >
-                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }}">
+                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }}{% if block.settings.image != blank %} tmm-gallery-no-image{% endif %}">
                       {%- if block.settings.image != blank -%}
                         {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                         {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
@@ -241,7 +245,7 @@
                   href="#"
                   class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
                 >
-                  <div class="tmm-gallery-image_wrap">
+                  <div class="tmm-gallery-image_wrap tmm-gallery-no-image">
                     {%- render 'TMM-placeholder', class: 'tmm-gallery-image' -%}
                     <div class="tmm-gallery-image_overlay">
                       <div class="tmm-visually-hidden"></div>
