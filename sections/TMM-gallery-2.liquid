@@ -62,124 +62,122 @@
             </div>
           </div>
         </div>
-        <div class="tmm-layout-grid tmm-gallery2-component">
-          {%- if section.blocks.size > 0 -%}
-            {%- for block in section.blocks -%}
-              {%- if forloop.index == grid_container_index -%}
-                <div class="tmm-interaction_wrap">
+        <div class="tmm-interaction_wrap">
+          <div class="tmm-layout-grid tmm-gallery2-component">
+            {%- if section.blocks.size > 0 -%}
+              {%- for block in section.blocks -%}
+                {%- if forloop.index == grid_container_index -%}
                   <div class="tmm-layout-grid tmm-gallery2-row">
-              {%- endif -%}
-              <a
-                href="#"
-                id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
-                class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox tmm-gallery2-image-block_{{ block.id }}"
-              >
-                <div class="tmm-gallery2-image_wrap">
-                  {%- if block.settings.image != blank -%}
-                    {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
-                    {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 600
-                      | image_tag:
-                        class: 'tmm-gallery2-image',
-                        widths: widths,
-                        height: block.settings.image.height,
-                        width: block.settings.image.width,
-                        alt: block.settings.alt_text,
-                        sizes: sizes,
-                        preload: true
-                    }}
-                  {%- else -%}
-                    {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
-                  {%- endif -%}
-                </div>
-                <script
-                  type="application/json"
-                  class="tmm-json"
+                {%- endif -%}
+                <a
+                  href="#"
+                  id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
+                  class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox tmm-gallery2-image-block_{{ block.id }}"
                 >
-                  {%- if block.settings.image != blank -%}
-                    {
-                      "items": [
-                        {
-                          "_id": "{{ block.settings.image.id }}",
-                          "height": "{{ block.settings.height }}",
-                          "url": "{{ block.settings.image | image_url }}",
-                          "width": "{{ block.settings.width }}",
-                          "type": "image"
-                        }
-                      ],
-                      "group": "Gallery_2"
-                    }
-                  {%- else -%}
-                    {
-                      "items": [
-                        {
-                          "_id": "example_img",
-                          "origFileName": "image-placeholder.svg",
-                          "fileName": "image-placeholder.svg",
-                          "fileSize": 2063,
-                          "height": 150,
-                          "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
-                          "width": 150,
-                          "type": "image"
-                        }
-                      ],
-                      "group": "Gallery_2"
-                    }
-                  {%- endif -%}
-                </script>
-              </a>
-              {%- if forloop.index == block_maximum_iteration -%}
-                {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
-                {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
+                  <div class="tmm-gallery2-image_wrap">
+                    {%- if block.settings.image != blank -%}
+                      {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
+                      {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 600
+                        | image_tag:
+                          class: 'tmm-gallery2-image',
+                          widths: widths,
+                          height: block.settings.image.height,
+                          width: block.settings.image.width,
+                          alt: block.settings.alt_text,
+                          sizes: sizes,
+                          preload: true
+                      }}
+                    {%- else -%}
+                      {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
+                    {%- endif -%}
                   </div>
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
-          {% else %}
-            {%- for i in (1..6) -%}
-              {%- if forloop.index == grid_container_index -%}
-                <div class="tmm-interaction_wrap">
-                  <div class="tmm-layout-grid tmm-gallery2-row">
-              {%- endif -%}
-              <a
-                href="#"
-                id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
-                class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox"
-              >
-                <div class="tmm-gallery2-image_wrap">
-                  {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
-                </div>
-                <script
-                  type="application/json"
-                  class="tmm-json"
-                >
-                  {
-                    "items": [
+                  <script
+                    type="application/json"
+                    class="tmm-json"
+                  >
+                    {%- if block.settings.image != blank -%}
                       {
-                          "_id": "example_img",
-                          "origFileName": "image-placeholder.svg",
-                          "fileName": "image-placeholder.svg",
-                          "fileSize": 2063,
-                          "height": 150,
-                          "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
-                          "width": 150,
-                          "type": "image"
+                        "items": [
+                          {
+                            "_id": "{{ block.settings.image.id }}",
+                            "height": "{{ block.settings.height }}",
+                            "url": "{{ block.settings.image | image_url }}",
+                            "width": "{{ block.settings.width }}",
+                            "type": "image"
+                          }
+                        ],
+                        "group": "Gallery_2"
                       }
-                    ],
-                    "group": "Gallery_2"
-                  }
-                </script>
-              </a>
-              {%- if forloop.index == block_maximum_iteration -%}
-                {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
-                {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
+                    {%- else -%}
+                      {
+                        "items": [
+                          {
+                            "_id": "example_img",
+                            "origFileName": "image-placeholder.svg",
+                            "fileName": "image-placeholder.svg",
+                            "fileSize": 2063,
+                            "height": 150,
+                            "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
+                            "width": 150,
+                            "type": "image"
+                          }
+                        ],
+                        "group": "Gallery_2"
+                      }
+                    {%- endif -%}
+                  </script>
+                </a>
+                {%- if forloop.index == block_maximum_iteration -%}
+                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
+                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   </div>
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {% else %}
+              {%- for i in (1..6) -%}
+                {%- if forloop.index == grid_container_index -%}
+                    <div class="tmm-layout-grid tmm-gallery2-row">
+                {%- endif -%}
+                <a
+                  href="#"
+                  id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
+                  class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox"
+                >
+                  <div class="tmm-gallery2-image_wrap">
+                    {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
+                  </div>
+                  <script
+                    type="application/json"
+                    class="tmm-json"
+                  >
+                    {
+                      "items": [
+                        {
+                            "_id": "example_img",
+                            "origFileName": "image-placeholder.svg",
+                            "fileName": "image-placeholder.svg",
+                            "fileSize": 2063,
+                            "height": 150,
+                            "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
+                            "width": 150,
+                            "type": "image"
+                        }
+                      ],
+                      "group": "Gallery_2"
+                    }
+                  </script>
+                </a>
+                {%- if forloop.index == block_maximum_iteration -%}
+                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
+                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          </div>
         </div>
       </div>
     </div>
