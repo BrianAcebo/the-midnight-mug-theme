@@ -41,9 +41,6 @@
   {%- endfor -%}
 {%- endstyle -%}
 
-{%- assign block_maximum_iteration = 0 -%}
-{%- assign grid_container_index = 1 -%}
-
 <section class="tmm-gallery2-container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
   <div class="tmm-padding-global">
     <div class="tmm-container-large">
@@ -131,9 +128,6 @@
                 {%- endfor -%}
               {% else %}
                 {%- for i in (1..6) -%}
-                  {%- if forloop.index == grid_container_index -%}
-                      <div class="tmm-layout-grid tmm-gallery2-row">
-                  {%- endif -%}
                   <a
                     href="#"
                     id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
