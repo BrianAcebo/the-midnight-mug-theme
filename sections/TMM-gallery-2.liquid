@@ -44,8 +44,8 @@
   {%- endfor -%}
 {%- endstyle -%}
 
-{% assign block_maximum_iteration = 0 %}
-{% assign grid_container_index = 1 %}
+{%- assign block_maximum_iteration = 0 -%}
+{%- assign grid_container_index = 1 -%}
 
 <section class="tmm-gallery2-container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
   <div class="tmm-padding-global">
@@ -70,8 +70,8 @@
             {%- if section.blocks.size > 0 -%}
               {%- for block in section.blocks -%}
                 {%- if forloop.index == grid_container_index -%}
-                  {% assign block_maximum_iteration = block_maximum_iteration | plus: 3 %}
-                  {% assign grid_container_index = block_maximum_iteration | plus: 1 %}
+                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
+                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   <div class="tmm-layout-grid tmm-gallery2-row">
                 {%- endif -%}
                 <a
@@ -124,8 +124,8 @@
             {% else %}
               {%- for i in (1..6) -%}
                 {%- if forloop.index == grid_container_index -%}
-                  {% assign block_maximum_iteration = block_maximum_iteration | plus: 3 %}
-                  {% assign grid_container_index = block_maximum_iteration | plus: 1 %}
+                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
+                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   <div class="tmm-layout-grid tmm-gallery2-row">
                 {%- endif -%}
                 <a
