@@ -109,16 +109,6 @@
     "tmm_gallery_1_CrH7pE": {
       "type": "TMM-gallery-1",
       "blocks": {
-        "image_rxxQAF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
-            "object_fit": "cover",
-            "object_position": "center",
-            "alt_text": "Image of mountain valley covered in  vegetation",
-            "overlay_color": "#000000"
-          }
-        },
         "image_qKEbWR": {
           "type": "image",
           "settings": {
@@ -138,12 +128,22 @@
             "alt_text": "Pour over coffee into black pot",
             "overlay_color": "#e4f6ff"
           }
+        },
+        "image_rxxQAF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "alt_text": "Image of mountain valley covered in  vegetation",
+            "overlay_color": "#000000"
+          }
         }
       },
       "block_order": [
-        "image_rxxQAF",
         "image_qKEbWR",
-        "image_KAraUB"
+        "image_KAraUB",
+        "image_rxxQAF"
       ],
       "settings": {
         "padding_top": 20,
