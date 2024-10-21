@@ -1117,7 +1117,7 @@
 }
 
 .tmm-tabs1-link.tmm--current {
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   border-bottom-color: var(--base-color-neutral--black);
   color: var(--text-color--text-primary);
   background-color: #ddd0;
@@ -4298,7 +4298,7 @@
   }
 
   .tmm-tabs1-link.tmm--current {
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
     border-bottom-color: var(--base-color-brand--black);
   }
 
