@@ -11,11 +11,6 @@
     }
   }
 
-  .tmm-section-{{ section.id }}.tmm-padding-global {
-    padding-left: {{ section.settings.padding_left }}%;
-    padding-right: {{ section.settings.padding_right }}%;
-  }
-
   .tmm-section-{{ section.id }} .tmm-breadcrumbs ul {
     gap: {{ section.settings.text_spacing }}px;
     justify-content: {{ section.settings.text_alignment }};
@@ -328,26 +323,6 @@
       "unit": "px",
       "label": "Padding bottom",
       "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_left",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "Padding left",
-      "default": 5
-    },
-    {
-      "type": "range",
-      "id": "padding_right",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "Padding right",
-      "default": 5
     }
   ],
   "presets": [
