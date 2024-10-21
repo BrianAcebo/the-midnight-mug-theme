@@ -58,6 +58,8 @@
               {%- for block in section.blocks -%}
                 {% assign cycle_group = 'cycle_1_' | append: section.id %}
                 {% capture loop_iteration_1 %}{% cycle cycle_group: 'odd', 'even' %}{% endcapture %}
+                {{ forloop.index }}
+                {{ loop_iteration_1 }}
                 {%- if loop_iteration_1 == 'odd' -%}
                   <a
                     href="#"
@@ -147,6 +149,8 @@
               {%- for block in section.blocks -%}
                 {% assign cycle_group = 'cycle_2_' | append: section.id %}
                 {% capture loop_iteration_2 %}{% cycle cycle_group: 'odd', 'even' %}{% endcapture %}
+                {{ forloop.index }}
+                {{ loop_iteration_2 }}
                 {%- if loop_iteration_2 == 'even' -%}
                   <a
                     href="#"
