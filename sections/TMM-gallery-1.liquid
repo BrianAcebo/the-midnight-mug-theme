@@ -32,6 +32,8 @@
             {%- if section.blocks.size > 0 -%}
               {%- for block in section.blocks -%}
                 {% capture loop_iteration_1 %}{% cycle 'odd', 'even' %}{% endcapture %}
+                {{ forloop.index }}
+                {{ loop_iteration_1 }}
                 {%- if loop_iteration_1 == 'odd' -%}
                   <a
                     href="#"
