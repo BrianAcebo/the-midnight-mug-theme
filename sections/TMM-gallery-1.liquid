@@ -13,7 +13,7 @@
 
   {%- for block in section.blocks -%}
     {%- liquid
-      assign new_image_height = 450
+      assign new_image_height = 550
       if block.settings.image_orientation == 'landscape'
         assign new_image_height = 250
       endif
@@ -33,6 +33,10 @@
       {%- if block.settings.image_orientation == 'landscape' -%}
         .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
           height: 250px;
+        }
+      {%- else if block.settings.image_orientation == 'square' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
+          height: 400px;
         }
       {%- endif -%}
 
@@ -289,23 +293,23 @@
           "options": [
             {
               "value": "cover",
-              "label": "cover"
+              "label": "Cover"
             },
             {
               "value": "contain",
-              "label": "contain"
+              "label": "Contain"
             },
             {
               "value": "none",
-              "label": "none"
+              "label": "None"
             },
             {
               "value": "fill",
-              "label": "fill"
+              "label": "Fill"
             },
             {
               "value": "scale-down",
-              "label": "scale-down"
+              "label": "Scale-down"
             }
           ],
           "default": "cover",
@@ -317,19 +321,19 @@
           "options": [
             {
               "value": "bottom",
-              "label": "bottom"
+              "label": "Bottom"
             },
             {
               "value": "center",
-              "label": "center"
+              "label": "Center"
             },
             {
               "value": "left",
-              "label": "left"
+              "label": "Left"
             },
             {
               "value": "right",
-              "label": "right"
+              "label": "Right"
             },
             {
               "value": "top",
@@ -345,11 +349,15 @@
           "options": [
             {
               "value": "landscape",
-              "label": "landscape"
+              "label": "Landscape"
             },
             {
               "value": "portrait",
-              "label": "portrait"
+              "label": "Portrait"
+            },
+            {
+              "value": "square",
+              "label": "Square"
             }
           ],
           "default": "portrait",
