@@ -13,23 +13,23 @@
 
   {%- for block in section.blocks -%}
     {%- if block.settings.image != blank -%}
-      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }}, 
+      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
       .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
         --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * 450);
         width: calc(var(--og-width-x-new-height_{{ block.id }}) / {{ block.settings.image.height}});
         max-width: 100%;
         margin: 0 auto;
       }
-    {%- endif -%}
-    
-    .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
-      object-fit: {{ block.settings.object_fit }};
-      object-position: {{ block.settings.object_position }};
-    }
 
-    .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image_overlay {
-      background-color: {{ block.settings.overlay_color }};
-    }
+      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
+        object-fit: {{ block.settings.object_fit }};
+        object-position: {{ block.settings.object_position }};
+      }
+
+      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image_overlay {
+        background-color: {{ block.settings.overlay_color }};
+      }
+    {%- endif -%}
   {%- endfor -%}
 {%- endstyle -%}
 
