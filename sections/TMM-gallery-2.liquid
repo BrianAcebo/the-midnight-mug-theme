@@ -1,3 +1,49 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  {%- for block in section.blocks -%}
+    {%- liquid
+      assign new_image_height = 450
+      if block.settings.image_orientation == 'landscape'
+        assign new_image_height = 250
+      endif
+    -%}
+
+    {%- if block.settings.image != blank -%}
+      {%- if block.settings.object_fit == 'contain' or block.settings.object_fit == 'scale-down' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }},
+        .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} .tmm-gallery2-image {
+          --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * {{ new_image_height }});
+          width: calc(var(--og-width-x-new-height_{{ block.id }}) / {{ block.settings.image.height}});
+          max-width: 100%;
+          margin: 0 auto;
+        }
+      {%- endif -%}
+
+      {%- if block.settings.image_orientation == 'landscape' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} {
+          height: 250px;
+        }
+      {%- endif -%}
+
+      .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} .tmm-gallery2-image {
+        object-fit: {{ block.settings.object_fit }};
+        object-position: {{ block.settings.object_position }};
+      }
+    {%- endif -%}
+  {%- endfor -%}
+{%- endstyle -%}
+
 {% assign block_forloop_index = 0 %}
 {% assign block_maximum_iteration = 0 %}
 {% assign grid_container_index = 1 %}
@@ -32,7 +78,7 @@
                 <a
                   href="#"
                   id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
-                  class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox"
+                  class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox tmm-gallery2-image-block_{{ block.id }}"
                 >
                   <div class="tmm-gallery2-image_wrap">
                     {%- if block.settings.image != blank -%}
@@ -123,3 +169,142 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "TMM - Gallery 2",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1",
+      "info": "Only applicable for themes that have color schemes enabled."
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "object_fit",
+          "options": [
+            {
+              "value": "cover",
+              "label": "cover"
+            },
+            {
+              "value": "contain",
+              "label": "contain"
+            },
+            {
+              "value": "none",
+              "label": "none"
+            },
+            {
+              "value": "fill",
+              "label": "fill"
+            },
+            {
+              "value": "scale-down",
+              "label": "scale-down"
+            }
+          ],
+          "default": "cover",
+          "label": "Image fit"
+        },
+        {
+          "type": "select",
+          "id": "object_position",
+          "options": [
+            {
+              "value": "bottom",
+              "label": "bottom"
+            },
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "left",
+              "label": "left"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            },
+            {
+              "value": "top",
+              "label": "top"
+            }
+          ],
+          "default": "center",
+          "label": "Image position"
+        },
+        {
+          "type": "select",
+          "id": "image_orientation",
+          "options": [
+            {
+              "value": "landscape",
+              "label": "landscape"
+            },
+            {
+              "value": "portrait",
+              "label": "portrait"
+            }
+          ],
+          "default": "portrait",
+          "label": "Image position"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Image alt text"
+        }
+      ]
+    }
+  ],
+   "presets": [
+    {
+      "name": "TMM - Gallery 2",
+      "blocks": [
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
