@@ -11,6 +11,14 @@
     }
   }
 
+  .tmm-section-{{ section.id }} .tmm-gallery2-header {
+    text-transform: {{ section.settings.text_transformation }};
+  }
+  
+  .tmm-section-{{ section.id }} .tmm-gallery2-body-text {
+    text-transform: {{ section.settings.text_transformation }};
+  }
+
   {%- for block in section.blocks -%}
     {%- liquid
       assign new_image_height = 450
@@ -58,9 +66,9 @@
                 class="tmm-max-width-large tmm-align-center tmm-gallery2-text"
               >
                 <div class="tmm-margin-bottom tmm-margin-small">
-                  <h2>Browse Gallery</h2>
+                  <{{ section.settings.header_size }} class="tmm-gallery2-header">Browse Gallery</{{ section.settings.header_size }}>
                 </div>
-                <p>Discover our top-selling products and happy customers</p>
+                <p class="tmm-gallery2-body-text">Discover our top-selling products and happy customers</p>
               </div>
             </div>
           </div>
