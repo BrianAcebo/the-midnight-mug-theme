@@ -101,9 +101,7 @@
         "shopping_link": "",
         "show_shopping_link": true,
         "padding_top": 36,
-        "padding_bottom": 20,
-        "padding_left": 5,
-        "padding_right": 5
+        "padding_bottom": 20
       }
     },
     "tmm_gallery_1_CrH7pE": {
@@ -161,6 +159,7 @@
         "image_Qn9bey"
       ],
       "settings": {
+        "color_scheme": "scheme-2",
         "padding_top": 0,
         "padding_bottom": 20
       }
@@ -168,6 +167,7 @@
     "tmm_divider_gYqVhd": {
       "type": "TMM-divider",
       "settings": {
+        "color_scheme": "scheme-2",
         "container_size": "900",
         "divider_color": "#020912",
         "divider_thickness": 3,
