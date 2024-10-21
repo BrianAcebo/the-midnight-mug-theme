@@ -1027,7 +1027,8 @@
   display: flex;
 }
 
-.tmm-gallery-image {
+.tmm-gallery-image,
+svg.tmm-gallery-image rect {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -3869,9 +3870,7 @@
   height: 9px;
 }
 
-.tmm-gallery-image_wrap,
-.tmm-gallery-image,
-svg.tmm-gallery-image rect {
+.tmm-gallery-image_wrap {
   width: 100%;
   height: 550px;
 }
