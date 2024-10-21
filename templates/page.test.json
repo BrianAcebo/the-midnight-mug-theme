@@ -115,6 +115,7 @@
             "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
             "object_fit": "cover",
             "object_position": "center",
+            "image_orientation": "portrait",
             "alt_text": "Image of lady on rocky shore",
             "overlay_color": "#000000"
           }
@@ -125,6 +126,7 @@
             "image": "shopify://shop_images/wooden-table-with-a-scale-and-pour-over-coffee.jpg",
             "object_fit": "cover",
             "object_position": "center",
+            "image_orientation": "portrait",
             "alt_text": "Pour over coffee into black pot",
             "overlay_color": "#e4f6ff"
           }
@@ -135,6 +137,7 @@
             "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
             "object_fit": "cover",
             "object_position": "center",
+            "image_orientation": "portrait",
             "alt_text": "Image of mountain valley covered in  vegetation",
             "overlay_color": "#000000"
           }
@@ -145,6 +148,7 @@
             "image": "shopify://shop_images/startup-desk.jpg",
             "object_fit": "cover",
             "object_position": "center",
+            "image_orientation": "landscape",
             "alt_text": "Image of a phone, notebook, and keyboard on top of a desk",
             "overlay_color": "#000000"
           }
