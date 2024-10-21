@@ -70,8 +70,6 @@
             {%- if section.blocks.size > 0 -%}
               {%- for block in section.blocks -%}
                 {%- if forloop.index == grid_container_index -%}
-                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
-                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   <div class="tmm-layout-grid tmm-gallery2-row">
                 {%- endif -%}
                 <a
@@ -96,7 +94,7 @@
                           preload: true
                       }}
                     {%- else -%}
-                      {%- render 'TMM-placeholder', class: 'tmm-gallery-image' -%}
+                      {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
                     {%- endif -%}
                   </div>
                   <script
@@ -118,6 +116,8 @@
                   </script>
                 </a>
                 {%- if forloop.index == grid_container_index -%}
+                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
+                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   </div>
                 {%- endif -%}
               {%- endfor -%}
@@ -134,7 +134,7 @@
                   class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox"
                 >
                   <div class="tmm-gallery2-image_wrap">
-                    {%- render 'TMM-placeholder', class: 'tmm-gallery-image' -%}
+                    {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
                   </div>
                   <script
                     type="application/json"
@@ -158,6 +158,8 @@
                   </script>
                 </a>
                 {%- if forloop.index == grid_container_index -%}
+                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
+                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   </div>
                 {%- endif -%}
               {%- endfor -%}
