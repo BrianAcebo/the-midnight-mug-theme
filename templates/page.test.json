@@ -175,23 +175,8 @@
         "padding_bottom": 100
       }
     },
-    "tmm_gallery_1_CBfbRq": {
-      "type": "TMM-gallery-1",
-      "blocks": {
-        "image_GmnXwR": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "portrait",
-            "alt_text": "",
-            "overlay_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_GmnXwR"
-      ],
+    "tmm_gallery_2_qUpzCA": {
+      "type": "TMM-gallery-2",
       "settings": {
         "color_scheme": "",
         "padding_top": 36,
@@ -206,6 +191,6 @@
     "tmm_breadcrumbs_zmTXwE",
     "tmm_gallery_1_CrH7pE",
     "tmm_divider_gYqVhd",
-    "tmm_gallery_1_CBfbRq"
+    "tmm_gallery_2_qUpzCA"
   ]
 }
