@@ -137,7 +137,7 @@
             "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
             "object_fit": "cover",
             "object_position": "center",
-            "image_orientation": "portrait",
+            "image_orientation": "landscape",
             "alt_text": "Image of mountain valley covered in  vegetation",
             "overlay_color": "#000000"
           }
