@@ -273,6 +273,17 @@
         "padding_bottom": 36
       }
     },
+    "tmm_divider_k3KjkN": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tmm_tabs_1_hKbB67": {
       "type": "TMM-tabs-1",
       "blocks": {
@@ -321,13 +332,10 @@
         "padding_bottom": 36
       }
     },
-    "tmm_divider_k3KjkN": {
-      "type": "TMM-divider",
+    "tmm_gallery_1_cAEH6k": {
+      "type": "TMM-gallery-1",
       "settings": {
         "color_scheme": "",
-        "container_size": "900",
-        "divider_color": "#000000",
-        "divider_thickness": 1,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -342,6 +350,7 @@
     "tmm_divider_gYqVhd",
     "tmm_gallery_2_qUpzCA",
     "tmm_divider_k3KjkN",
-    "tmm_tabs_1_hKbB67"
+    "tmm_tabs_1_hKbB67",
+    "tmm_gallery_1_cAEH6k"
   ]
 }
