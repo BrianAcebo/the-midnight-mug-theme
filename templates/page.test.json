@@ -115,7 +115,8 @@
             "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
             "object_fit": "cover",
             "object_position": "center",
-            "alt_text": "Image of mountain valley covered in  vegetation"
+            "alt_text": "Image of mountain valley covered in  vegetation",
+            "overlay_color": "#000000"
           }
         },
         "image_qKEbWR": {
@@ -124,16 +125,27 @@
             "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
             "object_fit": "cover",
             "object_position": "center",
-            "alt_text": "Image of lady on rocky shore"
+            "alt_text": "Image of lady on rocky shore",
+            "overlay_color": "#000000"
+          }
+        },
+        "image_KAraUB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/wooden-table-with-a-scale-and-pour-over-coffee.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "alt_text": "Pour over coffee into black pot",
+            "overlay_color": "#e4f6ff"
           }
         }
       },
       "block_order": [
         "image_rxxQAF",
-        "image_qKEbWR"
+        "image_qKEbWR",
+        "image_KAraUB"
       ],
       "settings": {
-        "overlay_color": "#e4f6ff",
         "padding_top": 20,
         "padding_bottom": 20
       }
