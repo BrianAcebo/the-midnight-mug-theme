@@ -1,6 +1,153 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-{% endschema %}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tmm-slider1 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="tmm-padding-global">
+    <div
+      data-tmm-id="42408a7b-61d5-279b-999e-330e1301fd15"
+      class="tmm-slider1-content none-padding"
+    >
+      <div
+        data-delay="4000"
+        data-animation="slide"
+        class="tmm-slider1-block tmm-slider"
+        data-autoplay="false"
+        data-easing="ease"
+        data-hide-arrows="false"
+        data-disable-swipe="false"
+        data-autoplay-limit="0"
+        data-nav-spacing="4"
+        data-duration="500"
+        data-infinite="true"
+      >
+        <div class="tmm-slider1-mask tmm-slider-mask">
+          <div
+            data-tmm-id="42408a7b-61d5-279b-999e-330e1301fd18"
+            class="tmm-slider-slide tmm-slide"
+          >
+            <div
+              class="tmm-slider1-content_wrap tmm-slider1-content_container"
+            >
+              <div class="tmm-slider1-image tmm-margin-none">
+                <img
+                  width="532"
+                  loading="lazy"
+                  alt=""
+                  src="images/Placeholder-Image---Landscape-4x3.svg"
+                  class="tmm-slider1-image-absolute"
+                >
+              </div>
+              <div class="tmm-slider1-content_block">
+                <h2 class="tmm-slider1-heading">Product Title</h2>
+                <div class="tmm-slider1-content_middle">
+                  This platform allows developers and designers to build responsive websites without having to write
+                  code.
+                </div>
+                <a
+                  href="#"
+                  class="tmm-button-primary tmm-button"
+                  >View Our Services</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            data-tmm-id="42408a7b-61d5-279b-999e-330e1301fd25"
+            class="tmm-slider-slide tmm-slide"
+          >
+            <div
+              class="tmm-slider1-content_wrap tmm-slider1-content_container"
+            >
+              <div class="tmm-slider1-image tmm-margin-none">
+                <img
+                  width="532"
+                  loading="lazy"
+                  alt=""
+                  src="images/Placeholder-Image---Landscape-4x3.svg"
+                  class="tmm-slider1-image-absolute"
+                >
+              </div>
+              <div class="tmm-slider1-content_block">
+                <h2>Product Title</h2>
+                <div class="tmm-slider1-content_middle">
+                  This platform allows developers and designers to build responsive websites without having to write
+                  code.
+                </div>
+                <a
+                  href="#"
+                  class="tmm-button-primary tmm-button"
+                  >View Our Services</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            data-tmm-id="42408a7b-61d5-279b-999e-330e1301fd32"
+            class="tmm-slider-slide tmm-slide"
+          >
+            <div
+              class="tmm-slider1-content_wrap tmm-slider1-content_container"
+            >
+              <div class="tmm-slider1-image tmm-margin-none">
+                <img
+                  width="532"
+                  loading="lazy"
+                  alt=""
+                  src="images/Placeholder-Image---Landscape-4x3.svg"
+                  class="tmm-slider1-image-absolute"
+                >
+              </div>
+              <div class="tmm-slider1-content_block">
+                <h2>Product Title</h2>
+                <div class="tmm-slider1-content_middle">
+                  This platform allows developers and designers to build responsive websites without having to write
+                  code.
+                </div>
+                <a
+                  href="#"
+                  class="tmm-button-primary tmm-button"
+                  >View Our Services</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tmm-slider1-left-arrow tmm-slider1-left-arrow_position tmm-slider-arrow-left"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.prod.website-files.com/66fe26a9157040ae4289222e/66fe26a9157040ae428922a6_arrow-left(24x24)%402x%20(5).svg"
+            alt=""
+            class="tmm-slider-arrow"
+          >
+        </div>
+        <div
+          class="tmm-slider1-right-arrow tmm-slider1-right-arrow_position tmm-slider-arrow-right"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.prod.website-files.com/66fe26a9157040ae4289222e/66fe26a9157040ae428922a0_arrow-right(24x24)%402x%20(5).svg"
+            alt=""
+            class="tmm-slider-arrow"
+          >
+        </div>
+        <div class="tmm-slider1-active-nav tmm-slider1-nav_wrap"></div>
+        <div
+          class="tmm-slider1-active-nav_block tmm-slider-nav tmm-slider-nav-invert tmm-round"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
