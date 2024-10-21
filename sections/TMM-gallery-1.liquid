@@ -23,6 +23,14 @@
         }
       {%- endif -%}
 
+      {%- if block.settings.image_orientation == 'landscape' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
+          height: 250px;
+        }
+      {%- endif -%}
+
+      image_orientation
+
       .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
         object-fit: {{ block.settings.object_fit }};
         object-position: {{ block.settings.object_position }};
@@ -315,6 +323,22 @@
             }
           ],
           "default": "center",
+          "label": "Image position"
+        },
+        {
+          "type": "select",
+          "id": "image_orientation",
+          "options": [
+            {
+              "value": "landscape",
+              "label": "landscape"
+            },
+            {
+              "value": "portrait",
+              "label": "portrait"
+            }
+          ],
+          "default": "portrait",
           "label": "Image position"
         },
         {
