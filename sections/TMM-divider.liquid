@@ -11,19 +11,21 @@
     }
   }
 
-  .tmm-section-{{ section.id }}.tmm-divider {
+  .tmm-section-{{ section.id }} .tmm-divider {
     max-width: {{ section.settings.container_size }}px;
   }
 
-  .tmm-section-{{ section.id }}.tmm-divider .tmm-divider_line {
+  .tmm-section-{{ section.id }} .tmm-divider .tmm-divider_line {
     background-color: {{ section.settings.divider_color }};
     height: {{ section.settings.divider_thickness }}px;
   }
 {%- endstyle -%}
 
-<div class="section__tmm-component tmm-section-{{ section.id }} section-{{ section.id }}-padding tmm-divider color-{{ section.settings.color_scheme }} gradient">
-  <div class="tmm-divider_line">
-    <div class="tmm-visually-hidden"></div>
+<div class="tmm-divider_container tmm-section-{{ section.id }} section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="tmm-divider">
+    <div class="tmm-divider_line">
+      <div class="tmm-visually-hidden"></div>
+    </div>
   </div>
 </div>
 
