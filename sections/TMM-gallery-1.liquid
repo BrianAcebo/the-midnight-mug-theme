@@ -11,14 +11,14 @@
     }
   }
 
-  .tmm-section-{{ section.id }} .tmm-gallery-image_overlay {
-    background-color: {{ section.settings.overlay_color }};
-  }
-
   {%- for block in section.blocks -%}
     .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
       object-fit: {{ block.settings.object_fit }};
       object-position: {{ block.settings.object_position }};
+    }
+
+    .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image_overlay {
+      background-color: {{ block.settings.overlay_color }};
     }
   {%- endfor -%}
 {%- endstyle -%}
@@ -41,18 +41,18 @@
                       {%- if block.settings.image != blank -%}
                         {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                         {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
-                          {{
-                            block.settings.image
-                            | image_url: width: 600
-                            | image_tag:
-                              class: 'tmm-gallery-image',
-                              widths: widths,
-                              height: block.settings.image.height,
-                              width: block.settings.image.width,
-                              alt: block.settings.alt_text,
-                              sizes: sizes,
-                              preload: true
-                          }}
+                        {{
+                          block.settings.image
+                          | image_url: width: 600
+                          | image_tag:
+                            class: 'tmm-gallery-image',
+                            widths: widths,
+                            height: block.settings.image.height,
+                            width: block.settings.image.width,
+                            alt: block.settings.alt_text,
+                            sizes: sizes,
+                            preload: true
+                        }}
                       {%- else -%}
                         {%- render 'TMM-placeholder', class: 'tmm-gallery-image' -%}
                       {%- endif -%}
@@ -129,18 +129,18 @@
                       {%- if block.settings.image != blank -%}
                         {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                         {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
-                          {{
-                            block.settings.image
-                            | image_url: width: 600
-                            | image_tag:
-                              class: 'tmm-gallery-image',
-                              widths: widths,
-                              height: block.settings.image.height,
-                              width: block.settings.image.width,
-                              alt: block.settings.alt_text,
-                              sizes: sizes,
-                              preload: true
-                          }}
+                        {{
+                          block.settings.image
+                          | image_url: width: 600
+                          | image_tag:
+                            class: 'tmm-gallery-image',
+                            widths: widths,
+                            height: block.settings.image.height,
+                            width: block.settings.image.width,
+                            alt: block.settings.alt_text,
+                            sizes: sizes,
+                            preload: true
+                        }}
                       {%- else -%}
                         {%- render 'TMM-placeholder', class: 'tmm-gallery-image' -%}
                       {%- endif -%}
@@ -214,12 +214,6 @@
 {
   "name": "TMM - Gallery 1",
   "settings": [
-    {
-      "type": "color",
-      "id": "overlay_color",
-      "default": "#000000",
-      "label": "Overlay color"
-    },
     {
       "type": "header",
       "content": "Section padding"
@@ -315,6 +309,12 @@
           "type": "text",
           "id": "alt_text",
           "label": "Image alt text"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "default": "#000000",
+          "label": "Overlay color"
         }
       ]
     }
