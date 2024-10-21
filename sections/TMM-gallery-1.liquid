@@ -173,7 +173,7 @@
             {%- endif -%}
           </div>
           <div class="tmm-gallery-columns_right tmm-col tmm-col-6">
-            {%- if section.blocks.size > 1 -%}
+            {%- if section.blocks.size > 0 -%}
               {%- for block in section.blocks -%}
                 {% assign cycle_group = 'cycle_2_' | append: section.id %}
                 {% capture loop_iteration_2 %}{% cycle cycle_group: 'odd', 'even' %}{% endcapture %}
