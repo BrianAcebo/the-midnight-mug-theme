@@ -1,6 +1,293 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tmm-section-{{ section.id }} .tmm-tabs1-header {
+    text-transform: {{ section.settings.header_text_transformation }};
+  }
+  
+  .tmm-section-{{ section.id }} .tmm-tabs1-body-text {
+    text-transform: {{ section.settings.body_text_transformation }};
+  }
+{%- endstyle -%}
+
+<div
+  bind="eac4529d-08a0-66f9-2c8a-a83a964cab0a"
+  class="tmm-tabs1_container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient"
+>
+  <div class="tmm-interaction_wrap">
+    <div class="tmm-padding-global">
+      <{{ section.settings.header_size }} class="tmm-tabs1-header" data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a68">What I can do</{{ section.settings.header_size }}>
+      <div
+        data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a6b"
+        data-current="Tab 1"
+        data-easing="ease"
+        data-duration-in="300"
+        data-duration-out="100"
+        class="tmm-tabs1 tmm-tabs"
+      >
+        <div
+          id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a6c-b8b46a66"
+          class="tmm-tabs1-menu tmm-tab-menu"
+        >
+          {%- for block in section.blocks -%}
+            <a
+              data-tmm-tab="Tab {{ forloop.index }}"
+              class="tmm-tabs1-link tmm-inline-block tmm-tab-link{% if forloop.index == 1 %} tmm--current{% endif %}"
+            >
+              <div class="tmm-tabs1-heading">{{- block.settings.heading -}}</div>
+            </a>
+          {%- endfor -%}
+        </div>
+        <div
+          id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a7d-b8b46a66"
+          class="tmm-tabs1-content tmm-tab-content"
+        >
+          {%- for block in section.blocks -%}
+            <div
+              data-tmm-tab="Tab {{ forloop.index }}"
+              class="tmm-tabs1-pane{{ forloop.index }} tmm-tab-pane{% if forloop.index == 1 %} tmm--tab-active{% endif %}"
+            >
+              <div class="tmm-tabs1-content_wrap">
+                <div class="tmm-tabs1-tags_wrap">
+                  {%- if block.settings.tag_1 != blank -%}
+                    <div class="tmm-tabs1-tag">
+                      <div>{{- block.settings.tag_1 -}}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.tag_2 != blank -%}
+                    <div class="tmm-tabs1-tag">
+                      <div>{{- block.settings.tag_2 -}}</div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.tag_3 != blank -%}
+                    <div class="tmm-tabs1-tag">
+                      <div>{{- block.settings.tag_3 -}}</div>
+                    </div>
+                  {%- endif -%}
+                </div>
+                <p class="tmm-tabs1-body-text">
+                  {{- block.settings.body_text -}}
+                </p>
+                {%- if block.settings.button_url != blank -%}
+                  <a
+                    href="{{ block.settings.button_url }}"
+                    class="tmm-button-primary tmm-button{% if block.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                  >
+                    {{- block.settings.button_text -}}
+                  </a>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "TMM - Tabs 1",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1",
+      "info": "Only applicable for themes that have color schemes enabled."
+    },
+    {
+      "type": "text",
+      "id": "header_text",
+      "default": "Browse our Gallery",
+      "label": "Header"
+    },
+    {
+      "type": "select",
+      "id": "header_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        }
+      ],
+      "default": "h2",
+      "label": "Header tag size"
+    },
+    {
+      "type": "select",
+      "id": "header_text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "capitalize",
+      "label": "Header text transform"
+    },
+    {
+      "type": "text",
+      "id": "body_text",
+      "default": "Discover our top-selling products and happy customers",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "body_text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "none",
+      "label": "Body text transform"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Awesome product title"
+        },
+        {
+          "type": "text",
+          "id": "body_text",
+          "label": "Body text",
+          "default": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Buy now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button url"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "outline",
+              "label": "Outline"
+            }
+          ],
+          "default": "solid",
+          "label": "Button style"
+        },
+        {
+          "type": "text",
+          "id": "tag_1",
+          "label": "Tag 1",
+          "default": "Innovative"
+        },
+        {
+          "type": "text",
+          "id": "tag_2",
+          "label": "Tag 2",
+          "default": "Interactive"
+        },
+        {
+          "type": "text",
+          "id": "tag_3",
+          "label": "Tag 3",
+          "default": "Gourmet"
+        }
+      ]
+    }
+  ],
+   "presets": [
+    {
+      "name": "TMM - Tabs 1"
+    }
+  ]
+}
 {% endschema %}
