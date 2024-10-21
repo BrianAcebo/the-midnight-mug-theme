@@ -147,7 +147,7 @@
           "settings": {
             "image": "shopify://shop_images/startup-desk.jpg",
             "object_fit": "cover",
-            "object_position": "center",
+            "object_position": "bottom",
             "image_orientation": "landscape",
             "alt_text": "Image of a phone, notebook, and keyboard on top of a desk",
             "overlay_color": "#000000"
