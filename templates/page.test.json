@@ -138,12 +138,23 @@
             "alt_text": "Image of mountain valley covered in  vegetation",
             "overlay_color": "#000000"
           }
+        },
+        "image_Qn9bey": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/startup-desk.jpg",
+            "object_fit": "contain",
+            "object_position": "center",
+            "alt_text": "Image of a phone, notebook, and keyboard on top of a desk",
+            "overlay_color": "#000000"
+          }
         }
       },
       "block_order": [
         "image_qKEbWR",
         "image_KAraUB",
-        "image_rxxQAF"
+        "image_rxxQAF",
+        "image_Qn9bey"
       ],
       "settings": {
         "padding_top": 20,
