@@ -37,11 +37,11 @@
 
     .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }}:hover {
       background-color: transparent;
-      color: {{ section.settings.button_color }};
+      color: {{ block.settings.button_color }};
     }
 
     .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }}.tmm-is-secondary:hover {
-      background-color: {{ section.settings.button_color }};
+      background-color: {{ block.settings.button_color }};
       color: #ffffff;
     }
   {%- endfor -%}
