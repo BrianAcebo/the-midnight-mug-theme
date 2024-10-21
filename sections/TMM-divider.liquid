@@ -11,7 +11,11 @@
     }
   }
 
-  .tmm-section-{{ section.id }} .tmm-divider_line {
+  .tmm-section-{{ section.id }}.tmm-divider {
+    max-width: {{ section.settings.container_size }}px;
+  }
+
+  .tmm-section-{{ section.id }}.tmm-divider .tmm-divider_line {
     background-color: {{ section.settings.divider_color }};
     height: {{ section.settings.divider_thickness }}px;
   }
@@ -27,6 +31,42 @@
 {
   "name": "TMM Divider",
   "settings": [
+    {
+      "type": "select",
+      "id": "container_size",
+      "options": [
+        {
+          "value": "100",
+          "label": "XS"
+        },
+        {
+          "value": "300",
+          "label": "S"
+        },
+        {
+          "value": "600",
+          "label": "M"
+        },
+        {
+          "value": "900",
+          "label": "L"
+        },
+        {
+          "value": "1200",
+          "label": "XL"
+        },
+        {
+          "value": "1600",
+          "label": "XXL"
+        },
+        {
+          "value": "2400",
+          "label": "XXXL"
+        }
+      ],
+      "default": "900",
+      "label": "Container size"
+    },
     {
       "type": "color",
       "id": "divider_color",
