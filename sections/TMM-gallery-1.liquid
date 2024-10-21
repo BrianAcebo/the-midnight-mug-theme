@@ -31,9 +31,7 @@
           <div class="tmm-gallery-columns_left tmm-col tmm-col-6">
             {%- if section.blocks.size > 0 -%}
               {%- for block in section.blocks -%}
-                {% capture loop_iteration_1 %}{% cycle 'cycle_2': 'odd', 'even' %}{% endcapture %}
-                {{ forloop.index }}
-                {{ loop_iteration_1 }}
+                {% capture loop_iteration_1 %}{% cycle 'cycle_1': 'odd', 'even' %}{% endcapture %}
                 {%- if loop_iteration_1 == 'odd' -%}
                   <a
                     href="#"
@@ -122,8 +120,6 @@
             {%- if section.blocks.size > 1 -%}
               {%- for block in section.blocks -%}
                 {% capture loop_iteration_2 %}{% cycle 'cycle_2': 'odd', 'even' %}{% endcapture %}
-                {{ forloop.index }}
-                {{ loop_iteration_2 }}
                 {%- if loop_iteration_2 == 'even' -%}
                   <a
                     href="#"
