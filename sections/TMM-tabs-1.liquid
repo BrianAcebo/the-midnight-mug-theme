@@ -26,7 +26,7 @@
 >
   <div class="tmm-interaction_wrap">
     <div class="tmm-padding-global">
-      <{{ section.settings.header_size }} class="tmm-tabs1-header" data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a68">What I can do</{{ section.settings.header_size }}>
+      <{{ section.settings.header_size }} class="tmm-tabs1-header" data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a68">{{- section.settings.header_text -}}</{{ section.settings.header_size }}>
       <div
         data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a6b"
         data-current="Tab 1"
@@ -44,7 +44,7 @@
               data-tmm-tab="Tab {{ forloop.index }}"
               class="tmm-tabs1-link tmm-inline-block tmm-tab-link{% if forloop.index == 1 %} tmm--current{% endif %}"
             >
-              <div class="tmm-tabs1-heading">{{- block.settings.heading -}}</div>
+              <div class="tmm-tabs1-heading">{{- block.settings.title -}}</div>
             </a>
           {%- endfor -%}
         </div>
@@ -109,7 +109,7 @@
     {
       "type": "text",
       "id": "header_text",
-      "default": "Browse our Gallery",
+      "default": "New products",
       "label": "Header"
     },
     {
@@ -163,12 +163,6 @@
       ],
       "default": "capitalize",
       "label": "Header text transform"
-    },
-    {
-      "type": "text",
-      "id": "body_text",
-      "default": "Discover our top-selling products and happy customers",
-      "label": "Text"
     },
     {
       "type": "select",
