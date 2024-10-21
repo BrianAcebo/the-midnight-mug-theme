@@ -115,7 +115,7 @@
                     }
                   </script>
                 </a>
-                {%- if forloop.index == grid_container_index -%}
+                {%- if forloop.index == block_maximum_iteration -%}
                   {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
                   {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   </div>
@@ -155,7 +155,7 @@
                     }
                   </script>
                 </a>
-                {%- if forloop.index == grid_container_index -%}
+                {%- if forloop.index == block_maximum_iteration -%}
                   {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
                   {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   </div>
