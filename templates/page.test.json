@@ -297,13 +297,13 @@
             "title": "Awesome product title",
             "body_text": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!",
             "button_text": "Buy now",
-            "button_url": "",
+            "button_url": "shopify://collections",
             "button_color": "#000000",
             "button_text_color": "#ffffff",
-            "button_style": "solid",
+            "button_style": "outline",
             "tag_1": "Innovative",
             "tag_2": "Interactive",
-            "tag_3": "Gourmet"
+            "tag_3": ""
           }
         }
       },
