@@ -124,8 +124,6 @@
             {% else %}
               {%- for i in (1..6) -%}
                 {%- if forloop.index == grid_container_index -%}
-                  {%- assign block_maximum_iteration = block_maximum_iteration | plus: 3 -%}
-                  {%- assign grid_container_index = block_maximum_iteration | plus: 1 -%}
                   <div class="tmm-layout-grid tmm-gallery2-row">
                 {%- endif -%}
                 <a
