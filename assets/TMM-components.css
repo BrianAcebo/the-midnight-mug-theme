@@ -3783,6 +3783,10 @@
   margin-bottom: 10px;
 }
 
+.tmm-divider_container {
+  width: 100%;
+}
+
 .tmm-divider {
   width: 90%;
   max-width: 900px;
