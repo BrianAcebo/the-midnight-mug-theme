@@ -98,18 +98,36 @@
                   type="application/json"
                   class="tmm-json"
                 >
-                  {
+                  {%- if block.settings.image != blank -%}
+                    {
                       "items": [
-                          {
-                            "_id": "{{ block.settings.image.id }}",
-                            "height": "{{ block.settings.height }}",
-                            "url": "{{ block.settings.image | image_url }}",
-                            "width": "{{ block.settings.width }}",
-                            "type": "image"
-                          }
+                        {
+                          "_id": "{{ block.settings.image.id }}",
+                          "height": "{{ block.settings.height }}",
+                          "url": "{{ block.settings.image | image_url }}",
+                          "width": "{{ block.settings.width }}",
+                          "type": "image"
+                        }
                       ],
-                      "group": "gallery-2"
-                  }
+                      "group": "Gallery_2"
+                    }
+                  {%- else -%}
+                    {
+                      "items": [
+                        {
+                          "_id": "example_img",
+                          "origFileName": "image-placeholder.svg",
+                          "fileName": "image-placeholder.svg",
+                          "fileSize": 2063,
+                          "height": 150,
+                          "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
+                          "width": 150,
+                          "type": "image"
+                        }
+                      ],
+                      "group": "Gallery"
+                    }
+                  {%- endif -%}
                 </script>
               </a>
               {%- if forloop.index == block_maximum_iteration -%}
@@ -139,18 +157,18 @@
                 >
                   {
                     "items": [
-                        {
-                            "_id": "example_img",
-                            "origFileName": "image-placeholder.svg",
-                            "fileName": "image-placeholder.svg",
-                            "fileSize": 2063,
-                            "height": 150,
-                            "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
-                            "width": 150,
-                            "type": "image"
-                        }
+                      {
+                          "_id": "example_img",
+                          "origFileName": "image-placeholder.svg",
+                          "fileName": "image-placeholder.svg",
+                          "fileSize": 2063,
+                          "height": 150,
+                          "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
+                          "width": 150,
+                          "type": "image"
+                      }
                     ],
-                    "group": "gallery-2"
+                    "group": "Gallery_2"
                   }
                 </script>
               </a>
