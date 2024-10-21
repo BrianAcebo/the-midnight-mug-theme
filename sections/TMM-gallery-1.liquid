@@ -13,6 +13,7 @@
 
   {%- for block in section.blocks -%}
     .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
+      width: {{ block.settings.image.width }}px;
       object-fit: {{ block.settings.object_fit }};
       object-position: {{ block.settings.object_position }};
     }
