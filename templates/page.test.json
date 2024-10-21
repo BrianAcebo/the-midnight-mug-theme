@@ -334,6 +334,21 @@
     },
     "tmm_gallery_1_cAEH6k": {
       "type": "TMM-gallery-1",
+      "blocks": {
+        "image_8a3qNm": {
+          "type": "image",
+          "settings": {
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "portrait",
+            "alt_text": "",
+            "overlay_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_8a3qNm"
+      ],
       "settings": {
         "color_scheme": "",
         "padding_top": 36,
