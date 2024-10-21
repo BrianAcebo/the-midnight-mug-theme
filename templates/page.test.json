@@ -113,7 +113,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
-            "object_fit": "cover",
+            "object_fit": "contain",
             "object_position": "center",
             "alt_text": "Image of lady on rocky shore",
             "overlay_color": "#000000"
@@ -133,7 +133,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
-            "object_fit": "cover",
+            "object_fit": "contain",
             "object_position": "center",
             "alt_text": "Image of mountain valley covered in  vegetation",
             "overlay_color": "#000000"
