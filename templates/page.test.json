@@ -146,7 +146,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/startup-desk.jpg",
-            "object_fit": "contain",
+            "object_fit": "cover",
             "object_position": "center",
             "image_orientation": "landscape",
             "alt_text": "Image of a phone, notebook, and keyboard on top of a desk",
