@@ -12,11 +12,18 @@
   }
 
   {%- for block in section.blocks -%}
+    {%- liquid
+      assign new_image_height = 450
+      if block.settings.image_orientation == 'landscape'
+        assign new_image_height = 250
+      endif
+    -%}
+    
     {%- if block.settings.image != blank -%}
       {%- if block.settings.object_fit == 'contain' or block.settings.object_fit == 'scale-down' -%}
         .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
         .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
-          --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * 450);
+          --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * {{ new_image_height }});
           width: calc(var(--og-width-x-new-height_{{ block.id }}) / {{ block.settings.image.height}});
           max-width: 100%;
           margin: 0 auto;
