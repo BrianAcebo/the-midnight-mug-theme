@@ -63,7 +63,7 @@
                     href="#"
                     class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
                   >
-                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }} }}">
+                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }}">
                       {%- if block.settings.image != blank -%}
                         {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                         {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
@@ -153,7 +153,7 @@
                     href="#"
                     class="tmm-gallery-lightbox tmm-inline-block tmm-lightbox"
                   >
-                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }} }}">
+                    <div class="tmm-gallery-image_wrap tmm-gallery-image-block_{{ block.id }}">
                       {%- if block.settings.image != blank -%}
                         {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                         {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
