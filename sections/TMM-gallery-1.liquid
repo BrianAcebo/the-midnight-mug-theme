@@ -52,7 +52,11 @@
   {%- endfor -%}
 
   .tmm-gallery-no-image {
-    height: 420px;
+    overflow: hidden;
+  }
+
+  .tmm-gallery-no-image svg rect {
+    width: 800px;
   }
 {%- endstyle -%}
 
