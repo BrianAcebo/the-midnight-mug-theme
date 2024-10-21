@@ -27,6 +27,7 @@
     .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }} {
       background-color: {{ block.settings.button_color }};
       border: 1px solid {{ block.settings.button_color }};
+      color: {{ block.settings.button_text_color }};
     }
 
     .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }}.tmm-is-secondary {
@@ -268,6 +269,12 @@
           "id": "button_color",
           "default": "#000000",
           "label": "Button color"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "default": "#ffffff",
+          "label": "Button text color"
         },
         {
           "type": "select",
