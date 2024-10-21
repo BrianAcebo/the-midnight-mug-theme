@@ -121,6 +121,7 @@
             {%- if section.blocks.size > 1 -%}
               {%- for block in section.blocks -%}
                 {% capture loop_iteration %}{% cycle 'odd', 'even' %}{% endcapture %}
+                {{ loop_iteration }}
                 {%- if loop_iteration == 'even' -%}
                   <a
                     href="#"
