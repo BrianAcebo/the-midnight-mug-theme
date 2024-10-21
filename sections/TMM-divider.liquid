@@ -21,7 +21,7 @@
   }
 {%- endstyle -%}
 
-<div class="section__tmm-component tmm-section-{{ section.id }} section-{{ section.id }}-padding tmm-divider">
+<div class="section__tmm-component tmm-section-{{ section.id }} section-{{ section.id }}-padding tmm-divider color-{{ section.settings.color_scheme }} gradient">
   <div class="tmm-divider_line">
     <div class="tmm-visually-hidden"></div>
   </div>
@@ -31,6 +31,13 @@
 {
   "name": "TMM Divider",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme-1",
+      "info": "Only applicable for themes that have color schemes enabled."
+    },
     {
       "type": "select",
       "id": "container_size",
