@@ -1,6 +1,105 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-{% endschema %}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tmm-section-{{ section.id }} .tmm-newsletter1-heading_text {
+    text-transform: {{ section.settings.header_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-product-list-body_text {
+    text-transform: {{ section.settings.body_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button {
+    transition: 0.2s;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
+    background-color: {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
+    opacity: 0.8;
+  }
+{%- endstyle -%}
+
+<section class="tmm-newsletter1">
+  <div class="tmm-interaction_wrap">
+    <div class="tmm-padding-global">
+      <div class="tmm-container-large">
+        <div class="tmm-padding-section-large">
+          <div class="tmm-layout-grid tmm-newsletter1-container">
+            <div class="tmm-newsletter1-content">
+              <div class="tmm-margin-bottom tmm-margin-small">
+                <{{ section.settings.heading_size }} class="tmm-newsletter1-heading_text">Secure Checkout for Your Order</{{ section.settings.heading_size }}>
+              </div>
+              <p class="tmm-text-size-medium">Please provide your billing and shipping information below.</p>
+              <div class="tmm-margin-top margin-medium">
+                <div class="tmm-newsletter1-form_block tmm-form">
+                  <form
+                    id="tmm-newsletter1-form"
+                    name="email-form"
+                    data-name="Email Form"
+                    method="get"
+                    class="tmm-newsletter1-form"
+                    data-tmm-page-id="66fe0979b699a164ac033dc9"
+                    data-tmm-element-id="a37bd63f-deaa-bf07-e582-86e9dde5c020"
+                  >
+                    <div class="tmm-newsletter-form_wrap">
+                      <input
+                        class="tmm-newsletter1-form_input tmm-input"
+                        maxlength="256"
+                        name="email-4"
+                        data-name="Email 4"
+                        placeholder="Enter your details"
+                        type="email"
+                        id="email-4"
+                        required=""
+                      >
+                      
+                      <button
+                        type="submit"
+                        data-wait="Please wait..."
+                        class="tmm-button-primary tmm-button"
+                      >
+                        Submit Order
+                      </button>
+                    </div>
+                    <div class="tmm-text-size-tiny">
+                      By submitting your order, you agree to our Terms and Conditions.
+                    </div>
+                  </form>
+                  <div class="tmm-success-message tmm-form-done">
+                    <div class="tmm-success-text">Thank you! Order received successfully.</div>
+                  </div>
+                  <div class="tmm-error-message tmm-form-fail">
+                    <div class="tmm-error-text">Oops! Something went wrong. Please try again.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tmm-newsletter1-image_wrap">
+              {%- render 'TMM-placeholder', class: 'tmm-newsletter1-image' -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
