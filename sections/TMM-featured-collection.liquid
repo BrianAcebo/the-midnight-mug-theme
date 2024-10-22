@@ -50,14 +50,14 @@
                 <div class="tmm-product-list-heading">
                   <div class="tmm-max-width-large">
                     <div class="tmm-margin-bottom tmm-margin-xsmall">
-                      <div class="tmm-text-semibold">Discover</div>
+                      <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
                     </div>
                     <div class="tmm-margin-bottom tmm-margin-xsmall">
                       <{{ section.settings.heading_size }} class="tmm-product-list-heading_text">
                         {{- section.settings.heading -}}
                       </{{ section.settings.heading_size }}>
                     </div>
-                    <p class="tmm-text-size-medium tmm-product-list-body_text">
+                    <p class="tmm-product-list-body_text">
                       {{- section.settings.body_text -}}
                     </p>
                   </div>
@@ -208,6 +208,12 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "caption_text",
+      "label": "Caption",
+      "default": "Discover",
     },
     {
       "type": "text",
