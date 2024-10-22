@@ -362,11 +362,26 @@
             "button_text_color": "#ffffff",
             "button_style": "solid"
           }
+        },
+        "slider_r6pQUF": {
+          "type": "slider",
+          "settings": {
+            "image": "shopify://shop_images/abandoned-swimming-pool-next-to-highway.jpg",
+            "heading_size": "h2",
+            "header": "Our new product",
+            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
+            "button_text": "Buy now",
+            "button_url": "",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid"
+          }
         }
       },
       "block_order": [
         "slider_RhG39K",
-        "slider_mYVHxQ"
+        "slider_mYVHxQ",
+        "slider_r6pQUF"
       ],
       "settings": {
         "color_scheme": "scheme-4",
