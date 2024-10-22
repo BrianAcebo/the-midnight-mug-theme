@@ -31,13 +31,12 @@
 
   @media screen and (max-width: 991px) {
     .tmm-section-{{ section.id }} .tmm-slider-dot {
-      display: block!important;
+      display: inline-block !important;
     }
   }
 
   .tmm-section-{{ section.id }} .tmm-slider-dot {
     background-color: {{ section.settings.arrow_button_color }} !important;
-    display: block!important;
   }
 
   .tmm-section-{{ section.id }} .tmm-slider-dot {
@@ -97,11 +96,11 @@
               >
                 <div class="tmm-slider1-image tmm-margin-none">
                   {%- liquid
-                     if block.settings.product != blank
-                       assign block_image = block.settings.product.featured_image
-                     else
-                       assign block_image = block.settings.image
-                     endif
+                    if block.settings.product != blank
+                      assign block_image = block.settings.product.featured_image
+                    else
+                      assign block_image = block.settings.image
+                    endif
                   -%}
                   {%- if block_image != blank -%}
                     {% capture sizes %}(max-width: {{ block_image.width | times: 2 }}px) 50vw, {{ block_image.width }}px{% endcapture %}
@@ -165,8 +164,7 @@
           <div
             class="tmm-slider1-right-arrow tmm-slider1-right-arrow_position tmm-slider-arrow-right"
           >
-            {%-
-              render 'TMM-icon-arrow',
+            {%- render 'TMM-icon-arrow',
               dir: 'right',
               background_color: section.settings.arrow_button_color,
               arrow_color: section.settings.arrow_color,
