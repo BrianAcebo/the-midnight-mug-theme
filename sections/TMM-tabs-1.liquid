@@ -41,7 +41,7 @@
   {%- endfor -%}
 {%- endstyle -%}
 
-<div
+<section
   bind="eac4529d-08a0-66f9-2c8a-a83a964cab0a"
   class="tmm-tabs1_container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient"
 >
@@ -64,6 +64,7 @@
         >
           {%- for block in section.blocks -%}
             <a
+              {{ block.shopify_attributes }}
               data-tmm-tab="Tab {{ forloop.index }}"
               class="tmm-tabs1-link tmm-inline-block tmm-tab-link{% if forloop.index == 1 %} tmm--current{% endif %}"
             >
@@ -77,6 +78,7 @@
         >
           {%- for block in section.blocks -%}
             <div
+              {{ block.shopify_attributes }}
               data-tmm-tab="Tab {{ forloop.index }}"
               class="tmm-tabs1-pane{{ forloop.index }} tmm-tab-pane{% if forloop.index == 1 %} tmm--tab-active{% endif %}"
             >
@@ -116,7 +118,7 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 {% schema %}
 {
