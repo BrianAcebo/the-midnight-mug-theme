@@ -112,7 +112,24 @@
             </div>
           </div>
           <div class="tmm-newsletter1-image_wrap">
-            {%- render 'TMM-placeholder', class: 'tmm-newsletter1-image' -%}
+            {%- if section.settings.image != blank -%}
+              {% capture sizes %}(max-width: {{ section.settings.image.width | times: 2 }}px) 50vw, {{ section.settings.image.width }}px{% endcapture %}
+              {% capture widths %}{{ section.settings.image.width }}, {{ section.settings.image.width | times: 1.5 | round }}, {{ section.settings.image.width | times: 2 }}{% endcapture %}
+              {{
+                section.settings.image
+                | image_url: width: 800
+                | image_tag:
+                  class: 'tmm-newsletter1-image',
+                  widths: widths,
+                  height: section.settings.image.height,
+                  width: section.settings.image.width,
+                  alt: section.settingsimage.alt,
+                  sizes: sizes,
+                  preload: true
+              }}
+            {%- else -%}
+              {%- render 'TMM-placeholder', class: 'tmm-newsletter1-image' -%}
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -130,6 +147,11 @@
       "label": "Color scheme",
       "default": "scheme-1",
       "info": "Only applicable for themes that have color schemes enabled."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
     },
     {
       "type": "text",
