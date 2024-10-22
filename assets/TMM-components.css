@@ -988,7 +988,6 @@
 
 .tmm-error-message {
   margin-top: 1.5rem;
-  padding: 0.875rem 1rem;
 }
 
 .tmm-success-text {
@@ -2932,6 +2931,10 @@
   grid-auto-columns: 1fr;
   align-items: center;
   display: grid;
+}
+
+.tmm-success-message {
+  margin-top: 1.5rem;
 }
 
 .tmm-newsletter1-image {
