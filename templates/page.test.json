@@ -414,7 +414,8 @@
       "type": "TMM-featured-collection",
       "settings": {
         "color_scheme": "",
-        "collection": "",
+        "collection": "best-sellers",
+        "caption_text": "Discover",
         "heading": "Our sleep collection",
         "body_text": "Conquer your day with the ultimate comfort experience.",
         "heading_size": "h2",
