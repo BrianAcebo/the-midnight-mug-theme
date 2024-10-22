@@ -43,6 +43,12 @@
     opacity: 0.6;
   }
 
+  @media screen and (max-width: 479px) {
+    .tmm-section-{{ section.id }} .tmm-slider-slide {
+        vertical-align: top;
+    }
+  }
+
   .tmm-section-{{ section.id }} .tmm-slider-dot.tmm-active {
     opacity: 1;
   }
