@@ -90,14 +90,14 @@
                     <div class="tmm-text-size-tiny">
                       {{- section.settings.disclaimer_text -}}
                     </div>
-                    {%- if form.posted_successfully? -%} 
+                    {%- if form.posted_successfully? -%}
                       <div class="tmm-success-message">
                         <div class="tmm-success-text" id="tmm-newsletter1-success_{{ section.id }}">
                           {{- section.settings.success_text -}}
                         </div>
                       </div>
                     {%- endif -%}
-                    {%- if true -%}
+                    {%- if form.errors -%}
                       <div class="tmm-error-message">
                         <div class="tmm-error-text" id="tmm-newsletter1-error_{{ section.id }}">
                           {{- form.errors.translated_fields.email | capitalize }}
