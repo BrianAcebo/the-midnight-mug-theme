@@ -986,6 +986,10 @@
   text-align: center;
 }
 
+.tmm-newsletter1 .tmm-error-text {
+  text-align: left;
+}
+
 .tmm-error-message {
   margin-top: 1.5rem;
 }
