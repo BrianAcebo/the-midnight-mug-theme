@@ -1,6 +1,335 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tmm-section-{{ section.id }} .tmm-product-list-heading_text {
+    text-transform: {{ section.settings.header_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-product-list-body_text {
+    text-transform: {{ section.settings.body_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button {
+    transition: 0.2s;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
+    background-color: {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
+    opacity: 0.8;
+  }
+{%- endstyle -%}
+
+<section class="tmm-product-list_container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="tmm-padding-global">
+    <div class="tmm-container-large">
+      <div class="tmm-padding-section-large">
+        <div class="tmm-product-list">
+          <div class="tmm-interaction_wrap">
+            <div class="tmm-margin-bottom tmm-margin-xxlarge">
+              <div class="tmm-product-list-heading_wrap">
+                <div class="tmm-product-list-heading">
+                  <div class="tmm-max-width-large">
+                    <div class="tmm-margin-bottom tmm-margin-xsmall">
+                      <div class="tmm-text-semibold">Discover</div>
+                    </div>
+                    <div class="tmm-margin-bottom tmm-margin-xsmall">
+                      <{{ section.settings.heading_size }} class="tmm-product-list-heading_text">
+                        {{- section.settings.heading -}}
+                      </{{ section.settings.heading_size }}>
+                    </div>
+                    <p class="tmm-text-size-medium tmm-product-list-body_text">
+                      {{- section.settings.body_text -}}
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="tmm-product-list-button_row tmm-hide-mobile-landscape"
+                >
+                  {%- if section.settings.button_url != blank -%}
+                    <a
+                      href="{{ section.settings.button_url }}"
+                      class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                    >
+                      {{- section.settings.button_text -}}
+                    </a>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tmm-interaction_wrap">
+            <div class="tmm-product-list_list_wrap">
+              <div class="tmm-layout-grid tmm-product-list_list">
+                {%- if collection != blank -%}
+                  {%- for product in collection.products -%}
+                    <div class="tmm-product-list_item">
+                      <div class="tmm-margin-bottom tmm-margin-xsmall">
+                        <a
+                          href="#"
+                          class="tmm-product-list_image_link tmm-inline-block"
+                        >
+                          <div class="tmm-product-list_image_wrap">
+                            {%- if product.featured_image != blank -%}
+                              {% capture sizes %}(max-width: {{ product.featured_image.width | times: 2 }}px) 50vw, {{ product.featured_image.width }}px{% endcapture %}
+                              {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
+                              {{
+                                product.featured_image
+                                | image_url: width: 600
+                                | image_tag:
+                                  class: 'tmm-product-list_item_image',
+                                  widths: widths,
+                                  height: product.featured_image.height,
+                                  width: product.featured_image.width,
+                                  alt: product.featured_image.alt,
+                                  sizes: sizes,
+                                  preload: true
+                              }}
+                            {%- else -%}
+                              {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                            {%- endif -%}
+                          </div>
+                        </a>
+                      </div>
+                      <div class="tmm-product-list_item_content">
+                        <a
+                          href="{{ product.url }}"
+                          class="tmm-product-list_item_text-link tmm-inline-block"
+                        >
+                          <div class="tmm-product-list_item_content-left">
+                            <div
+                              class="tmm-text-size-medium tmm-text-weight-semibold"
+                            >
+                              {{- product.title -}}
+                            </div>
+                            <div class="tmm-text-size-small">Type</div>
+                          </div>
+                          <div
+                            class="tmm-text-size-large tmm-text-weight-semibold"
+                          >
+                            {{- product.price | money -}}
+                          </div>
+                        </a>
+                        <div class="tmm-margin-top tmm-margin-xsmall">
+                          <a
+                            href="{{ product.url }}"
+                            class="tmm-button-primary tmm-button-is-secondary is-small max-width-full tmm-button"
+                          >
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                {%- else -%}
+                  {%- for i in (1..12) -%}
+                    <div class="tmm-product-list_item">
+                      <div class="tmm-margin-bottom tmm-margin-xsmall">
+                        <a
+                          href="#"
+                          class="tmm-product-list_image_link tmm-inline-block"
+                        >
+                          <div class="tmm-product-list_image_wrap">
+                            {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                          </div>
+                        </a>
+                      </div>
+                      <div class="tmm-product-list_item_content">
+                        <a
+                          href="#"
+                          class="tmm-product-list_item_text-link tmm-inline-block"
+                        >
+                          <div class="tmm-product-list_item_content-left">
+                            <div
+                              class="tmm-text-size-medium tmm-text-weight-semibold"
+                            >
+                              Product name
+                            </div>
+                            <div class="tmm-text-size-small">Type</div>
+                          </div>
+                          <div
+                            class="tmm-text-size-large tmm-text-weight-semibold"
+                          >
+                            $55
+                          </div>
+                        </a>
+                        <div class="tmm-margin-top tmm-margin-xsmall">
+                          <a
+                            href="#"
+                            class="tmm-button-primary tmm-button-is-secondary is-small max-width-full tmm-button"
+                          >
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TMM - Featured Brands",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1",
+      "info": "Only applicable for themes that have color schemes enabled."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Header",
+          "default": "SleepCloud Pillow",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "text",
+          "id": "body_text",
+          "label": "Body text",
+          "default": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            }
+          ],
+          "default": "h2",
+          "label": "Header tag size"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Buy now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button url"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "default": "#000000",
+          "label": "Button color"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "default": "#ffffff",
+          "label": "Button text color"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "outline",
+              "label": "Outline"
+            }
+          ],
+          "default": "solid",
+          "label": "Button style"
+        },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+   "presets": [
+    {
+      "name": "TMM - Featured Collection"
+    }
+  ]
+}
 {% endschema %}
