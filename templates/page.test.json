@@ -470,18 +470,18 @@
     "tmm_newsletter_2_UaKDUg": {
       "type": "TMM-newsletter-2",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "heading": "Get exclusive offers and updates",
         "heading_size": "h2",
         "header_text_transformation": "capitalize",
         "body_text": "Stay up to date with our latest news and promotions.",
         "body_text_transformation": "none",
         "button_text": "Submit",
-        "button_color": "#000000",
+        "button_color": "#ffdfb8",
         "button_text_color": "#ffffff",
         "button_style": "solid",
         "input_placeholder": "Enter your email address",
-        "disclaimer_text": "<p>By submitting, you agree to our Terms and Conditions.</p>",
+        "disclaimer_text": "<p>By submitting, you agree to our <a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms and Conditions.</a></p>",
         "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
         "padding_top": 36,
         "padding_bottom": 36
