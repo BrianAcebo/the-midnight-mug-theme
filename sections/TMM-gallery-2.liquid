@@ -65,6 +65,7 @@
               {%- if section.blocks.size > 0 -%}
                 {%- for block in section.blocks -%}
                   <a
+                    {{ block.shopify_attributes }}
                     href="#"
                     id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
                     class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox tmm-gallery2-image-block_{{ block.id }}"
