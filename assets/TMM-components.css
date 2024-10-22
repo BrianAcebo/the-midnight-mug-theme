@@ -2967,7 +2967,8 @@
   height: auto;
   min-height: 2.75rem;
   margin-bottom: 18px;
-  padding: 0.5rem 0.75rem;
+  padding: 12px 25px;
+  text-indent: 25px;
 }
 
 .tmm-newsletter1-form_input:focus {
