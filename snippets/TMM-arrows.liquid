@@ -1,0 +1,17 @@
+{%- liquid
+  if color == blank
+    assign color_hex = '#000000'
+  endif
+-%}
+
+{%- if dir == 'left' -%}
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" data-reactroot="">
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="{{ color_hex }}" d="M3 12H21"/>
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="{{ color_hex }}" d="M9 6L3 12L9 18"/>
+  </svg>
+{%- elsif dir == 'right' -%}
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" data-reactroot="">
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="{{ color_hex }}" d="M15 6L21 12L15 18"/>
+    <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="{{ color_hex }}" d="M21 12H3"/>
+  </svg>
+{%- endif -%}
