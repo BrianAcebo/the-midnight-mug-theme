@@ -28,6 +28,16 @@
     background-color: {{ section.settings.arrow_button_color }};
   }
 
+  .tmm-section-{{ section.id }} .tmm-slider-dot {
+    background-color: {{ section.settings.arrow_button_color }};
+    opacity: 0.6;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-slider-dot.tmm-active {
+    background-color: {{ section.settings.arrow_button_color }};
+    opacity: 1;
+  }
+
   {%- for block in section.blocks -%}
     .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }} {
       background-color: {{ block.settings.button_color }};
