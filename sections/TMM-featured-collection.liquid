@@ -210,97 +210,84 @@
       "label": "Collection"
     },
     {
-          "type": "product",
-          "id": "product",
-          "label": "Product"
+      "type": "text",
+      "id": "heading",
+      "label": "Header",
+      "default": "Our sleep collection",
+    },
+    {
+      "type": "text",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "Conquer your day with the ultimate comfort experience."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
         },
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image",
-          "info": "This is used as a fallback if no product is selected."
+          "value": "h2",
+          "label": "H2"
         },
         {
-          "type": "text",
-          "id": "heading",
-          "label": "Header",
-          "default": "SleepCloud Pillow",
-          "info": "This is used as a fallback if no product is selected."
+          "value": "h3",
+          "label": "H3"
         },
         {
-          "type": "text",
-          "id": "body_text",
-          "label": "Body text",
-          "default": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
-          "info": "This is used as a fallback if no product is selected."
+          "value": "h4",
+          "label": "H4"
         },
         {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h1",
-              "label": "H1"
-            },
-            {
-              "value": "h2",
-              "label": "H2"
-            },
-            {
-              "value": "h3",
-              "label": "H3"
-            },
-            {
-              "value": "h4",
-              "label": "H4"
-            },
-            {
-              "value": "h5",
-              "label": "H5"
-            }
-          ],
-          "default": "h2",
-          "label": "Header tag size"
+          "value": "h5",
+          "label": "H5"
+        }
+      ],
+      "default": "h2",
+      "label": "Header tag size"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button url"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "default": "#000000",
+      "label": "Button color"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "default": "#ffffff",
+      "label": "Button text color"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
         },
         {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button text",
-          "default": "Buy now"
-        },
-        {
-          "type": "url",
-          "id": "button_url",
-          "label": "Button url"
-        },
-        {
-          "type": "color",
-          "id": "button_color",
-          "default": "#000000",
-          "label": "Button color"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "default": "#ffffff",
-          "label": "Button text color"
-        },
-        {
-          "type": "select",
-          "id": "button_style",
-          "options": [
-            {
-              "value": "solid",
-              "label": "Solid"
-            },
-            {
-              "value": "outline",
-              "label": "Outline"
-            }
-          ],
-          "default": "solid",
-          "label": "Button style"
-        },
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "solid",
+      "label": "Button style"
+    },
     {
       "type": "header",
       "content": "Section padding"
