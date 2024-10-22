@@ -10,6 +10,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .tmm-section-{{ section.id }} .tmm-featured-brands_wrap {
+    gap: {{ section.settings.brand_spacing }}px;
+  }
 {%- endstyle -%}
 
 {%- capture placeholder_logo_svg -%}
@@ -66,6 +70,20 @@
       "label": "Color scheme",
       "default": "scheme-1",
       "info": "Only applicable for themes that have color schemes enabled."
+    },
+    {
+      "type": "header",
+      "content": "Grid"
+    },
+    {
+      "type": "range",
+      "id": "brand_spacing",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Brand spacing",
+      "default": 10
     },
     {
       "type": "header",
