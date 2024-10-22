@@ -42,156 +42,154 @@
 <section class="tmm-product-list_container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
   <div class="tmm-padding-global">
     <div class="tmm-container-large">
-      <div class="tmm-padding-section-large">
-        <div class="tmm-product-list">
-          <div class="tmm-interaction_wrap">
-            <div class="tmm-margin-bottom tmm-margin-xxlarge">
-              <div class="tmm-product-list-heading_wrap">
-                <div class="tmm-product-list-heading">
-                  <div class="tmm-max-width-large">
-                    <div class="tmm-margin-bottom tmm-margin-xsmall">
-                      <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
-                    </div>
-                    <div class="tmm-margin-bottom tmm-margin-xsmall">
-                      <{{ section.settings.heading_size }} class="tmm-product-list-heading_text">
-                        {{- section.settings.heading -}}
-                      </{{ section.settings.heading_size }}>
-                    </div>
-                    <p class="tmm-product-list-body_text">
-                      {{- section.settings.body_text -}}
-                    </p>
+      <div class="tmm-product-list">
+        <div class="tmm-interaction_wrap">
+          <div class="tmm-margin-bottom tmm-margin-xxlarge">
+            <div class="tmm-product-list-heading_wrap">
+              <div class="tmm-product-list-heading">
+                <div class="tmm-max-width-large">
+                  <div class="tmm-margin-bottom tmm-margin-xsmall">
+                    <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
                   </div>
+                  <div class="tmm-margin-bottom tmm-margin-xsmall">
+                    <{{ section.settings.heading_size }} class="tmm-product-list-heading_text">
+                      {{- section.settings.heading -}}
+                    </{{ section.settings.heading_size }}>
+                  </div>
+                  <p class="tmm-product-list-body_text">
+                    {{- section.settings.body_text -}}
+                  </p>
                 </div>
-                <div
-                  class="tmm-product-list-button_row tmm-hide-mobile-landscape"
-                >
-                  {%- if section.settings.button_url != blank -%}
-                    <a
-                      href="{{ section.settings.button_url }}"
-                      class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
-                    >
-                      {{- section.settings.button_text -}}
-                    </a>
-                  {%- endif -%}
-                </div>
+              </div>
+              <div
+                class="tmm-product-list-button_row tmm-hide-mobile-landscape"
+              >
+                {%- if section.settings.button_url != blank -%}
+                  <a
+                    href="{{ section.settings.button_url }}"
+                    class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                  >
+                    {{- section.settings.button_text -}}
+                  </a>
+                {%- endif -%}
               </div>
             </div>
           </div>
-          <div class="tmm-interaction_wrap">
-            <div class="tmm-product-list_list_wrap">
-              <div class="tmm-layout-grid tmm-product-list_list">
-                {%- if section.settings.collection != blank -%}
-                  {%- for product in section.settings.collection.products -%}
-                    <div class="tmm-product-list_item">
-                      <div class="tmm-margin-bottom tmm-margin-xsmall">
-                        <a
-                          href="{{ product.url }}"
-                          class="tmm-product-list_image_link tmm-inline-block"
-                        >
-                          <div class="tmm-product-list_image_wrap">
-                            {%- if product.featured_image != blank -%}
-                              {% capture sizes %}(max-width: {{ product.featured_image.width | times: 2 }}px) 50vw, {{ product.featured_image.width }}px{% endcapture %}
-                              {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
-                              {{
-                                product.featured_image
-                                | image_url: width: 600
-                                | image_tag:
-                                  class: 'tmm-product-list_item_image',
-                                  widths: widths,
-                                  height: product.featured_image.height,
-                                  width: product.featured_image.width,
-                                  alt: product.featured_image.alt,
-                                  sizes: sizes,
-                                  preload: true
-                              }}
-                            {%- else -%}
-                              {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
-                            {%- endif -%}
-                          </div>
-                        </a>
-                      </div>
-                      <div class="tmm-product-list_item_content">
-                        <a
-                          href="{{ product.url }}"
-                          class="tmm-product-list_item_text-link tmm-inline-block"
-                        >
-                          <div class="tmm-product-list_item_content-left">
-                            <p
-                              class="tmm-text-weight-semibold"
-                            >
-                              {{- product.title -}}
-                            </p>
-                          </div>
-                          <p
-                            class="tmm-text-weight-semibold"
-                          >
-                            {%- case section.settings.price_style -%}
-                              {%- when 'money' -%}
-                                {{- product.price | money -}}
-                              {%- when 'money_with_currency' -%}
-                                {{- product.price | money_with_currency -}}
-                              {%- when 'money_without_currency' -%}
-                                {{- product.price | money_without_currency -}}
-                              {%- when 'money_without_trailing_zeros' -%}
-                                {{- product.price | money_without_trailing_zeros -}}
-                            {%- endcase -%}
-                          </p>
-                        </a>
-                        <div class="tmm-margin-top tmm-margin-xsmall">
-                          <a
-                            href="{{ product.url }}"
-                            class="tmm-button-primary tmm-button-is-secondary is-small max-width-full tmm-button"
-                          >
-                            View
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  {%- endfor -%}
-                {%- else -%}
-                  {%- for i in (1..12) -%}
-                    <div class="tmm-product-list_item">
-                      <div class="tmm-margin-bottom tmm-margin-xsmall">
-                        <a
-                          href="#"
-                          class="tmm-product-list_image_link tmm-inline-block"
-                        >
-                          <div class="tmm-product-list_image_wrap">
+        </div>
+        <div class="tmm-interaction_wrap">
+          <div class="tmm-product-list_list_wrap">
+            <div class="tmm-layout-grid tmm-product-list_list">
+              {%- if section.settings.collection != blank -%}
+                {%- for product in section.settings.collection.products -%}
+                  <div class="tmm-product-list_item">
+                    <div class="tmm-margin-bottom tmm-margin-xsmall">
+                      <a
+                        href="{{ product.url }}"
+                        class="tmm-product-list_image_link tmm-inline-block"
+                      >
+                        <div class="tmm-product-list_image_wrap">
+                          {%- if product.featured_image != blank -%}
+                            {% capture sizes %}(max-width: {{ product.featured_image.width | times: 2 }}px) 50vw, {{ product.featured_image.width }}px{% endcapture %}
+                            {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
+                            {{
+                              product.featured_image
+                              | image_url: width: 600
+                              | image_tag:
+                                class: 'tmm-product-list_item_image',
+                                widths: widths,
+                                height: product.featured_image.height,
+                                width: product.featured_image.width,
+                                alt: product.featured_image.alt,
+                                sizes: sizes,
+                                preload: true
+                            }}
+                          {%- else -%}
                             {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
-                          </div>
-                        </a>
-                      </div>
-                      <div class="tmm-product-list_item_content">
-                        <a
-                          href="#"
-                          class="tmm-product-list_item_text-link tmm-inline-block"
-                        >
-                          <div class="tmm-product-list_item_content-left">
-                            <p
-                              class="tmm-text-weight-semibold"
-                            >
-                              Product name
-                            </p>
-                          </div>
+                          {%- endif -%}
+                        </div>
+                      </a>
+                    </div>
+                    <div class="tmm-product-list_item_content">
+                      <a
+                        href="{{ product.url }}"
+                        class="tmm-product-list_item_text-link tmm-inline-block"
+                      >
+                        <div class="tmm-product-list_item_content-left">
                           <p
                             class="tmm-text-weight-semibold"
                           >
-                            $55
+                            {{- product.title -}}
                           </p>
-                        </a>
-                        <div class="tmm-margin-top tmm-margin-xsmall">
-                          <a
-                            href="#"
-                            class="tmm-button-primary tmm-button-is-secondary is-small max-width-full tmm-button"
-                          >
-                            View
-                          </a>
                         </div>
+                        <p
+                          class="tmm-text-weight-semibold"
+                        >
+                          {%- case section.settings.price_style -%}
+                            {%- when 'money' -%}
+                              {{- product.price | money -}}
+                            {%- when 'money_with_currency' -%}
+                              {{- product.price | money_with_currency -}}
+                            {%- when 'money_without_currency' -%}
+                              {{- product.price | money_without_currency -}}
+                            {%- when 'money_without_trailing_zeros' -%}
+                              {{- product.price | money_without_trailing_zeros -}}
+                          {%- endcase -%}
+                        </p>
+                      </a>
+                      <div class="tmm-margin-top tmm-margin-xsmall">
+                        <a
+                          href="{{ product.url }}"
+                          class="tmm-button-primary tmm-button-is-secondary is-small max-width-full tmm-button"
+                        >
+                          View
+                        </a>
                       </div>
                     </div>
-                  {%- endfor -%}
-                {%- endif -%}
-              </div>
+                  </div>
+                {%- endfor -%}
+              {%- else -%}
+                {%- for i in (1..12) -%}
+                  <div class="tmm-product-list_item">
+                    <div class="tmm-margin-bottom tmm-margin-xsmall">
+                      <a
+                        href="#"
+                        class="tmm-product-list_image_link tmm-inline-block"
+                      >
+                        <div class="tmm-product-list_image_wrap">
+                          {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                        </div>
+                      </a>
+                    </div>
+                    <div class="tmm-product-list_item_content">
+                      <a
+                        href="#"
+                        class="tmm-product-list_item_text-link tmm-inline-block"
+                      >
+                        <div class="tmm-product-list_item_content-left">
+                          <p
+                            class="tmm-text-weight-semibold"
+                          >
+                            Product name
+                          </p>
+                        </div>
+                        <p
+                          class="tmm-text-weight-semibold"
+                        >
+                          $55
+                        </p>
+                      </a>
+                      <div class="tmm-margin-top tmm-margin-xsmall">
+                        <a
+                          href="#"
+                          class="tmm-button-primary tmm-button-is-secondary is-small max-width-full tmm-button"
+                        >
+                          View
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                {%- endfor -%}
+              {%- endif -%}
             </div>
           </div>
         </div>
