@@ -75,7 +75,7 @@
                 class="tmm-slider1-content_wrap tmm-slider1-content_container"
               >
                 <div class="tmm-slider1-image tmm-margin-none">
-                  {%- if block.settings.image != blank -%}
+                  {%- if block.settings.product.image != blank -%}
                     {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                     {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
                     {{
