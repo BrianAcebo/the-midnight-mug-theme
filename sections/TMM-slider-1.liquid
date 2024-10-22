@@ -29,6 +29,17 @@
     background-color: {{ section.settings.arrow_button_color }} !important;
   }
 
+  @media screen and (max-width: 991px) {
+    .tmm-section-{{ section.id }} .tmm-slider-dot {
+      display: block!important;
+    }
+  }
+
+  .tmm-section-{{ section.id }} .tmm-slider-dot {
+    background-color: {{ section.settings.arrow_button_color }} !important;
+    display: block!important;
+  }
+
   .tmm-section-{{ section.id }} .tmm-slider-dot {
     opacity: 0.6;
   }
