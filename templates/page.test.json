@@ -339,6 +339,8 @@
           "type": "slider",
           "settings": {
             "product": "make-money-with-shopify-ebook",
+            "heading": "SleepCloud Pillow",
+            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
             "heading_size": "h2",
             "button_text": "Buy now",
             "button_url": "shopify://collections/all",
@@ -350,7 +352,10 @@
         "slider_QJ94LM": {
           "type": "slider",
           "settings": {
-            "product": "the-ultimate-guide-to-seo",
+            "product": "",
+            "image": "shopify://shop_images/green-plants-grow-in-lines-on-rolling-hills.jpg",
+            "heading": "SleepCloud Pillow",
+            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
             "heading_size": "h2",
             "button_text": "Buy now",
             "button_url": "",
