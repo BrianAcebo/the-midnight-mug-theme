@@ -358,7 +358,7 @@
             "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
             "heading_size": "h2",
             "button_text": "Buy now",
-            "button_url": "",
+            "button_url": "shopify://collections/all",
             "button_color": "#fcfcfc",
             "button_text_color": "#020912",
             "button_style": "outline"
