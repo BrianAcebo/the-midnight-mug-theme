@@ -41,7 +41,7 @@
             {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
             {{
               block.settings.image
-              | image_url: width: 100
+              | image_url: width: 400
               | image_tag:
                 class: 'tmm-featured-brand_image',
                 widths: widths,
