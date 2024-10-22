@@ -338,50 +338,18 @@
         "slider_RhG39K": {
           "type": "slider",
           "settings": {
-            "image": "shopify://shop_images/green-plants-grow-in-lines-on-rolling-hills.jpg",
+            "product": "make-money-with-shopify-ebook",
             "heading_size": "h2",
-            "header": "Our new product",
-            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
             "button_text": "Buy now",
             "button_url": "shopify://collections/all",
             "button_color": "#ffdfb8",
             "button_text_color": "#020912",
             "button_style": "solid"
           }
-        },
-        "slider_mYVHxQ": {
-          "type": "slider",
-          "settings": {
-            "image": "shopify://shop_images/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
-            "heading_size": "h2",
-            "header": "Our new product",
-            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
-            "button_text": "Buy now",
-            "button_url": "shopify://collections/best-sellers",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_style": "solid"
-          }
-        },
-        "slider_r6pQUF": {
-          "type": "slider",
-          "settings": {
-            "image": "shopify://shop_images/abandoned-swimming-pool-next-to-highway.jpg",
-            "heading_size": "h2",
-            "header": "Our new product",
-            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
-            "button_text": "Buy now",
-            "button_url": "",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_style": "solid"
-          }
         }
       },
       "block_order": [
-        "slider_RhG39K",
-        "slider_mYVHxQ",
-        "slider_r6pQUF"
+        "slider_RhG39K"
       ],
       "settings": {
         "color_scheme": "scheme-4",
