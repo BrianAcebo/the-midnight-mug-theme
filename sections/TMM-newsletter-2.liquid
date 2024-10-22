@@ -84,7 +84,7 @@
                       <button
                         type="submit"
                         data-wait="Please wait..."
-                        class="tmm-button-primary tmm-margin-bottom tmm-margin-small tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                        class="tmm-button-primary tmm-margin-bottom tmm-margin-small tmm-button_{{ section.id }} tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
                       >
                         {{- section.settings.button_text -}}
                       </button>
