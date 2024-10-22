@@ -35,7 +35,7 @@
       class="tmm-featured-brands_wrap"
     >
       {%- for block in section.blocks -%}
-        <div class="tmm-featured-brand">
+        <div class="tmm-featured-brand" {{ block.shopify_attributes }}>
           {%- if block.settings.image != blank -%}
             {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
             {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
