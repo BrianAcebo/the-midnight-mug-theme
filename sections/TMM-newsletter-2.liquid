@@ -1,6 +1,260 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tmm-section-{{ section.id }} .tmm-gallery-no-image {
+    overflow: hidden;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-gallery-no-image svg rect {
+    width: 1200px;
+  }
+
+  {%- for block in section.blocks -%}
+    {%- liquid
+      assign new_image_height = 550
+      if block.settings.image_orientation == 'landscape'
+        assign new_image_height = 250
+      endif
+    -%}
+
+    {%- if block.settings.image != blank -%}
+      {%- if block.settings.object_fit == 'contain' or block.settings.object_fit == 'scale-down' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
+          --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * {{ new_image_height }});
+          width: calc(var(--og-width-x-new-height_{{ block.id }}) / {{ block.settings.image.height}});
+          max-width: 100%;
+          margin: 0 auto;
+        }
+      {%- endif -%}
+
+      {%- if block.settings.image_orientation == 'landscape' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
+          height: 250px;
+        }
+      {%- elsif block.settings.image_orientation == 'square' -%}
+        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
+          height: 400px;
+        }
+      {%- endif -%}
+
+      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
+        object-fit: {{ block.settings.object_fit }};
+        object-position: {{ block.settings.object_position }};
+      }
+
+      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image_overlay {
+        background-color: {{ block.settings.overlay_color }};
+      }
+    {%- endif -%}
+  {%- endfor -%}
+{%- endstyle -%}
+
+<section class="tmm-newsletter2 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="tmm-interaction_wrap">
+    <div class="tmm-padding-global">
+      <div class="tmm-container-large">
+        <div class="tmm-padding-section-large">
+          <div class="tmm-layout-grid tmm-newsletter2-container">
+            <div class="tmm-newsletter2-heading">
+              <h2>Get Exclusive Offers and Updates</h2>
+            </div>
+            <div class="tmm-newsletter2-content">
+              <p class="tmm-text-size-medium">Stay up to date with our latest news and promotions.</p>
+              <div class="tmm-margin-top margin-medium">
+                <div class="tmm-newsletter2-form_block tmm-form">
+                  <form
+                    id="tmm-newsletter2-form"
+                    name="email-form"
+                    data-name="Email Form"
+                    method="get"
+                    class="tmm-newsletter2-form"
+                    data-tmm-page-id="66fe0979b699a164ac033dc9"
+                    data-tmm-element-id="f19315f3-df83-8d59-956f-c701fa575737"
+                  >
+                    <div class="tmm-newsletter-form_wrap">
+                      <input
+                        class="tmm-newsletter2-form_input tmm-input"
+                        maxlength="256"
+                        name="email-2"
+                        data-name="Email 2"
+                        placeholder="Enter your email address"
+                        type="email"
+                        id="tmm-newsletter2-form-input"
+                        required=""
+
+                      ><input
+                        type="submit"
+                        data-wait="Please wait..."
+                        class="tmm-button-primary tmm-button"
+                        value="Join Now"
+                      >
+                    </div>
+                    <div class="tmm-text-size-tiny">By joining, you agree to our Terms and Conditions.</div>
+                  </form>
+                  <div class="tmm-success-message tmm-form-done">
+                    <div class="tmm-success-text">Thank you! Your subscription has been confirmed.</div>
+                  </div>
+                  <div class="tmm-error-message tmm-form-fail">
+                    <div class="tmm-error-text">Oops! Something went wrong. Please try again.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TMM - Newsletter 2",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1",
+      "info": "Only applicable for themes that have color schemes enabled."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Header",
+      "default": "Join our newsletter",
+    },
+    {
+      "type": "text",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "Be the first to know about new collections and exclusive offers."
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        }
+      ],
+      "default": "h2",
+      "label": "Header tag size"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Submit"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "default": "#000000",
+      "label": "Button color"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "default": "#ffffff",
+      "label": "Button text color"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "solid",
+      "label": "Button style"
+    },
+     {
+      "type": "text",
+      "id": "input_placeholder",
+      "label": "Input placeholder",
+      "default": "Enter your email address",
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer_text",
+      "label": "Disclaimer text",
+      "default": "<p>By submitting, you agree to our Terms and Conditions.</p>",
+    },
+    {
+      "type": "richtext",
+      "id": "success_text",
+      "label": "Success text",
+      "default": "<p>Thank you! We will respond as soon as possible.</p>",
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+   "presets": [
+    {
+      "name": "TMM - Newsletter 2"
+    }
+  ]
+}
 {% endschema %}
