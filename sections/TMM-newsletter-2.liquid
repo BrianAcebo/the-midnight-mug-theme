@@ -13,6 +13,7 @@
 
   .tmm-section-{{ section.id }} .tmm-newsletter2-heading_text {
     text-transform: {{ section.settings.header_text_transformation }};
+    text-align: {{ section.settings.header_text_align }};
   }
 
   .tmm-section-{{ section.id }} .tmm-newsletter2-body_text {
@@ -184,6 +185,26 @@
       ],
       "default": "capitalize",
       "label": "Header text transform"
+    },
+    {
+      "type": "select",
+      "id": "header_text_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "left"
+        },
+        {
+          "value": "center",
+          "label": "center"
+        },
+        {
+          "value": "right",
+          "label": "right"
+        }
+      ],
+      "default": "center",
+      "label": "Header text alignment"
     },
     {
       "type": "text",
