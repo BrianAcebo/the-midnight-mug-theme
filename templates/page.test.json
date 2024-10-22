@@ -454,8 +454,8 @@
         "heading": "Join our newsletter",
         "heading_size": "h2",
         "header_text_transformation": "capitalize",
-        "body_text_transformation": "none",
         "body_text": "Be the first to know about new collections and exclusive offers.",
+        "body_text_transformation": "none",
         "button_text": "Submit",
         "button_color": "#000000",
         "button_text_color": "#ffffff",
@@ -465,6 +465,26 @@
         "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
         "padding_top": 100,
         "padding_bottom": 100
+      }
+    },
+    "tmm_newsletter_2_UaKDUg": {
+      "type": "TMM-newsletter-2",
+      "settings": {
+        "color_scheme": "",
+        "heading": "Get exclusive offers and updates",
+        "heading_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Stay up to date with our latest news and promotions.",
+        "body_text_transformation": "none",
+        "button_text": "Submit",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
+        "input_placeholder": "Enter your email address",
+        "disclaimer_text": "<p>By submitting, you agree to our Terms and Conditions.</p>",
+        "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -482,6 +502,7 @@
     "tmm_featured_brands_e4QPk8",
     "tmm_featured_collection_jxhYwQ",
     "tmm_divider_BWpbip",
-    "tmm_newsletter_1_AaLmCN"
+    "tmm_newsletter_1_AaLmCN",
+    "tmm_newsletter_2_UaKDUg"
   ]
 }
