@@ -409,6 +409,23 @@
         "padding_top": 56,
         "padding_bottom": 56
       }
+    },
+    "tmm_featured_collection_jxhYwQ": {
+      "type": "TMM-featured-collection",
+      "settings": {
+        "color_scheme": "",
+        "collection": "",
+        "heading": "Our sleep collection",
+        "body_text": "Conquer your day with the ultimate comfort experience.",
+        "heading_size": "h2",
+        "button_text": "Buy now",
+        "button_url": "",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -422,6 +439,7 @@
     "tmm_divider_k3KjkN",
     "tmm_tabs_1_hKbB67",
     "tmm_slider_1_fRRcWb",
-    "tmm_featured_brands_e4QPk8"
+    "tmm_featured_brands_e4QPk8",
+    "tmm_featured_collection_jxhYwQ"
   ]
 }
