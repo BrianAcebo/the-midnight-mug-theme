@@ -312,11 +312,59 @@
           "info": "This is used as a fallback if no product is selected."
         },
         {
+          "type": "select",
+          "id": "header_text_transformation",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "uppercase",
+              "label": "Uppercase"
+            },
+            {
+              "value": "lowercase",
+              "label": "Lowercase"
+            },
+            {
+              "value": "capitalize",
+              "label": "Capitalize"
+            }
+          ],
+          "default": "capitalize",
+          "label": "Header text transform"
+        },
+        {
           "type": "text",
           "id": "body_text",
           "label": "Body text",
           "default": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
           "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "select",
+          "id": "body_text_transformation",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "uppercase",
+              "label": "Uppercase"
+            },
+            {
+              "value": "lowercase",
+              "label": "Lowercase"
+            },
+            {
+              "value": "capitalize",
+              "label": "Capitalize"
+            }
+          ],
+          "default": "none",
+          "label": "Body text transform"
         },
         {
           "type": "select",
