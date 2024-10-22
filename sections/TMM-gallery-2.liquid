@@ -44,103 +44,69 @@
 <section class="tmm-gallery2-container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
   <div class="tmm-padding-global">
     <div class="tmm-container-large">
-      <div class="tmm-padding-section-large">
-        <div class="tmm-interaction_wrap">
-          <div class="tmm-margin-bottom tmm-margin-xxlarge">
-            <div class="tmm-text-align-center">
-              <div
-                class="tmm-max-width-large tmm-align-center tmm-gallery2-text"
-              >
-                <div class="tmm-margin-bottom tmm-margin-small">
-                  <{{ section.settings.header_size }} class="tmm-gallery2-header">Browse Gallery</{{ section.settings.header_size }}>
-                </div>
-                <p class="tmm-gallery2-body-text">Discover our top-selling products and happy customers</p>
+      <div class="tmm-interaction_wrap">
+        <div class="tmm-margin-bottom tmm-margin-xxlarge">
+          <div class="tmm-text-align-center">
+            <div
+              class="tmm-max-width-large tmm-align-center tmm-gallery2-text"
+            >
+              <div class="tmm-margin-bottom tmm-margin-small">
+                <{{ section.settings.header_size }} class="tmm-gallery2-header">Browse Gallery</{{ section.settings.header_size }}>
               </div>
+              <p class="tmm-gallery2-body-text">Discover our top-selling products and happy customers</p>
             </div>
           </div>
         </div>
-        <div class="tmm-interaction_wrap">
-          <div class="tmm-gallery2-component">
-            <div class="tmm-layout-grid tmm-gallery2-row">
-              {%- if section.blocks.size > 0 -%}
-                {%- for block in section.blocks -%}
-                  <a
-                    {{ block.shopify_attributes }}
-                    href="#"
-                    id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
-                    class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox tmm-gallery2-image-block_{{ block.id }}"
-                  >
-                    <div class="tmm-gallery2-image_wrap">
-                      {%- if block.settings.image != blank -%}
-                        {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
-                        {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
-                        {{
-                          block.settings.image
-                          | image_url: width: 600
-                          | image_tag:
-                            class: 'tmm-gallery2-image',
-                            widths: widths,
-                            height: block.settings.image.height,
-                            width: block.settings.image.width,
-                            alt: block.settings.image.alt,
-                            sizes: sizes,
-                            preload: true
-                        }}
-                      {%- else -%}
-                        {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
-                      {%- endif -%}
-                    </div>
-                    <script
-                      type="application/json"
-                      class="tmm-json"
-                    >
-                      {%- if block.settings.image != blank -%}
-                        {
-                          "items": [
-                            {
-                              "_id": "{{ block.settings.image.id }}",
-                              "height": "{{ block.settings.height }}",
-                              "url": "{{ block.settings.image | image_url }}",
-                              "width": "{{ block.settings.width }}",
-                              "type": "image"
-                            }
-                          ],
-                          "group": "Gallery_{{ section.id }}"
-                        }
-                      {%- else -%}
-                        {
-                          "items": [
-                            {
-                              "_id": "example_img",
-                              "origFileName": "image-placeholder.svg",
-                              "fileName": "image-placeholder.svg",
-                              "fileSize": 2063,
-                              "height": 150,
-                              "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
-                              "width": 150,
-                              "type": "image"
-                            }
-                          ],
-                          "group": "Gallery_{{ section.id }}"
-                        }
-                      {%- endif -%}
-                    </script>
-                  </a>
-                {%- endfor -%}
-              {% else %}
-                {%- for i in (1..6) -%}
-                  <a
-                    href="#"
-                    id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
-                    class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox"
-                  >
-                    <div class="tmm-gallery2-image_wrap">
+      </div>
+      <div class="tmm-interaction_wrap">
+        <div class="tmm-gallery2-component">
+          <div class="tmm-layout-grid tmm-gallery2-row">
+            {%- if section.blocks.size > 0 -%}
+              {%- for block in section.blocks -%}
+                <a
+                  {{ block.shopify_attributes }}
+                  href="#"
+                  id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
+                  class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox tmm-gallery2-image-block_{{ block.id }}"
+                >
+                  <div class="tmm-gallery2-image_wrap">
+                    {%- if block.settings.image != blank -%}
+                      {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
+                      {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 600
+                        | image_tag:
+                          class: 'tmm-gallery2-image',
+                          widths: widths,
+                          height: block.settings.image.height,
+                          width: block.settings.image.width,
+                          alt: block.settings.image.alt,
+                          sizes: sizes,
+                          preload: true
+                      }}
+                    {%- else -%}
                       {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
-                    </div>
-                    <script
-                      type="application/json"
-                      class="tmm-json"
-                    >
+                    {%- endif -%}
+                  </div>
+                  <script
+                    type="application/json"
+                    class="tmm-json"
+                  >
+                    {%- if block.settings.image != blank -%}
+                      {
+                        "items": [
+                          {
+                            "_id": "{{ block.settings.image.id }}",
+                            "height": "{{ block.settings.height }}",
+                            "url": "{{ block.settings.image | image_url }}",
+                            "width": "{{ block.settings.width }}",
+                            "type": "image"
+                          }
+                        ],
+                        "group": "Gallery_{{ section.id }}"
+                      }
+                    {%- else -%}
                       {
                         "items": [
                           {
@@ -156,11 +122,43 @@
                         ],
                         "group": "Gallery_{{ section.id }}"
                       }
-                    </script>
-                  </a>
-                {%- endfor -%}
-              {%- endif -%}
-            </div>
+                    {%- endif -%}
+                  </script>
+                </a>
+              {%- endfor -%}
+            {% else %}
+              {%- for i in (1..6) -%}
+                <a
+                  href="#"
+                  id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
+                  class="tmm-gallery2-lightbox-link tmm-inline-block tmm-lightbox"
+                >
+                  <div class="tmm-gallery2-image_wrap">
+                    {%- render 'TMM-placeholder', class: 'tmm-gallery2-image' -%}
+                  </div>
+                  <script
+                    type="application/json"
+                    class="tmm-json"
+                  >
+                    {
+                      "items": [
+                        {
+                          "_id": "example_img",
+                          "origFileName": "image-placeholder.svg",
+                          "fileName": "image-placeholder.svg",
+                          "fileSize": 2063,
+                          "height": 150,
+                          "url": "https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg",
+                          "width": 150,
+                          "type": "image"
+                        }
+                      ],
+                      "group": "Gallery_{{ section.id }}"
+                    }
+                  </script>
+                </a>
+              {%- endfor -%}
+            {%- endif -%}
           </div>
         </div>
       </div>
