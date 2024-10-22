@@ -428,6 +428,25 @@
         "padding_top": 40,
         "padding_bottom": 36
       }
+    },
+    "tmm_newsletter_1_cBhqnB": {
+      "type": "TMM-newsletter-1",
+      "settings": {
+        "color_scheme": "",
+        "heading": "Our sleep collection",
+        "body_text": "Conquer your day with the ultimate comfort experience.",
+        "heading_size": "h2",
+        "button_text": "Buy now",
+        "button_url": "",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
+        "input_placeholder": "Enter your email address",
+        "disclaimer_text": "<p>By submitting, you agree to our Terms and Conditions.</p>",
+        "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -442,6 +461,7 @@
     "tmm_tabs_1_hKbB67",
     "tmm_slider_1_fRRcWb",
     "tmm_featured_brands_e4QPk8",
-    "tmm_featured_collection_jxhYwQ"
+    "tmm_featured_collection_jxhYwQ",
+    "tmm_newsletter_1_cBhqnB"
   ]
 }
