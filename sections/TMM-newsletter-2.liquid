@@ -43,72 +43,70 @@
   <div class="tmm-interaction_wrap">
     <div class="tmm-padding-global">
       <div class="tmm-container-large">
-        <div class="tmm-padding-section-large">
-          <div class="tmm-layout-grid tmm-newsletter2-container">
-            <div class="tmm-newsletter2-heading">
-              <{{ section.settings.heading_size }} class="tmm-newsletter2-heading_text">
-                {{- section.settings.heading -}}
-              </{{ section.settings.heading_size }}>
-            </div>
-            <div class="tmm-newsletter2-content">
-              <p class="tmm-newsletter2-body_text">{{- section.settings.body_text -}}</p>
-              <div class="tmm-margin-top margin-medium">
-                <div class="tmm-newsletter2-form_block tmm-form">
-                  {% form 'customer',
-                    id: 'tmm-newsletter2-form',
-                    class: 'tmm-newsletter2-form',
-                    data-tmm-page-id: '66fe0979b699a164ac033dc9',
-                    data-tmm-element-id: 'f19315f3-df83-8d59-956f-c701fa575737'
-                  %}
-                    <input type="hidden" name="contact[tags]" value="newsletter">
-                    <div class="tmm-newsletter-form_wrap">
-                      <input
-                        class="tmm-newsletter2-form_input tmm-input tmm-margin-bottom tmm-margin-small"
-                        placeholder="{{- section.settings.input_placeholder -}}"
-                        type="email"
-                        required
-                        name="contact[email]"
-                        value="{{ form.email }}"
-                        aria-required="true"
-                        autocorrect="off"
-                        autocapitalize="off"
-                        autocomplete="email"
-                        {% if form.errors %}
-                          autofocus
-                          aria-invalid="true"
-                          aria-describedby="tmm-newsletter1-error_{{ section.id }}"
-                        {% elsif form.posted_successfully? %}
-                          aria-describedby="tmm-newsletter1-success_{{ section.id }}"
-                        {% endif %}
-                      >
-                      <button
-                        type="submit"
-                        data-wait="Please wait..."
-                        class="tmm-button-primary tmm-margin-bottom tmm-margin-small tmm-button_{{ section.id }} tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
-                      >
-                        {{- section.settings.button_text -}}
-                      </button>
-                    </div>
-                    <div class="tmm-text-size-tiny">
-                      {{- section.settings.disclaimer_text -}}
-                    </div>
-                    {%- if form.posted_successfully? -%}
-                      <div class="tmm-success-message">
-                        <div class="tmm-success-text" id="tmm-newsletter2-success_{{ section.id }}">
-                          {{- section.settings.success_text -}}
-                        </div>
+        <div class="tmm-layout-grid tmm-newsletter2-container">
+          <div class="tmm-newsletter2-heading">
+            <{{ section.settings.heading_size }} class="tmm-newsletter2-heading_text">
+              {{- section.settings.heading -}}
+            </{{ section.settings.heading_size }}>
+          </div>
+          <div class="tmm-newsletter2-content">
+            <p class="tmm-newsletter2-body_text">{{- section.settings.body_text -}}</p>
+            <div class="tmm-margin-top margin-medium">
+              <div class="tmm-newsletter2-form_block tmm-form">
+                {% form 'customer',
+                  id: 'tmm-newsletter2-form',
+                  class: 'tmm-newsletter2-form',
+                  data-tmm-page-id: '66fe0979b699a164ac033dc9',
+                  data-tmm-element-id: 'f19315f3-df83-8d59-956f-c701fa575737'
+                %}
+                  <input type="hidden" name="contact[tags]" value="newsletter">
+                  <div class="tmm-newsletter-form_wrap">
+                    <input
+                      class="tmm-newsletter2-form_input tmm-input tmm-margin-bottom tmm-margin-small"
+                      placeholder="{{- section.settings.input_placeholder -}}"
+                      type="email"
+                      required
+                      name="contact[email]"
+                      value="{{ form.email }}"
+                      aria-required="true"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      autocomplete="email"
+                      {% if form.errors %}
+                        autofocus
+                        aria-invalid="true"
+                        aria-describedby="tmm-newsletter1-error_{{ section.id }}"
+                      {% elsif form.posted_successfully? %}
+                        aria-describedby="tmm-newsletter1-success_{{ section.id }}"
+                      {% endif %}
+                    >
+                    <button
+                      type="submit"
+                      data-wait="Please wait..."
+                      class="tmm-button-primary tmm-margin-bottom tmm-margin-small tmm-button_{{ section.id }} tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                    >
+                      {{- section.settings.button_text -}}
+                    </button>
+                  </div>
+                  <div class="tmm-text-size-tiny">
+                    {{- section.settings.disclaimer_text -}}
+                  </div>
+                  {%- if form.posted_successfully? -%}
+                    <div class="tmm-success-message">
+                      <div class="tmm-success-text" id="tmm-newsletter2-success_{{ section.id }}">
+                        {{- section.settings.success_text -}}
                       </div>
-                    {%- endif -%}
-                    {%- if form.errors -%}
-                      <div class="tmm-error-message">
-                        <div class="tmm-error-text" id="tmm-newsletter2-error_{{ section.id }}">
-                          {{- form.errors.translated_fields.email | capitalize }}
-                          {{ form.errors.messages.email -}}
-                        </div>
+                    </div>
+                  {%- endif -%}
+                  {%- if form.errors -%}
+                    <div class="tmm-error-message">
+                      <div class="tmm-error-text" id="tmm-newsletter2-error_{{ section.id }}">
+                        {{- form.errors.translated_fields.email | capitalize }}
+                        {{ form.errors.messages.email -}}
                       </div>
-                    {%- endif -%}
-                  {% endform %}
-                </div>
+                    </div>
+                  {%- endif -%}
+                {% endform %}
               </div>
             </div>
           </div>
