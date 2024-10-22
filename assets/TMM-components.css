@@ -3002,9 +3002,9 @@
   border: 1px solid #000;
   border-radius: 0;
   margin-bottom: 0;
-  padding: 16px;
+  padding: 12px;
   text-indent: 12px;
-  line-height: inherit;
+  height: 40px;
 }
 
 .tmm-newsletter2-form_input:focus {
