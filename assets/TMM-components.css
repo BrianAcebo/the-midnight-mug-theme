@@ -3001,12 +3001,8 @@
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 0;
-  height: auto;
-  min-height: 2.75rem;
   margin-bottom: 0;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.6;
+  padding: 12px;
 }
 
 .tmm-newsletter2-form_input:focus {
