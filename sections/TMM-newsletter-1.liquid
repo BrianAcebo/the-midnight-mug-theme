@@ -94,17 +94,17 @@
                       </p>
                       {%- if form.posted_successfully? -%}
                         <div class="tmm-success-message tmm-form-done">
-                          <small class="tmm-success-text" id="tmm-newsletter1-success_{{ section.id }}">
+                          <p class="tmm-success-text" id="tmm-newsletter1-success_{{ section.id }}">
                             {{- section.settings.success_text -}}
-                          </small>
+                          </p>
                         </div>
                       {%- endif -%}
                       {%- if form.errors -%}
                         <div class="tmm-error-message tmm-form-fail">
-                          <small class="tmm-error-text" id="tmm-newsletter1-error_{{ section.id }}">
+                          <p class="tmm-error-text" id="tmm-newsletter1-error_{{ section.id }}">
                             {{- form.errors.translated_fields.email | capitalize }}
                             {{ form.errors.messages.email -}}
-                          </small>
+                          </p>
                         </div>
                       {%- endif -%}
                     {% endform %}
