@@ -75,18 +75,18 @@
                 class="tmm-slider1-content_wrap tmm-slider1-content_container"
               >
                 <div class="tmm-slider1-image tmm-margin-none">
-                  {%- if block.settings.product.image != blank -%}
-                    {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
-                    {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
+                  {%- if block.settings.product.featured_image != blank -%}
+                    {% capture sizes %}(max-width: {{ block.settings.product.featured_image.width | times: 2 }}px) 50vw, {{ block.settings.product.featured_image.width }}px{% endcapture %}
+                    {% capture widths %}{{ block.settings.product.featured_image.width }}, {{ block.settings.product.featured_image.width | times: 1.5 | round }}, {{ block.settings.product.featured_image.width | times: 2 }}{% endcapture %}
                     {{
-                      block.settings.product.image
+                      block.settings.product.featured_image
                       | image_url: width: 600
                       | image_tag:
                         class: 'tmm-slider1-image-absolute',
                         widths: widths,
-                        height: block.settings.image.height,
-                        width: block.settings.image.width,
-                        alt: block.settings.alt_text,
+                        height: block.settings.product.featured_image.height,
+                        width: block.settings.featured_image.width,
+                        alt: block.settings.product.featured_image.alt_text,
                         sizes: sizes,
                         preload: true
                     }}
