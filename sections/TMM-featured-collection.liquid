@@ -93,7 +93,7 @@
                             {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
                             {{
                               product.featured_image
-                              | image_url: width: 600
+                              | image_url: width: 800
                               | image_tag:
                                 class: 'tmm-product-list_item_image',
                                 widths: widths,
