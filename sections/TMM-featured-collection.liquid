@@ -81,7 +81,7 @@
             <div class="tmm-product-list_list_wrap">
               <div class="tmm-layout-grid tmm-product-list_list">
                 {%- if section.settings.collection != blank -%}
-                  {%- for product in collection.products -%}
+                  {%- for product in section.settings.collection.products -%}
                     <div class="tmm-product-list_item">
                       <div class="tmm-margin-bottom tmm-margin-xsmall">
                         <a
