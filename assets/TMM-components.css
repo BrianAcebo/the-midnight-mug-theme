@@ -2982,7 +2982,7 @@
 }
 
 .tmm-newsletter2-form_block {
-  max-width: 30rem;
+  max-width: 400px;
   margin-bottom: 0;
 }
 
@@ -3002,7 +3002,8 @@
   border: 1px solid #000;
   border-radius: 0;
   margin-bottom: 0;
-  padding: 12px;
+  padding: 16px;
+  text-indent: 16px;
 }
 
 .tmm-newsletter2-form_input:focus {
