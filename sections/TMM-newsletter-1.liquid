@@ -89,22 +89,22 @@
                       >
                         {{- section.settings.button_text -}}
                       </button>
-                      <p class="tmm-text-size-tiny">
+                      <div class="tmm-text-size-tiny">
                         {{- section.settings.disclaimer_text -}}
-                      </p>
+                      </div>
                       {%- if form.posted_successfully? -%}
                         <div class="tmm-success-message tmm-form-done">
-                          <p class="tmm-success-text" id="tmm-newsletter1-success_{{ section.id }}">
+                          <div class="tmm-success-text" id="tmm-newsletter1-success_{{ section.id }}">
                             {{- section.settings.success_text -}}
-                          </p>
+                          </div>
                         </div>
                       {%- endif -%}
                       {%- if form.errors -%}
                         <div class="tmm-error-message tmm-form-fail">
-                          <p class="tmm-error-text" id="tmm-newsletter1-error_{{ section.id }}">
+                          <div class="tmm-error-text" id="tmm-newsletter1-error_{{ section.id }}">
                             {{- form.errors.translated_fields.email | capitalize }}
                             {{ form.errors.messages.email -}}
-                          </p>
+                          </div>
                         </div>
                       {%- endif -%}
                     {% endform %}
