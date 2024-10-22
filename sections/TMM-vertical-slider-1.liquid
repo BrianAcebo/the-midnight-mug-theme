@@ -11,12 +11,12 @@
     }
   }
 
-  .tmm-section-{{ section.id }} .tmm-newsletter2-heading_text {
+  .tmm-section-{{ section.id }} .tmm-sticky1-heading_text {
     text-transform: {{ section.settings.header_text_transformation }};
     text-align: {{ section.settings.header_text_align }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-newsletter2-body_text {
+  .tmm-section-{{ section.id }} .tmm-sticky1-body_text {
     text-transform: {{ section.settings.body_text_transformation }};
   }
 
@@ -46,13 +46,23 @@
       <div class="tmm-container-large">
         <div class="tmm-layout-grid tmm-sticky1-container">
           <div class="tmm-sticky1-content">
-            <div class="tmm-margin-bottom tmm-margin-xsmall">
-              <div class="tmm-text-semibold">Innovative</div>
-            </div>
-            <div class="tmm-margin-bottom tmm-margin-small">
-              <h2>Meet Our Team</h2>
-            </div>
-            <p class="tmm-text-size-medium">Get to know the talented individuals behind our company.</p>
+            {%- if section.settings.caption_text != blank -%}
+              <div class="tmm-margin-bottom tmm-margin-xsmall">
+                <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.heading != blank -%}
+              <div class="tmm-margin-bottom tmm-margin-xsmall">
+                <{{ section.settings.heading_size }} class="tmm-sticky1-heading_text">
+                  {{- section.settings.heading -}}
+                </{{ section.settings.heading_size }}>
+              </div>
+            {%- endif -%}
+            {%- if section.settings.body_text != blank -%}
+              <p class="tmm-sticky1-body_text">
+                {{- section.settings.body_text -}}
+              </p>
+            {%- endif -%}
             <div class="tmm-margin-top margin-medium">
               <a
                 href="#"
