@@ -361,7 +361,7 @@
             "button_url": "shopify://collections/all",
             "button_color": "#fcfcfc",
             "button_text_color": "#020912",
-            "button_style": "outline"
+            "button_style": "solid"
           }
         }
       },
