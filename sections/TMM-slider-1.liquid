@@ -75,18 +75,25 @@
                 class="tmm-slider1-content_wrap tmm-slider1-content_container"
               >
                 <div class="tmm-slider1-image tmm-margin-none">
-                  {%- if block.settings.product.featured_image != blank -%}
-                    {% capture sizes %}(max-width: {{ block.settings.product.featured_image.width | times: 2 }}px) 50vw, {{ block.settings.product.featured_image.width }}px{% endcapture %}
-                    {% capture widths %}{{ block.settings.product.featured_image.width }}, {{ block.settings.product.featured_image.width | times: 1.5 | round }}, {{ block.settings.product.featured_image.width | times: 2 }}{% endcapture %}
+                  {%- liquid
+                     if block.settings.product != blank
+                       assign block_image = block.settings.product.featured_image
+                     else
+                       assign block_image = block.settings.image
+                     endif
+                  -%}
+                  {%- if block_image != blank -%}
+                    {% capture sizes %}(max-width: {{ block_image.width | times: 2 }}px) 50vw, {{ block_image.width }}px{% endcapture %}
+                    {% capture widths %}{{ block_image.width }}, {{ block_image.width | times: 1.5 | round }}, {{ block_image.width | times: 2 }}{% endcapture %}
                     {{
-                      block.settings.product.featured_image
+                      block_image
                       | image_url: width: 600
                       | image_tag:
                         class: 'tmm-slider1-image-absolute',
                         widths: widths,
-                        height: block.settings.product.featured_image.height,
-                        width: block.settings.featured_image.width,
-                        alt: block.settings.product.featured_image.alt_text,
+                        height: block_image.height,
+                        width: block_image.width,
+                        alt: block_image.alt_text,
                         sizes: sizes,
                         preload: true
                     }}
@@ -96,10 +103,18 @@
                 </div>
                 <div class="tmm-slider1-content_block">
                   <{{ block.settings.heading_size }} class="tmm-slider1-heading">
-                    {{- block.settings.product.title -}}
+                    {%- if block.settings.product != blank -%}
+                      {{- block.settings.product.title -}}
+                    {%- else -%}
+                      {{- block.settings.heading -}}
+                    {%- endif -%}
                   </{{ block.settings.heading_size }}>
                   <div class="tmm-slider1-content_middle">
-                    {{- block.settings.product.description -}}
+                    {%- if block.settings.product != blank -%}
+                      {{- block.settings.product.description -}}
+                    {%- else -%}
+                      {{- block.settings.body_text -}}
+                    {%- endif -%}
                   </div>
                   {%- if block.settings.button_url != blank -%}
                     <a
@@ -253,6 +268,26 @@
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Header",
+          "default": "SleepCloud Pillow",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "text",
+          "id": "body_text",
+          "label": "Body text",
+          "default": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
+          "info": "This is used as a fallback if no product is selected."
         },
         {
           "type": "select",
