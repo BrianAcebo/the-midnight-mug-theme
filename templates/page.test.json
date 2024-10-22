@@ -346,10 +346,23 @@
             "button_text_color": "#020912",
             "button_style": "solid"
           }
+        },
+        "slider_QJ94LM": {
+          "type": "slider",
+          "settings": {
+            "product": "the-ultimate-guide-to-seo",
+            "heading_size": "h2",
+            "button_text": "Buy now",
+            "button_url": "",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid"
+          }
         }
       },
       "block_order": [
-        "slider_RhG39K"
+        "slider_RhG39K",
+        "slider_QJ94LM"
       ],
       "settings": {
         "color_scheme": "scheme-4",
