@@ -87,7 +87,7 @@
                             widths: widths,
                             height: block.settings.image.height,
                             width: block.settings.image.width,
-                            alt: block.settings.alt_text,
+                            alt: block.settings.image.alt,
                             sizes: sizes,
                             preload: true
                         }}
@@ -194,7 +194,7 @@
                             widths: widths,
                             height: block.settings.image.height,
                             width: block.settings.image.width,
-                            alt: block.settings.alt_text,
+                            alt: block.settings.image.alt,
                             sizes: sizes,
                             preload: true
                         }}
@@ -406,11 +406,6 @@
           ],
           "default": "portrait",
           "label": "Image position"
-        },
-        {
-          "type": "text",
-          "id": "alt_text",
-          "label": "Image alt text"
         },
         {
           "type": "color",
