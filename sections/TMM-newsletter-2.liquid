@@ -11,53 +11,32 @@
     }
   }
 
-  .tmm-section-{{ section.id }} .tmm-gallery-no-image {
-    overflow: hidden;
+  .tmm-section-{{ section.id }} .tmm-newsletter2-heading_text {
+    text-transform: {{ section.settings.header_text_transformation }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-gallery-no-image svg rect {
-    width: 1200px;
+  .tmm-section-{{ section.id }} .tmm-newsletter2-body_text {
+    text-transform: {{ section.settings.body_text_transformation }};
   }
 
-  {%- for block in section.blocks -%}
-    {%- liquid
-      assign new_image_height = 550
-      if block.settings.image_orientation == 'landscape'
-        assign new_image_height = 250
-      endif
-    -%}
+  .tmm-section-{{ section.id }} .tmm-button {
+    transition: 0.2s;
+  }
 
-    {%- if block.settings.image != blank -%}
-      {%- if block.settings.object_fit == 'contain' or block.settings.object_fit == 'scale-down' -%}
-        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }},
-        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
-          --og-width-x-new-height_{{ block.id }}: calc({{ block.settings.image.width }}px * {{ new_image_height }});
-          width: calc(var(--og-width-x-new-height_{{ block.id }}) / {{ block.settings.image.height}});
-          max-width: 100%;
-          margin: 0 auto;
-        }
-      {%- endif -%}
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
+    background-color: {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+  }
 
-      {%- if block.settings.image_orientation == 'landscape' -%}
-        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
-          height: 250px;
-        }
-      {%- elsif block.settings.image_orientation == 'square' -%}
-        .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} {
-          height: 400px;
-        }
-      {%- endif -%}
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button_color }};
+  }
 
-      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image {
-        object-fit: {{ block.settings.object_fit }};
-        object-position: {{ block.settings.object_position }};
-      }
-
-      .tmm-section-{{ section.id }} .tmm-gallery-image-block_{{ block.id }} .tmm-gallery-image_overlay {
-        background-color: {{ block.settings.overlay_color }};
-      }
-    {%- endif -%}
-  {%- endfor -%}
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
+    opacity: 0.8;
+  }
 {%- endstyle -%}
 
 <section class="tmm-newsletter2 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
@@ -67,10 +46,12 @@
         <div class="tmm-padding-section-large">
           <div class="tmm-layout-grid tmm-newsletter2-container">
             <div class="tmm-newsletter2-heading">
-              <h2>Get Exclusive Offers and Updates</h2>
+              <{{ section.settings.heading_size }} class="tmm-newsletter2-heading_text">
+                {{- section.settings.heading -}}
+              </{{ section.settings.heading_size }}>
             </div>
             <div class="tmm-newsletter2-content">
-              <p class="tmm-text-size-medium">Stay up to date with our latest news and promotions.</p>
+              <p class="tmm-newsletter2-body_text">{{- section.settings.body_text -}}</p>
               <div class="tmm-margin-top margin-medium">
                 <div class="tmm-newsletter2-form_block tmm-form">
                   <form
@@ -138,13 +119,7 @@
       "type": "text",
       "id": "heading",
       "label": "Header",
-      "default": "Join our newsletter",
-    },
-    {
-      "type": "text",
-      "id": "body_text",
-      "label": "Body text",
-      "default": "Be the first to know about new collections and exclusive offers."
+      "default": "Get exclusive offers and updates",
     },
     {
       "type": "select",
@@ -173,6 +148,60 @@
       ],
       "default": "h2",
       "label": "Header tag size"
+    },
+    {
+      "type": "select",
+      "id": "header_text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "capitalize",
+      "label": "Header text transform"
+    },
+    {
+      "type": "text",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "Stay up to date with our latest news and promotions."
+    },
+    {
+      "type": "select",
+      "id": "body_text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "none",
+      "label": "Body text transform"
     },
     {
       "type": "text",
@@ -211,7 +240,7 @@
      {
       "type": "text",
       "id": "input_placeholder",
-      "label": "Input placeholder",
+      "label": "Input placeholder text",
       "default": "Enter your email address",
     },
     {
