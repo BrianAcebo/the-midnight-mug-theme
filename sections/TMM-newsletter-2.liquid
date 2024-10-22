@@ -89,33 +89,6 @@
                         {{- section.settings.button_text -}}
                       </button>
                     </div>
-                    <input type="hidden" name="contact[tags]" value="newsletter">
-                    <input
-                      class="tmm-newsletter1-form_input tmm-input tmm-margin-bottom tmm-margin-small"
-                      placeholder="{{- section.settings.input_placeholder -}}"
-                      type="email"
-                      required
-                      name="contact[email]"
-                      value="{{ form.email }}"
-                      aria-required="true"
-                      autocorrect="off"
-                      autocapitalize="off"
-                      autocomplete="email"
-                      {% if form.errors %}
-                        autofocus
-                        aria-invalid="true"
-                        aria-describedby="tmm-newsletter2-error_{{ section.id }}"
-                      {% elsif form.posted_successfully? %}
-                        aria-describedby="tmm-newsletter2-success_{{ section.id }}"
-                      {% endif %}
-                    >
-                    <button
-                      type="submit"
-                      data-wait="Please wait..."
-                      class="tmm-button-primary tmm-margin-bottom tmm-margin-small tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
-                    >
-                      {{- section.settings.button_text -}}
-                    </button>
                     <div class="tmm-text-size-tiny">
                       {{- section.settings.disclaimer_text -}}
                     </div>
