@@ -116,18 +116,26 @@
                           class="tmm-product-list_item_text-link tmm-inline-block"
                         >
                           <div class="tmm-product-list_item_content-left">
-                            <div
+                            <p
                               class="tmm-text-weight-semibold"
                             >
                               {{- product.title -}}
-                            </div>
-                            <div>Type</div>
+                            </p>
                           </div>
-                          <div
+                          <p
                             class="tmm-text-weight-semibold"
                           >
-                            {{- product.price | money -}}
-                          </div>
+                            {%- case section.settings.price_style -%}
+                              {%- when 'money' -%}
+                                {{- product.price | money -}}
+                              {%- when 'money_with_currency' -%}
+                                {{- product.price | money_with_currency -}}
+                              {%- when 'money_without_currency' -%}
+                                {{- product.price | money_without_currency -}}
+                              {%- when 'money_without_trailing_zeros' -%}
+                                {{- product.price | money_without_trailing_zeros -}}
+                            {%- endcase -%}
+                          </p>
                         </a>
                         <div class="tmm-margin-top tmm-margin-xsmall">
                           <a
@@ -159,18 +167,17 @@
                           class="tmm-product-list_item_text-link tmm-inline-block"
                         >
                           <div class="tmm-product-list_item_content-left">
-                            <div
+                            <p
                               class="tmm-text-weight-semibold"
                             >
                               Product name
-                            </div>
-                            <div>Type</div>
+                            </p>
                           </div>
-                          <div
+                          <p
                             class="tmm-text-weight-semibold"
                           >
                             $55
-                          </div>
+                          </p>
                         </a>
                         <div class="tmm-margin-top tmm-margin-xsmall">
                           <a
@@ -293,6 +300,30 @@
       ],
       "default": "solid",
       "label": "Button style"
+    },
+    {
+      "type": "select",
+      "id": "price_style",
+      "options": [
+        {
+          "value": "money",
+          "label": "Money"
+        },
+        {
+          "value": "money_with_currency",
+          "label": "Money with currency"
+        },
+        {
+          "value": "money_without_currency",
+          "label": "Money without currency"
+        },
+        {
+          "value": "money_without_trailing_zeros",
+          "label": "Money without trailing zeros"
+        }
+      ],
+      "default": "money",
+      "label": "Product price display"
     },
     {
       "type": "header",
