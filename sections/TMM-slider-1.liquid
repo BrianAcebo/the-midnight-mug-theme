@@ -79,7 +79,7 @@
                     {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
                     {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
                     {{
-                      block.settings.image
+                      block.settings.product.image
                       | image_url: width: 600
                       | image_tag:
                         class: 'tmm-slider1-image-absolute',
@@ -95,11 +95,11 @@
                   {%- endif -%}
                 </div>
                 <div class="tmm-slider1-content_block">
-                  <{{ block.settings.heading_size }} class="tmm-slider1-heading"
-                    >Product Title</{{ block.settings.heading_size }}
-                  >
+                  <{{ block.settings.heading_size }} class="tmm-slider1-heading">
+                    {{- block.settings.product.title -}}
+                  </{{ block.settings.heading_size }}>
                   <div class="tmm-slider1-content_middle">
-                    {{- block.settings.body_text -}}
+                    {{- block.settings.product.description -}}
                   </div>
                   {%- if block.settings.button_url != blank -%}
                     <a
