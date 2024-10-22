@@ -1,6 +1,153 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
-{% endschema %}
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tmm-section-{{ section.id }} .tmm-newsletter2-heading_text {
+    text-transform: {{ section.settings.header_text_transformation }};
+    text-align: {{ section.settings.header_text_align }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-newsletter2-body_text {
+    text-transform: {{ section.settings.body_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button {
+    transition: 0.2s;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
+    background-color: {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
+    opacity: 0.8;
+  }
+{%- endstyle -%}
+
+<section class="tmm-sticky1 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="tmm-interaction_wrap">
+    <div class="tmm-padding-global">
+      <div class="tmm-container-large">
+        <div class="tmm-layout-grid tmm-sticky1-container">
+          <div class="tmm-sticky1-content">
+            <div class="tmm-margin-bottom tmm-margin-xsmall">
+              <div class="tmm-text-semibold">Innovative</div>
+            </div>
+            <div class="tmm-margin-bottom tmm-margin-small">
+              <h2>Meet Our Team</h2>
+            </div>
+            <p class="tmm-text-size-medium">Get to know the talented individuals behind our company.</p>
+            <div class="tmm-margin-top margin-medium">
+              <a
+                href="#"
+                class="tmm-button-primary tmm-button"
+                >Explore Careers</a
+              >
+            </div>
+          </div>
+          <div class="tmm-sticky1-items">
+            <div class="tmm-layout-grid tmm-sticky1-items_list">
+              <div class="tmm-sticky1-list_item">
+                <div class="tmm-sticky1-image_wrap">
+                  <img
+                    loading="lazy"
+                    src="images/Placeholder-Image---Landscape-4x3.svg"
+                    alt=""
+                    class="tmm-sticky1-image"
+                  >
+                </div>
+                <div class="tmm-sticky1-item_content">
+                  <div class="tmm-margin-bottom tmm-margin-xsmall">
+                    <div class="tmm-sitcky1-item_title">
+                      <div
+                        class="tmm-text-size-large tmm-text-weight-semibold"
+                      >
+                        John Doe
+                      </div>
+                      <div
+                        class="tmm-text-size-medium tmm-sticky1-item-content_middle"
+                      >
+                        CEO
+                      </div>
+                    </div>
+                  </div>
+                  <p>John is a visionary leader with a passion for driving innovation and growth.</p>
+                </div>
+              </div>
+              <div class="tmm-sticky1-list_item">
+                <div class="tmm-sticky1-image_wrap">
+                  <img
+                    loading="lazy"
+                    src="images/Placeholder-Image---Landscape-4x3.svg"
+                    alt=""
+                    class="tmm-sticky1-image"
+                  >
+                </div>
+                <div class="tmm-sticky1-item_content">
+                  <div class="tmm-margin-bottom tmm-margin-xsmall">
+                    <div class="tmm-sitcky1-item_title">
+                      <div
+                        class="tmm-text-size-large tmm-text-weight-semibold"
+                      >
+                        Jane Smith
+                      </div>
+                      <div
+                        class="tmm-text-size-medium tmm-sticky1-item-content_middle"
+                      >
+                        CTO
+                      </div>
+                    </div>
+                  </div>
+                  <p>Jane is a tech expert who oversees the development of our cutting-edge solutions.</p>
+                </div>
+              </div>
+              <div class="tmm-sticky1-list_item">
+                <div class="tmm-sticky1-image_wrap">
+                  <img
+                    loading="lazy"
+                    src="images/Placeholder-Image---Landscape-4x3.svg"
+                    alt=""
+                    class="tmm-sticky1-image"
+                  >
+                </div>
+                <div class="tmm-sticky1-item_content">
+                  <div class="tmm-margin-bottom tmm-margin-xsmall">
+                    <div class="tmm-sitcky1-item_title">
+                      <div
+                        class="tmm-text-size-large tmm-text-weight-semibold"
+                      >
+                        Mark Johnson
+                      </div>
+                      <div
+                        class="tmm-text-size-medium tmm-sticky1-item-content_middle"
+                      >
+                        COO
+                      </div>
+                    </div>
+                  </div>
+                  <p>Mark ensures smooth operations and efficient processes across the organization.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
