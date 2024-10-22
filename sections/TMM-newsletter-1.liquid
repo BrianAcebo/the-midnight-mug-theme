@@ -97,12 +97,9 @@
                         </div>
                       </div>
                     {%- endif -%}
-                    {%- if true -%}
+                    {%- if form.errors -%}
                       <div class="tmm-error-message">
                         <div class="tmm-error-text" id="tmm-newsletter1-error_{{ section.id }}">
-                          SAMPLE ERROR
-                          error 12345
-                          error 45678
                           {{- form.errors.translated_fields.email | capitalize }}
                           {{ form.errors.messages.email -}}
                         </div>
