@@ -78,83 +78,75 @@
             <div class="tmm-layout-grid tmm-sticky1-items_list">
               <div class="tmm-sticky1-list_item">
                 <div class="tmm-sticky1-image_wrap">
-                  <img
-                    loading="lazy"
-                    src="images/Placeholder-Image---Landscape-4x3.svg"
-                    alt=""
-                    class="tmm-sticky1-image"
-                  >
+                  {%- if product != blank -%}
+                    <a
+                      href="{{ product.url }}"
+                      class="tmm-sticky1-image_wrap"
+                    >
+                  {%- else -%}
+                    <div class="tmm-sticky1-image_wrap">
+                  {%- endif -%}
+                  {%- if product.featured_image != blank -%}
+                    {% capture sizes %}(max-width: {{ product.featured_image.width | times: 2 }}px) 50vw, {{ product.featured_image.width }}px{% endcapture %}
+                    {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
+                    {{
+                      product.featured_image
+                      | image_url: width: 800
+                      | image_tag:
+                        class: 'tmm-sticky1-image',
+                        widths: widths,
+                        height: product.featured_image.height,
+                        width: product.featured_image.width,
+                        alt: product.featured_image.alt,
+                        sizes: sizes,
+                        preload: true
+                    }}
+                  {%- else -%}
+                    {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                  {%- endif -%}
+                  {%- if product != blank -%}
+                    </a>
+                  {%- else -%}
+                    </div>
+                  {%- endif -%}
                 </div>
                 <div class="tmm-sticky1-item_content">
                   <div class="tmm-margin-bottom tmm-margin-xsmall">
                     <div class="tmm-sitcky1-item_title">
-                      <div
-                        class="tmm-text-size-large tmm-text-weight-semibold"
-                      >
-                        John Doe
-                      </div>
-                      <div
+                      <h4 class="tmm-text-size-large tmm-text-weight-semibold">
+                        {%- if product != blank -%}
+                          {{- product.title -}}
+                        {%- else -%}
+                          Product Title
+                        {%- endif -%}
+                      </h4>
+                      <p
                         class="tmm-text-size-medium tmm-sticky1-item-content_middle"
                       >
-                        CEO
-                      </div>
+                        {%- if product != blank -%}
+                          {%- case section.settings.price_style -%}
+                            {%- when 'money' -%}
+                              {{- product.price | money -}}
+                            {%- when 'money_with_currency' -%}
+                              {{- product.price | money_with_currency -}}
+                            {%- when 'money_without_currency' -%}
+                              {{- product.price | money_without_currency -}}
+                            {%- when 'money_without_trailing_zeros' -%}
+                              {{- product.price | money_without_trailing_zeros -}}
+                          {%- endcase -%}
+                        {%- else -%}
+                          $51
+                        {%- endif -%}
+                      </p>
                     </div>
                   </div>
-                  <p>John is a visionary leader with a passion for driving innovation and growth.</p>
-                </div>
-              </div>
-              <div class="tmm-sticky1-list_item">
-                <div class="tmm-sticky1-image_wrap">
-                  <img
-                    loading="lazy"
-                    src="images/Placeholder-Image---Landscape-4x3.svg"
-                    alt=""
-                    class="tmm-sticky1-image"
-                  >
-                </div>
-                <div class="tmm-sticky1-item_content">
-                  <div class="tmm-margin-bottom tmm-margin-xsmall">
-                    <div class="tmm-sitcky1-item_title">
-                      <div
-                        class="tmm-text-size-large tmm-text-weight-semibold"
-                      >
-                        Jane Smith
-                      </div>
-                      <div
-                        class="tmm-text-size-medium tmm-sticky1-item-content_middle"
-                      >
-                        CTO
-                      </div>
-                    </div>
-                  </div>
-                  <p>Jane is a tech expert who oversees the development of our cutting-edge solutions.</p>
-                </div>
-              </div>
-              <div class="tmm-sticky1-list_item">
-                <div class="tmm-sticky1-image_wrap">
-                  <img
-                    loading="lazy"
-                    src="images/Placeholder-Image---Landscape-4x3.svg"
-                    alt=""
-                    class="tmm-sticky1-image"
-                  >
-                </div>
-                <div class="tmm-sticky1-item_content">
-                  <div class="tmm-margin-bottom tmm-margin-xsmall">
-                    <div class="tmm-sitcky1-item_title">
-                      <div
-                        class="tmm-text-size-large tmm-text-weight-semibold"
-                      >
-                        Mark Johnson
-                      </div>
-                      <div
-                        class="tmm-text-size-medium tmm-sticky1-item-content_middle"
-                      >
-                        COO
-                      </div>
-                    </div>
-                  </div>
-                  <p>Mark ensures smooth operations and efficient processes across the organization.</p>
+                  <p>
+                    {%- if product != blank -%}
+                      {{- product.description -}}
+                    {%- else -%}
+                      Say goodbye to bland dinners—this spoon enhances flavors!
+                    {%- endif -%}
+                  </p>
                 </div>
               </div>
             </div>
