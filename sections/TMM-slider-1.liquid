@@ -88,7 +88,7 @@
                     {% capture widths %}{{ block_image.width }}, {{ block_image.width | times: 1.5 | round }}, {{ block_image.width | times: 2 }}{% endcapture %}
                     {{
                       block_image
-                      | image_url: width: 600
+                      | image_url: width: 800
                       | image_tag:
                         class: 'tmm-slider1-image-absolute',
                         widths: widths,
