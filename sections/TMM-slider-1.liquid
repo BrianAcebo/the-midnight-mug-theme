@@ -10,6 +10,35 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .tmm-section-{{ section.id }} .tmm-slider1-heading {
+    text-transform: {{ section.settings.header_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-slider1-content_middle {
+    text-transform: {{ section.settings.body_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button {
+    transition: 0.2s;
+  }
+
+  {%- for block in section.blocks -%}
+    .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }} {
+      background-color: {{ block.settings.button_color }};
+      border: 1px solid {{ block.settings.button_color }};
+      color: {{ block.settings.button_text_color }};
+    }
+
+    .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }}.tmm-is-secondary {
+      background-color: transparent;
+      border: 1px solid {{ block.settings.button_color }};
+    }
+
+    .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }}:hover {
+      opacity: 0.8;
+    }
+  {%- endfor -%}
 {%- endstyle -%}
 
 <div class="tmm-slider1 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
@@ -33,52 +62,62 @@
       >
         <div class="tmm-slider1-mask tmm-slider-mask">
           {%- for block in section.blocks -%}
-          <div
-            data-tmm-id="42408a7b-61d5-279b-999e-330e1301fd18"
-            class="tmm-slider-slide tmm-slide"
-          >
             <div
-              class="tmm-slider1-content_wrap tmm-slider1-content_container"
+              data-tmm-id="42408a7b-61d5-279b-999e-330e1301fd18"
+              class="tmm-slider-slide tmm-slide"
             >
-              <div class="tmm-slider1-image tmm-margin-none">
-                <img
-                  width="532"
-                  loading="lazy"
-                  alt=""
-                  src="images/Placeholder-Image---Landscape-4x3.svg"
-                  class="tmm-slider1-image-absolute"
-                >
-              </div>
-              <div class="tmm-slider1-content_block">
-                <h2 class="tmm-slider1-heading">Product Title</h2>
-                <div class="tmm-slider1-content_middle">
-                  This platform allows developers and designers to build responsive websites without having to write
-                  code.
+              <div
+                class="tmm-slider1-content_wrap tmm-slider1-content_container"
+              >
+                <div class="tmm-slider1-image tmm-margin-none">
+                  {%- if block.settings.image != blank -%}
+                    {% capture sizes %}(max-width: {{ block.settings.image.width | times: 2 }}px) 50vw, {{ block.settings.image.width }}px{% endcapture %}
+                    {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
+                    {{
+                      block.settings.image
+                      | image_url: width: 600
+                      | image_tag:
+                        class: 'tmm-slider1-image-absolute',
+                        widths: widths,
+                        height: block.settings.image.height,
+                        width: block.settings.image.width,
+                        alt: block.settings.alt_text,
+                        sizes: sizes,
+                        preload: true
+                    }}
+                  {%- else -%}
+                    {%- render 'TMM-placeholder', class: 'tmm-slider1-image-absolute' -%}
+                  {%- endif -%}
                 </div>
-                <a
-                  href="#"
-                  class="tmm-button-primary tmm-button"
-                  >View Our Services</a
-                >
+                <div class="tmm-slider1-content_block">
+                  <{{ block.settings.heading_size }} class="tmm-slider1-heading"
+                    >Product Title</{{ block.settings.heading_size }}
+                  >
+                  <div class="tmm-slider1-content_middle">
+                    {{- block.settings.body_text -}}
+                  </div>
+                  {%- if block.settings.button_url != blank -%}
+                    <a
+                      href="{{ block.settings.button_url }}"
+                      class="tmm-button_{{ block.id }} tmm-button-primary tmm-button{% if block.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                    >
+                      {{- block.settings.button_text -}}
+                    </a>
+                  {%- endif -%}
+                </div>
               </div>
             </div>
-          </div>
           {%- endfor -%}
         </div>
         <div
           class="tmm-slider1-left-arrow tmm-slider1-left-arrow_position tmm-slider-arrow-left"
         >
-          <img
-            loading="lazy"
-            src="https://cdn.prod.website-files.com/66fe26a9157040ae4289222e/66fe26a9157040ae428922a6_arrow-left(24x24)%402x%20(5).svg"
-            alt=""
-            class="tmm-slider-arrow"
-          >
+          {%- render 'TMM-icon-arrow', dir: 'left', color_hex: '#ffffff', class: 'tmm-slider-arrow' -%}
         </div>
         <div
           class="tmm-slider1-right-arrow tmm-slider1-right-arrow_position tmm-slider-arrow-right"
         >
-          {%- render 'TMM-icon-arrows', dir: "right", color_hex: "#ffffff", class: "tmm-slider-arrow" -%}
+          {%- render 'TMM-icon-arrow', dir: 'right', color_hex: '#ffffff', class: 'tmm-slider-arrow' -%}
         </div>
         <div class="tmm-slider1-active-nav tmm-slider1-nav_wrap"></div>
         <div
@@ -179,8 +218,13 @@
       "name": "Slider",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
           "type": "select",
-          "id": "title_size",
+          "id": "heading_size",
           "options": [
             {
               "value": "h1",
@@ -210,13 +254,13 @@
           "type": "text",
           "id": "header",
           "label": "Header",
-          "default": "Awesome product title"
+          "default": "Our new product"
         },
         {
           "type": "text",
           "id": "body_text",
           "label": "Body text",
-          "default": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!"
+          "default": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!"
         },
         {
           "type": "text",
