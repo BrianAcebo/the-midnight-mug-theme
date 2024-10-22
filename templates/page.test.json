@@ -433,6 +433,7 @@
       "type": "TMM-newsletter-1",
       "settings": {
         "color_scheme": "scheme-1",
+        "image": "shopify://shop_images/two-people-surfing-in-blue-choppy-water.jpg",
         "heading": "Join our newsletter",
         "body_text": "Be the first to know about new collections and exclusive offers.",
         "heading_size": "h2",
@@ -443,6 +444,17 @@
         "input_placeholder": "Enter your email address",
         "disclaimer_text": "<p>By submitting, you agree to our <a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms and Conditions</a>.</p>",
         "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "tmm_divider_BWpbip": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -461,6 +473,7 @@
     "tmm_slider_1_fRRcWb",
     "tmm_featured_brands_e4QPk8",
     "tmm_featured_collection_jxhYwQ",
+    "tmm_divider_BWpbip",
     "tmm_newsletter_1_AaLmCN"
   ]
 }
