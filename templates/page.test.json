@@ -359,9 +359,9 @@
             "heading_size": "h2",
             "button_text": "Buy now",
             "button_url": "",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_style": "solid"
+            "button_color": "#fcfcfc",
+            "button_text_color": "#020912",
+            "button_style": "outline"
           }
         }
       },
