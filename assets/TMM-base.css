@@ -675,6 +675,15 @@ figcaption {
   padding-bottom: 7rem;
 }
 
+.tmm-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.tmm-no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .form_message-error {
   background-color: var(--background-color--background-error);
   color: var(--text-color--text-error);
