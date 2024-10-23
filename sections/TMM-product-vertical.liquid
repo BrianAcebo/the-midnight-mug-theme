@@ -76,24 +76,24 @@
             <div class="tmm-layout-grid tmm-sticky1-items_list">
               {%- if section.blocks.size > 0 -%}
                 {%- for block in section.blocks -%}
-                  <div class="tmm-sticky1-list_item{% if block.product == blank %} tmm-empty-block{% endif %}" {{ block.shopify_attributes }}>
+                  <div class="tmm-sticky1-list_item{% if block.settings.product == blank %} tmm-empty-block{% endif %}" {{ block.shopify_attributes }}>
                     <div class="tmm-sticky1-image_wrap">
                       <a
-                        href="{{ block.product.url }}"
+                        href="{{ block.settings.product.url }}"
                         class="tmm-sticky1-image_wrap"
                       >
-                        {%- if block.product.featured_image != blank -%}
-                          {% capture sizes %}(max-width: {{ block.product.featured_image.width | times: 2 }}px) 50vw, {{ block.product.featured_image.width }}px{% endcapture %}
-                          {% capture widths %}{{ block.product.featured_image.width }}, {{ block.product.featured_image.width | times: 1.5 | round }}, {{ block.product.featured_image.width | times: 2 }}{% endcapture %}
+                        {%- if block.settings.product.featured_image != blank -%}
+                          {% capture sizes %}(max-width: {{ block.settings.product.featured_image.width | times: 2 }}px) 50vw, {{ block.settings.product.featured_image.width }}px{% endcapture %}
+                          {% capture widths %}{{ block.settings.product.featured_image.width }}, {{ block.settings.product.featured_image.width | times: 1.5 | round }}, {{ block.settings.product.featured_image.width | times: 2 }}{% endcapture %}
                           {{
-                            block.product.featured_image
+                            block.settings.product.featured_image
                             | image_url: width: 800
                             | image_tag:
                               class: 'tmm-sticky1-image',
                               widths: widths,
-                              height: block.product.featured_image.height,
-                              width: block.product.featured_image.width,
-                              alt: block.product.featured_image.alt,
+                              height: block.settings.product.featured_image.height,
+                              width: block.settings.product.featured_image.width,
+                              alt: block.settings.product.featured_image.alt,
                               sizes: sizes,
                               preload: true
                           }}
@@ -105,23 +105,23 @@
                     <div class="tmm-sticky1-item_content">
                       <div class="tmm-sitcky1-item_title">
                         <h3 class="tmm-text-weight-semibold">
-                          {%- if block.product != blank -%}
-                            {{- block.product.title -}}
+                          {%- if block.settings.product != blank -%}
+                            {{- block.settings.product.title -}}
                           {%- else -%}
                             Product Title
                           {%- endif -%}
                         </h3>
                         <p class="tmm-sticky1-item-content_middle">
-                          {%- if block.product != blank -%}
+                          {%- if block.settings.product != blank -%}
                             {%- case section.settings.price_style -%}
                               {%- when 'money' -%}
-                                {{- block.product.price | money -}}
+                                {{- block.settings.product.price | money -}}
                               {%- when 'money_with_currency' -%}
-                                {{- block.product.price | money_with_currency -}}
+                                {{- block.settings.product.price | money_with_currency -}}
                               {%- when 'money_without_currency' -%}
-                                {{- block.product.price | money_without_currency -}}
+                                {{- block.settings.product.price | money_without_currency -}}
                               {%- when 'money_without_trailing_zeros' -%}
-                                {{- block.product.price | money_without_trailing_zeros -}}
+                                {{- block.settings.product.price | money_without_trailing_zeros -}}
                             {%- endcase -%}
                           {%- else -%}
                             $51
@@ -129,8 +129,8 @@
                         </p>
                       </div>
                       <p>
-                        {%- if block.product != blank -%}
-                          {{- block.product.description -}}
+                        {%- if block.settings.product != blank -%}
+                          {{- block.settings.product.description -}}
                         {%- else -%}
                           Say goodbye to bland dinners—this spoon enhances flavors!
                         {%- endif -%}
