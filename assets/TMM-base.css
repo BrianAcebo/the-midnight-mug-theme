@@ -675,6 +675,8 @@ figcaption {
 .tmm-padding-global {
   padding-left: 5%;
   padding-right: 5%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .tmm-padding-section-medium {
