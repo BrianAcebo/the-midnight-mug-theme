@@ -497,36 +497,15 @@
         "padding_bottom": 0
       }
     },
-    "tmm_product_vertical_RXhQpg": {
+    "tmm_product_vertical_bn6LYH": {
       "type": "TMM-product-vertical",
-      "blocks": {
-        "product_R9c8aU": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_X4khJd": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        },
-        "product_FBcE3M": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_R9c8aU",
-        "product_X4khJd",
-        "product_FBcE3M"
-      ],
       "settings": {
         "color_scheme": "",
+        "caption_text": "Discover",
+        "heading": "Our sleep collection",
+        "heading_size": "h2",
         "header_text_transformation": "capitalize",
+        "body_text": "Conquer your day with the ultimate comfort experience.",
         "body_text_transformation": "none",
         "button_text": "Buy now",
         "button_url": "",
@@ -555,6 +534,6 @@
     "tmm_newsletter_1_AaLmCN",
     "tmm_newsletter_2_UaKDUg",
     "tmm_divider_W6tc6J",
-    "tmm_product_vertical_RXhQpg"
+    "tmm_product_vertical_bn6LYH"
   ]
 }
