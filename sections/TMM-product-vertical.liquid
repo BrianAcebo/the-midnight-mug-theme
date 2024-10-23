@@ -76,54 +76,40 @@
           </div>
           <div class="tmm-sticky1-items">
             <div class="tmm-layout-grid tmm-sticky1-items_list">
-              <div class="tmm-sticky1-list_item">
-                <div class="tmm-sticky1-image_wrap">
-                  {%- if product != blank -%}
+              {%- if section.blocks.size > 0 -%}
+                <div class="tmm-sticky1-list_item">
+                  <div class="tmm-sticky1-image_wrap">
                     <a
                       href="{{ product.url }}"
                       class="tmm-sticky1-image_wrap"
                     >
-                  {%- else -%}
-                    <div class="tmm-sticky1-image_wrap">
-                  {%- endif -%}
-                  {%- if product.featured_image != blank -%}
-                    {% capture sizes %}(max-width: {{ product.featured_image.width | times: 2 }}px) 50vw, {{ product.featured_image.width }}px{% endcapture %}
-                    {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
-                    {{
-                      product.featured_image
-                      | image_url: width: 800
-                      | image_tag:
-                        class: 'tmm-sticky1-image',
-                        widths: widths,
-                        height: product.featured_image.height,
-                        width: product.featured_image.width,
-                        alt: product.featured_image.alt,
-                        sizes: sizes,
-                        preload: true
-                    }}
-                  {%- else -%}
-                    {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
-                  {%- endif -%}
-                  {%- if product != blank -%}
+                      {%- if product.featured_image != blank -%}
+                        {% capture sizes %}(max-width: {{ product.featured_image.width | times: 2 }}px) 50vw, {{ product.featured_image.width }}px{% endcapture %}
+                        {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
+                        {{
+                          product.featured_image
+                          | image_url: width: 800
+                          | image_tag:
+                            class: 'tmm-sticky1-image',
+                            widths: widths,
+                            height: product.featured_image.height,
+                            width: product.featured_image.width,
+                            alt: product.featured_image.alt,
+                            sizes: sizes,
+                            preload: true
+                        }}
+                      {%- else -%}
+                        {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                      {%- endif -%}
                     </a>
-                  {%- else -%}
-                    </div>
-                  {%- endif -%}
-                </div>
-                <div class="tmm-sticky1-item_content">
-                  <div class="tmm-margin-bottom tmm-margin-xsmall">
-                    <div class="tmm-sitcky1-item_title">
-                      <h4 class="tmm-text-size-large tmm-text-weight-semibold">
-                        {%- if product != blank -%}
+                  </div>
+                  <div class="tmm-sticky1-item_content">
+                    <div class="tmm-margin-bottom tmm-margin-xsmall">
+                      <div class="tmm-sitcky1-item_title">
+                        <h3 class="tmm-text-weight-semibold">
                           {{- product.title -}}
-                        {%- else -%}
-                          Product Title
-                        {%- endif -%}
-                      </h4>
-                      <p
-                        class="tmm-text-size-medium tmm-sticky1-item-content_middle"
-                      >
-                        {%- if product != blank -%}
+                        </h3>
+                        <p class="tmm-sticky1-item-content_middle">
                           {%- case section.settings.price_style -%}
                             {%- when 'money' -%}
                               {{- product.price | money -}}
@@ -134,21 +120,30 @@
                             {%- when 'money_without_trailing_zeros' -%}
                               {{- product.price | money_without_trailing_zeros -}}
                           {%- endcase -%}
-                        {%- else -%}
-                          $51
-                        {%- endif -%}
-                      </p>
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <p>
-                    {%- if product != blank -%}
+                    <p>
                       {{- product.description -}}
-                    {%- else -%}
-                      Say goodbye to bland dinners—this spoon enhances flavors!
-                    {%- endif -%}
-                  </p>
+                    </p>
+                  </div>
                 </div>
-              </div>
+              {%- else -%}
+                <div class="tmm-sticky1-list_item">
+                  <div class="tmm-sticky1-image_wrap">
+                    {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                  </div>
+                  <div class="tmm-sticky1-item_content">
+                    <div class="tmm-margin-bottom tmm-margin-xsmall">
+                      <div class="tmm-sitcky1-item_title">
+                        <h3 class="tmm-text-weight-semibold">Product Title</h3>
+                        <p class="tmm-sticky1-item-content_middle">$51</p>
+                      </div>
+                    </div>
+                    <p>Say goodbye to bland dinners—this spoon enhances flavors!</p>
+                  </div>
+                </div>
+              {%- endif -%}
             </div>
           </div>
         </div>
