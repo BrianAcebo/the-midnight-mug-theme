@@ -11,11 +11,11 @@
     }
   }
 
-  .tmm-section-{{ section.id }} .tmm-product-list-heading_text {
+  .tmm-section-{{ section.id }} .tmm-features4-heading_text {
     text-transform: {{ section.settings.header_text_transformation }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-product-list-body_text {
+  .tmm-section-{{ section.id }} .tmm-features4-body_text {
     text-transform: {{ section.settings.body_text_transformation }};
   }
 
@@ -23,13 +23,13 @@
     transition: 0.2s;
   }
 
-  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
+  .tmm-section-{{ section.id }} .tmm-button-1.tmm-button_{{ section.id }} {
     background-color: {{ section.settings.button_color }};
     border: 1px solid {{ section.settings.button_color }};
     color: {{ section.settings.button_text_color }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
+  .tmm-section-{{ section.id }} .tmm-button-1.tmm-button_{{ section.id }}.tmm-is-secondary {
     background-color: transparent;
     border: 1px solid {{ section.settings.button_color }};
   }
@@ -47,48 +47,45 @@
           <div class="tmm-margin-bottom tmm-margin-xxlarge">
             <div class="tmm-layout-grid tmm-features4-content">
               <div class="tmm-features4-content_left">
-                <div class="tmm-margin-bottom tmm-margin-xsmall">
-                  <div class="tmm-text-semibold">Discover</div>
-                </div>
-                <h2>Achieve Radiant Skin with Our Vegan Skincare</h2>
+                {%- if section.settings.caption_text != blank -%}
+                  <div class="tmm-margin-bottom tmm-margin-xsmall">
+                    <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
+                  </div>
+                {%- endif -%}
+                <{{ section.settings.heading_size }} class="tmm-features4-heading_text">
+                  {{- section.settings.heading -}}
+                </{{ section.settings.heading_size }}>
               </div>
               <div class="tmm-features4-content_right">
-                <p class="tmm-text-size-medium">
-                  At Oak, we believe in the power of nature to transform your skin. Our vegan skincare products are
-                  carefully crafted using natural ingredients that nourish and rejuvenate. Follow our step-by-step
-                  guide to unlock your skin&#x27;s true potential.
+                <p class="tmm-features4-body_text">
+                  {{- section.settings.body_text -}}
                 </p>
               </div>
             </div>
           </div>
           <div class="tmm-layout-grid tmm-features4-list">
-            <div class="tmm-features4-item">
-              <div class="tmm-margin-bottom tmm-margin-small">
-                <h3 class="tmm-heading-style-h4">Cleanse and Prep Your Skin</h3>
-              </div>
-              <p>
-                Start your skincare routine by cleansing your face with our gentle vegan cleanser. This will remove
-                impurities and prepare your skin for the next steps.
-              </p>
-            </div>
-            <div class="tmm-features4-item">
-              <div class="tmm-margin-bottom tmm-margin-small">
-                <h3 class="tmm-heading-style-h4">Nourish and Hydrate Your Skin</h3>
-              </div>
-              <p>
-                Apply our vegan moisturizer to provide deep hydration and nourishment to your skin. This will help
-                restore its natural glow and elasticity.
-              </p>
-            </div>
-            <div class="tmm-features4-item">
-              <div class="tmm-margin-bottom tmm-margin-small">
-                <h3 class="tmm-heading-style-h4">Protect and Rejuvenate Your Skin</h3>
-              </div>
-              <p>
-                Finish off your skincare routine by applying our vegan sunscreen. This will protect your skin from
-                harmful UV rays and help prevent premature aging.
-              </p>
-            </div>
+            {%- if section.blocks.size > 0 -%}
+              {%- for block in section.blocks -%}
+                <div class="tmm-features4-item" {{ block.shopify_attributes }}>
+                  <div class="tmm-margin-bottom tmm-margin-small">
+                    <h3 class="tmm-heading-style-h4">{{- block.settings.heading -}}</h3>
+                  </div>
+                  <p>{{ block.settings.text }}</p>
+                </div>
+              {%- endfor -%}
+            {%- else -%}
+              {%- for i in (1..3) -%}
+                <div class="tmm-features4-item">
+                  <div class="tmm-margin-bottom tmm-margin-small">
+                    <h3 class="tmm-heading-style-h4">Cleanse and Prep Your Skin</h3>
+                  </div>
+                  <p>
+                    Start your skincare routine by cleansing your face with our gentle vegan cleanser. This will remove
+                    impurities and prepare your skin for the next steps.
+                  </p>
+                </div>
+              {%- endfor -%}
+            {%- endif -%}
           </div>
           <div class="tmm-margin-top margin-xlarge">
             <div class="tmm-button-group">
@@ -152,7 +149,7 @@
       "type": "text",
       "id": "heading",
       "label": "Header",
-      "default": "Our sleep collection",
+      "default": "Achieve Radiant Skin with Our Vegan Skincare",
     },
     {
       "type": "select",
@@ -210,7 +207,7 @@
       "type": "text",
       "id": "body_text",
       "label": "Body text",
-      "default": "Conquer your day with the ultimate comfort experience."
+      "default": "Our vegan skincare products are carefully crafted using natural ingredients that nourish and rejuvenate. Follow our step-by-step guide to unlock your skin's true potential."
     },
     {
       "type": "select",
@@ -238,30 +235,30 @@
     },
     {
       "type": "text",
-      "id": "button_text",
-      "label": "Button text",
-      "default": "Buy now"
+      "id": "button1_text",
+      "label": "Button one text",
+      "default": "Explore"
     },
     {
       "type": "url",
-      "id": "button_url",
-      "label": "Button url"
+      "id": "button1_url",
+      "label": "Button one url"
     },
     {
       "type": "color",
-      "id": "button_color",
+      "id": "button1_color",
       "default": "#000000",
-      "label": "Button color"
+      "label": "Button one color"
     },
     {
       "type": "color",
-      "id": "button_text_color",
+      "id": "button1_text_color",
       "default": "#ffffff",
-      "label": "Button text color"
+      "label": "Button one text color"
     },
     {
       "type": "select",
-      "id": "button_style",
+      "id": "button1_style",
       "options": [
         {
           "value": "solid",
@@ -273,31 +270,24 @@
         }
       ],
       "default": "solid",
-      "label": "Button style"
+      "label": "Button one style"
     },
     {
-      "type": "select",
-      "id": "price_style",
-      "options": [
-        {
-          "value": "money",
-          "label": "Money"
-        },
-        {
-          "value": "money_with_currency",
-          "label": "Money with currency"
-        },
-        {
-          "value": "money_without_currency",
-          "label": "Money without currency"
-        },
-        {
-          "value": "money_without_trailing_zeros",
-          "label": "Money without trailing zeros"
-        }
-      ],
-      "default": "money",
-      "label": "Product price display"
+      "type": "text",
+      "id": "button2_text",
+      "label": "Button two text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button2_url",
+      "label": "Button two url"
+    },
+    {
+      "type": "color",
+      "id": "button2_text_color",
+      "default": "#000000",
+      "label": "Button two text color"
     },
     {
       "type": "header",
@@ -324,7 +314,28 @@
       "default": 36
     }
   ],
-   "presets": [
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Header",
+          "default": "Nourish and Hydrate Your Skin"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Apply our vegan moisturizer to provide deep hydration and nourishment to your skin. This will help restore its natural glow and elasticity."
+        }
+      ]
+    }
+  ],
+  "presets": [
     {
       "name": "TMM - Features"
     }
