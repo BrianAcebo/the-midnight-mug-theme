@@ -499,8 +499,19 @@
     },
     "tmm_product_vertical_bn6LYH": {
       "type": "TMM-product-vertical",
+      "blocks": {
+        "product_FMybd8": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_FMybd8"
+      ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "caption_text": "Discover",
         "heading": "Our sleep collection",
         "heading_size": "h2",
