@@ -85,63 +85,61 @@
                   {%- else -%}
                     <div class="tmm-sticky1-list_item{% if block.settings.product == blank %} tmm-empty-block{% endif %}" {{ block.shopify_attributes }}>
                   {%- endif -%}
-                  <div class="tmm-sticky1-list_item{% if block.settings.product == blank %} tmm-empty-block{% endif %}" {{ block.shopify_attributes }}>
+                  <div class="tmm-sticky1-image_wrap">
                     <div class="tmm-sticky1-image_wrap">
-                      <div class="tmm-sticky1-image_wrap">
-                        {%- if block.settings.product.featured_image != blank -%}
-                          {% capture sizes %}(max-width: {{ block.settings.product.featured_image.width | times: 2 }}px) 50vw, {{ block.settings.product.featured_image.width }}px{% endcapture %}
-                          {% capture widths %}{{ block.settings.product.featured_image.width }}, {{ block.settings.product.featured_image.width | times: 1.5 | round }}, {{ block.settings.product.featured_image.width | times: 2 }}{% endcapture %}
-                          {{
-                            block.settings.product.featured_image
-                            | image_url: width: 800
-                            | image_tag:
-                              class: 'tmm-sticky1-image',
-                              widths: widths,
-                              height: block.settings.product.featured_image.height,
-                              width: block.settings.product.featured_image.width,
-                              alt: block.settings.product.featured_image.alt,
-                              sizes: sizes,
-                              preload: true
-                          }}
-                        {%- else -%}
-                          {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
-                        {%- endif -%}
-                      </div>
+                      {%- if block.settings.product.featured_image != blank -%}
+                        {% capture sizes %}(max-width: {{ block.settings.product.featured_image.width | times: 2 }}px) 50vw, {{ block.settings.product.featured_image.width }}px{% endcapture %}
+                        {% capture widths %}{{ block.settings.product.featured_image.width }}, {{ block.settings.product.featured_image.width | times: 1.5 | round }}, {{ block.settings.product.featured_image.width | times: 2 }}{% endcapture %}
+                        {{
+                          block.settings.product.featured_image
+                          | image_url: width: 800
+                          | image_tag:
+                            class: 'tmm-sticky1-image',
+                            widths: widths,
+                            height: block.settings.product.featured_image.height,
+                            width: block.settings.product.featured_image.width,
+                            alt: block.settings.product.featured_image.alt,
+                            sizes: sizes,
+                            preload: true
+                        }}
+                      {%- else -%}
+                        {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                      {%- endif -%}
                     </div>
-                    <div class="tmm-sticky1-item_content">
-                      <div class="tmm-sitcky1-item_title">
-                        <h3 class="tmm-text-weight-semibold">
-                          {%- if block.settings.product != blank -%}
-                            {{- block.settings.product.title -}}
-                          {%- else -%}
-                            Product Title
-                          {%- endif -%}
-                        </h3>
-                        <p class="tmm-sticky1-item-content_middle">
-                          {%- if block.settings.product != blank -%}
-                            {%- case section.settings.price_style -%}
-                              {%- when 'money' -%}
-                                {{- block.settings.product.price | money -}}
-                              {%- when 'money_with_currency' -%}
-                                {{- block.settings.product.price | money_with_currency -}}
-                              {%- when 'money_without_currency' -%}
-                                {{- block.settings.product.price | money_without_currency -}}
-                              {%- when 'money_without_trailing_zeros' -%}
-                                {{- block.settings.product.price | money_without_trailing_zeros -}}
-                            {%- endcase -%}
-                          {%- else -%}
-                            $51
-                          {%- endif -%}
-                        </p>
-                      </div>
-                      <p>
+                  </div>
+                  <div class="tmm-sticky1-item_content">
+                    <div class="tmm-sitcky1-item_title">
+                      <h3 class="tmm-text-weight-semibold">
                         {%- if block.settings.product != blank -%}
-                          {{- block.settings.product.description -}}
+                          {{- block.settings.product.title -}}
                         {%- else -%}
-                          Say goodbye to bland dinners—this spoon enhances flavors!
+                          Product Title
+                        {%- endif -%}
+                      </h3>
+                      <p class="tmm-sticky1-item-content_middle">
+                        {%- if block.settings.product != blank -%}
+                          {%- case section.settings.price_style -%}
+                            {%- when 'money' -%}
+                              {{- block.settings.product.price | money -}}
+                            {%- when 'money_with_currency' -%}
+                              {{- block.settings.product.price | money_with_currency -}}
+                            {%- when 'money_without_currency' -%}
+                              {{- block.settings.product.price | money_without_currency -}}
+                            {%- when 'money_without_trailing_zeros' -%}
+                              {{- block.settings.product.price | money_without_trailing_zeros -}}
+                          {%- endcase -%}
+                        {%- else -%}
+                          $51
                         {%- endif -%}
                       </p>
                     </div>
+                    <p>
+                      {%- if block.settings.product != blank -%}
+                        {{- block.settings.product.description -}}
+                      {%- else -%}
+                        Say goodbye to bland dinners—this spoon enhances flavors!
+                      {%- endif -%}
+                    </p>
                   </div>
                   {%- if block.settings.product != blank -%}
                     </a>
