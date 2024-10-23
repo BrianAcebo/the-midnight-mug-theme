@@ -386,6 +386,17 @@
         "padding_bottom": 36
       }
     },
+    "tmm_divider_aTkUk3": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tmm_newsletter_NU8WjM": {
       "type": "TMM-newsletter",
       "settings": {
@@ -408,13 +419,50 @@
         "padding_bottom": 36
       }
     },
-    "tmm_divider_aTkUk3": {
-      "type": "TMM-divider",
+    "tmm_gallery_grhwQz": {
+      "type": "TMM-gallery",
+      "blocks": {
+        "image_37Xh86": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/flatlay-iron-skillet-with-meat-and-other-food.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "portrait"
+          }
+        },
+        "image_V8aUTT": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/person-carries-a-wooden-box-full-of-dough-balls.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "portrait"
+          }
+        },
+        "image_GaqyAf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square"
+          }
+        }
+      },
+      "block_order": [
+        "image_37Xh86",
+        "image_V8aUTT",
+        "image_GaqyAf"
+      ],
       "settings": {
-        "color_scheme": "",
-        "container_size": "900",
-        "divider_color": "#000000",
-        "divider_thickness": 1,
+        "color_scheme": "scheme-1",
+        "header_text": "Browse our Gallery",
+        "header_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Discover our top-selling products and happy customers",
+        "body_text_transformation": "none",
+        "page_width": "1600",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -434,6 +482,7 @@
     "tmm_divider_GE99Xw",
     "tmm_features_VEN6TG",
     "tmm_divider_aTkUk3",
-    "tmm_newsletter_NU8WjM"
+    "tmm_newsletter_NU8WjM",
+    "tmm_gallery_grhwQz"
   ]
 }
