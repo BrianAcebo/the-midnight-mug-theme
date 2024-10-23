@@ -218,6 +218,18 @@ figcaption {
   margin-bottom: 0;
 }
 
+.tmm-max-width-xlarge {
+  width: 100%;
+  max-width: 56rem;
+  margin-bottom: 0;
+}
+
+.tmm-max-width-xxlarge {
+  width: 100%;
+  max-width: 62rem;
+  margin-bottom: 0;
+}
+
 .tmm-max-width-large.tmm-align-center {
   margin-left: auto;
   margin-right: auto;
