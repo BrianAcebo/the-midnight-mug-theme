@@ -582,7 +582,7 @@
     "tmm_faq_3_7CnR4j": {
       "type": "TMM-faq-3",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "header_text": "Frequently Asked Questions",
         "header_size": "h2",
         "header_text_transformation": "capitalize",
