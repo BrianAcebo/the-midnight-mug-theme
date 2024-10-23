@@ -578,8 +578,8 @@ figcaption {
 }
 
 .tmm-button-group {
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
   flex-flow: row;
   align-items: center;
   display: flex;
