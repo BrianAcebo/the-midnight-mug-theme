@@ -55,7 +55,7 @@
           <div class="tmm-layout-grid tmm-faq3-list">
             {%- if section.blocks.size > 0 -%}
               {%- for block in section.blocks -%}
-                <div class="tmm-faq3-accordion">
+                <div class="tmm-faq3-accordion" {{ block.shopify_attributes }}>
                   <div
                     data-tmm-id="c8c5fd68-29a9-60d9-2c7b-e98b16adb6d6"
                     class="tmm-faq3-question"
