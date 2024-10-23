@@ -28,12 +28,12 @@
       {%- if block.settings.image_orientation == 'landscape' -%}
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }},
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} .tmm-gallery2-image_wrap {
-          aspect-ratio: 2 / 1;
+          aspect-ratio: 1 / 0.5;
         }
       {%- elsif block.settings.image_orientation == 'portrait' -%}
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }},
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} .tmm-gallery2-image_wrap {
-          aspect-ratio: 1 / 2;
+          aspect-ratio: 0.5 / 1;
         }
       {%- else -%}
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }},
