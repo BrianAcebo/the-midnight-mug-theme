@@ -53,7 +53,7 @@
     "tmm_hero_tncMBf": {
       "type": "TMM-hero",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
         "object_position": "center",
         "image_size": "medium",
@@ -77,10 +77,125 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "tmm_tabs_CDgip7": {
+      "type": "TMM-tabs",
+      "blocks": {
+        "tab_zenpa6": {
+          "type": "tab",
+          "settings": {
+            "title": "Awesome product title",
+            "body_text": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!",
+            "button_text": "Buy now",
+            "button_url": "shopify://collections",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid",
+            "tag_1": "Innovative",
+            "tag_2": "Interactive",
+            "tag_3": "Gourmet"
+          }
+        },
+        "tab_PdiNKV": {
+          "type": "tab",
+          "settings": {
+            "title": "Awesome product title",
+            "body_text": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!",
+            "button_text": "Buy now",
+            "button_url": "",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid",
+            "tag_1": "Innovative",
+            "tag_2": "Interactive",
+            "tag_3": "Gourmet"
+          }
+        },
+        "tab_pGarxk": {
+          "type": "tab",
+          "settings": {
+            "title": "Awesome product title",
+            "body_text": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!",
+            "button_text": "Buy now",
+            "button_url": "",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid",
+            "tag_1": "Innovative",
+            "tag_2": "Interactive",
+            "tag_3": "Gourmet"
+          }
+        }
+      },
+      "block_order": [
+        "tab_zenpa6",
+        "tab_PdiNKV",
+        "tab_pGarxk"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "header_text": "New products",
+        "header_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text_transformation": "none",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "tmm_slider_Utyk6C": {
+      "type": "TMM-slider",
+      "blocks": {
+        "slider_dygqRU": {
+          "type": "slider",
+          "settings": {
+            "product": "",
+            "image": "shopify://shop_images/cool-pool-pineapple.jpg",
+            "heading": "SleepCloud Pillow",
+            "header_text_transformation": "capitalize",
+            "heading_size": "h2",
+            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
+            "body_text_transformation": "none",
+            "button_text": "Buy now",
+            "button_url": "shopify://collections",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid"
+          }
+        },
+        "slider_iH4yDL": {
+          "type": "slider",
+          "settings": {
+            "product": "",
+            "heading": "SleepCloud Pillow",
+            "header_text_transformation": "capitalize",
+            "heading_size": "h2",
+            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
+            "body_text_transformation": "none",
+            "button_text": "Buy now",
+            "button_url": "",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "slider_dygqRU",
+        "slider_iH4yDL"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "arrow_button_color": "#000000",
+        "arrow_color": "#ffffff",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "tmm_promo_bar_jMtpTT",
-    "tmm_hero_tncMBf"
+    "tmm_hero_tncMBf",
+    "tmm_tabs_CDgip7",
+    "tmm_slider_Utyk6C"
   ]
 }
