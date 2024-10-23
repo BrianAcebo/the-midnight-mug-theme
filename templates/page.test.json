@@ -517,6 +517,19 @@
           "type": "product",
           "settings": {
             "product": "",
+            "image": "shopify://shop_images/cool-pool-pineapple.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "",
+            "description": "",
+            "price_style": "money"
+          }
+        },
+        "product_mYgCga": {
+          "type": "product",
+          "settings": {
+            "product": "",
             "object_fit": "cover",
             "object_position": "center",
             "image_orientation": "square",
@@ -528,7 +541,8 @@
       },
       "block_order": [
         "product_NE7UYN",
-        "product_n6VQii"
+        "product_n6VQii",
+        "product_mYgCga"
       ],
       "settings": {
         "color_scheme": "scheme-1",
