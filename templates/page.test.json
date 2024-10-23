@@ -171,96 +171,6 @@
         "padding_bottom": 100
       }
     },
-    "tmm_gallery_2_qUpzCA": {
-      "type": "TMM-gallery-2",
-      "blocks": {
-        "image_VHWie6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/small-business-interior.jpg",
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "landscape"
-          }
-        },
-        "image_meWptK": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square"
-          }
-        },
-        "image_rMkATz": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square"
-          }
-        },
-        "image_VkqbPY": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square"
-          }
-        },
-        "image_6ETRFY": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square"
-          }
-        },
-        "image_gGFXap": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square"
-          }
-        },
-        "image_pEfeEG": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square"
-          }
-        },
-        "image_7XUgrD": {
-          "type": "image",
-          "settings": {
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square"
-          }
-        }
-      },
-      "block_order": [
-        "image_VHWie6",
-        "image_meWptK",
-        "image_rMkATz",
-        "image_VkqbPY",
-        "image_6ETRFY",
-        "image_gGFXap",
-        "image_pEfeEG",
-        "image_7XUgrD"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "header_text": "Browse our Gallery",
-        "header_size": "h1",
-        "header_text_transformation": "capitalize",
-        "body_text": "Discover our top-selling products and happy customers",
-        "body_text_transformation": "none",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "tmm_divider_k3KjkN": {
       "type": "TMM-divider",
       "settings": {
@@ -269,121 +179,6 @@
         "divider_color": "#000000",
         "divider_thickness": 1,
         "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "tmm_tabs_1_hKbB67": {
-      "type": "TMM-tabs-1",
-      "blocks": {
-        "tab_KYCdqW": {
-          "type": "tab",
-          "settings": {
-            "title": "Smart Spoon 3000",
-            "body_text": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!",
-            "button_text": "Buy now",
-            "button_url": "shopify://products/make-money-with-shopify-ebook",
-            "button_color": "#e4f6ff",
-            "button_text_color": "#020912",
-            "button_style": "solid",
-            "tag_1": "Innovative",
-            "tag_2": "Interactive",
-            "tag_3": "Gourmet"
-          }
-        },
-        "tab_tdUpz3": {
-          "type": "tab",
-          "settings": {
-            "title": "Awesome product title",
-            "body_text": "Introducing the revolutionary Smart Spoon 3000: it not only stirs your soup but also predicts the future of your meal! Say goodbye to bland dinners—this spoon enhances flavors and shares witty dinner conversation, making every meal a delightful experience!",
-            "button_text": "Buy now",
-            "button_url": "shopify://collections",
-            "button_color": "#000000",
-            "button_text_color": "#020912",
-            "button_style": "outline",
-            "tag_1": "Innovative",
-            "tag_2": "Interactive",
-            "tag_3": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_KYCdqW",
-        "tab_tdUpz3"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "header_text": "New products",
-        "header_size": "h2",
-        "header_text_transformation": "capitalize",
-        "body_text_transformation": "none",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "tmm_slider_1_fRRcWb": {
-      "type": "TMM-slider-1",
-      "blocks": {
-        "slider_RhG39K": {
-          "type": "slider",
-          "settings": {
-            "product": "make-money-with-shopify-ebook",
-            "heading": "SleepCloud Pillow",
-            "header_text_transformation": "capitalize",
-            "heading_size": "h2",
-            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
-            "body_text_transformation": "none",
-            "button_text": "Buy now",
-            "button_url": "shopify://collections/all",
-            "button_color": "#ffdfb8",
-            "button_text_color": "#020912",
-            "button_style": "solid"
-          }
-        },
-        "slider_QJ94LM": {
-          "type": "slider",
-          "settings": {
-            "product": "",
-            "image": "shopify://shop_images/green-plants-grow-in-lines-on-rolling-hills.jpg",
-            "heading": "SleepCloud Pillow",
-            "header_text_transformation": "capitalize",
-            "heading_size": "h2",
-            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
-            "body_text_transformation": "none",
-            "button_text": "Buy now",
-            "button_url": "shopify://collections/all",
-            "button_color": "#fcfcfc",
-            "button_text_color": "#020912",
-            "button_style": "solid"
-          }
-        },
-        "slider_MjeFCC": {
-          "type": "slider",
-          "settings": {
-            "product": "",
-            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
-            "heading": "SleepCloud Pillow",
-            "header_text_transformation": "capitalize",
-            "heading_size": "h2",
-            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
-            "body_text_transformation": "none",
-            "button_text": "Buy now",
-            "button_url": "",
-            "button_color": "#000000",
-            "button_text_color": "#ffffff",
-            "button_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "slider_RhG39K",
-        "slider_QJ94LM",
-        "slider_MjeFCC"
-      ],
-      "settings": {
-        "color_scheme": "scheme-4",
-        "arrow_button_color": "#e4f6ff",
-        "arrow_color": "#020912",
-        "padding_top": 88,
         "padding_bottom": 36
       }
     },
@@ -460,27 +255,6 @@
         "divider_thickness": 1,
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "tmm_newsletter_1_AaLmCN": {
-      "type": "TMM-newsletter-1",
-      "settings": {
-        "color_scheme": "scheme-5",
-        "image": "shopify://shop_images/two-people-surfing-in-blue-choppy-water.jpg",
-        "heading": "Join our newsletter",
-        "heading_size": "h2",
-        "header_text_transformation": "capitalize",
-        "body_text": "Be the first to know about new collections and exclusive offers.",
-        "body_text_transformation": "none",
-        "button_text": "Submit",
-        "button_color": "#000000",
-        "button_text_color": "#fcfcfc",
-        "button_style": "solid",
-        "input_placeholder": "Enter your email address",
-        "disclaimer_text": "<p>By submitting, you agree to our <a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms and Conditions</a>.</p>",
-        "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
-        "padding_top": 100,
-        "padding_bottom": 100
       }
     },
     "tmm_newsletter_2_UaKDUg": {
@@ -579,37 +353,15 @@
         "padding_bottom": 84
       }
     },
-    "tmm_faq_3_7CnR4j": {
-      "type": "TMM-faq-3",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "header_text": "Frequently Asked Questions",
-        "header_size": "h2",
-        "header_text_transformation": "capitalize",
-        "body_text": "Find answers to commonly asked questions.",
-        "body_text_transformation": "none",
-        "info_heading": "Still have questions?",
-        "info_text": "Contact our support team for further assistance.",
-        "button_text": "Contact Us",
-        "button_url": "",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff",
-        "button_style": "solid",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "tmm_hero_3_a6rqBL": {
-      "type": "TMM-hero-3",
+    "tmm_features_n7xbYD": {
+      "type": "TMM-features",
       "settings": {
         "color_scheme": "",
-        "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
-        "object_position": "center",
-        "image_size": "medium",
-        "heading": "Discover the Latest Articles on Vegan Skincare",
-        "heading_size": "h1",
+        "caption_text": "Discover",
+        "heading": "Achieve Radiant Skin with Our Vegan Skincare",
+        "heading_size": "h2",
         "header_text_transformation": "capitalize",
-        "body_text": "Stay up-to-date with the latest trends, tips, and advice on vegan skincare.",
+        "body_text": "Our vegan skincare products are carefully crafted using natural ingredients that nourish and rejuvenate. Follow our step-by-step guide to unlock your skin's true potential.",
         "body_text_transformation": "none",
         "button1_text": "Explore",
         "button1_url": "shopify://collections",
@@ -617,10 +369,8 @@
         "button1_text_color": "#ffffff",
         "button1_style": "solid",
         "button2_text": "Learn more",
-        "button2_url": "shopify://products/make-money-with-shopify-ebook",
-        "button2_color": "#000000",
+        "button2_url": "shopify://collections",
         "button2_text_color": "#000000",
-        "button2_style": "outline",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -633,18 +383,13 @@
     "tmm_breadcrumbs_zmTXwE",
     "tmm_gallery_1_CrH7pE",
     "tmm_divider_gYqVhd",
-    "tmm_gallery_2_qUpzCA",
     "tmm_divider_k3KjkN",
-    "tmm_tabs_1_hKbB67",
-    "tmm_slider_1_fRRcWb",
     "tmm_featured_brands_e4QPk8",
     "tmm_featured_collection_jxhYwQ",
     "tmm_divider_BWpbip",
-    "tmm_newsletter_1_AaLmCN",
     "tmm_newsletter_2_UaKDUg",
     "tmm_divider_W6tc6J",
     "tmm_product_vertical_bn6LYH",
-    "tmm_faq_3_7CnR4j",
-    "tmm_hero_3_a6rqBL"
+    "tmm_features_n7xbYD"
   ]
 }
