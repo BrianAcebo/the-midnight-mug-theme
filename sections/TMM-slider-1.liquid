@@ -127,7 +127,10 @@
                         sizes: sizes,
                         preload: true
                     }}
-                    {% assign block_image = blank %}
+                    {%- liquid
+                       # Must reset block_image to clear variable assignment for future blocks
+                      assign block_image = blank
+                    -%}
                   {%- else -%}
                     {%- render 'TMM-placeholder', class: 'tmm-slider1-image-absolute' -%}
                   {%- endif -%}
