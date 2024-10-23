@@ -79,6 +79,17 @@
         "padding_bottom": 36
       }
     },
+    "tmm_divider_FDyger": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tmm_tabs_CDgip7": {
       "type": "TMM-tabs",
       "blocks": {
@@ -144,6 +155,17 @@
         "padding_bottom": 36
       }
     },
+    "tmm_divider_fmNmBM": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tmm_slider_Utyk6C": {
       "type": "TMM-slider",
       "blocks": {
@@ -190,6 +212,17 @@
         "arrow_button_color": "#000000",
         "arrow_color": "#ffffff",
         "page_width": "1200",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "tmm_divider_URxQ48": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -258,6 +291,17 @@
         "padding_bottom": 36
       }
     },
+    "tmm_divider_bDxzrk": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tmm_featured_collection_tMzEnq": {
       "type": "TMM-featured-collection",
       "settings": {
@@ -284,9 +328,13 @@
   "order": [
     "tmm_promo_bar_jMtpTT",
     "tmm_hero_tncMBf",
+    "tmm_divider_FDyger",
     "tmm_tabs_CDgip7",
+    "tmm_divider_fmNmBM",
     "tmm_slider_Utyk6C",
+    "tmm_divider_URxQ48",
     "tmm_product_vertical_slider_CDaQcf",
+    "tmm_divider_bDxzrk",
     "tmm_featured_collection_tMzEnq"
   ]
 }
