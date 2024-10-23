@@ -11,14 +11,6 @@
     }
   }
 
-  .tmm-section-{{ section.id }} .tmm-slider1-heading {
-    text-transform: {{ section.settings.header_text_transformation }};
-  }
-
-  .tmm-section-{{ section.id }} .tmm-slider1-content_middle {
-    text-transform: {{ section.settings.body_text_transformation }};
-  }
-
   .tmm-section-{{ section.id }} .tmm-button {
     transition: 0.2s;
   }
@@ -58,6 +50,14 @@
   }
 
   {%- for block in section.blocks -%}
+    .tmm-section-{{ section.id }} .tmm-slider1-content_block_{{ block.id }} .tmm-slider1-heading {
+      text-transform: {{ block.settings.header_text_transformation }};
+    }
+  
+    .tmm-section-{{ section.id }} .tmm-slider1-content_block_{{ block.id }} .tmm-slider1-content_middle {
+      text-transform: {{ block.settings.body_text_transformation }};
+    }
+    
     .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }} {
       background-color: {{ block.settings.button_color }};
       border: 1px solid {{ block.settings.button_color }};
@@ -135,7 +135,7 @@
                     {%- render 'TMM-placeholder', class: 'tmm-slider1-image-absolute' -%}
                   {%- endif -%}
                 </div>
-                <div class="tmm-slider1-content_block">
+                <div class="tmm-slider1-content_block tmm-slider1-content_block_{{ block.id }}">
                   <{{ block.settings.heading_size }} class="tmm-slider1-heading">
                     {%- if block.settings.product != blank -%}
                       {{- block.settings.product.title -}}
@@ -143,13 +143,13 @@
                       {{- block.settings.heading -}}
                     {%- endif -%}
                   </{{ block.settings.heading_size }}>
-                  <div class="tmm-slider1-content_middle">
+                  <p class="tmm-slider1-content_middle">
                     {%- if block.settings.product != blank -%}
                       {{- block.settings.product.description -}}
                     {%- else -%}
                       {{- block.settings.body_text -}}
                     {%- endif -%}
-                  </div>
+                  </p>
                   {%- if block.settings.button_url != blank -%}
                     <a
                       href="{{ block.settings.button_url }}"
