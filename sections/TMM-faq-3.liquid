@@ -1,6 +1,358 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .tmm-section-{{ section.id }} .tmm-faq3-header {
+    text-transform: {{ section.settings.header_text_transformation }};
+  }
+  
+  .tmm-section-{{ section.id }} .tmm-faq3-body-text {
+    text-transform: {{ section.settings.body_text_transformation }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button {
+    transition: 0.2s;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
+    background-color: {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button_color }};
+    color: {{ section.settings.button_text_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
+    opacity: 0.8;
+  }
+{%- endstyle -%}
+
+<section class="tmm-faq3 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
+  <div class="tmm-interaction_wrap">
+    <div class="tmm-padding-global">
+      <div class="tmm-container-large">
+        <div class="tmm-padding-section-large">
+          <div class="tmm-margin-bottom tmm-margin-xxlarge">
+            <div class="tmm-max-width-large">
+              <div class="tmm-margin-bottom tmm-margin-small">
+                <{{ section.settings.header_size }} class="tmm-faq3-header">
+                  {{- section.settings.header_text -}}
+                </{{ section.settings.header_size }}>
+              </div>
+              <p class="tmm-faq3-body-text">{{- section.settings.body_text -}}</p>
+            </div>
+          </div>
+          <div class="tmm-faq3_container">
+            <div class="tmm-layout-grid tmm-faq3-list">
+              {%- if section.blocks.size > 0 -%}
+                {%- for block in section.blocks -%}
+                  <div class="tmm-faq3-accordion">
+                    <div
+                      data-tmm-id="c8c5fd68-29a9-60d9-2c7b-e98b16adb6d6"
+                      class="tmm-faq3-question"
+                    >
+                      <div class="tmm-text-size-medium tmm-text-weight-bold">{{- section.settings.question -}}</div>
+                      <div class="tmm-faq3-icon_wrap">
+                        <div class="tmm-icon-embed-small tmm-embed">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewbox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                            	d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z"
+                            	fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tmm-faq3-answer">
+                      <div class="tmm-margin-bottom tmm-margin-small">
+                        <div class="tmm-max-width-large">
+                          {{- section.settings.answer -}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {%- endfor -%}
+              {%- else -%}
+                {%- for i in (1..4) -%}
+                  <div class="tmm-faq3-accordion">
+                    <div
+                      data-tmm-id="c8c5fd68-29a9-60d9-2c7b-e98b16adb6d6"
+                      class="tmm-faq3-question"
+                    >
+                      <div class="tmm-text-size-medium tmm-text-weight-bold">How can I learn more?</div>
+                      <div class="tmm-faq3-icon_wrap">
+                        <div class="tmm-icon-embed-small tmm-embed">
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewbox="0 0 32 32"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                            	d="M25.3333 15.667V16.3336C25.3333 16.7018 25.0349 17.0003 24.6667 17.0003H17V24.667C17 25.0351 16.7015 25.3336 16.3333 25.3336H15.6667C15.2985 25.3336 15 25.0351 15 24.667V17.0003H7.3333C6.96511 17.0003 6.66663 16.7018 6.66663 16.3336V15.667C6.66663 15.2988 6.96511 15.0003 7.3333 15.0003H15V7.33365C15 6.96546 15.2985 6.66699 15.6667 6.66699H16.3333C16.7015 6.66699 17 6.96546 17 7.33365V15.0003H24.6667C25.0349 15.0003 25.3333 15.2988 25.3333 15.667Z"
+                            	fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tmm-faq3-answer">
+                      <div class="tmm-margin-bottom tmm-margin-small">
+                        <div class="tmm-max-width-large">
+                          <p>
+                            To learn more about the blog post topic, you can read related articles on our website or reach
+                            out to our support team.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {%- endfor %}
+              {%- endif %}
+            </div>
+          </div>
+          <div class="tmm-margin-top margin-xxlarge">
+            <div class="tmm-max-width-medium">
+              <div class="tmm-margin-bottom tmm-margin-xsmall">
+                <h4>{{- section.settings.info_heading -}}</h4>
+              </div>
+              <p class="tmm-text-size-medium">{{- section.settings.info_text -}}</p>
+              <div class="tmm-margin-top margin-medium">
+                {%- if section.settings.button_url != blank -%}
+                  <a
+                    href="{{ section.settings.button_url }}"
+                    class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                  >
+                    {{- section.settings.button_text -}}
+                  </a>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "TMM - Gallery 2",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1",
+      "info": "Only applicable for themes that have color schemes enabled."
+    },
+    {
+      "type": "text",
+      "id": "header_text",
+      "default": "Browse our Gallery",
+      "label": "Header"
+    },
+    {
+      "type": "select",
+      "id": "header_size",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        }
+      ],
+      "default": "h2",
+      "label": "Header tag size"
+    },
+    {
+      "type": "select",
+      "id": "header_text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "capitalize",
+      "label": "Header text transform"
+    },
+    {
+      "type": "text",
+      "id": "body_text",
+      "default": "Discover our top-selling products and happy customers",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "body_text_transformation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "none",
+      "label": "Body text transform"
+    },
+    {
+      "type": "text",
+      "id": "info_heading",
+      "default": "Still have questions?",
+      "label": "Bottom information header"
+    },
+    {
+      "type": "text",
+      "id": "info_text",
+      "default": "Contact our support team for further assistance.",
+      "label": "Bottom information text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Buy now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button url"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "default": "#000000",
+      "label": "Button color"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "default": "#ffffff",
+      "label": "Button text color"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "solid",
+      "label": "Button style"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "default": "What is your refund and returns policy?",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "default": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.<p>",
+          "label": "Answer"
+        },
+      ]
+    }
+  ],
+   "presets": [
+    {
+      "name": "TMM - Gallery 2"
+    }
+  ]
+}
 {% endschema %}
