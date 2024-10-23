@@ -466,6 +466,17 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "tmm_divider_GyPqTQ": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -483,6 +494,7 @@
     "tmm_features_VEN6TG",
     "tmm_divider_aTkUk3",
     "tmm_newsletter_NU8WjM",
+    "tmm_divider_GyPqTQ",
     "tmm_gallery_grhwQz"
   ]
 }
