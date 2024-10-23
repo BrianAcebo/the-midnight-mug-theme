@@ -28,7 +28,7 @@
       {%- if block.settings.image_orientation == 'landscape' -%}
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }},
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} .tmm-gallery2-image_wrap {
-          height: 300px;
+          height: 150px;
         }
       {%- elsif block.settings.image_orientation == 'portrait' -%}
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }},
@@ -38,8 +38,7 @@
       {%- else -%}
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }},
         .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} .tmm-gallery2-image_wrap {
-          width: 450px;
-          height: 450px;
+          height: 400px;
         }
       {%- endif -%}
 
@@ -87,7 +86,7 @@
                       {% capture widths %}{{ block.settings.image.width }}, {{ block.settings.image.width | times: 1.5 | round }}, {{ block.settings.image.width | times: 2 }}{% endcapture %}
                       {{
                         block.settings.image
-                        | image_url: width: 1200
+                        | image_url: width: 12000
                         | image_tag:
                           class: 'tmm-gallery2-image',
                           widths: widths,
