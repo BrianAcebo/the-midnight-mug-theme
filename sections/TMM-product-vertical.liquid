@@ -51,98 +51,96 @@
                 <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
               </div>
             {%- endif -%}
-            {%- if section.settings.heading != blank -%}
-              <div class="tmm-margin-bottom tmm-margin-xsmall">
-                <{{ section.settings.heading_size }} class="tmm-sticky1-heading_text">
-                  {{- section.settings.heading -}}
-                </{{ section.settings.heading_size }}>
-              </div>
-            {%- endif -%}
-            {%- if section.settings.body_text != blank -%}
-              <p class="tmm-sticky1-body_text">
-                {{- section.settings.body_text -}}
-              </p>
-            {%- endif -%}
-            {%- if section.settings.button_url != blank -%}
-              <div class="tmm-margin-top margin-medium">
-                <a
-                  href="{{ section.settings.button_url }}"
-                  class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
-                >
-                  {{- section.settings.button_text -}}
-                </a>
-              </div>
-            {%- endif -%}
+            <div class="tmm-margin-bottom tmm-margin-xsmall">
+              <{{ section.settings.heading_size }} class="tmm-sticky1-heading_text">
+                {{- section.settings.heading -}}
+              </{{ section.settings.heading_size }}>
+            </div>
+            <p class="tmm-sticky1-body_text">
+              {{- section.settings.body_text -}}
+            </p>
+            <div class="tmm-margin-top margin-medium">
+              <a
+                href="{{ section.settings.button_url }}"
+                class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+              >
+                {{- section.settings.button_text -}}
+              </a>
+            </div>
           </div>
           <div class="tmm-sticky1-items">
             <div class="tmm-layout-grid tmm-sticky1-items_list">
               {%- if section.blocks.size > 0 -%}
-                <div class="tmm-sticky1-list_item">
-                  <div class="tmm-sticky1-image_wrap">
-                    <a
-                      href="{{ product.url }}"
-                      class="tmm-sticky1-image_wrap"
-                    >
-                      {%- if product.featured_image != blank -%}
-                        {% capture sizes %}(max-width: {{ product.featured_image.width | times: 2 }}px) 50vw, {{ product.featured_image.width }}px{% endcapture %}
-                        {% capture widths %}{{ product.featured_image.width }}, {{ product.featured_image.width | times: 1.5 | round }}, {{ product.featured_image.width | times: 2 }}{% endcapture %}
-                        {{
-                          product.featured_image
-                          | image_url: width: 800
-                          | image_tag:
-                            class: 'tmm-sticky1-image',
-                            widths: widths,
-                            height: product.featured_image.height,
-                            width: product.featured_image.width,
-                            alt: product.featured_image.alt,
-                            sizes: sizes,
-                            preload: true
-                        }}
-                      {%- else -%}
-                        {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
-                      {%- endif -%}
-                    </a>
-                  </div>
-                  <div class="tmm-sticky1-item_content">
-                    <div class="tmm-margin-bottom tmm-margin-xsmall">
-                      <div class="tmm-sitcky1-item_title">
-                        <h3 class="tmm-text-weight-semibold">
-                          {{- product.title -}}
-                        </h3>
-                        <p class="tmm-sticky1-item-content_middle">
-                          {%- case section.settings.price_style -%}
-                            {%- when 'money' -%}
-                              {{- product.price | money -}}
-                            {%- when 'money_with_currency' -%}
-                              {{- product.price | money_with_currency -}}
-                            {%- when 'money_without_currency' -%}
-                              {{- product.price | money_without_currency -}}
-                            {%- when 'money_without_trailing_zeros' -%}
-                              {{- product.price | money_without_trailing_zeros -}}
-                          {%- endcase -%}
-                        </p>
-                      </div>
+                {%- for block in section.blocks -%}
+                  <div class="tmm-sticky1-list_item" {{ block.shopify_attributes }}>
+                    <div class="tmm-sticky1-image_wrap">
+                      <a
+                        href="{{ block.product.url }}"
+                        class="tmm-sticky1-image_wrap"
+                      >
+                        {%- if block.product.featured_image != blank -%}
+                          {% capture sizes %}(max-width: {{ block.product.featured_image.width | times: 2 }}px) 50vw, {{ block.product.featured_image.width }}px{% endcapture %}
+                          {% capture widths %}{{ block.product.featured_image.width }}, {{ block.product.featured_image.width | times: 1.5 | round }}, {{ block.product.featured_image.width | times: 2 }}{% endcapture %}
+                          {{
+                            block.product.featured_image
+                            | image_url: width: 800
+                            | image_tag:
+                              class: 'tmm-sticky1-image',
+                              widths: widths,
+                              height: block.product.featured_image.height,
+                              width: block.product.featured_image.width,
+                              alt: block.product.featured_image.alt,
+                              sizes: sizes,
+                              preload: true
+                          }}
+                        {%- else -%}
+                          {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
+                        {%- endif -%}
+                      </a>
                     </div>
-                    <p>
-                      {{- product.description -}}
-                    </p>
+                    <div class="tmm-sticky1-item_content">
+                      <div class="tmm-margin-bottom tmm-margin-xsmall">
+                        <div class="tmm-sitcky1-item_title">
+                          <h3 class="tmm-text-weight-semibold">
+                            {{- block.product.title -}}
+                          </h3>
+                          <p class="tmm-sticky1-item-content_middle">
+                            {%- case section.settings.price_style -%}
+                              {%- when 'money' -%}
+                                {{- block.product.price | money -}}
+                              {%- when 'money_with_currency' -%}
+                                {{- block.product.price | money_with_currency -}}
+                              {%- when 'money_without_currency' -%}
+                                {{- block.product.price | money_without_currency -}}
+                              {%- when 'money_without_trailing_zeros' -%}
+                                {{- block.product.price | money_without_trailing_zeros -}}
+                            {%- endcase -%}
+                          </p>
+                        </div>
+                      </div>
+                      <p>
+                        {{- block.product.description -}}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                {%- endfor -%}
               {%- else -%}
-                <div class="tmm-sticky1-list_item">
-                  <div class="tmm-sticky1-image_wrap">
-                    {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
-                  </div>
-                  <div class="tmm-sticky1-item_content">
-                    <div class="tmm-margin-bottom tmm-margin-xsmall">
-                      <div class="tmm-sitcky1-item_title">
-                        <h3 class="tmm-text-weight-semibold">Product Title</h3>
-                        <p class="tmm-sticky1-item-content_middle">$51</p>
-                      </div>
+                {%- for i in (1..3) -%}
+                  <div class="tmm-sticky1-list_item">
+                    <div class="tmm-sticky1-image_wrap">
+                      {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
                     </div>
-                    <p>Say goodbye to bland dinners—this spoon enhances flavors!</p>
+                    <div class="tmm-sticky1-item_content">
+                      <div class="tmm-margin-bottom tmm-margin-xsmall">
+                        <div class="tmm-sitcky1-item_title">
+                          <h3 class="tmm-text-weight-semibold">Product Title</h3>
+                          <p class="tmm-sticky1-item-content_middle">$51</p>
+                        </div>
+                      </div>
+                      <p>Say goodbye to bland dinners—this spoon enhances flavors!</p>
+                    </div>
                   </div>
-                </div>
+                {%- endfor -%}
               {%- endif -%}
             </div>
           </div>
