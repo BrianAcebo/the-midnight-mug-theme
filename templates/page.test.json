@@ -419,6 +419,17 @@
         "padding_bottom": 36
       }
     },
+    "tmm_divider_GyPqTQ": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tmm_gallery_grhwQz": {
       "type": "TMM-gallery",
       "blocks": {
@@ -467,13 +478,51 @@
         "padding_bottom": 36
       }
     },
-    "tmm_divider_GyPqTQ": {
-      "type": "TMM-divider",
+    "tmm_faq_MyEXwy": {
+      "type": "TMM-faq",
+      "blocks": {
+        "faq_BhxwPP": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your refund and returns policy?",
+            "answer": "<p>To learn more about our refund and returns policy, you can read our <a href=\"/policies/refund-policy\" target=\"_blank\" title=\"Refund Policy\">refunds policy</a> on our website or reach out to our support team.</p><p></p>"
+          }
+        },
+        "faq_NgW3AR": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your refund and returns policy?",
+            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.</p><p></p>"
+          }
+        },
+        "faq_BFhx4B": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your refund and returns policy?",
+            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_BhxwPP",
+        "faq_NgW3AR",
+        "faq_BFhx4B"
+      ],
       "settings": {
-        "color_scheme": "",
-        "container_size": "900",
-        "divider_color": "#000000",
-        "divider_thickness": 1,
+        "color_scheme": "scheme-1",
+        "header_text": "Frequently Asked Questions",
+        "header_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Find answers to commonly asked questions.",
+        "body_text_transformation": "none",
+        "info_heading": "Still have questions?",
+        "info_text": "Contact our support team for further assistance.",
+        "button_text": "Contact Us",
+        "button_url": "shopify://collections",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
+        "page_width": "1600",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -495,6 +544,7 @@
     "tmm_divider_aTkUk3",
     "tmm_newsletter_NU8WjM",
     "tmm_divider_GyPqTQ",
-    "tmm_gallery_grhwQz"
+    "tmm_gallery_grhwQz",
+    "tmm_faq_MyEXwy"
   ]
 }
