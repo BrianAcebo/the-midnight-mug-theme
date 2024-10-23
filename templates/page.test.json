@@ -65,7 +65,7 @@
         "body_text": "Stay up-to-date with the latest trends, tips, and advice on vegan skincare.",
         "body_text_transformation": "none",
         "button1_text": "Explore",
-        "button1_url": "shopify://collections",
+        "button1_url": "shopify://pages/contact",
         "button1_color": "#000000",
         "button1_text_color": "#ffffff",
         "button1_style": "solid",
