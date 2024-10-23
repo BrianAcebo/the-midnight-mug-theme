@@ -579,54 +579,18 @@
         "padding_bottom": 84
       }
     },
-    "tmm_faq_3_3mY9xM": {
+    "tmm_faq_3_7CnR4j": {
       "type": "TMM-faq-3",
-      "blocks": {
-        "faq_RmkcR6": {
-          "type": "faq",
-          "settings": {
-            "question": "What is your refund and returns policy?",
-            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.</p><p></p>"
-          }
-        },
-        "faq_ri3bLb": {
-          "type": "faq",
-          "settings": {
-            "question": "What is your refund and returns policy?",
-            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.<p>"
-          }
-        },
-        "faq_nwHRpW": {
-          "type": "faq",
-          "settings": {
-            "question": "What is your refund and returns policy?",
-            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.<p>"
-          }
-        },
-        "faq_9YbiX4": {
-          "type": "faq",
-          "settings": {
-            "question": "What is your refund and returns policy?",
-            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.<p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_RmkcR6",
-        "faq_ri3bLb",
-        "faq_nwHRpW",
-        "faq_9YbiX4"
-      ],
       "settings": {
         "color_scheme": "",
-        "header_text": "Browse our Gallery",
+        "header_text": "Frequently Asked Questions",
         "header_size": "h2",
         "header_text_transformation": "capitalize",
-        "body_text": "Discover our top-selling products and happy customers",
+        "body_text": "Find answers to commonly asked questions.",
         "body_text_transformation": "none",
         "info_heading": "Still have questions?",
         "info_text": "Contact our support team for further assistance.",
-        "button_text": "Buy now",
+        "button_text": "Contact Us",
         "button_url": "",
         "button_color": "#000000",
         "button_text_color": "#ffffff",
@@ -654,6 +618,6 @@
     "tmm_newsletter_2_UaKDUg",
     "tmm_divider_W6tc6J",
     "tmm_product_vertical_bn6LYH",
-    "tmm_faq_3_3mY9xM"
+    "tmm_faq_3_7CnR4j"
   ]
 }
