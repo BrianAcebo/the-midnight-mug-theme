@@ -44,7 +44,15 @@
   }
 
   {%- for block in section.blocks -%}
-    {%- if block.settings.image != blank -%}
+    {%- liquid
+      if block.settings.image != blank
+       assign block_image = block.settings.image
+      elsif block.settings.product != blank
+        assign block_image = block.settings.product.featured_image
+      endif
+    -%}
+    
+    {%- if block_image != blank -%}
       {%- if block.settings.image_orientation == 'landscape' -%}
         .tmm-section-{{ section.id }} .tmm-sticky1-image-block_{{ block.id }} {
           height: 150px;
