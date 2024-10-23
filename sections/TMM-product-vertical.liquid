@@ -38,6 +38,10 @@
   .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
     opacity: 0.8;
   }
+
+  .tmm-section-{{ section.id }} .tmm-empty-block .tmm-product-list_item_image {
+    aspect-ratio: 1 / 1;
+  }
 {%- endstyle -%}
 
 <section class="tmm-sticky1 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
@@ -124,7 +128,7 @@
                 {%- endfor -%}
               {%- else -%}
                 {%- for i in (1..3) -%}
-                  <div class="tmm-sticky1-list_item">
+                  <div class="tmm-sticky1-list_item tmm-empty-block">
                     <div class="tmm-sticky1-image_wrap">
                       {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
                     </div>
