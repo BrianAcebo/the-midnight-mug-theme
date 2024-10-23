@@ -9,415 +9,49 @@
  */
 {
   "sections": {
-    "tmm_promo_bar_8nKHWa": {
+    "tmm_promo_bar_jMtpTT": {
       "type": "TMM-promo-bar",
       "blocks": {
-        "announcement_gaDLMM": {
+        "announcement_Hz9Bdb": {
+          "type": "announcement",
+          "settings": {
+            "text": "New sale",
+            "link": "shopify://collections"
+          }
+        },
+        "announcement_9bCTCB": {
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
-            "link": ""
+            "link": "shopify://collections"
           }
         },
-        "announcement_qUcDTj": {
+        "announcement_D4hR6p": {
           "type": "announcement",
           "settings": {
-            "text": "123456",
-            "link": "shopify://collections/all"
+            "text": "1234567890",
+            "link": "shopify://products/make-money-with-shopify-ebook"
           }
         }
       },
       "block_order": [
-        "announcement_gaDLMM",
-        "announcement_qUcDTj"
+        "announcement_Hz9Bdb",
+        "announcement_9bCTCB",
+        "announcement_D4hR6p"
       ],
       "settings": {
         "color_scheme": "scheme-1",
         "show_line_separators": true,
         "text_style": "body",
-        "text_transformation": "uppercase",
+        "text_transformation": "capitalize",
         "text_decoration": "none",
         "text_spacing": 4,
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
-    "tmm_navbar_1_bH3xzE": {
-      "type": "TMM-navbar-1",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "sticky_header_type": false,
-        "show_line_separators": false,
-        "menu": "main-menu",
-        "text_transformation": "capitalize",
-        "text_decoration": "none",
-        "text_color": "#000000",
-        "button_type": "outline",
-        "button_text": "Shop Now",
-        "button_link": "shopify://collections/all",
-        "button_color": "#000000",
-        "margin_bottom": 0,
-        "padding_top": 8,
-        "padding_bottom": 8
-      }
-    },
-    "tmm_navbar_2_63mmEF": {
-      "type": "TMM-navbar-2",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "sticky_header_type": false,
-        "show_line_separators": true,
-        "menu": "main-menu",
-        "text_transformation": "capitalize",
-        "text_decoration": "none",
-        "text_color": "#000000",
-        "button1_type": "outline",
-        "button1_text": "Shop Now",
-        "button1_link": "shopify://collections/all",
-        "button1_color": "#000000",
-        "button2_type": "solid",
-        "button2_text": "Shop Now",
-        "button2_link": "shopify://collections/best-sellers",
-        "button2_color": "#020912",
-        "margin_bottom": 0,
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
-    "tmm_breadcrumbs_zmTXwE": {
-      "type": "TMM-breadcrumbs",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "text_decoration": "none",
-        "text_alignment": "flex-start",
-        "text_transformation": "capitalize",
-        "text_spacing": 18,
-        "text_style": "body",
-        "link_color": "#000000",
-        "base_label": "Home",
-        "base_link": "",
-        "show_base_link": true,
-        "shopping_label": "Shop All",
-        "shopping_link": "",
-        "show_shopping_link": true,
-        "padding_top": 36,
-        "padding_bottom": 20
-      }
-    },
-    "tmm_gallery_1_CrH7pE": {
-      "type": "TMM-gallery-1",
-      "blocks": {
-        "image_qKEbWR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "portrait",
-            "overlay_color": "#000000"
-          }
-        },
-        "image_KAraUB": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/wooden-table-with-a-scale-and-pour-over-coffee.jpg",
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "portrait",
-            "overlay_color": "#e4f6ff"
-          }
-        },
-        "image_rxxQAF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "landscape",
-            "overlay_color": "#000000"
-          }
-        },
-        "image_Qn9bey": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/startup-desk.jpg",
-            "object_fit": "cover",
-            "object_position": "bottom",
-            "image_orientation": "landscape",
-            "overlay_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_qKEbWR",
-        "image_KAraUB",
-        "image_rxxQAF",
-        "image_Qn9bey"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "padding_top": 0,
-        "padding_bottom": 20
-      }
-    },
-    "tmm_divider_gYqVhd": {
-      "type": "TMM-divider",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "container_size": "900",
-        "divider_color": "#020912",
-        "divider_thickness": 3,
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "tmm_divider_k3KjkN": {
-      "type": "TMM-divider",
-      "settings": {
-        "color_scheme": "",
-        "container_size": "900",
-        "divider_color": "#000000",
-        "divider_thickness": 1,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "tmm_featured_brands_e4QPk8": {
-      "type": "TMM-featured-brands",
-      "blocks": {
-        "brand_B6UNRL": {
-          "type": "brand",
-          "settings": {
-          }
-        },
-        "brand_khgWxb": {
-          "type": "brand",
-          "settings": {
-          }
-        },
-        "brand_YtFyFJ": {
-          "type": "brand",
-          "settings": {
-          }
-        },
-        "brand_Jzi8nE": {
-          "type": "brand",
-          "settings": {
-          }
-        },
-        "brand_QQBpVR": {
-          "type": "brand",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "brand_B6UNRL",
-        "brand_khgWxb",
-        "brand_YtFyFJ",
-        "brand_Jzi8nE",
-        "brand_QQBpVR"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "brand_spacing": 100,
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "tmm_featured_collection_jxhYwQ": {
-      "type": "TMM-featured-collection",
-      "settings": {
-        "color_scheme": "",
-        "collection": "best-sellers",
-        "caption_text": "Discover",
-        "heading": "Our sleep collection",
-        "heading_size": "h2",
-        "header_text_transformation": "capitalize",
-        "body_text": "Conquer your day with the ultimate comfort experience.",
-        "body_text_transformation": "none",
-        "button_text": "View All",
-        "button_url": "shopify://collections/best-sellers",
-        "button_color": "#e4f6ff",
-        "button_text_color": "#ffffff",
-        "button_style": "solid",
-        "price_style": "money_without_trailing_zeros",
-        "padding_top": 40,
-        "padding_bottom": 36
-      }
-    },
-    "tmm_divider_BWpbip": {
-      "type": "TMM-divider",
-      "settings": {
-        "color_scheme": "",
-        "container_size": "900",
-        "divider_color": "#000000",
-        "divider_thickness": 1,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "tmm_newsletter_2_UaKDUg": {
-      "type": "TMM-newsletter-2",
-      "settings": {
-        "color_scheme": "scheme-1",
-        "heading": "Get exclusive offers and updates",
-        "heading_size": "h2",
-        "header_text_transformation": "capitalize",
-        "header_text_align": "right",
-        "body_text": "Stay up to date with our latest news and promotions.",
-        "body_text_transformation": "none",
-        "button_text": "Submit",
-        "button_color": "#ffdfb8",
-        "button_text_color": "#000000",
-        "button_style": "solid",
-        "input_placeholder": "Enter your email address",
-        "disclaimer_text": "<p>By submitting, you agree to our <a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms and Conditions.</a></p>",
-        "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
-        "padding_top": 72,
-        "padding_bottom": 52
-      }
-    },
-    "tmm_divider_W6tc6J": {
-      "type": "TMM-divider",
-      "settings": {
-        "color_scheme": "",
-        "container_size": "900",
-        "divider_color": "#000000",
-        "divider_thickness": 1,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "tmm_product_vertical_bn6LYH": {
-      "type": "TMM-product-vertical",
-      "blocks": {
-        "product_NE7UYN": {
-          "type": "product",
-          "settings": {
-            "product": "make-money-with-shopify-ebook",
-            "image": "shopify://shop_images/hand-holds-up-a-two-scoop-ice-cream-cone.jpg",
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square",
-            "heading": "SleepPillow 5000",
-            "description": "This newly enhanced design product.",
-            "price_style": "money"
-          }
-        },
-        "product_n6VQii": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "image": "shopify://shop_images/cool-pool-pineapple.jpg",
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square",
-            "heading": "",
-            "description": "",
-            "price_style": "money"
-          }
-        },
-        "product_mYgCga": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "object_fit": "cover",
-            "object_position": "center",
-            "image_orientation": "square",
-            "heading": "",
-            "description": "",
-            "price_style": "money"
-          }
-        }
-      },
-      "block_order": [
-        "product_NE7UYN",
-        "product_n6VQii",
-        "product_mYgCga"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "caption_text": "Discover",
-        "heading": "Our sleep collection",
-        "heading_size": "h2",
-        "header_text_transformation": "capitalize",
-        "body_text": "Conquer your day with the ultimate comfort experience.",
-        "body_text_transformation": "none",
-        "button_text": "Buy now",
-        "button_url": "shopify://collections/all",
-        "button_color": "#020912",
-        "button_text_color": "#ffffff",
-        "button_style": "solid",
-        "padding_top": 84,
-        "padding_bottom": 84
-      }
-    },
-    "tmm_features_n7xbYD": {
-      "type": "TMM-features",
-      "blocks": {
-        "feature_kwGrMz": {
-          "type": "feature",
-          "settings": {
-            "heading": "Nourish and Hydrate Your Skin",
-            "text": "Apply our vegan moisturizer to provide deep hydration and nourishment to your skin. This will help restore its natural glow and elasticity."
-          }
-        },
-        "feature_jr6Tnc": {
-          "type": "feature",
-          "settings": {
-            "heading": "Nourish and Hydrate Your Skin",
-            "text": "Apply our vegan moisturizer to provide deep hydration and nourishment to your skin. This will help restore its natural glow and elasticity."
-          }
-        },
-        "feature_KmaQg4": {
-          "type": "feature",
-          "settings": {
-            "heading": "Nourish and Hydrate Your Skin",
-            "text": "Apply our vegan moisturizer to provide deep hydration and nourishment to your skin. This will help restore its natural glow and elasticity."
-          }
-        }
-      },
-      "block_order": [
-        "feature_kwGrMz",
-        "feature_jr6Tnc",
-        "feature_KmaQg4"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "caption_text": "Discover",
-        "heading": "Achieve Radiant Skin with Our Vegan Skincare",
-        "heading_size": "h2",
-        "header_text_transformation": "capitalize",
-        "body_text": "Our vegan skincare products are carefully crafted using natural ingredients that nourish and rejuvenate. Follow our step-by-step guide to unlock your skin's true potential.",
-        "body_text_transformation": "none",
-        "button1_text": "Explore",
-        "button1_url": "shopify://collections",
-        "button1_color": "#000000",
-        "button1_text_color": "#ffffff",
-        "button1_style": "solid",
-        "button2_text": "Learn more",
-        "button2_url": "shopify://collections",
-        "button2_text_color": "#000000",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
-    "tmm_promo_bar_8nKHWa",
-    "tmm_navbar_1_bH3xzE",
-    "tmm_navbar_2_63mmEF",
-    "tmm_breadcrumbs_zmTXwE",
-    "tmm_gallery_1_CrH7pE",
-    "tmm_divider_gYqVhd",
-    "tmm_divider_k3KjkN",
-    "tmm_featured_brands_e4QPk8",
-    "tmm_featured_collection_jxhYwQ",
-    "tmm_divider_BWpbip",
-    "tmm_newsletter_2_UaKDUg",
-    "tmm_divider_W6tc6J",
-    "tmm_product_vertical_bn6LYH",
-    "tmm_features_n7xbYD"
+    "tmm_promo_bar_jMtpTT"
   ]
 }
