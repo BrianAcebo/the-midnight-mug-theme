@@ -79,7 +79,7 @@
                   {% for setting in block.settings %}
                   {{ block.settings[setting] }}
                 {% endfor %}
-                  {{ block.settings.product }}
+                  {{ block.settings.product.title }}
                   {%- if block.settings.product != blank -%}
                     <a 
                       href="{{ block.settings.product.url }}" 
