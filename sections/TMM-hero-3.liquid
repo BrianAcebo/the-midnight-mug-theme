@@ -55,27 +55,45 @@
                 <p class="tmm-newsletter1-body_text">{{- section.settings.body_text -}}</p>
                 <div class="tmm-margin-top margin-medium">
                   <div class="tmm-button-group">
-                    <a
-                      href="#"
-                      class="tmm-button tmm-button"
-                      >Explore</a
-                    >
-                    <a
-                      href="#"
-                      class="tmm-button tmm-is-secondary tmm-button"
-                      >Learn More</a
-                    >
+                    {%- if section.settings.button1_url != blank -%}
+                      <a
+                        href="{{ section.settings.button1_url }}"
+                        class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button1_style == 'outline' %} tmm-is-secondary{% endif %}"
+                      >
+                        {{- section.settings.button1_text -}}
+                      </a>
+                    {%- endif -%}
+                    {%- if section.settings.button2_url != blank -%}
+                      <a
+                        href="{{ section.settings.button2_url }}"
+                        class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button2_style == 'outline' %} tmm-is-secondary{% endif %}"
+                      >
+                        {{- section.settings.button2_text -}}
+                      </a>
+                    {%- endif -%}
                   </div>
                 </div>
               </div>
             </div>
             <div class="tmm-hero3-image_wrap">
-              <img
-                src="images/Placeholder-Image---Landscape.svg"
-                loading="eager"
-                alt=""
-                class="tmm-hero3-image"
-              >
+              {%- if section.settings.image != blank -%}
+                {% capture sizes %}(max-width: {{ section.settings.image.width | times: 2 }}px) 50vw, {{ section.settings.image.width }}px{% endcapture %}
+                {% capture widths %}{{ section.settings.image.width }}, {{ section.settings.image.width | times: 1.5 | round }}, {{ section.settings.image.width | times: 2 }}{% endcapture %}
+                {{
+                  section.settings.image
+                  | image_url: width: 2600
+                  | image_tag:
+                    class: 'tmm-hero3-image',
+                    widths: widths,
+                    height: section.settings.image.height,
+                    width: section.settings.image.width,
+                    alt: section.settings.image.alt,
+                    sizes: sizes,
+                    preload: true
+                }}
+              {%- else -%}
+                {%- render 'TMM-placeholder', class: 'tmm-hero3-image' -%}
+              {%- endif -%}
             </div>
           </div>
         </div>
@@ -195,6 +213,11 @@
       "default": "Explore"
     },
     {
+      "type": "url",
+      "id": "button1_url",
+      "label": "Button one url"
+    },
+    {
       "type": "color",
       "id": "button1_color",
       "default": "#000000",
@@ -227,6 +250,11 @@
       "id": "button2_text",
       "label": "Button two text",
       "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button2_url",
+      "label": "Button two url"
     },
     {
       "type": "color",
