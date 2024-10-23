@@ -3024,6 +3024,7 @@
   grid-auto-columns: 1fr;
   align-items: start;
   display: grid;
+  text-decoration: none;
 }
 
 .tmm-sticky1-items_list {
