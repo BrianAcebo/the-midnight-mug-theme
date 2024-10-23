@@ -46,16 +46,16 @@
   {%- for block in section.blocks -%}
     {%- if block.settings.image != blank -%}
       {%- if block.settings.image_orientation == 'landscape' -%}
-        .tmm-section-{{ section.id }} .tmm-sticky1-image__{{ block.id }} {
+        .tmm-section-{{ section.id }} .tmm-sticky1-image-block_{{ block.id }} {
           height: 150px;
         }
       {%- elsif block.settings.image_orientation == 'portrait' -%}
-        .tmm-section-{{ section.id }} .tmm-sticky1-image__{{ block.id }} {
+        .tmm-section-{{ section.id }} .tmm-sticky1-image-block_{{ block.id }} {
           height: 400px;
         }
       {%- endif -%}
 
-      .tmm-section-{{ section.id }} .tmm-gallery2-image-block_{{ block.id }} .tmm-gallery2-image {
+      .tmm-section-{{ section.id }} .tmm-sticky1-image-block_{{ block.id }} .tmm-gallery2-image {
         object-fit: {{ block.settings.object_fit }};
         object-position: {{ block.settings.object_position }};
       }
@@ -113,7 +113,7 @@
                           assign block_image = block.settings.product.featured_image
                         endif
 
-                         assign image_class = 'tmm-sticky1-image tmm-sticky1-image_' | append: block.id
+                         assign image_class = 'tmm-sticky1-image tmm-sticky1-image-block' | append: block.id
                       -%}
                       {%- if block_image != blank -%}
                         {% capture sizes %}(max-width: {{ block_image.width | times: 2 }}px) 50vw, {{ block_image.width }}px{% endcapture %}
@@ -374,7 +374,7 @@
   ],
   "blocks": [
     {
-      "type": "slider",
+      "type": "product",
       "name": "Product",
       "settings": [
         {
