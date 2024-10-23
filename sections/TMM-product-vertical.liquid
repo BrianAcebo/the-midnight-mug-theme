@@ -76,7 +76,6 @@
             <div class="tmm-layout-grid tmm-sticky1-items_list">
               {%- if section.blocks.size > 0 -%}
                 {%- for block in section.blocks -%}
-                  {{ block.settings.product | json }}
                   {%- if block.settings.product != blank -%}
                     <a 
                       href="{{ block.settings.product.url }}" 
