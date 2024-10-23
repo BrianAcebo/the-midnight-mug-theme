@@ -139,6 +139,7 @@
         "header_size": "h2",
         "header_text_transformation": "capitalize",
         "body_text_transformation": "none",
+        "page_width": "1200",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -150,7 +151,7 @@
           "type": "slider",
           "settings": {
             "product": "",
-            "image": "shopify://shop_images/cool-pool-pineapple.jpg",
+            "image": "shopify://shop_images/creamy-cold-drink-sits-on-a-wooden-table.jpg",
             "heading": "SleepCloud Pillow",
             "header_text_transformation": "none",
             "heading_size": "h2",
@@ -188,6 +189,71 @@
         "color_scheme": "scheme-1",
         "arrow_button_color": "#000000",
         "arrow_color": "#ffffff",
+        "page_width": "1200",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "tmm_product_vertical_slider_CDaQcf": {
+      "type": "TMM-product-vertical-slider",
+      "blocks": {
+        "product_y6RRfV": {
+          "type": "product",
+          "settings": {
+            "product": "how-to-make-money-with-shopify-ultimate-bundle",
+            "image": "shopify://shop_images/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "portrait",
+            "heading": "Cool Face Roller",
+            "description": "This is a cool face roller.",
+            "price_style": "money_with_currency"
+          }
+        },
+        "product_C6pbqi": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "",
+            "description": "",
+            "price_style": "money"
+          }
+        },
+        "product_fWtTNA": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "",
+            "description": "",
+            "price_style": "money"
+          }
+        }
+      },
+      "block_order": [
+        "product_y6RRfV",
+        "product_C6pbqi",
+        "product_fWtTNA"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "caption_text": "Discover",
+        "heading": "Our sleep collection",
+        "heading_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Conquer your day with the ultimate comfort experience.",
+        "body_text_transformation": "none",
+        "button_text": "Buy now",
+        "button_url": "shopify://collections",
+        "button_color": "#020912",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
+        "page_width": "1200",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -197,6 +263,7 @@
     "tmm_promo_bar_jMtpTT",
     "tmm_hero_tncMBf",
     "tmm_tabs_CDgip7",
-    "tmm_slider_Utyk6C"
+    "tmm_slider_Utyk6C",
+    "tmm_product_vertical_slider_CDaQcf"
   ]
 }
