@@ -23,15 +23,26 @@
     transition: 0.2s;
   }
 
-  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
-    background-color: {{ section.settings.button_color }};
-    border: 1px solid {{ section.settings.button_color }};
-    color: {{ section.settings.button_text_color }};
+  .tmm-section-{{ section.id }} .tmm-button_{{ section.id }}.tmm-button-1 {
+    background-color: {{ section.settings.button1_color }};
+    border: 1px solid {{ section.settings.button1_color }};
+    color: {{ section.settings.button1_text_color }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
+  .tmm-section-{{ section.id }} .tmm-button_{{ section.id }}.tmm-button-2 {
+    background-color: {{ section.settings.button2_color }};
+    border: 1px solid {{ section.settings.button2_color }};
+    color: {{ section.settings.button2_text_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button_{{ section.id }}.tmm-button-1.tmm-is-secondary {
     background-color: transparent;
-    border: 1px solid {{ section.settings.button_color }};
+    border: 1px solid {{ section.settings.button1_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-button_{{ section.id }}.tmm-button-2.tmm-is-secondary {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.button2_color }};
   }
 
   .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
@@ -57,7 +68,7 @@
                   {%- if section.settings.button1_url != blank -%}
                     <a
                       href="{{ section.settings.button1_url }}"
-                      class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button1_style == 'outline' %} tmm-is-secondary{% endif %}"
+                      class="tmm-button_{{ section.id }} tmm-button-1 tmm-button-primary tmm-button{% if section.settings.button1_style == 'outline' %} tmm-is-secondary{% endif %}"
                     >
                       {{- section.settings.button1_text -}}
                     </a>
@@ -65,7 +76,7 @@
                   {%- if section.settings.button2_url != blank -%}
                     <a
                       href="{{ section.settings.button2_url }}"
-                      class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button2_style == 'outline' %} tmm-is-secondary{% endif %}"
+                      class="tmm-button_{{ section.id }} tmm-button-2 tmm-button-primary tmm-button{% if section.settings.button2_style == 'outline' %} tmm-is-secondary{% endif %}"
                     >
                       {{- section.settings.button2_text -}}
                     </a>
