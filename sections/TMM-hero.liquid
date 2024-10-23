@@ -70,6 +70,21 @@
     margin: {{ section.settings.content_alignment }};
     text-align: {{ section.settings.text_alignment }};
   }
+
+  .tmm-section-{{ section.id }} .tmm-buttons-group-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-buttons-group-center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-buttons-group-right {
+    display: flex;
+    justify-content: flex-end;
+  }
 {%- endstyle -%}
 
 <section class="tmm-hero3 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
@@ -85,7 +100,7 @@
                 </{{ section.settings.heading_size }}>
               </div>
               <p class="tmm-hero3-body_text">{{- section.settings.body_text -}}</p>
-              <div class="tmm-margin-top margin-medium">
+              <div class="tmm-margin-top margin-medium tmm-buttons-group-{{ section.settings.text_alignment }}">
                 <div class="tmm-button-group">
                   {%- if section.settings.button1_url != blank -%}
                     <a
@@ -210,7 +225,7 @@
           "label": "Center"
         },
         {
-          "value": "0 0 auto 0",
+          "value": "0 0 0 auto",
           "label": "Right"
         }
       ],
@@ -234,7 +249,7 @@
           "label": "Right"
         }
       ],
-      "default": "center",
+      "default": "left",
       "label": "Text alignment"
     },
     {
