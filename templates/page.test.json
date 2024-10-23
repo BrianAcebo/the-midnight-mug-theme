@@ -379,7 +379,7 @@
         "button1_text_color": "#ffffff",
         "button1_style": "solid",
         "button2_text": "Learn more",
-        "button2_url": "shopify://collections",
+        "button2_url": "shopify://pages/data-sale-opt-out",
         "button2_text_color": "#000000",
         "page_width": "1600",
         "padding_top": 36,
