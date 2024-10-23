@@ -46,11 +46,9 @@
       <div class="tmm-container-large">
         <div class="tmm-layout-grid tmm-sticky1-container">
           <div class="tmm-sticky1-content">
-            {%- if section.settings.caption_text != blank -%}
-              <div class="tmm-margin-bottom tmm-margin-xsmall">
-                <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
-              </div>
-            {%- endif -%}
+            <div class="tmm-margin-bottom tmm-margin-xsmall">
+              <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
+            </div>
             <div class="tmm-margin-bottom tmm-margin-xsmall">
               <{{ section.settings.heading_size }} class="tmm-sticky1-heading_text">
                 {{- section.settings.heading -}}
