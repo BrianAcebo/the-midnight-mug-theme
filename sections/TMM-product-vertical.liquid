@@ -61,14 +61,16 @@
             <p class="tmm-sticky1-body_text">
               {{- section.settings.body_text -}}
             </p>
-            <div class="tmm-margin-top margin-medium">
-              <a
-                href="{{ section.settings.button_url }}"
-                class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
-              >
-                {{- section.settings.button_text -}}
-              </a>
-            </div>
+            {%- if section.settings.button_url != blank -%}
+              <div class="tmm-margin-top margin-medium">
+                <a
+                  href="{{ section.settings.button_url }}"
+                  class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                >
+                  {{- section.settings.button_text -}}
+                </a>
+              </div>
+            {%- endif -%}
           </div>
           <div class="tmm-sticky1-items">
             <div class="tmm-layout-grid tmm-sticky1-items_list">
