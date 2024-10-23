@@ -402,7 +402,7 @@
         "button_style": "solid",
         "input_placeholder": "Enter your email address",
         "disclaimer_text": "<p>By submitting, you agree to our <a href=\"/policies/terms-of-service\" target=\"_blank\" title=\"Terms of Service\">Terms and Conditions</a></p>",
-        "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
+        "success_text": "<p>Thank you for joining!</p>",
         "page_width": "1600",
         "padding_top": 36,
         "padding_bottom": 36
