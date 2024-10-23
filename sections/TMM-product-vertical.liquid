@@ -68,6 +68,11 @@
         object-position: {{ block.settings.object_position }};
       }
     {%- endif -%}
+
+    {%- liquid
+       # Must reset block_image to clear variable assignment for future blocks
+      assign block_image = blank
+    -%}
   {%- endfor -%}
 {%- endstyle -%}
 
@@ -138,6 +143,10 @@
                             sizes: sizes,
                             preload: true
                         }}
+                        {%- liquid
+                           # Must reset block_image to clear variable assignment for future blocks
+                          assign block_image = blank
+                        -%}
                       {%- else -%}
                         {%- render 'TMM-placeholder', class: 'tmm-product-list_item_image' -%}
                       {%- endif -%}
