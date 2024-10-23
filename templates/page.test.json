@@ -355,6 +355,26 @@
     },
     "tmm_features_n7xbYD": {
       "type": "TMM-features",
+      "blocks": {
+        "feature_kwGrMz": {
+          "type": "feature",
+          "settings": {
+            "heading": "Nourish and Hydrate Your Skin",
+            "text": "Apply our vegan moisturizer to provide deep hydration and nourishment to your skin. This will help restore its natural glow and elasticity."
+          }
+        },
+        "feature_jr6Tnc": {
+          "type": "feature",
+          "settings": {
+            "heading": "Nourish and Hydrate Your Skin",
+            "text": "Apply our vegan moisturizer to provide deep hydration and nourishment to your skin. This will help restore its natural glow and elasticity."
+          }
+        }
+      },
+      "block_order": [
+        "feature_kwGrMz",
+        "feature_jr6Tnc"
+      ],
       "settings": {
         "color_scheme": "",
         "caption_text": "Discover",
