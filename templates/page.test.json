@@ -74,6 +74,7 @@
         "button2_color": "#000000",
         "button2_text_color": "#000000",
         "button2_style": "outline",
+        "page_width": "1600",
         "padding_top": 36,
         "padding_bottom": 36
       }
