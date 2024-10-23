@@ -106,24 +106,36 @@
                       <div class="tmm-margin-bottom tmm-margin-xsmall">
                         <div class="tmm-sitcky1-item_title">
                           <h3 class="tmm-text-weight-semibold">
-                            {{- block.product.title -}}
+                            {%- if block.product != blank -%}
+                              {{- block.product.title -}}
+                            {%- else -%}
+                              Product Title
+                            {%- endif -%}
                           </h3>
                           <p class="tmm-sticky1-item-content_middle">
-                            {%- case section.settings.price_style -%}
-                              {%- when 'money' -%}
-                                {{- block.product.price | money -}}
-                              {%- when 'money_with_currency' -%}
-                                {{- block.product.price | money_with_currency -}}
-                              {%- when 'money_without_currency' -%}
-                                {{- block.product.price | money_without_currency -}}
-                              {%- when 'money_without_trailing_zeros' -%}
-                                {{- block.product.price | money_without_trailing_zeros -}}
-                            {%- endcase -%}
+                            {%- if block.product != blank -%}
+                              {%- case section.settings.price_style -%}
+                                {%- when 'money' -%}
+                                  {{- block.product.price | money -}}
+                                {%- when 'money_with_currency' -%}
+                                  {{- block.product.price | money_with_currency -}}
+                                {%- when 'money_without_currency' -%}
+                                  {{- block.product.price | money_without_currency -}}
+                                {%- when 'money_without_trailing_zeros' -%}
+                                  {{- block.product.price | money_without_trailing_zeros -}}
+                              {%- endcase -%}
+                            {%- else -%}
+                              $51
+                            {%- endif -%}
                           </p>
                         </div>
                       </div>
                       <p>
-                        {{- block.product.description -}}
+                        {%- if block.product != blank -%}
+                          {{- block.product.description -}}
+                        {%- else -%}
+                          Say goodbye to bland dinners—this spoon enhances flavors!
+                        {%- endif -%}
                       </p>
                     </div>
                   </div>
