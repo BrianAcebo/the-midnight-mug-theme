@@ -76,7 +76,7 @@
             <div class="tmm-layout-grid tmm-sticky1-items_list">
               {%- if section.blocks.size > 0 -%}
                 {%- for block in section.blocks -%}
-                  <div class="tmm-sticky1-list_item" {{ block.shopify_attributes }}>
+                  <div class="tmm-sticky1-list_item{% if block.product == blank %} tmm-empty-block{% endif %}" {{ block.shopify_attributes }}>
                     <div class="tmm-sticky1-image_wrap">
                       <a
                         href="{{ block.product.url }}"
