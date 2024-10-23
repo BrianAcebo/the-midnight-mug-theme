@@ -504,6 +504,19 @@
           "type": "product",
           "settings": {
             "product": "make-money-with-shopify-ebook",
+            "image": "shopify://shop_images/hand-holds-up-a-two-scoop-ice-cream-cone.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "SleepPillow 5000",
+            "description": "This newly enhanced design product.",
+            "price_style": "money"
+          }
+        },
+        "product_n6VQii": {
+          "type": "product",
+          "settings": {
+            "product": "",
             "object_fit": "cover",
             "object_position": "center",
             "image_orientation": "square",
@@ -514,7 +527,8 @@
         }
       },
       "block_order": [
-        "product_NE7UYN"
+        "product_NE7UYN",
+        "product_n6VQii"
       ],
       "settings": {
         "color_scheme": "scheme-1",
