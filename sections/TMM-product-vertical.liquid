@@ -343,13 +343,148 @@
   ],
   "blocks": [
     {
-      "type": "product_slide",
-      "name": "Product",
+      "type": "slider",
+      "name": "Slide",
       "settings": [
         {
           "type": "product",
           "id": "product",
           "label": "Product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Header",
+          "default": "SleepCloud Pillow",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "select",
+          "id": "header_text_transformation",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "uppercase",
+              "label": "Uppercase"
+            },
+            {
+              "value": "lowercase",
+              "label": "Lowercase"
+            },
+            {
+              "value": "capitalize",
+              "label": "Capitalize"
+            }
+          ],
+          "default": "capitalize",
+          "label": "Header text transform"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            },
+            {
+              "value": "h4",
+              "label": "H4"
+            },
+            {
+              "value": "h5",
+              "label": "H5"
+            }
+          ],
+          "default": "h2",
+          "label": "Header tag size"
+        },
+        {
+          "type": "text",
+          "id": "body_text",
+          "label": "Body text",
+          "default": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
+          "info": "This is used as a fallback if no product is selected."
+        },
+        {
+          "type": "select",
+          "id": "body_text_transformation",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "uppercase",
+              "label": "Uppercase"
+            },
+            {
+              "value": "lowercase",
+              "label": "Lowercase"
+            },
+            {
+              "value": "capitalize",
+              "label": "Capitalize"
+            }
+          ],
+          "default": "none",
+          "label": "Body text transform"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Buy now"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button url"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "default": "#000000",
+          "label": "Button color"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "default": "#ffffff",
+          "label": "Button text color"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "Solid"
+            },
+            {
+              "value": "outline",
+              "label": "Outline"
+            }
+          ],
+          "default": "solid",
+          "label": "Button style"
         }
       ]
     }
