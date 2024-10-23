@@ -113,7 +113,7 @@
                           assign block_image = block.settings.product.featured_image
                         endif
 
-                         assign image_class = 'tmm-sticky1-image tmm-sticky1-image-block' | append: block.id
+                         assign image_class = 'tmm-sticky1-image tmm-sticky1-image-block_' | append: block.id
                       -%}
                       {%- if block_image != blank -%}
                         {% capture sizes %}(max-width: {{ block_image.width | times: 2 }}px) 50vw, {{ block_image.width }}px{% endcapture %}
