@@ -1140,8 +1140,6 @@
 .tmm-slider1-content_block {
   width: 60%;
   max-width: 400px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .tmm-slider1-content_wrap {
@@ -4310,8 +4308,8 @@
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .tmm-slider1-content_wrap {
