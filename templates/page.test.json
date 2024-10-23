@@ -355,11 +355,29 @@
             "button_text_color": "#020912",
             "button_style": "solid"
           }
+        },
+        "slider_MjeFCC": {
+          "type": "slider",
+          "settings": {
+            "product": "",
+            "image": "shopify://shop_images/rack-of-womens-clothing.jpg",
+            "heading": "SleepCloud Pillow",
+            "header_text_transformation": "capitalize",
+            "heading_size": "h2",
+            "body_text": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
+            "body_text_transformation": "none",
+            "button_text": "Buy now",
+            "button_url": "",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid"
+          }
         }
       },
       "block_order": [
         "slider_RhG39K",
-        "slider_QJ94LM"
+        "slider_QJ94LM",
+        "slider_MjeFCC"
       ],
       "settings": {
         "color_scheme": "scheme-4",
