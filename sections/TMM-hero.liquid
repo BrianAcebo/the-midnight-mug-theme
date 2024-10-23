@@ -11,6 +11,11 @@
     }
   }
 
+  .tmm-section-{{ section.id }} .tmm-padding-global {
+    max-width: {{ section.settings.page_width }}px;
+    width: 100%;
+  }
+
   .tmm-section-{{ section.id }} .tmm-hero3-heading_text {
     text-transform: {{ section.settings.header_text_transformation }};
   }
@@ -427,6 +432,26 @@
     {
       "type": "header",
       "content": "Section padding"
+    },
+    {
+      "type": "select",
+      "id": "page_width",
+      "options": [
+        {
+          "value": "800",
+          "label": "Small"
+        },
+        {
+          "value": "1200",
+          "label": "Medium"
+        },
+        {
+          "value": "1600",
+          "label": "Large"
+        }
+      ],
+      "default": "1200",
+      "label": "Page width size"
     },
     {
       "type": "range",
