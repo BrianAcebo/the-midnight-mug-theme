@@ -61,14 +61,20 @@
     height: 750px;
   }
 
-  .tmm-section-{{ section.id }} .tmm-max-width-xxlarge.tmm-shift-right {
-    margin-right: 0;
-    margin-left: auto;
+  .tmm-section-{{ section.id }} .tmm-max-width-xxlarge {
+    text-align: {{ section.settings.text_alignment }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-max-width-xxlarge {
-    margin: {{ section.settings.content_alignment }};
-    text-align: {{ section.settings.text_alignment }};
+  .tmm-section-{{ section.id }} .tmm-hero3-content-left {
+    margin: 0 auto 0 0;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-hero3-content-center {
+    margin: 0 auto;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-hero3-content-right {
+    margin: 0 0 0 auto;
   }
 
   .tmm-section-{{ section.id }} .tmm-buttons-group-left {
@@ -93,7 +99,7 @@
       <div class="tmm-container-large">
         <div class="tmm-hero3_container">
           <div class="tmm-margin-bottom tmm-margin-xxlarge">
-            <div class="tmm-max-width-xxlarge">
+            <div class="tmm-max-width-xxlarge tmm-hero3-content-{{ section.settings.content_alignment }}">
               <div class="tmm-margin-bottom tmm-margin-small">
                 <{{ section.settings.heading_size }} class="tmm-hero3-heading_text">
                   {{- section.settings.heading -}}
@@ -217,19 +223,19 @@
       "id": "content_alignment",
       "options": [
         {
-          "value": "0 auto 0 0",
+          "value": "left",
           "label": "Left"
         },
         {
-          "value": "0 auto",
+          "value": "center",
           "label": "Center"
         },
         {
-          "value": "0 0 0 auto",
+          "value": "right",
           "label": "Right"
         }
       ],
-      "default": "0 auto 0 0",
+      "default": "left",
       "label": "Content alignment"
     },
     {
