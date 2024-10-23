@@ -581,6 +581,18 @@
     },
     "tmm_faq_3_3mY9xM": {
       "type": "TMM-faq-3",
+      "blocks": {
+        "faq_RmkcR6": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your refund and returns policy?",
+            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_RmkcR6"
+      ],
       "settings": {
         "color_scheme": "",
         "header_text": "Browse our Gallery",
@@ -595,7 +607,7 @@
         "button_color": "#000000",
         "button_text_color": "#ffffff",
         "button_style": "solid",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
