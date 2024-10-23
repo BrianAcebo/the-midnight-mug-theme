@@ -500,15 +500,18 @@
     "tmm_product_vertical_bn6LYH": {
       "type": "TMM-product-vertical",
       "blocks": {
-        "product_slide_VLrE33": {
-          "type": "product_slide",
+        "slider_WVGxgL": {
+          "type": "slider",
           "settings": {
-            "product": "free-cro-guide-optimizing-your-site-and-pages-for-more-money"
+            "product": "",
+            "heading": "here",
+            "description": "",
+            "price_style": "money"
           }
         }
       },
       "block_order": [
-        "product_slide_VLrE33"
+        "slider_WVGxgL"
       ],
       "settings": {
         "color_scheme": "scheme-1",
