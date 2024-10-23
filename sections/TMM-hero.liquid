@@ -60,6 +60,16 @@
   .tmm-section-{{ section.id }} .tmm-hero3-image_wrap.tmm-hero3-image_wrap-large {
     height: 750px;
   }
+
+  .tmm-section-{{ section.id }} .tmm-max-width-xxlarge.tmm-shift-right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .tmm-section-{{ section.id }} .tmm-max-width-xxlarge {
+    margin: {{ section.settings.content_alignment }};
+    text-align: {{ section.settings.text_alignment }};
+  }
 {%- endstyle -%}
 
 <section class="tmm-hero3 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
@@ -186,6 +196,46 @@
       ],
       "default": "medium",
       "label": "Image size"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "0 auto 0 0",
+          "label": "Left"
+        },
+        {
+          "value": "0 auto",
+          "label": "Center"
+        },
+        {
+          "value": "0 0 auto 0",
+          "label": "Right"
+        }
+      ],
+      "default": "0 auto 0 0",
+      "label": "Content alignment"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Text alignment"
     },
     {
       "type": "text",
