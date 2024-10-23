@@ -88,18 +88,25 @@
                   {%- endif -%}
                   <div class="tmm-sticky1-image_wrap">
                     <div class="tmm-sticky1-image_wrap">
-                      {%- if block.settings.product.featured_image != blank -%}
-                        {% capture sizes %}(max-width: {{ block.settings.product.featured_image.width | times: 2 }}px) 50vw, {{ block.settings.product.featured_image.width }}px{% endcapture %}
-                        {% capture widths %}{{ block.settings.product.featured_image.width }}, {{ block.settings.product.featured_image.width | times: 1.5 | round }}, {{ block.settings.product.featured_image.width | times: 2 }}{% endcapture %}
+                      {%- liquid
+                        if block.settings.image != blank
+                         assign block_image = block.settings.image
+                        elsif block.settings.product != blank
+                          assign block_image = block.settings.product.featured_image
+                        endif
+                      -%}
+                      {%- if block_image != blank -%}
+                        {% capture sizes %}(max-width: {{ block_image.width | times: 2 }}px) 50vw, {{ block_image.width }}px{% endcapture %}
+                        {% capture widths %}{{ block_image.width }}, {{ block_image.width | times: 1.5 | round }}, {{ block_image.width | times: 2 }}{% endcapture %}
                         {{
-                          block.settings.product.featured_image
+                          block_image
                           | image_url: width: 800
                           | image_tag:
                             class: 'tmm-sticky1-image',
                             widths: widths,
-                            height: block.settings.product.featured_image.height,
-                            width: block.settings.product.featured_image.width,
-                            alt: block.settings.product.featured_image.alt,
+                            height: block_image.height,
+                            width: block_image.width,
+                            alt: block_image.alt,
                             sizes: sizes,
                             preload: true
                         }}
@@ -111,7 +118,9 @@
                   <div class="tmm-sticky1-item_content">
                     <div class="tmm-sitcky1-item_title">
                       <h3 class="tmm-text-weight-semibold">
-                        {%- if block.settings.product != blank -%}
+                        {%- if block.settings.title != blank -%}
+                          {{- block.settings.title -}}
+                        {%- elsif block.settings.product != blank -%}
                           {{- block.settings.product.title -}}
                         {%- else -%}
                           Product Title
@@ -119,7 +128,7 @@
                       </h3>
                       <p class="tmm-sticky1-item-content_middle">
                         {%- if block.settings.product != blank -%}
-                          {%- case section.settings.price_style -%}
+                          {%- case block.settings.price_style -%}
                             {%- when 'money' -%}
                               {{- block.settings.product.price | money -}}
                             {%- when 'money_with_currency' -%}
@@ -135,7 +144,9 @@
                       </p>
                     </div>
                     <p>
-                      {%- if block.settings.product != blank -%}
+                      {%- if block.settings.description != blank -%}
+                        {{- block.settings.description -}}
+                      {%- elsif block.settings.product != blank -%}
                         {{- block.settings.product.description -}}
                       {%- else -%}
                         Say goodbye to bland dinners—this spoon enhances flavors!
@@ -355,137 +366,46 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image",
-          "info": "This is used as a fallback if no product is selected."
+          "info": "If used, this will replace the selected product's image."
         },
         {
           "type": "text",
           "id": "heading",
           "label": "Header",
           "default": "SleepCloud Pillow",
-          "info": "This is used as a fallback if no product is selected."
-        },
-        {
-          "type": "select",
-          "id": "header_text_transformation",
-          "options": [
-            {
-              "value": "none",
-              "label": "None"
-            },
-            {
-              "value": "uppercase",
-              "label": "Uppercase"
-            },
-            {
-              "value": "lowercase",
-              "label": "Lowercase"
-            },
-            {
-              "value": "capitalize",
-              "label": "Capitalize"
-            }
-          ],
-          "default": "capitalize",
-          "label": "Header text transform"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h1",
-              "label": "H1"
-            },
-            {
-              "value": "h2",
-              "label": "H2"
-            },
-            {
-              "value": "h3",
-              "label": "H3"
-            },
-            {
-              "value": "h4",
-              "label": "H4"
-            },
-            {
-              "value": "h5",
-              "label": "H5"
-            }
-          ],
-          "default": "h2",
-          "label": "Header tag size"
+          "info": "If used, this will replace the selected product's title."
         },
         {
           "type": "text",
-          "id": "body_text",
-          "label": "Body text",
-          "default": "Introducing the SleepCloud Pillow: designed with cutting-edge memory foam and infused with calming aromatherapy, it guarantees the perfect night's sleep! Wake up refreshed and rejuvenated, ready to conquer your day with the ultimate comfort experience!",
-          "info": "This is used as a fallback if no product is selected."
+          "id": "description",
+          "label": "Description",
+          "default": "Say goodbye to bland dinners—this spoon enhances flavors!",
+          "info": "If used, this will replace the selected product's description."
         },
         {
           "type": "select",
-          "id": "body_text_transformation",
+          "id": "price_style",
           "options": [
             {
-              "value": "none",
-              "label": "None"
+              "value": "money",
+              "label": "Money"
             },
             {
-              "value": "uppercase",
-              "label": "Uppercase"
+              "value": "money_with_currency",
+              "label": "Money with currency"
             },
             {
-              "value": "lowercase",
-              "label": "Lowercase"
+              "value": "money_without_currency",
+              "label": "Money without currency"
             },
             {
-              "value": "capitalize",
-              "label": "Capitalize"
+              "value": "money_without_trailing_zeros",
+              "label": "Money without trailing zeros"
             }
           ],
-          "default": "none",
-          "label": "Body text transform"
+          "default": "money",
+          "label": "Product price display"
         },
-        {
-          "type": "text",
-          "id": "button_text",
-          "label": "Button text",
-          "default": "Buy now"
-        },
-        {
-          "type": "url",
-          "id": "button_url",
-          "label": "Button url"
-        },
-        {
-          "type": "color",
-          "id": "button_color",
-          "default": "#000000",
-          "label": "Button color"
-        },
-        {
-          "type": "color",
-          "id": "button_text_color",
-          "default": "#ffffff",
-          "label": "Button text color"
-        },
-        {
-          "type": "select",
-          "id": "button_style",
-          "options": [
-            {
-              "value": "solid",
-              "label": "Solid"
-            },
-            {
-              "value": "outline",
-              "label": "Outline"
-            }
-          ],
-          "default": "solid",
-          "label": "Button style"
-        }
       ]
     }
   ],
