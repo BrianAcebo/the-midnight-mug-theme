@@ -439,7 +439,7 @@
             "image": "shopify://shop_images/flatlay-iron-skillet-with-meat-and-other-food.jpg",
             "object_fit": "cover",
             "object_position": "center",
-            "image_orientation": "portrait"
+            "image_orientation": "square"
           }
         },
         "image_V8aUTT": {
@@ -448,7 +448,7 @@
             "image": "shopify://shop_images/person-carries-a-wooden-box-full-of-dough-balls.jpg",
             "object_fit": "cover",
             "object_position": "center",
-            "image_orientation": "portrait"
+            "image_orientation": "square"
           }
         },
         "image_GaqyAf": {
