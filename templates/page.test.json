@@ -42,8 +42,8 @@
       "settings": {
         "color_scheme": "scheme-1",
         "show_line_separators": true,
-        "text_style": "body",
-        "text_transformation": "capitalize",
+        "text_style": "tmm-text-semibold",
+        "text_transformation": "uppercase",
         "text_decoration": "none",
         "text_spacing": 4,
         "padding_top": 20,
