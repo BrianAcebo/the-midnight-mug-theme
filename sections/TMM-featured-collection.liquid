@@ -53,18 +53,14 @@
                       <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
                     </div>
                   {%- endif -%}
-                  {%- if section.settings.heading != blank -%}
-                    <div class="tmm-margin-bottom tmm-margin-xsmall">
-                      <{{ section.settings.heading_size }} class="tmm-product-list-heading_text">
-                        {{- section.settings.heading -}}
-                      </{{ section.settings.heading_size }}>
-                    </div>
-                  {%- endif -%}
-                  {%- if section.settings.body_text != blank -%}
-                    <p class="tmm-product-list-body_text">
-                      {{- section.settings.body_text -}}
-                    </p>
-                  {%- endif -%}
+                  <div class="tmm-margin-bottom tmm-margin-xsmall">
+                    <{{ section.settings.heading_size }} class="tmm-product-list-heading_text">
+                      {{- section.settings.heading -}}
+                    </{{ section.settings.heading_size }}>
+                  </div>
+                  <p class="tmm-product-list-body_text">
+                    {{- section.settings.body_text -}}
+                  </p>
                 </div>
               </div>
               <div
