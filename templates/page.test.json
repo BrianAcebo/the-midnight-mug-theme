@@ -57,6 +57,8 @@
         "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
         "object_position": "center",
         "image_size": "medium",
+        "content_alignment": "0 0 auto 0",
+        "text_alignment": "right",
         "heading": "Discover the Latest Articles on Vegan Skincare",
         "heading_size": "h1",
         "header_text_transformation": "capitalize",
