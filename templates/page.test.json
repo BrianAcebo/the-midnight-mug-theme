@@ -15,7 +15,7 @@
         "announcement_Hz9Bdb": {
           "type": "announcement",
           "settings": {
-            "text": "New sale",
+            "text": "New sale launching",
             "link": "shopify://collections"
           }
         },
@@ -29,7 +29,7 @@
         "announcement_D4hR6p": {
           "type": "announcement",
           "settings": {
-            "text": "1234567890",
+            "text": "Buy now while time lasts",
             "link": "shopify://products/make-money-with-shopify-ebook"
           }
         }
