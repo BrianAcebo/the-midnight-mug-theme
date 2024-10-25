@@ -54,9 +54,9 @@
       "type": "TMM-hero",
       "settings": {
         "color_scheme": "scheme-1",
-        "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
+        "image": "shopify://shop_images/bath-bomb-spa-tub.jpg",
         "object_position": "center",
-        "image_size": "medium",
+        "image_size": "large",
         "content_alignment": "center",
         "text_alignment": "center",
         "heading": "Discover the Latest Articles on Vegan Skincare",
