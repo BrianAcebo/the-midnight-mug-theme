@@ -558,10 +558,26 @@
             "text": "Welcome to our store",
             "link": ""
           }
+        },
+        "announcement_B4AxnR": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
+        "announcement_wTg4V8": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement_BYqzKc"
+        "announcement_BYqzKc",
+        "announcement_B4AxnR",
+        "announcement_wTg4V8"
       ],
       "settings": {
         "color_scheme": "",
