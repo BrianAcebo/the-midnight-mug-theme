@@ -9,15 +9,50 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "tmm_promo_bar_jMtpTT": {
+      "type": "TMM-promo-bar",
+      "blocks": {
+        "announcement_Hz9Bdb": {
+          "type": "announcement",
+          "settings": {
+            "text": "New sale launching",
+            "link": "shopify://collections"
+          }
+        },
+        "announcement_9bCTCB": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": "shopify://collections"
+          }
+        },
+        "announcement_D4hR6p": {
+          "type": "announcement",
+          "settings": {
+            "text": "Buy now while time lasts",
+            "link": "shopify://products/make-money-with-shopify-ebook"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_Hz9Bdb",
+        "announcement_9bCTCB",
+        "announcement_D4hR6p"
+      ],
       "settings": {
-        "padding_top": 100,
-        "padding_bottom": 100
+        "color_scheme": "scheme-1",
+        "show_line_separators": true,
+        "text_style": "tmm-text-semibold",
+        "text_transformation": "uppercase",
+        "text_decoration": "none",
+        "text_spacing": 4,
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     }
   },
   "order": [
-    "main"
+    "tmm_promo_bar_jMtpTT"
   ]
 }
+
