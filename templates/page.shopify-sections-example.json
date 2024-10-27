@@ -37,8 +37,8 @@
         "button2_text_color": "#000000",
         "button2_style": "outline",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_promo_bar_7pTG3H": {
@@ -129,8 +129,8 @@
         "button2_url": "shopify://collections/all",
         "button2_text_color": "#000000",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_GRjBad": {
@@ -204,8 +204,8 @@
         "button_text_color": "#ffffff",
         "button_style": "solid",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_jwXnPq": {
@@ -301,8 +301,8 @@
         "product_button_text_color": "#000000",
         "product_button_style": "outline",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_D9cehi": {
@@ -363,8 +363,8 @@
         "arrow_button_color": "#eb3131",
         "arrow_color": "#ffffff",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_ETf8dY": {
@@ -452,8 +452,8 @@
         "body_text": "Discover our top-selling products and happy customers",
         "body_text_transformation": "none",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_xnbneE": {
@@ -485,8 +485,8 @@
         "disclaimer_text": "<p>By submitting, you agree to our Terms and Conditions.</p>",
         "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_ERcYqM": {
@@ -537,7 +537,7 @@
         "button_text_color": "#ffffff",
         "button_style": "solid",
         "page_width": "1600",
-        "padding_top": 72,
+        "padding_top": 100,
         "padding_bottom": 100
       }
     }
