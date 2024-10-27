@@ -45,11 +45,19 @@
             "text": "Professional designs that sell",
             "link": "shopify://products/premium-shopify-sections-10pk"
           }
+        },
+        "announcement_jFTGAQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Enhance your store today",
+            "link": "shopify://products/premium-shopify-sections-10pk"
+          }
         }
       },
       "block_order": [
         "announcement_CUCCYq",
-        "announcement_3Qd8Qc"
+        "announcement_3Qd8Qc",
+        "announcement_jFTGAQ"
       ],
       "settings": {
         "color_scheme": "",
