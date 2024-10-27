@@ -151,6 +151,24 @@
             {%- else -%}
               {%- render 'TMM-placeholder', class: 'tmm-hero3-image' -%}
             {%- endif -%}
+            {%- if section.settings.mobile_image != blank -%}
+              {% capture sizes %}(max-width: {{ section.settings.mobile_image.width | times: 2 }}px) 50vw, {{ section.settings.mobile_image.width }}px{% endcapture %}
+              {% capture widths %}{{ section.settings.mobile_image.width }}, {{ section.settings.mobile_image.width | times: 1.5 | round }}, {{ section.settings.mobile_image.width | times: 2 }}{% endcapture %}
+              {{
+                section.settings.mobile_image
+                | image_url: width: 2600
+                | image_tag:
+                  class: 'tmm-hero3-image',
+                  widths: widths,
+                  height: section.settings.mobile_image.height,
+                  width: section.settings.mobile_image.width,
+                  alt: section.settings.mobile_image.alt,
+                  sizes: sizes,
+                  preload: true
+              }}
+            {%- else -%}
+              {%- render 'TMM-placeholder', class: 'tmm-hero3-image' -%}
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -205,6 +223,59 @@
     {
       "type": "select",
       "id": "image_size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium",
+      "label": "Image size"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Image",
+    },
+    {
+      "type": "select",
+      "id": "mobile_object_position",
+      "options": [
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        }
+      ],
+      "default": "center",
+      "label": "Image position"
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_size",
       "options": [
         {
           "value": "small",
