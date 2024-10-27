@@ -9,47 +9,6 @@
  */
 {
   "sections": {
-    "tmm_promo_bar_jMtpTT": {
-      "type": "TMM-promo-bar",
-      "blocks": {
-        "announcement_Hz9Bdb": {
-          "type": "announcement",
-          "settings": {
-            "text": "No coding required",
-            "link": "shopify://products/premium-shopify-sections-10pk"
-          }
-        },
-        "announcement_9bCTCB": {
-          "type": "announcement",
-          "settings": {
-            "text": "Professional designs that sell",
-            "link": "shopify://products/premium-shopify-sections-10pk"
-          }
-        },
-        "announcement_D4hR6p": {
-          "type": "announcement",
-          "settings": {
-            "text": "Enhance your store today",
-            "link": "shopify://products/premium-shopify-sections-10pk"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_Hz9Bdb",
-        "announcement_9bCTCB",
-        "announcement_D4hR6p"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "show_line_separators": true,
-        "text_style": "tmm-text-semibold",
-        "text_transformation": "uppercase",
-        "text_decoration": "none",
-        "text_spacing": 4,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "tmm_hero_g3GMLm": {
       "type": "TMM-hero",
       "settings": {
@@ -584,7 +543,6 @@
     }
   },
   "order": [
-    "tmm_promo_bar_jMtpTT",
     "tmm_hero_g3GMLm",
     "tmm_promo_bar_7pTG3H",
     "tmm_features_DRGiJd",
