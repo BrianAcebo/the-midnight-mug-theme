@@ -15,22 +15,22 @@
         "announcement_Hz9Bdb": {
           "type": "announcement",
           "settings": {
-            "text": "New sale launching",
-            "link": "shopify://collections"
+            "text": "No coding required",
+            "link": "shopify://products/premium-shopify-sections-10pk"
           }
         },
         "announcement_9bCTCB": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
-            "link": "shopify://collections"
+            "text": "Professional designs that sell",
+            "link": "shopify://products/premium-shopify-sections-10pk"
           }
         },
         "announcement_D4hR6p": {
           "type": "announcement",
           "settings": {
-            "text": "Buy now while time lasts",
-            "link": "shopify://products/make-money-with-shopify-ebook"
+            "text": "Enhance your store today",
+            "link": "shopify://products/premium-shopify-sections-10pk"
           }
         }
       },
@@ -55,4 +55,3 @@
     "tmm_promo_bar_jMtpTT"
   ]
 }
-
