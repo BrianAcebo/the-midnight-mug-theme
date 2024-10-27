@@ -231,6 +231,17 @@
         "padding_bottom": 36
       }
     },
+    "tmm_divider_7F9W8G": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "tmm_featured_collection_3Gdmtz": {
       "type": "TMM-featured-collection",
       "settings": {
@@ -252,6 +263,68 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "tmm_divider_D9cehi": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "tmm_features_DRGiJd": {
+      "type": "TMM-features",
+      "blocks": {
+        "feature_pwg7Q3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Versatile Sections",
+            "text": "Includes a variety of 10 layouts, from product showcases to testimonials and image galleries, suitable for any store niche."
+          }
+        },
+        "feature_jmdRnN": {
+          "type": "feature",
+          "settings": {
+            "heading": "Fully Customizable",
+            "text": "Easily adjust colors, fonts, and content to match your brand without needing any coding knowledge."
+          }
+        },
+        "feature_gXmCY7": {
+          "type": "feature",
+          "settings": {
+            "heading": "One-Time Purchase",
+            "text": "Instant download and lifetime access to all sections, allowing you to update your store whenever you like."
+          }
+        }
+      },
+      "block_order": [
+        "feature_pwg7Q3",
+        "feature_jmdRnN",
+        "feature_gXmCY7"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "caption_text": "Optimize Your Store",
+        "heading": "Add sections to your store in minutes",
+        "heading_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "This pack includes a selection of stylish, drag-and-drop sections to give your store a fresh, custom look in minutes.",
+        "body_text_transformation": "none",
+        "button1_text": "Buy Now",
+        "button1_url": "shopify://products/premium-shopify-sections-10pk",
+        "button1_color": "#eb3131",
+        "button1_text_color": "#ffffff",
+        "button1_style": "solid",
+        "button2_text": "Shop All",
+        "button2_url": "shopify://collections/all",
+        "button2_text_color": "#000000",
+        "page_width": "1200",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -261,6 +334,9 @@
     "tmm_tabs_aBJgqr",
     "tmm_divider_jwXnPq",
     "tmm_slider_79BtDQ",
-    "tmm_featured_collection_3Gdmtz"
+    "tmm_divider_7F9W8G",
+    "tmm_featured_collection_3Gdmtz",
+    "tmm_divider_D9cehi",
+    "tmm_features_DRGiJd"
   ]
 }
