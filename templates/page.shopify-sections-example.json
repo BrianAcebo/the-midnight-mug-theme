@@ -120,6 +120,68 @@
         "padding_bottom": 20
       }
     },
+    "tmm_features_DRGiJd": {
+      "type": "TMM-features",
+      "blocks": {
+        "feature_pwg7Q3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Versatile Sections",
+            "text": "Includes a variety of 10 layouts, from product showcases to testimonials and image galleries, suitable for any store niche."
+          }
+        },
+        "feature_jmdRnN": {
+          "type": "feature",
+          "settings": {
+            "heading": "Fully Customizable",
+            "text": "Easily adjust colors, fonts, and content to match your brand without needing any coding knowledge."
+          }
+        },
+        "feature_gXmCY7": {
+          "type": "feature",
+          "settings": {
+            "heading": "One-Time Purchase",
+            "text": "Instant download and lifetime access to all sections, allowing you to update your store whenever you like."
+          }
+        }
+      },
+      "block_order": [
+        "feature_pwg7Q3",
+        "feature_jmdRnN",
+        "feature_gXmCY7"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "caption_text": "Optimize Your Store",
+        "heading": "Add sections to your store in minutes",
+        "heading_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "This pack includes a selection of stylish, drag-and-drop sections to give your store a fresh, custom look in minutes.",
+        "body_text_transformation": "none",
+        "button1_text": "Buy Now",
+        "button1_url": "shopify://products/premium-shopify-sections-10pk",
+        "button1_color": "#eb3131",
+        "button1_text_color": "#ffffff",
+        "button1_style": "solid",
+        "button2_text": "Shop All",
+        "button2_url": "shopify://collections/all",
+        "button2_text_color": "#000000",
+        "page_width": "1200",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "tmm_divider_GRjBad": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "tmm_tabs_aBJgqr": {
       "type": "TMM-tabs",
       "blocks": {
@@ -238,8 +300,8 @@
         "container_size": "900",
         "divider_color": "#000000",
         "divider_thickness": 1,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "tmm_featured_collection_3Gdmtz": {
@@ -271,56 +333,69 @@
         "container_size": "900",
         "divider_color": "#000000",
         "divider_thickness": 1,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "tmm_features_DRGiJd": {
-      "type": "TMM-features",
+    "tmm_product_vertical_slider_xnJEdh": {
+      "type": "TMM-product-vertical-slider",
       "blocks": {
-        "feature_pwg7Q3": {
-          "type": "feature",
+        "product_WHkGtU": {
+          "type": "product",
           "settings": {
-            "heading": "Versatile Sections",
-            "text": "Includes a variety of 10 layouts, from product showcases to testimonials and image galleries, suitable for any store niche."
+            "product": "premium-shopify-sections-10pk",
+            "image": "shopify://shop_images/ShopifySectionsProductImage.jpg",
+            "object_fit": "contain",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "10 Premium Sections",
+            "description": "Transform your Shopify store effortlessly with our 10 Premium Shopify Sections Pack!",
+            "price_style": "money"
           }
         },
-        "feature_jmdRnN": {
-          "type": "feature",
+        "product_VhMwGC": {
+          "type": "product",
           "settings": {
-            "heading": "Fully Customizable",
-            "text": "Easily adjust colors, fonts, and content to match your brand without needing any coding knowledge."
+            "product": "how-to-make-money-with-shopify-ultimate-bundle",
+            "object_fit": "contain",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "The Ultimate Bundle",
+            "description": "Unlock the power of the world's leading e-commerce platform and start your journey toward financial freedom with 3 EBOOKS IN ONE BUNDLE!",
+            "price_style": "money"
           }
         },
-        "feature_gXmCY7": {
-          "type": "feature",
+        "product_ctRpLf": {
+          "type": "product",
           "settings": {
-            "heading": "One-Time Purchase",
-            "text": "Instant download and lifetime access to all sections, allowing you to update your store whenever you like."
+            "product": "the-ultimate-guide-to-seo",
+            "object_fit": "contain",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "",
+            "description": "Discover the strategies that industry leaders swear by to elevate your store's visibility, drive consistent traffic, and witness transformative growth.",
+            "price_style": "money"
           }
         }
       },
       "block_order": [
-        "feature_pwg7Q3",
-        "feature_jmdRnN",
-        "feature_gXmCY7"
+        "product_WHkGtU",
+        "product_VhMwGC",
+        "product_ctRpLf"
       ],
       "settings": {
         "color_scheme": "",
-        "caption_text": "Optimize Your Store",
-        "heading": "Add sections to your store in minutes",
+        "caption_text": "Drive Sales",
+        "heading": "Pre-built Shopify Sections",
         "heading_size": "h2",
         "header_text_transformation": "capitalize",
-        "body_text": "This pack includes a selection of stylish, drag-and-drop sections to give your store a fresh, custom look in minutes.",
+        "body_text": "Elevate your Shopify store’s look and functionality with our 10 Shopify Sections Bundle! Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
         "body_text_transformation": "none",
-        "button1_text": "Buy Now",
-        "button1_url": "shopify://products/premium-shopify-sections-10pk",
-        "button1_color": "#eb3131",
-        "button1_text_color": "#ffffff",
-        "button1_style": "solid",
-        "button2_text": "Shop All",
-        "button2_url": "shopify://collections/all",
-        "button2_text_color": "#000000",
+        "button_text": "Buy now",
+        "button_url": "",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
         "page_width": "1200",
         "padding_top": 36,
         "padding_bottom": 36
@@ -331,12 +406,14 @@
     "tmm_promo_bar_jMtpTT",
     "tmm_hero_g3GMLm",
     "tmm_promo_bar_7pTG3H",
+    "tmm_features_DRGiJd",
+    "tmm_divider_GRjBad",
     "tmm_tabs_aBJgqr",
     "tmm_divider_jwXnPq",
     "tmm_slider_79BtDQ",
     "tmm_divider_7F9W8G",
     "tmm_featured_collection_3Gdmtz",
     "tmm_divider_D9cehi",
-    "tmm_features_DRGiJd"
+    "tmm_product_vertical_slider_xnJEdh"
   ]
 }
