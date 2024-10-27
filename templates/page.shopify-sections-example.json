@@ -324,6 +324,10 @@
         "button_text_color": "#eb3131",
         "button_style": "outline",
         "price_style": "money",
+        "product_button_text": "View",
+        "product_button_color": "#000000",
+        "product_button_text_color": "#000000",
+        "product_button_style": "outline",
         "page_width": "1200",
         "padding_top": 72,
         "padding_bottom": 72
