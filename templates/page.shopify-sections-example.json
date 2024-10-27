@@ -54,9 +54,11 @@
       "type": "TMM-hero",
       "settings": {
         "color_scheme": "",
-        "image": "shopify://shop_images/Red_White_Bold_Modern_Creative_Studio_Profile_Presentation.jpg",
+        "image": "shopify://shop_images/Red_White_Bold_Modern_Creative_Studio_Profile_Presentation_1920_x_500_px_1300_x_500_px.jpg",
         "object_position": "center",
         "image_size": "medium",
+        "mobile_object_position": "center",
+        "mobile_image_size": "medium",
         "content_alignment": "center",
         "text_alignment": "center",
         "heading": "Boost Your Store's Design Instantly!",
