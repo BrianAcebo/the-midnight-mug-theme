@@ -230,6 +230,28 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "tmm_featured_collection_3Gdmtz": {
+      "type": "TMM-featured-collection",
+      "settings": {
+        "color_scheme": "",
+        "collection": "best-sellers",
+        "caption_text": "Discover",
+        "heading": "Shop Our Best-sellers",
+        "heading_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Conquer your store with the ultimate online experience.",
+        "body_text_transformation": "none",
+        "button_text": "View All",
+        "button_url": "shopify://collections/all",
+        "button_color": "#eb3131",
+        "button_text_color": "#eb3131",
+        "button_style": "outline",
+        "price_style": "money",
+        "page_width": "1600",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -238,6 +260,7 @@
     "tmm_promo_bar_7pTG3H",
     "tmm_slider_79BtDQ",
     "tmm_divider_jwXnPq",
-    "tmm_tabs_aBJgqr"
+    "tmm_tabs_aBJgqr",
+    "tmm_featured_collection_3Gdmtz"
   ]
 }
