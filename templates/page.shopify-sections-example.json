@@ -75,8 +75,8 @@
         "button2_text_color": "#000000",
         "button2_style": "outline",
         "page_width": "1600",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "tmm_promo_bar_7pTG3H": {
@@ -118,6 +118,66 @@
         "text_spacing": 4,
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "tmm_tabs_aBJgqr": {
+      "type": "TMM-tabs",
+      "blocks": {
+        "tab_YrDqJM": {
+          "type": "tab",
+          "settings": {
+            "title": "How this page was made",
+            "body_text": "This entire page was built only using the 10 Shopify sections, plus the free divider ;). Enhance your customer experience and make a lasting impression—download your sections now and start building the store of your dreams!",
+            "button_text": "Buy now",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#eb3131",
+            "button_text_color": "#ffffff",
+            "button_style": "solid",
+            "tag_1": "Captivate",
+            "tag_2": "Convert",
+            "tag_3": "Engage"
+          }
+        },
+        "tab_aK7CTQ": {
+          "type": "tab",
+          "settings": {
+            "title": "Designed to engage and drive sales",
+            "body_text": "Whether you need eye-catching product displays, engaging testimonials, or dynamic image sliders, this bundle has you covered. Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
+            "button_text": "Buy now",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#eb3131",
+            "button_text_color": "#ffffff",
+            "button_style": "solid",
+            "tag_1": "Boost Sales",
+            "tag_2": "Looks Stunning",
+            "tag_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_YrDqJM",
+        "tab_aK7CTQ"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "header_text": "Built With Sections",
+        "header_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text_transformation": "none",
+        "page_width": "1200",
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
+    },
+    "tmm_divider_jwXnPq": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "tmm_slider_79BtDQ": {
@@ -166,67 +226,7 @@
         "color_scheme": "",
         "arrow_button_color": "#eb3131",
         "arrow_color": "#ffffff",
-        "page_width": "1600",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "tmm_divider_jwXnPq": {
-      "type": "TMM-divider",
-      "settings": {
-        "color_scheme": "",
-        "container_size": "900",
-        "divider_color": "#000000",
-        "divider_thickness": 1,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "tmm_tabs_aBJgqr": {
-      "type": "TMM-tabs",
-      "blocks": {
-        "tab_YrDqJM": {
-          "type": "tab",
-          "settings": {
-            "title": "How this page was made",
-            "body_text": "This entire page was built only using the 10 Shopify sections, plus the free divider ;). Enhance your customer experience and make a lasting impression—download your sections now and start building the store of your dreams!",
-            "button_text": "Buy now",
-            "button_url": "shopify://products/premium-shopify-sections-10pk",
-            "button_color": "#eb3131",
-            "button_text_color": "#ffffff",
-            "button_style": "solid",
-            "tag_1": "Captivate",
-            "tag_2": "Convert",
-            "tag_3": "Engage"
-          }
-        },
-        "tab_aK7CTQ": {
-          "type": "tab",
-          "settings": {
-            "title": "Designed to engage and drive sales",
-            "body_text": "Whether you need eye-catching product displays, engaging testimonials, or dynamic image sliders, this bundle has you covered. Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
-            "button_text": "Buy now",
-            "button_url": "shopify://products/premium-shopify-sections-10pk",
-            "button_color": "#eb3131",
-            "button_text_color": "#ffffff",
-            "button_style": "solid",
-            "tag_1": "Boost Sales",
-            "tag_2": "Looks Stunning",
-            "tag_3": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_YrDqJM",
-        "tab_aK7CTQ"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "header_text": "Built With Sections",
-        "header_size": "h2",
-        "header_text_transformation": "capitalize",
-        "body_text_transformation": "none",
-        "page_width": "1600",
+        "page_width": "1200",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -248,7 +248,7 @@
         "button_text_color": "#eb3131",
         "button_style": "outline",
         "price_style": "money",
-        "page_width": "1600",
+        "page_width": "1200",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -258,9 +258,9 @@
     "tmm_promo_bar_jMtpTT",
     "tmm_hero_g3GMLm",
     "tmm_promo_bar_7pTG3H",
-    "tmm_slider_79BtDQ",
-    "tmm_divider_jwXnPq",
     "tmm_tabs_aBJgqr",
+    "tmm_divider_jwXnPq",
+    "tmm_slider_79BtDQ",
     "tmm_featured_collection_3Gdmtz"
   ]
 }
