@@ -127,7 +127,7 @@
           "type": "feature",
           "settings": {
             "heading": "Versatile Sections",
-            "text": "Includes a variety of 10 layouts, from product showcases to testimonials and image galleries, suitable for any store niche."
+            "text": "Includes a variety of 10 layouts, from product showcases to testimonials and image galleries."
           }
         },
         "feature_jmdRnN": {
@@ -227,8 +227,8 @@
         "header_text_transformation": "capitalize",
         "body_text_transformation": "none",
         "page_width": "1200",
-        "padding_top": 76,
-        "padding_bottom": 76
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "tmm_divider_jwXnPq": {
@@ -289,8 +289,8 @@
         "arrow_button_color": "#eb3131",
         "arrow_color": "#ffffff",
         "page_width": "1200",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "tmm_divider_7F9W8G": {
@@ -322,8 +322,8 @@
         "button_style": "outline",
         "price_style": "money",
         "page_width": "1200",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "tmm_divider_D9cehi": {
@@ -397,8 +397,182 @@
         "button_text_color": "#ffffff",
         "button_style": "solid",
         "page_width": "1200",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "tmm_divider_ETf8dY": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "tmm_gallery_dtiMCF": {
+      "type": "TMM-gallery",
+      "blocks": {
+        "image_VV3FMp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square"
+          }
+        },
+        "image_NfXXzG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/person-carries-a-wooden-box-full-of-dough-balls.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square"
+          }
+        },
+        "image_QdRQKP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/flatlay-iron-skillet-with-meat-and-other-food.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square"
+          }
+        },
+        "image_CbfxwK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/green-plants-grow-in-lines-on-rolling-hills.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square"
+          }
+        },
+        "image_pmhCia": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square"
+          }
+        },
+        "image_dbWjpd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/stream-water-passing-through-cliffs.jpg",
+            "object_fit": "cover",
+            "object_position": "center",
+            "image_orientation": "square"
+          }
+        }
+      },
+      "block_order": [
+        "image_VV3FMp",
+        "image_NfXXzG",
+        "image_QdRQKP",
+        "image_CbfxwK",
+        "image_pmhCia",
+        "image_dbWjpd"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "header_text": "Browse our Gallery",
+        "header_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Discover our top-selling products and happy customers",
+        "body_text_transformation": "none",
+        "page_width": "1200",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "tmm_divider_xnbneE": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "tmm_newsletter_xiepEF": {
+      "type": "TMM-newsletter",
+      "settings": {
+        "color_scheme": "",
+        "image": "shopify://shop_images/two-people-surfing-in-blue-choppy-water.jpg",
+        "heading": "Join our newsletter",
+        "heading_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Be the first to know about new collections and exclusive offers.",
+        "body_text_transformation": "none",
+        "button_text": "Submit",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
+        "input_placeholder": "Enter your email address",
+        "disclaimer_text": "<p>By submitting, you agree to our Terms and Conditions.</p>",
+        "success_text": "<p>Thank you! We will respond as soon as possible.</p>",
+        "page_width": "1200",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "tmm_divider_ERcYqM": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "900",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "tmm_faq_YPUaQa": {
+      "type": "TMM-faq",
+      "blocks": {
+        "faq_pUCQBn": {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I get the Shopify sections?",
+            "answer": "<p>Check it out <a href=\"/products/premium-shopify-sections-10pk\" title=\"Premium Shopify Sections - 10pk\">here</a></p><p></p>"
+          }
+        },
+        "faq_iVrfzG": {
+          "type": "faq",
+          "settings": {
+            "question": "What is your refund and returns policy?",
+            "answer": "<p>To learn more about our refund and returns policy, you can read our refunds policy on our website or reach out to our support team.<p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_pUCQBn",
+        "faq_iVrfzG"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "header_text": "Frequently Asked Questions",
+        "header_size": "h2",
+        "header_text_transformation": "capitalize",
+        "body_text": "Find answers to commonly asked questions.",
+        "body_text_transformation": "none",
+        "info_heading": "Still have questions?",
+        "info_text": "Contact our support team for further assistance.",
+        "button_text": "Contact Us",
+        "button_url": "",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
+        "page_width": "1200",
+        "padding_top": 72,
+        "padding_bottom": 100
       }
     }
   },
@@ -414,6 +588,12 @@
     "tmm_divider_7F9W8G",
     "tmm_featured_collection_3Gdmtz",
     "tmm_divider_D9cehi",
-    "tmm_product_vertical_slider_xnJEdh"
+    "tmm_product_vertical_slider_xnJEdh",
+    "tmm_divider_ETf8dY",
+    "tmm_gallery_dtiMCF",
+    "tmm_divider_xnbneE",
+    "tmm_newsletter_xiepEF",
+    "tmm_divider_ERcYqM",
+    "tmm_faq_YPUaQa"
   ]
 }
