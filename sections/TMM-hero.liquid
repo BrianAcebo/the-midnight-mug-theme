@@ -4,7 +4,7 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  .tmm-section-{{ section.id }} .tmm-hero3-image::(not:.tmm-hero3-image_mobile) {
+  .tmm-section-{{ section.id }} .tmm-hero3-image:not(.tmm-hero3-image_mobile) {
     display: none;
     object-position: {{ section.settings.object_position }};
   }
@@ -20,7 +20,7 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
 
-    .tmm-section-{{ section.id }} .tmm-hero3-image:(not:.tmm-hero3-image_mobile) {
+    .tmm-section-{{ section.id }} .tmm-hero3-image:not(.tmm-hero3-image_mobile) {
       display: block;
     }
 
