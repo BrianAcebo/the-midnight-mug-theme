@@ -404,8 +404,8 @@
         "header_text_transformation": "capitalize",
         "body_text_transformation": "none",
         "page_width": "1600",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_ETf8dY": {
