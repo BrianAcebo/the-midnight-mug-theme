@@ -42,6 +42,10 @@
     .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ block.id }}:hover {
       opacity: 0.8;
     }
+
+    .tmm-section-{{ section.id }} .tmm-tabs1-tagn_{{ block.id }} {
+      border: {{ block.settings.tag_thickness}}px solid {{ block.settings.tag_color }};
+    }
   {%- endfor -%}
 {%- endstyle -%}
 
@@ -317,6 +321,22 @@
           ],
           "default": "solid",
           "label": "Button style"
+        },
+        {
+          "type": "color",
+          "id": "tag_color",
+          "default": "#000000",
+          "label": "Tag border color"
+        },
+        {
+          "type": "range",
+          "id": "tag_thickness",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Tag border thickness",
+          "default": 1
         },
         {
           "type": "text",
