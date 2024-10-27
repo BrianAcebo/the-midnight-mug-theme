@@ -119,11 +119,63 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "tmm_slider_79BtDQ": {
+      "type": "TMM-slider",
+      "blocks": {
+        "slider_kz3ihk": {
+          "type": "slider",
+          "settings": {
+            "product": "",
+            "image": "shopify://shop_images/ShopifySectionsProductImage.jpg",
+            "heading": "10 Premium Pre-built Shopify Sections",
+            "header_text_transformation": "capitalize",
+            "heading_size": "h2",
+            "body_text": "From image galleries and testimonials to product showcases and promotional banners, each section is crafted to seamlessly integrate with your theme, allowing you to build a visually stunning, professional online store without any coding knowledge.",
+            "body_text_transformation": "none",
+            "button_text": "Check it out",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#000000",
+            "button_text_color": "#020912",
+            "button_style": "outline"
+          }
+        },
+        "slider_tP4LiN": {
+          "type": "slider",
+          "settings": {
+            "product": "",
+            "image": "shopify://shop_images/ShopifySectionsProductImage.jpg",
+            "heading": "Elevate your brand and captivate your customers today",
+            "header_text_transformation": "capitalize",
+            "heading_size": "h2",
+            "body_text": "Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
+            "body_text_transformation": "none",
+            "button_text": "Buy now",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#000000",
+            "button_text_color": "#020912",
+            "button_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "slider_kz3ihk",
+        "slider_tP4LiN"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "arrow_button_color": "#eb3131",
+        "arrow_color": "#ffffff",
+        "page_width": "1600",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "tmm_promo_bar_jMtpTT",
     "tmm_hero_g3GMLm",
-    "tmm_promo_bar_7pTG3H"
+    "tmm_promo_bar_7pTG3H",
+    "tmm_slider_79BtDQ"
   ]
 }
