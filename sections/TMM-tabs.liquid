@@ -43,7 +43,7 @@
       opacity: 0.8;
     }
 
-    .tmm-section-{{ section.id }} .tmm-tabs1-tagn_{{ block.id }} {
+    .tmm-section-{{ section.id }} .tmm-tabs1-tag_{{ block.id }} {
       border: {{ block.settings.tag_thickness}}px solid {{ block.settings.tag_color }};
     }
   {%- endfor -%}
@@ -93,17 +93,17 @@
               <div class="tmm-tabs1-content_wrap">
                 <div class="tmm-tabs1-tags_wrap">
                   {%- if block.settings.tag_1 != blank -%}
-                    <div class="tmm-tabs1-tag">
+                    <div class="tmm-tabs1-tag tmm-tabs1-tag_{{ block.id }}">
                       <div>{{- block.settings.tag_1 -}}</div>
                     </div>
                   {%- endif -%}
                   {%- if block.settings.tag_2 != blank -%}
-                    <div class="tmm-tabs1-tag">
+                    <div class="tmm-tabs1-tag tmm-tabs1-tag_{{ block.id }}">
                       <div>{{- block.settings.tag_2 -}}</div>
                     </div>
                   {%- endif -%}
                   {%- if block.settings.tag_3 != blank -%}
-                    <div class="tmm-tabs1-tag">
+                    <div class="tmm-tabs1-tag tmm-tabs1-tag_{{ block.id }}">
                       <div>{{- block.settings.tag_3 -}}</div>
                     </div>
                   {%- endif -%}
