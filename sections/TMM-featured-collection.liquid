@@ -27,10 +27,20 @@
     transition: 0.2s;
   }
 
+  .tmm-section-{{ section.id }} .tmm-button:hover {
+    opacity: 0.8;
+  }
+
   .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }} {
     background-color: {{ section.settings.button_color }};
     border: 1px solid {{ section.settings.button_color }};
     color: {{ section.settings.button_text_color }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-product-list_item_content .tmm-button {
+    background-color: {{ section.settings.product_button_color }};
+    border: 1px solid {{ section.settings.product_button_color }};
+    color: {{ section.settings.product_button_text_color }};
   }
 
   .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}.tmm-is-secondary {
@@ -38,8 +48,9 @@
     border: 1px solid {{ section.settings.button_color }};
   }
 
-  .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
-    opacity: 0.8;
+  .tmm-section-{{ section.id }} .tmm-product-list_item_content .tmm-button.tmm-is-secondary {
+    background-color: transparent;
+    border: 1px solid {{ section.settings.product_button_color }};
   }
 {%- endstyle -%}
 
@@ -145,9 +156,9 @@
                       <div class="tmm-margin-top tmm-margin-xsmall">
                         <a
                           href="{{ product.url }}"
-                          class="tmm-button-primary tmm-button-is-secondary is-small max-width-full tmm-button"
+                          class="tmm-button-primary is-small max-width-full tmm-button{% if section.settings.product_button_style == 'outline' %} tmm-is-secondary{% endif %}"
                         >
-                          View
+                          {{- section.settings.product_button_text }}
                         </a>
                       </div>
                     </div>
@@ -376,6 +387,40 @@
       ],
       "default": "money",
       "label": "Product price display"
+    },
+    {
+      "type": "text",
+      "id": "product_button_text",
+      "label": "Product button text",
+      "default": "View"
+    },
+    {
+      "type": "color",
+      "id": "product_button_color",
+      "default": "#000000",
+      "label": "Product button color"
+    },
+    {
+      "type": "color",
+      "id": "product_button_text_color",
+      "default": "#ffffff",
+      "label": "Product button text color"
+    },
+    {
+      "type": "select",
+      "id": "product_button_style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        }
+      ],
+      "default": "solid",
+      "label": "Product button style"
     },
     {
       "type": "header",
