@@ -61,7 +61,7 @@
         "text_alignment": "center",
         "heading": "Boost Your Store's Design Instantly!",
         "heading_size": "h1",
-        "header_text_transformation": "uppercase",
+        "header_text_transformation": "capitalize",
         "body_text": "Transform your Shopify store effortlessly with our 10 Premium Shopify Sections Pack! Perfect for both beginners and experienced store owners to enhance your store’s layout, user experience, and sales potential.",
         "body_text_transformation": "none",
         "button1_text": "Buy Now",
