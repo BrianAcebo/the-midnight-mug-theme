@@ -53,7 +53,7 @@
     "tmm_hero_g3GMLm": {
       "type": "TMM-hero",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "image": "shopify://shop_images/Shopify_Sections_Hero_2800_x_1500_px.jpg",
         "object_position": "center",
         "image_size": "750",
@@ -154,7 +154,7 @@
         "feature_gXmCY7"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "caption_text": "Optimize Your Store",
         "heading": "Add sections to your store in minutes",
         "heading_size": "h2",
@@ -185,50 +185,65 @@
         "padding_bottom": 0
       }
     },
-    "tmm_tabs_aBJgqr": {
-      "type": "TMM-tabs",
+    "tmm_product_vertical_slider_xnJEdh": {
+      "type": "TMM-product-vertical-slider",
       "blocks": {
-        "tab_YrDqJM": {
-          "type": "tab",
+        "product_WHkGtU": {
+          "type": "product",
           "settings": {
-            "title": "How this page was made",
-            "body_text": "This entire page was built only using the 10 Shopify sections, plus the free divider ;). Enhance your customer experience and make a lasting impression—download your sections now and start building the store of your dreams!",
-            "button_text": "Buy now",
-            "button_url": "shopify://products/premium-shopify-sections-10pk",
-            "button_color": "#eb3131",
-            "button_text_color": "#ffffff",
-            "button_style": "solid",
-            "tag_1": "Captivate",
-            "tag_2": "Convert",
-            "tag_3": "Engage"
+            "product": "premium-shopify-sections-10pk",
+            "image": "shopify://shop_images/ShopifySectionsProductImage.jpg",
+            "object_fit": "contain",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "10 Premium Sections",
+            "description": "Transform your Shopify store effortlessly with our 10 Premium Shopify Sections Pack!",
+            "price_style": "money"
           }
         },
-        "tab_aK7CTQ": {
-          "type": "tab",
+        "product_VhMwGC": {
+          "type": "product",
           "settings": {
-            "title": "Designed to engage and drive sales",
-            "body_text": "Whether you need eye-catching product displays, engaging testimonials, or dynamic image sliders, this bundle has you covered. Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
-            "button_text": "Buy now",
-            "button_url": "shopify://products/premium-shopify-sections-10pk",
-            "button_color": "#eb3131",
-            "button_text_color": "#ffffff",
-            "button_style": "solid",
-            "tag_1": "Boost Sales",
-            "tag_2": "Looks Stunning",
-            "tag_3": ""
+            "product": "how-to-make-money-with-shopify-ultimate-bundle",
+            "object_fit": "contain",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "The Ultimate Bundle",
+            "description": "Unlock the power of the world's leading e-commerce platform and start your journey toward financial freedom with 3 EBOOKS IN ONE BUNDLE!",
+            "price_style": "money"
+          }
+        },
+        "product_ctRpLf": {
+          "type": "product",
+          "settings": {
+            "product": "the-ultimate-guide-to-seo",
+            "object_fit": "contain",
+            "object_position": "center",
+            "image_orientation": "square",
+            "heading": "",
+            "description": "Discover the strategies that industry leaders swear by to elevate your store's visibility, drive consistent traffic, and witness transformative growth.",
+            "price_style": "money"
           }
         }
       },
       "block_order": [
-        "tab_YrDqJM",
-        "tab_aK7CTQ"
+        "product_WHkGtU",
+        "product_VhMwGC",
+        "product_ctRpLf"
       ],
       "settings": {
-        "color_scheme": "",
-        "header_text": "Built With Sections",
-        "header_size": "h2",
+        "color_scheme": "scheme-3",
+        "caption_text": "Drive Sales",
+        "heading": "Pre-built Shopify Sections",
+        "heading_size": "h2",
         "header_text_transformation": "capitalize",
+        "body_text": "Elevate your Shopify store’s look and functionality with our 10 Shopify Sections Bundle! Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
         "body_text_transformation": "none",
+        "button_text": "Buy now",
+        "button_url": "",
+        "button_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_style": "solid",
         "page_width": "1600",
         "padding_top": 72,
         "padding_bottom": 72
@@ -288,7 +303,7 @@
         "slider_tP4LiN"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "arrow_button_color": "#eb3131",
         "arrow_color": "#ffffff",
         "page_width": "1600",
@@ -310,7 +325,7 @@
     "tmm_featured_collection_3Gdmtz": {
       "type": "TMM-featured-collection",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "collection": "best-sellers",
         "caption_text": "Discover",
         "heading": "Shop Our Best-sellers",
@@ -344,65 +359,50 @@
         "padding_bottom": 0
       }
     },
-    "tmm_product_vertical_slider_xnJEdh": {
-      "type": "TMM-product-vertical-slider",
+    "tmm_tabs_aBJgqr": {
+      "type": "TMM-tabs",
       "blocks": {
-        "product_WHkGtU": {
-          "type": "product",
+        "tab_YrDqJM": {
+          "type": "tab",
           "settings": {
-            "product": "premium-shopify-sections-10pk",
-            "image": "shopify://shop_images/ShopifySectionsProductImage.jpg",
-            "object_fit": "contain",
-            "object_position": "center",
-            "image_orientation": "square",
-            "heading": "10 Premium Sections",
-            "description": "Transform your Shopify store effortlessly with our 10 Premium Shopify Sections Pack!",
-            "price_style": "money"
+            "title": "How this page was made",
+            "body_text": "This entire page was built only using the 10 Shopify sections, plus the free divider ;). Enhance your customer experience and make a lasting impression—download your sections now and start building the store of your dreams!",
+            "button_text": "Buy now",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#eb3131",
+            "button_text_color": "#ffffff",
+            "button_style": "solid",
+            "tag_1": "Captivate",
+            "tag_2": "Convert",
+            "tag_3": "Engage"
           }
         },
-        "product_VhMwGC": {
-          "type": "product",
+        "tab_aK7CTQ": {
+          "type": "tab",
           "settings": {
-            "product": "how-to-make-money-with-shopify-ultimate-bundle",
-            "object_fit": "contain",
-            "object_position": "center",
-            "image_orientation": "square",
-            "heading": "The Ultimate Bundle",
-            "description": "Unlock the power of the world's leading e-commerce platform and start your journey toward financial freedom with 3 EBOOKS IN ONE BUNDLE!",
-            "price_style": "money"
-          }
-        },
-        "product_ctRpLf": {
-          "type": "product",
-          "settings": {
-            "product": "the-ultimate-guide-to-seo",
-            "object_fit": "contain",
-            "object_position": "center",
-            "image_orientation": "square",
-            "heading": "",
-            "description": "Discover the strategies that industry leaders swear by to elevate your store's visibility, drive consistent traffic, and witness transformative growth.",
-            "price_style": "money"
+            "title": "Designed to engage and drive sales",
+            "body_text": "Whether you need eye-catching product displays, engaging testimonials, or dynamic image sliders, this bundle has you covered. Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
+            "button_text": "Buy now",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#eb3131",
+            "button_text_color": "#ffffff",
+            "button_style": "solid",
+            "tag_1": "Boost Sales",
+            "tag_2": "Looks Stunning",
+            "tag_3": ""
           }
         }
       },
       "block_order": [
-        "product_WHkGtU",
-        "product_VhMwGC",
-        "product_ctRpLf"
+        "tab_YrDqJM",
+        "tab_aK7CTQ"
       ],
       "settings": {
-        "color_scheme": "",
-        "caption_text": "Drive Sales",
-        "heading": "Pre-built Shopify Sections",
-        "heading_size": "h2",
+        "color_scheme": "scheme-3",
+        "header_text": "Built With Sections",
+        "header_size": "h2",
         "header_text_transformation": "capitalize",
-        "body_text": "Elevate your Shopify store’s look and functionality with our 10 Shopify Sections Bundle! Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.",
         "body_text_transformation": "none",
-        "button_text": "Buy now",
-        "button_url": "",
-        "button_color": "#000000",
-        "button_text_color": "#ffffff",
-        "button_style": "solid",
         "page_width": "1600",
         "padding_top": 72,
         "padding_bottom": 72
@@ -486,7 +486,7 @@
         "image_dbWjpd"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "header_text": "Browse our Gallery",
         "header_size": "h2",
         "header_text_transformation": "capitalize",
@@ -511,7 +511,7 @@
     "tmm_newsletter_xiepEF": {
       "type": "TMM-newsletter",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "image": "shopify://shop_images/two-people-surfing-in-blue-choppy-water.jpg",
         "heading": "Join our newsletter",
         "heading_size": "h2",
@@ -564,7 +564,7 @@
         "faq_iVrfzG"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-3",
         "header_text": "Frequently Asked Questions",
         "header_size": "h2",
         "header_text_transformation": "capitalize",
@@ -589,13 +589,13 @@
     "tmm_promo_bar_7pTG3H",
     "tmm_features_DRGiJd",
     "tmm_divider_GRjBad",
-    "tmm_tabs_aBJgqr",
+    "tmm_product_vertical_slider_xnJEdh",
     "tmm_divider_jwXnPq",
     "tmm_slider_79BtDQ",
     "tmm_divider_7F9W8G",
     "tmm_featured_collection_3Gdmtz",
     "tmm_divider_D9cehi",
-    "tmm_product_vertical_slider_xnJEdh",
+    "tmm_tabs_aBJgqr",
     "tmm_divider_ETf8dY",
     "tmm_gallery_dtiMCF",
     "tmm_divider_xnbneE",
