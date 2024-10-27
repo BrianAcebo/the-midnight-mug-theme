@@ -4,10 +4,36 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .tmm-section-{{ section.id }} .tmm-hero3-image {
+    display: none;
+    object-position: {{ section.settings.object_position }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-hero3-image_mobile {
+    display: block;
+    object-position: {{ section.settings.mobile_object_position }};
+  }
+
+  .tmm-section-{{ section.id }} .tmm-hero3-image_wrap.tmm-hero3-image_wrap {
+    height: {{ section.settings.mobile_image_size }}px;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .tmm-section-{{ section.id }} .tmm-hero3-image {
+      display: block;
+    }
+
+    .tmm-section-{{ section.id }} .tmm-hero3-image-mobile {
+      display: none;
+    }
+
+    .tmm-section-{{ section.id }} .tmm-hero3-image_wrap.tmm-hero3-image_wrap {
+      height: {{ section.settings.image_size }}px;
     }
   }
 
@@ -51,18 +77,6 @@
 
   .tmm-section-{{ section.id }} .tmm-button.tmm-button_{{ section.id }}:hover {
     opacity: 0.8;
-  }
-
-  .tmm-section-{{ section.id }} .tmm-hero3-image {
-    object-position: {{ section.settings.object_position }};
-  }
-
-  .tmm-section-{{ section.id }} .tmm-hero3-image_wrap.tmm-hero3-image_wrap-small {
-    height: 250px;
-  }
-
-  .tmm-section-{{ section.id }} .tmm-hero3-image_wrap.tmm-hero3-image_wrap-large {
-    height: 750px;
   }
 
   .tmm-section-{{ section.id }} .tmm-max-width-xxlarge {
@@ -225,19 +239,19 @@
       "id": "image_size",
       "options": [
         {
-          "value": "small",
+          "value": "300",
           "label": "Small"
         },
         {
-          "value": "medium",
+          "value": "500",
           "label": "Medium"
         },
         {
-          "value": "large",
+          "value": "750",
           "label": "Large"
         }
       ],
-      "default": "medium",
+      "default": "500",
       "label": "Image size"
     },
     {
@@ -278,19 +292,19 @@
       "id": "mobile_image_size",
       "options": [
         {
-          "value": "small",
+          "value": "300",
           "label": "Small"
         },
         {
-          "value": "medium",
+          "value": "500",
           "label": "Medium"
         },
         {
-          "value": "large",
+          "value": "750",
           "label": "Large"
         }
       ],
-      "default": "medium",
+      "default": "500",
       "label": "Image size"
     },
     {
