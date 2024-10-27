@@ -146,7 +146,7 @@
               </div>
             </div>
           </div>
-          <div class="tmm-hero3-image_wrap tmm-hero3-image_wrap-{{ section.settings.image_size }}">
+          <div class="tmm-hero3-image_wrap">
             {%- if section.settings.image != blank -%}
               {% capture sizes %}(max-width: {{ section.settings.image.width | times: 2 }}px) 50vw, {{ section.settings.image.width }}px{% endcapture %}
               {% capture widths %}{{ section.settings.image.width }}, {{ section.settings.image.width | times: 1.5 | round }}, {{ section.settings.image.width | times: 2 }}{% endcapture %}
