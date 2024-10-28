@@ -73,13 +73,14 @@
       >
         <div class="tmm-interaction_wrap">
           {%- for block in section.blocks -%}
-            <button
+            <a
+              href="#"
               {{ block.shopify_attributes }}
               data-tmm-tab="Tab {{ forloop.index }}"
               class="tmm-tabs1-link tmm-inline-block tmm-tab-link{% if forloop.index == 1 %} tmm--current{% endif %}"
             >
               <div class="tmm-tabs1-heading">{{- block.settings.title -}}</div>
-            </button>
+            </a>
           {%- endfor -%}
         </div>
       </div>
