@@ -18,7 +18,7 @@
   .tmm-section-{{ section.id }} .tmm-faq3-header {
     text-transform: {{ section.settings.header_text_transformation }};
   }
-  
+
   .tmm-section-{{ section.id }} .tmm-faq3-body-text {
     text-transform: {{ section.settings.body_text_transformation }};
   }
@@ -44,9 +44,9 @@
 {%- endstyle -%}
 
 <section class="tmm-faq3 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
-  <div class="tmm-interaction_wrap">
-    <div class="tmm-padding-global">
-      <div class="tmm-container-large">
+  <div class="tmm-padding-global">
+    <div class="tmm-container-large">
+      <div class="tmm-interaction_wrap">
         <div class="tmm-margin-bottom tmm-margin-xxlarge">
           <div class="tmm-margin-bottom tmm-margin-small">
             <{{ section.settings.header_size }} class="tmm-faq3-header">
@@ -55,10 +55,12 @@
           </div>
           <p class="tmm-faq3-body-text">{{- section.settings.body_text -}}</p>
         </div>
-        <div class="tmm-faq3_container">
-          <div class="tmm-layout-grid tmm-faq3-list">
-            {%- if section.blocks.size > 0 -%}
-              {%- for block in section.blocks -%}
+      </div>
+      <div class="tmm-faq3_container">
+        <div class="tmm-layout-grid tmm-faq3-list">
+          {%- if section.blocks.size > 0 -%}
+            {%- for block in section.blocks -%}
+              <div class="tmm-interaction_wrap">
                 <div class="tmm-faq3-accordion" {{ block.shopify_attributes }}>
                   <div
                     data-tmm-id="c8c5fd68-29a9-60d9-2c7b-e98b16adb6d6"
@@ -90,9 +92,11 @@
                     </div>
                   </div>
                 </div>
-              {%- endfor -%}
-            {%- else -%}
-              {%- for i in (1..4) -%}
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            {%- for i in (1..4) -%}
+              <div class="tmm-interaction_wrap">
                 <div class="tmm-faq3-accordion">
                   <div
                     data-tmm-id="c8c5fd68-29a9-60d9-2c7b-e98b16adb6d6"
@@ -127,10 +131,12 @@
                     </div>
                   </div>
                 </div>
-              {%- endfor %}
-            {%- endif %}
-          </div>
+              </div>
+            {%- endfor %}
+          {%- endif %}
         </div>
+      </div>
+      <div class="tmm-interaction_wrap">
         <div class="tmm-margin-top margin-xxlarge">
           <div class="tmm-max-width-large">
             <div class="tmm-margin-bottom tmm-margin-xsmall">
