@@ -62,7 +62,7 @@
       "settings": {
         "color_scheme": "",
         "show_line_separators": true,
-        "fade_in": true,
+        "fade_in": false,
         "text_style": "tmm-text-semibold",
         "text_transformation": "uppercase",
         "text_decoration": "none",
