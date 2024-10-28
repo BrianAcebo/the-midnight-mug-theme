@@ -112,10 +112,10 @@
 {%- endstyle -%}
 
 <section class="tmm-hero3 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
-  <div class="tmm-interaction_wrap">
-    <div class="tmm-padding-global">
-      <div class="tmm-container-large">
-        <div class="tmm-hero3_container">
+  <div class="tmm-padding-global">
+    <div class="tmm-container-large">
+      <div class="tmm-hero3_container">
+        <div class="tmm-interaction_wrap">
           <div class="tmm-margin-bottom tmm-margin-xxlarge">
             <div class="tmm-max-width-xxlarge tmm-hero3-content-{{ section.settings.content_alignment }}">
               <div class="tmm-margin-bottom tmm-margin-small">
@@ -146,6 +146,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="tmm-interaction_wrap">
           <div class="tmm-hero3-image_wrap">
             {%- if section.settings.image != blank -%}
               {% capture sizes %}(max-width: {{ section.settings.image.width | times: 2 }}px) 50vw, {{ section.settings.image.width }}px{% endcapture %}
