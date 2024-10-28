@@ -48,10 +48,10 @@
 {%- endstyle -%}
 
 <section class="tmm-features4 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
-  <div class="tmm-interaction_wrap">
-    <div class="tmm-padding-global">
-      <div class="tmm-container-large">
-        <div class="tmm-features4_container">
+  <div class="tmm-padding-global">
+    <div class="tmm-container-large">
+      <div class="tmm-features4_container">
+        <div class="tmm-interaction_wrap">
           <div class="tmm-margin-bottom tmm-margin-xxlarge">
             <div class="tmm-layout-grid tmm-features4-content">
               <div class="tmm-features4-content_left">
@@ -71,18 +71,22 @@
               </div>
             </div>
           </div>
-          <div class="tmm-layout-grid tmm-features4-list">
-            {%- if section.blocks.size > 0 -%}
-              {%- for block in section.blocks -%}
+        </div>
+        <div class="tmm-layout-grid tmm-features4-list">
+          {%- if section.blocks.size > 0 -%}
+            {%- for block in section.blocks -%}
+              <div class="tmm-interaction_wrap">
                 <div class="tmm-features4-item" {{ block.shopify_attributes }}>
                   <div class="tmm-margin-bottom tmm-margin-small">
                     <h3 class="tmm-heading-style-h4">{{- block.settings.heading -}}</h3>
                   </div>
                   <p>{{ block.settings.text }}</p>
                 </div>
-              {%- endfor -%}
-            {%- else -%}
-              {%- for i in (1..3) -%}
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            {%- for i in (1..3) -%}
+              <div class="tmm-interaction_wrap">
                 <div class="tmm-features4-item">
                   <div class="tmm-margin-bottom tmm-margin-small">
                     <h3 class="tmm-heading-style-h4">Cleanse and Prep Your Skin</h3>
@@ -92,43 +96,43 @@
                     impurities and prepare your skin for the next steps.
                   </p>
                 </div>
-              {%- endfor -%}
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+        <div class="tmm-margin-top margin-xlarge">
+          <div class="tmm-button-group">
+            {%- if section.settings.button1_url != blank -%}
+              <a
+                href="{{ section.settings.button1_url }}"
+                class="tmm-button_{{ section.id }} tmm-button-1 tmm-button-primary tmm-button{% if section.settings.button1_style == 'outline' %} tmm-is-secondary{% endif %}"
+              >
+                {{- section.settings.button1_text -}}
+              </a>
             {%- endif -%}
-          </div>
-          <div class="tmm-margin-top margin-xlarge">
-            <div class="tmm-button-group">
-              {%- if section.settings.button1_url != blank -%}
-                <a
-                  href="{{ section.settings.button1_url }}"
-                  class="tmm-button_{{ section.id }} tmm-button-1 tmm-button-primary tmm-button{% if section.settings.button1_style == 'outline' %} tmm-is-secondary{% endif %}"
-                >
-                  {{- section.settings.button1_text -}}
-                </a>
-              {%- endif -%}
-              {%- if section.settings.button2_url != blank -%}
-                <a
-                  href="{{ section.settings.button2_url }}"
-                  class="tmm-button_{{ section.id }} tmm-button-2 tmm-is-link tmm-is-icon tmm-inline-block tmm-button-2 tmm-button-primary tmm-button{% if section.settings.button2_style == 'outline' %} tmm-is-secondary{% endif %}"
-                >
-                  <div>{{- section.settings.button2_text -}}</div>
-                  <div class="tmm-icon-embed-xxsmall tmm-embed">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewbox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M6 3L11 8L6 13"
-                        stroke="{{ section.settings.button2_text_color }}"
-                        stroke-width="1.5"
-                      ></path>
-                    </svg>
-                  </div>
-                </a>
-              {%- endif -%}
-            </div>
+            {%- if section.settings.button2_url != blank -%}
+              <a
+                href="{{ section.settings.button2_url }}"
+                class="tmm-button_{{ section.id }} tmm-button-2 tmm-is-link tmm-is-icon tmm-inline-block tmm-button-2 tmm-button-primary tmm-button{% if section.settings.button2_style == 'outline' %} tmm-is-secondary{% endif %}"
+              >
+                <div>{{- section.settings.button2_text -}}</div>
+                <div class="tmm-icon-embed-xxsmall tmm-embed">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewbox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 3L11 8L6 13"
+                      stroke="{{ section.settings.button2_text_color }}"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            {%- endif -%}
           </div>
         </div>
       </div>
@@ -370,4 +374,3 @@
   ]
 }
 {% endschema %}
-
