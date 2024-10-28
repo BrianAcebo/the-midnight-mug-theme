@@ -525,7 +525,10 @@
                     ),
                       u.call(this),
                       s > 0 &&
-                        ((this.timer = new B({ duration: s, context: this })),
+                        ((this.timer = new B({
+                          duration: s,
+                          context: this,
+                        })),
                         (this.active = !0),
                         t && (this.timer.complete = o));
                     var p = this,
@@ -654,7 +657,10 @@
                 }),
                 I("then", function (e) {
                   return this.active
-                    ? (this.queue.push({ options: e, args: arguments }),
+                    ? (this.queue.push({
+                        options: e,
+                        args: arguments,
+                      }),
                       void (this.timer.complete = o))
                     : s(
                         "No active transition timer. Use start() or wait() before then()."
@@ -1130,7 +1136,11 @@
               return new j(e);
             }),
             (t.delay = function (e, t, n) {
-              return new B({ complete: t, duration: e, context: n });
+              return new B({
+                complete: t,
+                duration: e,
+                context: n,
+              });
             }),
             (e.fn.tram = function (e) {
               return t.call(null, this, e);
@@ -1664,7 +1674,10 @@
                           "https://d3e54v103j8qbb.cloudfront.net/img/tmm-badge-icon-d2.89e12c322e.svg"
                         )
                         .attr("alt", "")
-                        .css({ marginRight: "4px", width: "26px" })),
+                        .css({
+                          marginRight: "4px",
+                          width: "26px",
+                        })),
                       (r = e("<img>")
                         .attr(
                           "src",
@@ -1896,7 +1909,10 @@
             },
           };
         (a.triggers = {}),
-          (a.types = { INTRO: "tmm-ix-intro" + o, OUTRO: "tmm-ix-outro" + o }),
+          (a.types = {
+            INTRO: "tmm-ix-intro" + o,
+            OUTRO: "tmm-ix-outro" + o,
+          }),
           (a.init = function () {
             for (var e = i.length, t = 0; t < e; t++) {
               var o = i[t];
@@ -1940,7 +1956,10 @@
             },
           };
         (o.triggers = {}),
-          (o.types = { INTRO: "tmm-ix-intro" + r, OUTRO: "tmm-ix-outro" + r }),
+          (o.types = {
+            INTRO: "tmm-ix-intro" + r,
+            OUTRO: "tmm-ix-outro" + r,
+          }),
           i.extend(o.triggers, s),
           (t.exports = o);
       },
@@ -3203,7 +3222,10 @@
                     break;
                   }
                 }
-                return (0, zt.merge)(e, { viewportWidth: n, mediaQueryKey: o });
+                return (0, zt.merge)(e, {
+                  viewportWidth: n,
+                  mediaQueryKey: o,
+                });
               }
               case en:
                 return (0, zt.set)(e, "hasDefinedMediaQueries", !0);
@@ -5295,7 +5317,10 @@
         Object.defineProperty(e, "__esModule", { value: !0 }),
           (function (e, t) {
             for (var n in t)
-              Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+              Object.defineProperty(e, n, {
+                enumerable: !0,
+                get: t[n],
+              });
           })(e, {
             clearPlugin: function () {
               return s;
@@ -5349,7 +5374,10 @@
         Object.defineProperty(e, "__esModule", { value: !0 }),
           (function (e, t) {
             for (var n in t)
-              Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+              Object.defineProperty(e, n, {
+                enumerable: !0,
+                get: t[n],
+              });
           })(e, {
             clearPlugin: function () {
               return l;
@@ -5439,7 +5467,10 @@
         Object.defineProperty(e, "__esModule", { value: !0 }),
           (function (e, t) {
             for (var n in t)
-              Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+              Object.defineProperty(e, n, {
+                enumerable: !0,
+                get: t[n],
+              });
           })(e, {
             clearPlugin: function () {
               return d;
@@ -5504,7 +5535,10 @@
                       i = d[t] ?? a.fit,
                       o = d[n] ?? a.alignment;
                     (i === a.fit && o === a.alignment) ||
-                      (e.layout = a.copyWith({ fit: i, alignment: o }));
+                      (e.layout = a.copyWith({
+                        fit: i,
+                        alignment: o,
+                      }));
                   }
                   for (const e in d) {
                     if (e === t || e === n) continue;
@@ -5786,7 +5820,10 @@
         Object.defineProperty(e, "__esModule", { value: !0 }),
           (function (e, t) {
             for (var n in t)
-              Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+              Object.defineProperty(e, n, {
+                enumerable: !0,
+                get: t[n],
+              });
           })(e, {
             clearPlugin: function () {
               return l;
@@ -6888,9 +6925,21 @@
             }
           }),
           (ws = {
-            [rs]: Object.freeze({ xValue: 0, yValue: 0, zValue: 0 }),
-            [ss]: Object.freeze({ xValue: 1, yValue: 1, zValue: 1 }),
-            [ls]: Object.freeze({ xValue: 0, yValue: 0, zValue: 0 }),
+            [rs]: Object.freeze({
+              xValue: 0,
+              yValue: 0,
+              zValue: 0,
+            }),
+            [ss]: Object.freeze({
+              xValue: 1,
+              yValue: 1,
+              zValue: 1,
+            }),
+            [ls]: Object.freeze({
+              xValue: 0,
+              yValue: 0,
+              zValue: 0,
+            }),
             [ds]: Object.freeze({ xValue: 0, yValue: 0 }),
           }),
           (Ms = Object.freeze({
@@ -6903,7 +6952,12 @@
             contrast: 100,
             brightness: 100,
           })),
-          (ks = Object.freeze({ wght: 0, opsz: 0, wdth: 0, slnt: 0 })),
+          (ks = Object.freeze({
+            wght: 0,
+            opsz: 0,
+            wdth: 0,
+            slnt: 0,
+          })),
           (Vs = (e, t) => {
             const n = (0, Sr.default)(t.filters, ({ type: t }) => t === e);
             if (n && n.unit) return n.unit;
@@ -6959,7 +7013,10 @@
         Object.defineProperty(e, "__esModule", { value: !0 }),
           (function (e, t) {
             for (var n in t)
-              Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+              Object.defineProperty(e, n, {
+                enumerable: !0,
+                get: t[n],
+              });
           })(e, {
             IX2BrowserSupport: function () {
               return t;
@@ -7899,10 +7956,19 @@
             type: id,
             payload: { stateKey: e, newState: t },
           })),
-          (Ad = (e, t) => ({ type: od, payload: { now: e, parameters: t } })),
-          (Ld = (e, t) => ({ type: rd, payload: { key: e, value: t } })),
+          (Ad = (e, t) => ({
+            type: od,
+            payload: { now: e, parameters: t },
+          })),
+          (Ld = (e, t) => ({
+            type: rd,
+            payload: { key: e, value: t },
+          })),
           (Rd = (e) => ({ type: sd, payload: { ...e } })),
-          (Nd = (e, t) => ({ type: ld, payload: { instanceId: e, time: t } })),
+          (Nd = (e, t) => ({
+            type: ld,
+            payload: { instanceId: e, time: t },
+          })),
           (Cd = (e) => ({ type: dd, payload: { instanceId: e } })),
           (xd = (e, t, n, a) => ({
             type: cd,
@@ -8629,7 +8695,11 @@
           }),
           (hu = { ...Iu, types: [ru, su].join(" ") }),
           (Tu = [
-            { target: window, types: "resize orientationchange", throttle: !0 },
+            {
+              target: window,
+              types: "resize orientationchange",
+              throttle: !0,
+            },
             {
               target: document,
               types: "scroll wheel readystatechange IX2_PAGE_UPDATE",
@@ -8754,7 +8824,9 @@
             e.top > t.top &&
             e.top < t.bottom),
           (Mu = (e) => (t, n) => {
-            const a = { finished: "complete" === document.readyState };
+            const a = {
+              finished: "complete" === document.readyState,
+            };
             return !a.finished || (n && n.finshed) || e(t), a;
           }),
           (ku = (e) => (t, n) => (n || e(t), { started: !0 })),
@@ -8802,8 +8874,14 @@
             [Yc]: Fu(!1),
             [Hc]: Uu(),
             [Qc]: Fu(),
-            [au]: { types: "ecommerce-cart-open", handler: yu(pu, Eu) },
-            [nu]: { types: "ecommerce-cart-close", handler: yu(pu, Eu) },
+            [au]: {
+              types: "ecommerce-cart-open",
+              handler: yu(pu, Eu),
+            },
+            [nu]: {
+              types: "ecommerce-cart-close",
+              handler: yu(pu, Eu),
+            },
             [Vc]: {
               types: "click",
               handler: yu(
@@ -8852,7 +8930,12 @@
                   nativeEvent: i,
                   eventStateKey: o,
                 },
-                r = { clientX: 0, clientY: 0, pageX: 0, pageY: 0 }
+                r = {
+                  clientX: 0,
+                  clientY: 0,
+                  pageX: 0,
+                  pageY: 0,
+                }
               ) => {
                 const {
                     basedOn: s,
@@ -8892,7 +8975,15 @@
                   default: {
                     h = du(o, d);
                     const e = 0 === i.type.indexOf("mouse");
-                    if (e && !0 !== pu({ element: t, nativeEvent: i })) break;
+                    if (
+                      e &&
+                      !0 !==
+                        pu({
+                          element: t,
+                          nativeEvent: i,
+                        })
+                    )
+                      break;
                     const n = t.getBoundingClientRect(),
                       { left: a, top: r, width: s, height: l } = n;
                     if (!e && !wu({ left: f, top: p }, n)) break;
@@ -9000,9 +9091,21 @@
     sp = {};
   function lp(e) {
     rf({ store: e, select: ({ ixRequest: e }) => e.preview, onChange: dp }),
-      rf({ store: e, select: ({ ixRequest: e }) => e.playback, onChange: up }),
-      rf({ store: e, select: ({ ixRequest: e }) => e.stop, onChange: fp }),
-      rf({ store: e, select: ({ ixRequest: e }) => e.clear, onChange: pp });
+      rf({
+        store: e,
+        select: ({ ixRequest: e }) => e.playback,
+        onChange: up,
+      }),
+      rf({
+        store: e,
+        select: ({ ixRequest: e }) => e.stop,
+        onChange: fp,
+      }),
+      rf({
+        store: e,
+        select: ({ ixRequest: e }) => e.clear,
+        onChange: pp,
+      });
   }
   function dp({ rawData: e, defer: t }, n) {
     const a = () => {
@@ -9183,7 +9286,10 @@
                                           elementRoot: o,
                                           elementApi: Ic,
                                         }).forEach((e) => {
-                                          y.push({ element: e, key: r });
+                                          y.push({
+                                            element: e,
+                                            key: r,
+                                          });
                                         });
                                       }
                                     });
@@ -9246,7 +9352,11 @@
                         }
                         (o.actionTypeId === s.GENERAL_START_ACTION ||
                           $u(o.actionTypeId)) &&
-                          Ip({ store: n, actionListId: u, eventId: d });
+                          Ip({
+                            store: n,
+                            actionListId: u,
+                            eventId: d,
+                          });
                       });
                       const c = (e) => {
                           const { ixSession: t } = n.getState();
@@ -9551,7 +9661,11 @@
             const { ixInstances: a } = e.getState();
             Sp(a[t], e);
           })(n, p)
-        : (rf({ store: n, select: ({ ixInstances: e }) => e[p], onChange: Sp }),
+        : (rf({
+            store: n,
+            select: ({ ixInstances: e }) => e[p],
+            onChange: Sp,
+          }),
           f && n.dispatch(Nd(p, g.tick)));
   }
   function bp(e, t) {
@@ -9700,7 +9814,10 @@
         Object.defineProperty(e, "__esModule", { value: !0 }),
           (function (e, t) {
             for (var n in t)
-              Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+              Object.defineProperty(e, n, {
+                enumerable: !0,
+                get: t[n],
+              });
           })(e, {
             actions: function () {
               return i;
@@ -9755,7 +9872,12 @@
           e() && (0, a.observeRequests)(l);
         }
         function c(e) {
-          u(), (0, a.startEngine)({ store: l, rawData: e, allowEvents: !0 });
+          u(),
+            (0, a.startEngine)({
+              store: l,
+              rawData: e,
+              allowEvents: !0,
+            });
         }
         function u() {
           (0, a.stopEngine)(l);
@@ -9807,7 +9929,12 @@
                   ) {
                     if (!/^#[a-zA-Z0-9\-\_]+$/.test(c.hash)) return;
                     var s = e(c.hash);
-                    s.length && i.push({ link: r, sec: s, active: !1 });
+                    s.length &&
+                      i.push({
+                        link: r,
+                        sec: s,
+                        active: !1,
+                      });
                   } else if ("#" !== n && "" !== n) {
                     var l =
                       c.href === d.href || n === o || (f.test(n) && p.test(o));
@@ -10016,7 +10143,9 @@
                           l(u);
                         })(f, function () {
                           E(f, "add"),
-                            f.get(0).focus({ preventScroll: !0 }),
+                            f.get(0).focus({
+                              preventScroll: !0,
+                            }),
                             E(f, "remove");
                         });
                       },
@@ -10072,9 +10201,13 @@
                       n &&
                       "" === String(n()) &&
                       (!(function (t, n, a) {
-                        var i = e.Event(t, { originalEvent: n });
+                        var i = e.Event(t, {
+                          originalEvent: n,
+                        });
                         e(n.target).trigger(i, a);
-                      })("swipe", t, { direction: d > 0 ? "right" : "left" }),
+                      })("swipe", t, {
+                        direction: d > 0 ? "right" : "left",
+                      }),
                       u());
                 }
               }
@@ -10769,7 +10902,10 @@
                                       t,
                                       this,
                                       (e) =>
-                                        a.handler({ ...a, turnstileToken: e }),
+                                        a.handler({
+                                          ...a,
+                                          turnstileToken: e,
+                                        }),
                                       () => {
                                         a.fail.toggle(!0), a.fail.focus(), T(a);
                                       }
@@ -10862,7 +10998,11 @@
                 (d = s.substring(d, s.indexOf("&", d))),
                   (i["b_" + l + "_" + d] = ""),
                   e
-                    .ajax({ url: s, data: i, dataType: "jsonp" })
+                    .ajax({
+                      url: s,
+                      data: i,
+                      dataType: "jsonp",
+                    })
                     .done(function (e) {
                       (n.success =
                         "success" === e.result || /already/.test(e.msg)),
@@ -10969,9 +11109,10 @@
           (I.build = function () {
             return (
               I.destroy(),
-              ((c = { html: n(t.documentElement), empty: n() }).arrowLeft = P(
-                "control left inactive"
-              )
+              ((c = {
+                html: n(t.documentElement),
+                empty: n(),
+              }).arrowLeft = P("control left inactive")
                 .attr("role", "button")
                 .attr("aria-hidden", !0)
                 .attr("aria-controls", "tmm-lightbox-view")),
@@ -11107,7 +11248,9 @@
                           c.view
                             ? (f(c.view)
                                 .add("opacity .3s")
-                                .start({ opacity: 0 })
+                                .start({
+                                  opacity: 0,
+                                })
                                 .then(
                                   ((a = c.view),
                                   function () {
@@ -11117,8 +11260,13 @@
                               f(g)
                                 .add("opacity .3s")
                                 .add("transform .3s")
-                                .set({ x: e > m ? "80px" : "-80px" })
-                                .start({ opacity: 1, x: 0 }))
+                                .set({
+                                  x: e > m ? "80px" : "-80px",
+                                })
+                                .start({
+                                  opacity: 1,
+                                  x: 0,
+                                }))
                             : g.css("opacity", 1),
                           (c.view = g),
                           c.view.prop("tabIndex", 0),
@@ -11142,9 +11290,9 @@
                                 ? (t = Math.max(0, i + o - s))
                                 : i + o > s + r && (t = Math.min(i, l));
                               null != t &&
-                                f(c.strip)
-                                  .add("scroll-left 500ms")
-                                  .start({ "scroll-left": t });
+                                f(c.strip).add("scroll-left 500ms").start({
+                                  "scroll-left": t,
+                                });
                             })(i);
                         }
                       }
@@ -11763,7 +11911,10 @@
                     return (
                       I(e.menu)
                         .add(d)
-                        .set({ x: a.animDirect * r, height: i })
+                        .set({
+                          x: a.animDirect * r,
+                          height: i,
+                        })
                         .start({ x: 0 })
                         .then(u),
                       void (e.overlay && e.overlay.width(r))
@@ -12053,7 +12204,11 @@
                           e(o).index() === a && (i = n);
                         });
                       }),
-                      null != i && G(n, { index: i, immediate: !0 });
+                      null != i &&
+                        G(n, {
+                          index: i,
+                          immediate: !0,
+                        });
                   })(a, p.select);
                 } else {
                   if ("swipe" === f.type) {
@@ -12221,7 +12376,10 @@
                     (t.shifted = p))
                   : (a.infinite &&
                       t.shifted &&
-                      (y(t.shifted).set({ visibility: "", x: l }),
+                      (y(t.shifted).set({
+                        visibility: "",
+                        x: l,
+                      }),
                       (t.shifted = null)),
                     y(t.slides).set({ visibility: "" }).add(_).start({ x: d }));
               }
@@ -12270,7 +12428,11 @@
                   i - a > s &&
                     (n++,
                     (a += r),
-                    (t.anchors[n - 1] = { els: [], x: i, width: 0 })),
+                    (t.anchors[n - 1] = {
+                      els: [],
+                      x: i,
+                      width: 0,
+                    })),
                     (o = e(d).outerWidth(!0)),
                     (i += o),
                     (t.anchors[n - 1].width += o),
@@ -12299,7 +12461,10 @@
                         .attr("tabindex", "-1"),
                         t.nav.hasClass("tmm-num") && n.text(o + 1),
                         null != i &&
-                          n.css({ "margin-left": i, "margin-right": i }),
+                          n.css({
+                            "margin-left": i,
+                            "margin-right": i,
+                          }),
                         a.push(n);
                     t.nav.empty().append(a);
                   })(t));
@@ -12467,12 +12632,17 @@
                         r
                           .addClass(m)
                           .removeAttr("tabindex")
-                          .attr({ "aria-selected": "true" })
+                          .attr({
+                            "aria-selected": "true",
+                          })
                           .each(E.intro))
                       : r.hasClass(m) &&
                         r
                           .removeClass(m)
-                          .attr({ tabindex: "-1", "aria-selected": "false" })
+                          .attr({
+                            tabindex: "-1",
+                            "aria-selected": "false",
+                          })
                           .each(E.outro);
                   });
                 var c = [],
@@ -12506,15 +12676,13 @@
             }
             function b(e, t, a) {
               if (
-                (t
-                  .removeClass(g)
-                  .css({
-                    opacity: "",
-                    transition: "",
-                    transform: "",
-                    width: "",
-                    height: "",
-                  }),
+                (t.removeClass(g).css({
+                  opacity: "",
+                  transition: "",
+                  transform: "",
+                  width: "",
+                  height: "",
+                }),
                 a.addClass(g).each(E.intro),
                 n.redraw.up(),
                 !e.intro)
@@ -12523,7 +12691,9 @@
               r(a)
                 .set({ opacity: 0 })
                 .redraw()
-                .add("opacity " + e.intro + "ms " + e.easing, { fallback: d })
+                .add("opacity " + e.intro + "ms " + e.easing, {
+                  fallback: d,
+                })
                 .start({ opacity: 1 });
             }
             return (
@@ -13896,7 +14066,10 @@ timm/lib/timm.js:
           id: "",
           actionTypeId: "SLIDE_EFFECT",
           instant: !1,
-          config: { actionListId: "slideInBottom", autoStopEventId: "e-100" },
+          config: {
+            actionListId: "slideInBottom",
+            autoStopEventId: "e-100",
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -14523,7 +14696,10 @@ timm/lib/timm.js:
           id: "",
           actionTypeId: "FADE_EFFECT",
           instant: !1,
-          config: { actionListId: "fadeIn", autoStopEventId: "e-130" },
+          config: {
+            actionListId: "fadeIn",
+            autoStopEventId: "e-130",
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -14599,7 +14775,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-32", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-32",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -14638,7 +14818,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-38", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-38",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -14677,7 +14861,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-39", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-39",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -14696,14 +14884,14 @@ timm/lib/timm.js:
         ],
         config: [
           {
-            // continuousParameterGroupId: "a-39-p",
-            // smoothing: 90,
-            // startsEntering: !0,
-            // addStartOffset: !1,
-            // addOffsetValue: 50,
-            // startsExiting: !1,
-            // addEndOffset: !1,
-            // endOffsetValue: 50,
+            continuousParameterGroupId: "a-39-p",
+            smoothing: 90,
+            startsEntering: !0,
+            addStartOffset: !1,
+            addOffsetValue: 50,
+            startsExiting: !1,
+            addEndOffset: !1,
+            endOffsetValue: 50,
           },
         ],
         createdOn: 1631121531548,
@@ -14716,7 +14904,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-39", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-39",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -14755,7 +14947,10 @@ timm/lib/timm.js:
           id: "",
           actionTypeId: "FADE_EFFECT",
           instant: !1,
-          config: { actionListId: "fadeIn", autoStopEventId: "e-137" },
+          config: {
+            actionListId: "fadeIn",
+            autoStopEventId: "e-137",
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -15755,7 +15950,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-48", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-48",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -16222,7 +16421,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-66", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-66",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -16343,7 +16546,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-32", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-32",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
@@ -16380,7 +16587,11 @@ timm/lib/timm.js:
         action: {
           id: "",
           actionTypeId: "GENERAL_CONTINUOUS_ACTION",
-          config: { actionListId: "a-38", affectedElements: {}, duration: 0 },
+          config: {
+            actionListId: "a-38",
+            affectedElements: {},
+            duration: 0,
+          },
         },
         mediaQueries: ["main", "medium", "small", "tiny"],
         target: {
