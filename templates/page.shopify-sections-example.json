@@ -37,8 +37,8 @@
         "button2_text_color": "#000000",
         "button2_style": "outline",
         "page_width": "1600",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
     "tmm_promo_bar_7pTG3H": {
@@ -74,6 +74,7 @@
       "settings": {
         "color_scheme": "",
         "show_line_separators": true,
+        "fade_in": true,
         "text_style": "tmm-text-semibold",
         "text_transformation": "uppercase",
         "text_decoration": "none",
@@ -232,6 +233,8 @@
             "button_color": "#eb3131",
             "button_text_color": "#ffffff",
             "button_style": "solid",
+            "tag_color": "#000000",
+            "tag_thickness": 1,
             "tag_1": "Captivate",
             "tag_2": "Convert",
             "tag_3": "Engage"
@@ -247,6 +250,8 @@
             "button_color": "#eb3131",
             "button_text_color": "#ffffff",
             "button_style": "solid",
+            "tag_color": "#000000",
+            "tag_thickness": 1,
             "tag_1": "Boost Sales",
             "tag_2": "Looks Stunning",
             "tag_3": ""
