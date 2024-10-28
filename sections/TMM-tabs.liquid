@@ -67,12 +67,12 @@
       data-duration-out="100"
       class="tmm-tabs1 tmm-tabs"
     >
-      <div
-        id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a6c-b8b46a66"
-        class="tmm-tabs1-menu tmm-tab-menu"
-      >
-        {%- for block in section.blocks -%}
-          <div class="tmm-interaction_wrap">
+      <div class="tmm-interaction_wrap">
+        <div
+          id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a6c-b8b46a66"
+          class="tmm-tabs1-menu tmm-tab-menu"
+        >
+          {%- for block in section.blocks -%}
             <a
               {{ block.shopify_attributes }}
               data-tmm-tab="Tab {{ forloop.index }}"
@@ -80,8 +80,8 @@
             >
               <div class="tmm-tabs1-heading">{{- block.settings.title -}}</div>
             </a>
-          </div>
-        {%- endfor -%}
+          {%- endfor -%}
+        </div>
       </div>
       <div
         id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a7d-b8b46a66"
