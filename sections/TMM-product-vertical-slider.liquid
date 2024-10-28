@@ -83,28 +83,30 @@
   <div class="tmm-padding-global">
     <div class="tmm-container-large">
       <div class="tmm-layout-grid tmm-sticky1-container">
-        <div class="tmm-sticky1-content">
-          <div class="tmm-margin-bottom tmm-margin-xsmall">
-            <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
-          </div>
-          <div class="tmm-margin-bottom tmm-margin-xsmall">
-            <{{ section.settings.heading_size }} class="tmm-sticky1-heading_text">
-              {{- section.settings.heading -}}
-            </{{ section.settings.heading_size }}>
-          </div>
-          <p class="tmm-sticky1-body_text">
-            {{- section.settings.body_text -}}
-          </p>
-          {%- if section.settings.button_url != blank -%}
-            <div class="tmm-margin-top margin-medium">
-              <a
-                href="{{ section.settings.button_url }}"
-                class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
-              >
-                {{- section.settings.button_text -}}
-              </a>
+        <div class="tmm-interaction_wrap">
+          <div class="tmm-sticky1-content">
+            <div class="tmm-margin-bottom tmm-margin-xsmall">
+              <div class="tmm-text-semibold">{{- section.settings.caption_text -}}</div>
             </div>
-          {%- endif -%}
+            <div class="tmm-margin-bottom tmm-margin-xsmall">
+              <{{ section.settings.heading_size }} class="tmm-sticky1-heading_text">
+                {{- section.settings.heading -}}
+              </{{ section.settings.heading_size }}>
+            </div>
+            <p class="tmm-sticky1-body_text">
+              {{- section.settings.body_text -}}
+            </p>
+            {%- if section.settings.button_url != blank -%}
+              <div class="tmm-margin-top margin-medium">
+                <a
+                  href="{{ section.settings.button_url }}"
+                  class="tmm-button_{{ section.id }} tmm-button-primary tmm-button{% if section.settings.button_style == 'outline' %} tmm-is-secondary{% endif %}"
+                >
+                  {{- section.settings.button_text -}}
+                </a>
+              </div>
+            {%- endif -%}
+          </div>
         </div>
         <div class="tmm-sticky1-items">
           <div class="tmm-layout-grid tmm-sticky1-items_list">
