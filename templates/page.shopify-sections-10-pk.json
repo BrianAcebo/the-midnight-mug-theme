@@ -15,7 +15,7 @@
         "heading_JYY8XT": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Boost Your Store's Design Instantly!",
             "heading_2": "",
             "heading_3": "",
             "heading_size": "h1",
@@ -26,24 +26,28 @@
         "text_7PihLn": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Transform your Shopify store effortlessly with our 10 Premium Shopify Sections Pack! Perfect for both beginners and experienced store owners to enhance your store’s layout, user experience, and sales potential.",
             "text_style": "body"
           }
         },
         "buttons_fRxjFJ": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "Buy Now",
+            "button_link_1": "shopify://products/premium-shopify-sections-10pk",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
+            "button_label_2": "Shop All",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true,
             "button_rounding": 0
           }
         }
       },
-      "block_order": ["heading_JYY8XT", "text_7PihLn", "buttons_fRxjFJ"],
+      "block_order": [
+        "heading_JYY8XT",
+        "text_7PihLn",
+        "buttons_fRxjFJ"
+      ],
       "settings": {
         "image": "shopify://shop_images/shopify-sections.jpg",
         "image_overlay_opacity": 0,
@@ -63,5 +67,7 @@
       }
     }
   },
-  "order": ["image_banner_tmm_VP6ebY"]
+  "order": [
+    "image_banner_tmm_VP6ebY"
+  ]
 }
