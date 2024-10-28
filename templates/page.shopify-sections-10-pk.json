@@ -178,7 +178,7 @@
         "divider_color": "#000000",
         "divider_thickness": 1,
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "featured_product_4pqUJX": {
@@ -248,8 +248,8 @@
         "image_zoom": "lightbox",
         "hide_variants": false,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "tmm_divider_jddVbi": {
@@ -259,7 +259,7 @@
         "container_size": "1600",
         "divider_color": "#000000",
         "divider_thickness": 1,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -310,8 +310,8 @@
         "arrow_button_color": "#000000",
         "arrow_color": "#ffffff",
         "page_width": "1600",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "newsletter_UKbbNh": {
