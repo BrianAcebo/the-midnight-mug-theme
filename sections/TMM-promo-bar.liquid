@@ -27,33 +27,35 @@
 {%- endstyle -%}
 
 <div class="section__tmm-component tmm-section-{{ section.id }} section-{{ section.id }}-padding tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
-  {%- for i in (1..2) -%}
-    <div class="tmm-promo-text_wrap">
-      {%- for i in (1..3) -%}
-        {%- for block in section.blocks -%}
-          {%- if block.settings.link != blank -%}
-            <a
-              {{ block.shopify_attributes }}
-              href="{{- block.settings.link -}}"
-              role="region"
-              class="tmm-promo-text {{ section.settings.text_style }}"
-            >
-              {{- block.settings.text -}}
-            </a>
-          {%- else -%}
-            <div
-              {{ block.shopify_attributes }}
-              role="region"
-              class="tmm-promo-text {{ section.settings.text_style }}"
-              aria-label="{{- block.settings.text -}}"
-            >
-              {{- block.settings.text -}}
-            </div>
-          {%- endif -%}
+  <div class="tmm-interaction_wrap">
+    {%- for i in (1..2) -%}
+      <div class="tmm-promo-text_wrap">
+        {%- for i in (1..3) -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.link != blank -%}
+              <a
+                {{ block.shopify_attributes }}
+                href="{{- block.settings.link -}}"
+                role="region"
+                class="tmm-promo-text {{ section.settings.text_style }}"
+              >
+                {{- block.settings.text -}}
+              </a>
+            {%- else -%}
+              <div
+                {{ block.shopify_attributes }}
+                role="region"
+                class="tmm-promo-text {{ section.settings.text_style }}"
+                aria-label="{{- block.settings.text -}}"
+              >
+                {{- block.settings.text -}}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
         {%- endfor -%}
-      {%- endfor -%}
-    </div>
-  {%- endfor -%}
+      </div>
+    {%- endfor -%}
+  </div>
 </div>
 
 {% schema %}
