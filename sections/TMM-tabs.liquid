@@ -53,24 +53,26 @@
   bind="eac4529d-08a0-66f9-2c8a-a83a964cab0a"
   class="tmm-tabs1_container section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient"
 >
-  <div class="tmm-interaction_wrap">
-    <div class="tmm-padding-global">
+  <div class="tmm-padding-global">
+    <div class="tmm-interaction_wrap">
       <{{ section.settings.header_size }} class="tmm-tabs1-header" data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a68">
         {{- section.settings.header_text -}}
       </{{ section.settings.header_size }}>
+    </div>
+    <div
+      data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a6b"
+      data-current="Tab 1"
+      data-easing="ease"
+      data-duration-in="300"
+      data-duration-out="100"
+      class="tmm-tabs1 tmm-tabs"
+    >
       <div
-        data-tmm-id="351d49d2-3876-0408-ea98-40e9b8b46a6b"
-        data-current="Tab 1"
-        data-easing="ease"
-        data-duration-in="300"
-        data-duration-out="100"
-        class="tmm-tabs1 tmm-tabs"
+        id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a6c-b8b46a66"
+        class="tmm-tabs1-menu tmm-tab-menu"
       >
-        <div
-          id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a6c-b8b46a66"
-          class="tmm-tabs1-menu tmm-tab-menu"
-        >
-          {%- for block in section.blocks -%}
+        {%- for block in section.blocks -%}
+          <div class="tmm-interaction_wrap">
             <a
               {{ block.shopify_attributes }}
               data-tmm-tab="Tab {{ forloop.index }}"
@@ -78,13 +80,15 @@
             >
               <div class="tmm-tabs1-heading">{{- block.settings.title -}}</div>
             </a>
-          {%- endfor -%}
-        </div>
-        <div
-          id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a7d-b8b46a66"
-          class="tmm-tabs1-content tmm-tab-content"
-        >
-          {%- for block in section.blocks -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      <div
+        id="tmm-node-_351d49d2-3876-0408-ea98-40e9b8b46a7d-b8b46a66"
+        class="tmm-tabs1-content tmm-tab-content"
+      >
+        {%- for block in section.blocks -%}
+          <div class="tmm-interaction_wrap">
             <div
               {{ block.shopify_attributes }}
               data-tmm-tab="Tab {{ forloop.index }}"
@@ -121,8 +125,8 @@
                 {%- endif -%}
               </div>
             </div>
-          {%- endfor -%}
-        </div>
+          </div>
+        {%- endfor -%}
       </div>
     </div>
   </div>
