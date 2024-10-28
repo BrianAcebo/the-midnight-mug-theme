@@ -79,7 +79,8 @@
         "row_Bc3VNP": {
           "type": "row",
           "settings": {
-            "caption": "Enhance",
+            "image": "shopify://shop_images/Minimalist_Website_Launch_Computer_Mockup_Instagram_Post.jpg",
+            "caption": "Enhance your store",
             "heading": "Pre-built Shopify Sections",
             "text": "<p>Elevate your Shopify store’s look and functionality with our 10 Shopify Sections Bundle! Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.</p>",
             "button_label": "Buy now",
@@ -89,11 +90,12 @@
         "row_XTVTbp": {
           "type": "row",
           "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "image": "shopify://shop_images/Minimalist_Website_Launch_Computer_Mockup_Instagram_Post_1.jpg",
+            "caption": "Elevate your brand",
+            "heading": "Captivate Your Customers",
+            "text": "<p>From image galleries and testimonials to product showcases and promotional banners, each section is crafted to seamlessly integrate with your theme, allowing you to build a visually stunning, professional online store without any coding knowledge.</p>",
+            "button_label": "Buy Now",
+            "button_link": "shopify://products/premium-shopify-sections-10pk"
           }
         }
       },
@@ -102,11 +104,11 @@
         "row_XTVTbp"
       ],
       "settings": {
-        "image_height": "medium",
+        "image_height": "adapt",
         "desktop_image_width": "medium",
         "heading_size": "h1",
         "text_style": "body",
-        "button_style": "secondary",
+        "button_style": "primary",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "image_layout": "alternate-left",
@@ -167,12 +169,195 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "tmm_divider_J6CWRX": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "1600",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_4pqUJX": {
+      "type": "featured-product",
+      "blocks": {
+        "text_zTq66L": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_VXy6NC": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "price_ehQdeH": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_rzbACQ": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_eGgdqK": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_Fx9Fta": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_LpYd6y": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_zTq66L",
+        "title_VXy6NC",
+        "price_ehQdeH",
+        "variant_picker_rzbACQ",
+        "quantity_selector_eGgdqK",
+        "buy_buttons_Fx9Fta",
+        "share_LpYd6y"
+      ],
+      "settings": {
+        "product": "premium-shopify-sections-10pk",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "tmm_divider_jddVbi": {
+      "type": "TMM-divider",
+      "settings": {
+        "color_scheme": "",
+        "container_size": "1600",
+        "divider_color": "#000000",
+        "divider_thickness": 1,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "tmm_slider_mjLmDW": {
+      "type": "TMM-slider",
+      "blocks": {
+        "slider_BTNVVp": {
+          "type": "slider",
+          "settings": {
+            "product": "",
+            "image": "shopify://shop_images/tshirts.jpg",
+            "heading": "\"This was the best thing I absolutely ever did for my business.\"",
+            "header_text_transformation": "uppercase",
+            "heading_size": "h2",
+            "body_text": "Robert Jones - Owner of Robo Fashion",
+            "body_text_transformation": "capitalize",
+            "button_text": "Vew More",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid"
+          }
+        },
+        "slider_YNRTjz": {
+          "type": "slider",
+          "settings": {
+            "product": "",
+            "image": "shopify://shop_images/stacked-bracelets.jpg",
+            "heading": "\"This helped me so much for my pre-launch. It skyrocketed my sales!\"",
+            "header_text_transformation": "uppercase",
+            "heading_size": "h2",
+            "body_text": "Micheal Davis - Owner Of Monica's Jewelry",
+            "body_text_transformation": "none",
+            "button_text": "View More",
+            "button_url": "shopify://products/premium-shopify-sections-10pk",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "slider_BTNVVp",
+        "slider_YNRTjz"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "arrow_button_color": "#777777",
+        "arrow_color": "#ffffff",
+        "page_width": "1200",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "newsletter_UKbbNh": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_k6Ewha": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_nNtY9e": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_jhwfAw": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_k6Ewha",
+        "paragraph_nNtY9e",
+        "email_form_jhwfAw"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_tmm_VP6ebY",
     "as_seen_on_M7GaHx",
     "multirow_bHBqFj",
-    "tmm_features_DRGiJd"
+    "tmm_features_DRGiJd",
+    "tmm_divider_J6CWRX",
+    "featured_product_4pqUJX",
+    "tmm_divider_jddVbi",
+    "tmm_slider_mjLmDW",
+    "newsletter_UKbbNh"
   ]
 }
