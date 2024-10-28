@@ -100,39 +100,41 @@
             {%- endfor -%}
           {%- endif -%}
         </div>
-        <div class="tmm-margin-top margin-xlarge">
-          <div class="tmm-button-group">
-            {%- if section.settings.button1_url != blank -%}
-              <a
-                href="{{ section.settings.button1_url }}"
-                class="tmm-button_{{ section.id }} tmm-button-1 tmm-button-primary tmm-button{% if section.settings.button1_style == 'outline' %} tmm-is-secondary{% endif %}"
-              >
-                {{- section.settings.button1_text -}}
-              </a>
-            {%- endif -%}
-            {%- if section.settings.button2_url != blank -%}
-              <a
-                href="{{ section.settings.button2_url }}"
-                class="tmm-button_{{ section.id }} tmm-button-2 tmm-is-link tmm-is-icon tmm-inline-block tmm-button-2 tmm-button-primary tmm-button{% if section.settings.button2_style == 'outline' %} tmm-is-secondary{% endif %}"
-              >
-                <div>{{- section.settings.button2_text -}}</div>
-                <div class="tmm-icon-embed-xxsmall tmm-embed">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewbox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 3L11 8L6 13"
-                      stroke="{{ section.settings.button2_text_color }}"
-                      stroke-width="1.5"
-                    ></path>
-                  </svg>
-                </div>
-              </a>
-            {%- endif -%}
+        <div class="tmm-interaction_wrap">
+          <div class="tmm-margin-top margin-xlarge">
+            <div class="tmm-button-group">
+              {%- if section.settings.button1_url != blank -%}
+                <a
+                  href="{{ section.settings.button1_url }}"
+                  class="tmm-button_{{ section.id }} tmm-button-1 tmm-button-primary tmm-button{% if section.settings.button1_style == 'outline' %} tmm-is-secondary{% endif %}"
+                >
+                  {{- section.settings.button1_text -}}
+                </a>
+              {%- endif -%}
+              {%- if section.settings.button2_url != blank -%}
+                <a
+                  href="{{ section.settings.button2_url }}"
+                  class="tmm-button_{{ section.id }} tmm-button-2 tmm-is-link tmm-is-icon tmm-inline-block tmm-button-2 tmm-button-primary tmm-button{% if section.settings.button2_style == 'outline' %} tmm-is-secondary{% endif %}"
+                >
+                  <div>{{- section.settings.button2_text -}}</div>
+                  <div class="tmm-icon-embed-xxsmall tmm-embed">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 3L11 8L6 13"
+                        stroke="{{ section.settings.button2_text_color }}"
+                        stroke-width="1.5"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              {%- endif -%}
+            </div>
           </div>
         </div>
       </div>
