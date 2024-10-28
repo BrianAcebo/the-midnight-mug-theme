@@ -154,6 +154,119 @@
         "padding_bottom": 0
       }
     },
+    "rich_text_KxgYJC": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mPt9TE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Boost Your Store's Design Instantly!",
+            "heading_size": "h2"
+          }
+        },
+        "text_FzCVHP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Transform your Shopify store effortlessly with our 10 Premium Shopify Sections Pack! Perfect for both beginners and experienced store owners to enhance your store’s layout, user experience, and sales potential.</p>"
+          }
+        },
+        "button_ehhTpn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check it Out",
+            "button_link": "shopify://products/premium-shopify-sections-10pk",
+            "button_style_secondary": false,
+            "button_label_2": "View All",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_mPt9TE",
+        "text_FzCVHP",
+        "button_ehhTpn"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_product_atNwcR": {
+      "type": "featured-product",
+      "blocks": {
+        "text_CmFxeL": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_WGGPW8": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_PQxp86": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_HtPFaJ": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_pKh6zp": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_AjYGYw": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_FwWLgQ": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_CmFxeL",
+        "title_WGGPW8",
+        "price_PQxp86",
+        "variant_picker_HtPFaJ",
+        "quantity_selector_pKh6zp",
+        "buy_buttons_AjYGYw",
+        "share_FwWLgQ"
+      ],
+      "settings": {
+        "product": "premium-shopify-sections-10pk",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "video_4tj4fA": {
       "type": "video",
       "settings": {
@@ -209,6 +322,8 @@
     "rich_text_mzqHBY",
     "featured_collection",
     "multirow_DwQBLE",
+    "rich_text_KxgYJC",
+    "featured_product_atNwcR",
     "video_4tj4fA",
     "newsletter_pND8VG"
   ]
