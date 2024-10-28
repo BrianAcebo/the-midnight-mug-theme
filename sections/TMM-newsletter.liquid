@@ -44,10 +44,10 @@
 {%- endstyle -%}
 
 <section class="tmm-newsletter1 section-{{ section.id }}-padding tmm-section-{{ section.id }} color-{{ section.settings.color_scheme }} gradient">
-  <div class="tmm-interaction_wrap">
-    <div class="tmm-padding-global">
-      <div class="tmm-container-large">
-        <div class="tmm-layout-grid tmm-newsletter1-container">
+  <div class="tmm-padding-global">
+    <div class="tmm-container-large">
+      <div class="tmm-layout-grid tmm-newsletter1-container">
+        <div class="tmm-interaction_wrap">
           <div class="tmm-newsletter1-content">
             <div class="tmm-margin-bottom tmm-margin-small">
               <{{ section.settings.heading_size }} class="tmm-newsletter1-heading_text">
@@ -114,6 +114,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="tmm-interaction_wrap">
           <div class="tmm-newsletter1-image_wrap">
             {%- if section.settings.image != blank -%}
               {% capture sizes %}(max-width: {{ section.settings.image.width | times: 2 }}px) 50vw, {{ section.settings.image.width }}px{% endcapture %}
