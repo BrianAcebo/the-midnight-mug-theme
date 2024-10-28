@@ -159,8 +159,7 @@
                   height: section.settings.image.height,
                   width: section.settings.image.width,
                   alt: section.settings.image.alt,
-                  sizes: sizes,
-                  preload: true
+                  sizes: sizes
               }}
             {%- else -%}
               {%- render 'TMM-placeholder', class: 'tmm-hero3-image' -%}
@@ -177,8 +176,7 @@
                   height: section.settings.mobile_image.height,
                   width: section.settings.mobile_image.width,
                   alt: section.settings.mobile_image.alt,
-                  sizes: sizes,
-                  preload: true
+                  sizes: sizes
               }}
             {%- else -%}
               {%- render 'TMM-placeholder', class: 'tmm-hero3-image tmm-hero3-image_mobile' -%}
