@@ -43,11 +43,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_JYY8XT",
-        "text_7PihLn",
-        "buttons_fRxjFJ"
-      ],
+      "block_order": ["heading_JYY8XT", "text_7PihLn", "buttons_fRxjFJ"],
       "settings": {
         "image": "shopify://shop_images/shopify-sections.jpg",
         "image_overlay_opacity": 60,
@@ -73,33 +69,57 @@
         "padding_bottom": 36
       }
     },
-    "tmm_features_wUjLUQ": {
+    "tmm_features_DRGiJd": {
       "type": "TMM-features",
+      "blocks": {
+        "feature_pwg7Q3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Versatile Sections",
+            "text": "Includes a variety of 10 layouts, from product showcases to testimonials and image galleries."
+          }
+        },
+        "feature_jmdRnN": {
+          "type": "feature",
+          "settings": {
+            "heading": "Fully Customizable",
+            "text": "Easily adjust colors, fonts, and content to match your brand without needing any coding knowledge."
+          }
+        },
+        "feature_gXmCY7": {
+          "type": "feature",
+          "settings": {
+            "heading": "One-Time Purchase",
+            "text": "Instant download and lifetime access to all sections, allowing you to update your store whenever you like."
+          }
+        }
+      },
+      "block_order": ["feature_pwg7Q3", "feature_jmdRnN", "feature_gXmCY7"],
       "settings": {
-        "color_scheme": "",
-        "caption_text": "Discover",
-        "heading": "Achieve Radiant Skin with Our Vegan Skincare",
+        "color_scheme": "scheme-1",
+        "caption_text": "Optimize Your Store",
+        "heading": "Add sections to your store in minutes",
         "heading_size": "h2",
         "header_text_transformation": "capitalize",
-        "body_text": "Our vegan skincare products are carefully crafted using natural ingredients that nourish and rejuvenate. Follow our step-by-step guide to unlock your skin's true potential.",
+        "body_text": "This pack includes a selection of stylish, drag-and-drop sections to give your store a fresh, custom look in minutes.",
         "body_text_transformation": "none",
-        "button1_text": "Explore",
-        "button1_url": "",
-        "button1_color": "#000000",
+        "button1_text": "Buy Now",
+        "button1_url": "shopify://products/premium-shopify-sections-10pk",
+        "button1_color": "#eb3131",
         "button1_text_color": "#ffffff",
         "button1_style": "solid",
-        "button2_text": "Learn more",
-        "button2_url": "",
+        "button2_text": "Shop All",
+        "button2_url": "shopify://collections/all",
         "button2_text_color": "#000000",
-        "page_width": "1200",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "page_width": "1600",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "image_banner_tmm_VP6ebY",
     "as_seen_on_M7GaHx",
-    "tmm_features_wUjLUQ"
+    "tmm_features_DRGiJd"
   ]
 }
