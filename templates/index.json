@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image-with-text": {
@@ -23,7 +23,7 @@
         "text_apnnjG": {
           "type": "text",
           "settings": {
-            "text": "<p>Build your business and grow your online store with our expert-crafted guides, kits, and templates for guaranteed success!<\/p>",
+            "text": "<p>Build your business and grow your online store with our expert-crafted guides, kits, and templates for guaranteed success!</p>",
             "text_style": "body"
           }
         },
@@ -31,7 +31,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/best-sellers",
+            "button_link": "shopify://collections/best-sellers",
             "button_style_secondary": false
           }
         }
@@ -42,7 +42,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/pexels-vlada-karpovich-4050302_1.jpg",
+        "image": "shopify://shop_images/pexels-vlada-karpovich-4050302_1.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -114,23 +114,23 @@
         "row_pNt4Ph": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/build-empire.jpg",
+            "image": "shopify://shop_images/build-empire.jpg",
             "caption": "",
             "heading": "Running an Online Store is Hard",
-            "text": "<p>Learning how to use Shopify doesn't have to be confusing or time consuming. The Midnight Mug is dedicated to helping store owners understand complex tasks, improve their website, and level up their online store.<\/p>",
+            "text": "<p>Learning how to use Shopify doesn't have to be confusing or time consuming. The Midnight Mug is dedicated to helping store owners understand complex tasks, improve their website, and level up their online store.</p>",
             "button_label": "View The Bundle",
-            "button_link": "shopify:\/\/products\/how-to-make-money-with-shopify-ultimate-bundle"
+            "button_link": "shopify://products/how-to-make-money-with-shopify-ultimate-bundle"
           }
         },
         "row_zDwLEX": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-cottonbro-studio-4778621_1.jpg",
+            "image": "shopify://shop_images/pexels-cottonbro-studio-4778621_1.jpg",
             "caption": "",
-            "heading": "Learn from Shopify <em>Experts<\/em>",
-            "text": "<p>Gain valuable insights on optimizing your storefront, platform tips and tricks, and much more from seasoned Shopify developers!<\/p>",
+            "heading": "Learn from Shopify <em>Experts</em>",
+            "text": "<p>Gain valuable insights on optimizing your storefront, platform tips and tricks, and much more from seasoned Shopify developers!</p>",
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/best-sellers"
+            "button_link": "shopify://collections/best-sellers"
           }
         }
       },
@@ -160,8 +160,8 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=j-R387vb3NM",
-        "cover_image": "shopify:\/\/shop_images\/HLxRMWmhbdp_6ad37757-3ee8-435a-9d4e-88abcd4e404f.png",
+        "video_url": "https://www.youtube.com/watch?v=j-R387vb3NM",
+        "cover_image": "shopify://shop_images/HLxRMWmhbdp_6ad37757-3ee8-435a-9d4e-88abcd4e404f.png",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -182,7 +182,7 @@
         "paragraph_HV9mAc": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Dedicated to teaching Shopify in a quick, easy to understand way.<\/p>"
+            "text": "<p>Dedicated to teaching Shopify in a quick, easy to understand way.</p>"
           }
         },
         "email_form_HTaHz7": {
@@ -202,59 +202,6 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
-    },
-    "lt_parallax_8iCMPa": {
-      "type": "LT-parallax",
-      "blocks": {
-        "heading_WKjzVn": {
-          "type": "heading",
-          "settings": {
-            "title": "<p>Your Heading<\/p>",
-            "heading_tag": "h2",
-            "font_size_desktop": 80,
-            "font_size_mobile": 50
-          }
-        },
-        "text_trRRU9": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Add your own custom content.<\/p>",
-            "font_size_desktop": 20,
-            "font_size_mobile": 18
-          }
-        },
-        "button_REWCcJ": {
-          "type": "button",
-          "settings": {
-            "link_text": "Learn more",
-            "link_url": "",
-            "btn_shape": "square",
-            "color_btn_fill": "#fff",
-            "color_btn_border": "#000",
-            "color_btn_text": "#000",
-            "color_btn_fill_hover": "#000",
-            "color_btn_border_hover": "#000",
-            "color_btn_text_hover": "#fff",
-            "font_size_btn_desktop": 18,
-            "font_size_btn_mobile": 16
-          }
-        }
-      },
-      "block_order": [
-        "heading_WKjzVn",
-        "text_trRRU9",
-        "button_REWCcJ"
-      ],
-      "settings": {
-        "parallax_on": true,
-        "color_text": "#000",
-        "color_bg": "transparent",
-        "text_width": 60,
-        "container_shape": "rounded",
-        "section_padding": 100,
-        "css_class": "",
-        "custom_css": ""
-      }
     }
   },
   "order": [
@@ -263,7 +210,6 @@
     "featured_collection",
     "multirow_DwQBLE",
     "video_4tj4fA",
-    "newsletter_pND8VG",
-    "lt_parallax_8iCMPa"
+    "newsletter_pND8VG"
   ]
 }
