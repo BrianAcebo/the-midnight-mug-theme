@@ -9,54 +9,15 @@
  */
 {
   "sections": {
-    "tmm_promo_bar_jMtpTT": {
-      "type": "TMM-promo-bar",
-      "blocks": {
-        "announcement_Hz9Bdb": {
-          "type": "announcement",
-          "settings": {
-            "text": "New sale launching",
-            "link": "shopify://collections"
-          }
-        },
-        "announcement_9bCTCB": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": "shopify://collections"
-          }
-        },
-        "announcement_D4hR6p": {
-          "type": "announcement",
-          "settings": {
-            "text": "Buy now while time lasts",
-            "link": "shopify://products/make-money-with-shopify-ebook"
-          }
-        }
-      },
-      "block_order": [
-        "announcement_Hz9Bdb",
-        "announcement_9bCTCB",
-        "announcement_D4hR6p"
-      ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "show_line_separators": true,
-        "text_style": "tmm-text-semibold",
-        "text_transformation": "uppercase",
-        "text_decoration": "none",
-        "text_spacing": 4,
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
     "tmm_hero_tncMBf": {
       "type": "TMM-hero",
       "settings": {
         "color_scheme": "scheme-1",
         "image": "shopify://shop_images/bath-bomb-spa-tub.jpg",
         "object_position": "center",
-        "image_size": "large",
+        "image_size": "750",
+        "mobile_object_position": "center",
+        "mobile_image_size": "500",
         "content_alignment": "center",
         "text_alignment": "center",
         "heading": "Discover the Latest Articles on Vegan Skincare",
@@ -103,6 +64,8 @@
             "button_color": "#000000",
             "button_text_color": "#ffffff",
             "button_style": "solid",
+            "tag_color": "#000000",
+            "tag_thickness": 1,
             "tag_1": "Innovative",
             "tag_2": "Interactive",
             "tag_3": "Gourmet"
@@ -118,6 +81,8 @@
             "button_color": "#000000",
             "button_text_color": "#ffffff",
             "button_style": "solid",
+            "tag_color": "#000000",
+            "tag_thickness": 1,
             "tag_1": "Innovative",
             "tag_2": "Interactive",
             "tag_3": "Gourmet"
@@ -133,6 +98,8 @@
             "button_color": "#000000",
             "button_text_color": "#ffffff",
             "button_style": "solid",
+            "tag_color": "#000000",
+            "tag_thickness": 1,
             "tag_1": "Innovative",
             "tag_2": "Interactive",
             "tag_3": "Gourmet"
@@ -319,6 +286,10 @@
         "button_text_color": "#ffffff",
         "button_style": "solid",
         "price_style": "money",
+        "product_button_text": "View",
+        "product_button_color": "#000000",
+        "product_button_text_color": "#ffffff",
+        "product_button_style": "outline",
         "page_width": "1600",
         "padding_top": 36,
         "padding_bottom": 36
@@ -582,6 +553,7 @@
       "settings": {
         "color_scheme": "",
         "show_line_separators": true,
+        "fade_in": true,
         "text_style": "body",
         "text_transformation": "capitalize",
         "text_decoration": "none",
@@ -592,7 +564,6 @@
     }
   },
   "order": [
-    "tmm_promo_bar_jMtpTT",
     "tmm_hero_tncMBf",
     "tmm_divider_FDyger",
     "tmm_tabs_CDgip7",
