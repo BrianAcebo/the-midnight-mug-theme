@@ -307,7 +307,7 @@
       ],
       "settings": {
         "color_scheme": "",
-        "arrow_button_color": "#777777",
+        "arrow_button_color": "#000000",
         "arrow_color": "#ffffff",
         "page_width": "1200",
         "padding_top": 36,
