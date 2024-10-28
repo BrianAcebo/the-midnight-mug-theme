@@ -26,7 +26,11 @@
   }
 {%- endstyle -%}
 
-<section{%- if section.settings.fade_in -%} class="tmm-interaction_wrap"{%- endif -%}>
+<section
+  {%- if section.settings.fade_in -%}
+    class="tmm-interaction_wrap"
+  {%- endif -%}
+>
   <div class="section__tmm-component tmm-section-{{ section.id }} section-{{ section.id }}-padding tmm-promo-strip color-{{ section.settings.color_scheme }} gradient">
     {%- for i in (1..2) -%}
       <div class="tmm-promo-text_wrap">
@@ -80,7 +84,7 @@
       "type": "checkbox",
       "id": "fade_in",
       "default": true,
-      "label": "Fade in"
+      "label": "Add fade in animation"
     },
     {
       "type": "select",
