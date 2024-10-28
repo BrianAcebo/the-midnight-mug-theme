@@ -43,7 +43,11 @@
           }
         }
       },
-      "block_order": ["heading_JYY8XT", "text_7PihLn", "buttons_fRxjFJ"],
+      "block_order": [
+        "heading_JYY8XT",
+        "text_7PihLn",
+        "buttons_fRxjFJ"
+      ],
       "settings": {
         "image": "shopify://shop_images/shopify-sections.jpg",
         "image_overlay_opacity": 60,
@@ -65,6 +69,50 @@
     "as_seen_on_M7GaHx": {
       "type": "as-seen-on",
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_bHBqFj": {
+      "type": "multirow",
+      "blocks": {
+        "row_Bc3VNP": {
+          "type": "row",
+          "settings": {
+            "caption": "Enhance",
+            "heading": "Pre-built Shopify Sections",
+            "text": "<p>Elevate your Shopify store’s look and functionality with our 10 Shopify Sections Bundle! Perfect for building a cohesive brand presence, each section is optimized for easy setup, mobile-friendly, and designed to help drive conversions.</p>",
+            "button_label": "Buy now",
+            "button_link": "shopify://products/premium-shopify-sections-10pk"
+          }
+        },
+        "row_XTVTbp": {
+          "type": "row",
+          "settings": {
+            "caption": "Caption",
+            "heading": "Row",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_Bc3VNP",
+        "row_XTVTbp"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -94,7 +142,11 @@
           }
         }
       },
-      "block_order": ["feature_pwg7Q3", "feature_jmdRnN", "feature_gXmCY7"],
+      "block_order": [
+        "feature_pwg7Q3",
+        "feature_jmdRnN",
+        "feature_gXmCY7"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "caption_text": "Optimize Your Store",
@@ -105,7 +157,7 @@
         "body_text_transformation": "none",
         "button1_text": "Buy Now",
         "button1_url": "shopify://products/premium-shopify-sections-10pk",
-        "button1_color": "#eb3131",
+        "button1_color": "#000000",
         "button1_text_color": "#ffffff",
         "button1_style": "solid",
         "button2_text": "Shop All",
@@ -120,6 +172,7 @@
   "order": [
     "image_banner_tmm_VP6ebY",
     "as_seen_on_M7GaHx",
+    "multirow_bHBqFj",
     "tmm_features_DRGiJd"
   ]
 }
