@@ -9,13 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
     "image_banner_tmm_VP6ebY": {
       "type": "image-banner-tmm",
       "blocks": {
@@ -50,11 +43,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_JYY8XT",
-        "text_7PihLn",
-        "buttons_fRxjFJ"
-      ],
+      "block_order": ["heading_JYY8XT", "text_7PihLn", "buttons_fRxjFJ"],
       "settings": {
         "image": "shopify://shop_images/shopify-sections.jpg",
         "image_overlay_opacity": 0,
@@ -74,8 +63,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "image_banner_tmm_VP6ebY"
-  ]
+  "order": ["image_banner_tmm_VP6ebY"]
 }
