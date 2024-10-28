@@ -18,7 +18,7 @@
   .tmm-section-{{ section.id }} .tmm-gallery2-header {
     text-transform: {{ section.settings.header_text_transformation }};
   }
-  
+
   .tmm-section-{{ section.id }} .tmm-gallery2-body-text {
     text-transform: {{ section.settings.body_text_transformation }};
   }
@@ -69,11 +69,11 @@
           </div>
         </div>
       </div>
-      <div class="tmm-interaction_wrap">
-        <div class="tmm-gallery2-component">
-          <div class="tmm-layout-grid tmm-gallery2-row">
-            {%- if section.blocks.size > 0 -%}
-              {%- for block in section.blocks -%}
+      <div class="tmm-gallery2-component">
+        <div class="tmm-layout-grid tmm-gallery2-row">
+          {%- if section.blocks.size > 0 -%}
+            {%- for block in section.blocks -%}
+              <div class="tmm-interaction_wrap">
                 <a
                   {{ block.shopify_attributes }}
                   href="#"
@@ -136,9 +136,11 @@
                     {%- endif -%}
                   </script>
                 </a>
-              {%- endfor -%}
-            {% else %}
-              {%- for i in (1..6) -%}
+              </div>
+            {%- endfor -%}
+          {% else %}
+            {%- for i in (1..6) -%}
+              <div class="tmm-interaction_wrap">
                 <a
                   href="#"
                   id="tmm-node-_4eabc478-9f45-2c16-0a02-c1b37d97d159-7d97d14b"
@@ -168,9 +170,9 @@
                     }
                   </script>
                 </a>
-              {%- endfor -%}
-            {%- endif -%}
-          </div>
+              </div>
+            {%- endfor -%}
+          {%- endif -%}
         </div>
       </div>
     </div>
