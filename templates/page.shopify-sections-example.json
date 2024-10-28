@@ -155,7 +155,7 @@
             "image": "shopify://shop_images/ShopifySectionsProductImage.jpg",
             "object_fit": "contain",
             "object_position": "center",
-            "image_orientation": "square",
+            "image_orientation": "portrait",
             "heading": "10 Premium Sections",
             "description": "Transform your Shopify store effortlessly with our 10 Premium Shopify Sections Pack!",
             "price_style": "money"
@@ -167,7 +167,7 @@
             "product": "how-to-make-money-with-shopify-ultimate-bundle",
             "object_fit": "contain",
             "object_position": "center",
-            "image_orientation": "square",
+            "image_orientation": "portrait",
             "heading": "The Ultimate Bundle",
             "description": "Unlock the power of the world's leading e-commerce platform and start your journey toward financial freedom with 3 EBOOKS IN ONE BUNDLE!",
             "price_style": "money"
@@ -179,7 +179,7 @@
             "product": "the-ultimate-guide-to-seo",
             "object_fit": "contain",
             "object_position": "center",
-            "image_orientation": "square",
+            "image_orientation": "portrait",
             "heading": "",
             "description": "Discover the strategies that industry leaders swear by to elevate your store's visibility, drive consistent traffic, and witness transformative growth.",
             "price_style": "money"
